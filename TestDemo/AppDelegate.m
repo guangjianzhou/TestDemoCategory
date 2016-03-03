@@ -13,11 +13,20 @@
 @end
 
 @implementation AppDelegate
-
-
+/**
+ *  LaunhScreen.storyboard files are static and cannot run codes, segues or other forms of animation.You should implement you UI inside Main.storyboard or another storyboard set as your main storyboard
+ */
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //白色
+    //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    [self confing];
     return YES;
+}
+
+- (void)confing
+{
+    [NSThread sleepForTimeInterval:3.0];//设置启动页面时间
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
