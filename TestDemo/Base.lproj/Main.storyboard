@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QOu-SO-ao2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QOu-SO-ao2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
@@ -18,7 +18,224 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4e-fL-2kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5710.5" y="-2222.25"/>
+            <point key="canvasLocation" x="-7504.5" y="-2339.25"/>
+        </scene>
+        <!--Assert View Controller-->
+        <scene sceneID="EVr-IK-Iih">
+            <objects>
+                <viewController id="tAv-vV-SUV" customClass="AssertViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3qx-dV-yss"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZXM-Jr-E90"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ir4-Ce-hNl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l92-F0-kHo">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.32160850143933994" blue="0.41302978583073979" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ci6-Aa-006"/>
+                                    <constraint firstAttribute="width" constant="75" id="WQd-ke-lpn"/>
+                                </constraints>
+                                <state key="normal" title="生成二维码"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ci6-Aa-006"/>
+                                        <exclude reference="WQd-ke-lpn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Ci6-Aa-006"/>
+                                        <include reference="WQd-ke-lpn"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="createQRCode:" destination="tAv-vV-SUV" eventType="touchUpInside" id="JNv-Wm-Opt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68m-Ng-AGP">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.82308566185464749" blue="0.66601120284280768" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="90B-UE-dfN"/>
+                                    <constraint firstAttribute="width" constant="105" id="yRp-iu-NRb"/>
+                                </constraints>
+                                <state key="normal" title="相册二维码识别"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="90B-UE-dfN"/>
+                                        <exclude reference="yRp-iu-NRb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="90B-UE-dfN"/>
+                                        <include reference="yRp-iu-NRb"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="deQRCodeFromPhoto:" destination="tAv-vV-SUV" eventType="touchUpInside" id="whu-0G-4ob"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtJ-uE-dwL">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.53858414972839141" green="1" blue="0.39698972600506766" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7to-ma-YF9"/>
+                                    <constraint firstAttribute="width" constant="75" id="jvw-5W-kC7"/>
+                                </constraints>
+                                <state key="normal" title="照相机识别"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7to-ma-YF9"/>
+                                        <exclude reference="jvw-5W-kC7"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="7to-ma-YF9"/>
+                                        <include reference="jvw-5W-kC7"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="deQRCodeFromCarmer:" destination="tAv-vV-SUV" eventType="touchUpInside" id="5SD-Vq-zuM"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKa-7i-n4f">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_erweima_scan" translatesAutoresizingMaskIntoConstraints="NO" id="iF4-Vq-b9R">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="3Z6-Ng-zMC"/>
+                                    <constraint firstAttribute="height" constant="162" id="7bO-oa-sTu"/>
+                                    <constraint firstAttribute="bottom" secondItem="iF4-Vq-b9R" secondAttribute="bottom" id="Lmj-Yi-kOB"/>
+                                    <constraint firstItem="iF4-Vq-b9R" firstAttribute="leading" secondItem="WKa-7i-n4f" secondAttribute="leading" id="RVx-rh-QnB"/>
+                                    <constraint firstAttribute="trailing" secondItem="iF4-Vq-b9R" secondAttribute="trailing" id="tTv-Xf-WC1"/>
+                                    <constraint firstItem="iF4-Vq-b9R" firstAttribute="top" secondItem="WKa-7i-n4f" secondAttribute="top" id="yjX-in-kC2"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="iF4-Vq-b9R"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="3Z6-Ng-zMC"/>
+                                        <exclude reference="7bO-oa-sTu"/>
+                                        <exclude reference="Lmj-Yi-kOB"/>
+                                        <exclude reference="RVx-rh-QnB"/>
+                                        <exclude reference="tTv-Xf-WC1"/>
+                                        <exclude reference="yjX-in-kC2"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="iF4-Vq-b9R"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="3Z6-Ng-zMC"/>
+                                        <include reference="7bO-oa-sTu"/>
+                                        <include reference="Lmj-Yi-kOB"/>
+                                        <include reference="RVx-rh-QnB"/>
+                                        <include reference="tTv-Xf-WC1"/>
+                                        <include reference="yjX-in-kC2"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUc-DW-rMl">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.6585159934" blue="0.55919963090000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="Fmj-lD-zpR"/>
+                                    <constraint firstAttribute="height" constant="30" id="T45-XB-fIT"/>
+                                </constraints>
+                                <state key="normal" title="openTorchButton"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Fmj-lD-zpR"/>
+                                        <exclude reference="T45-XB-fIT"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Fmj-lD-zpR"/>
+                                        <include reference="T45-XB-fIT"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="openTorchButtonTouched:" destination="tAv-vV-SUV" eventType="touchUpInside" id="IOZ-Oz-jRF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l92-F0-kHo" firstAttribute="top" secondItem="3qx-dV-yss" secondAttribute="bottom" constant="30" id="09t-Mt-EG2"/>
+                            <constraint firstItem="gUc-DW-rMl" firstAttribute="leading" secondItem="Ir4-Ce-hNl" secondAttribute="leading" constant="28" id="4xc-WD-Hkc"/>
+                            <constraint firstItem="l92-F0-kHo" firstAttribute="leading" secondItem="Ir4-Ce-hNl" secondAttribute="leading" constant="28" id="AHL-YS-mw4"/>
+                            <constraint firstAttribute="trailing" secondItem="BtJ-uE-dwL" secondAttribute="trailing" constant="28" id="Kcj-jD-kGD"/>
+                            <constraint firstItem="gUc-DW-rMl" firstAttribute="top" secondItem="l92-F0-kHo" secondAttribute="bottom" constant="8" id="LHi-t5-YAg"/>
+                            <constraint firstItem="68m-Ng-AGP" firstAttribute="leading" secondItem="l92-F0-kHo" secondAttribute="trailing" constant="45" id="M49-sG-0C2"/>
+                            <constraint firstItem="BtJ-uE-dwL" firstAttribute="top" secondItem="3qx-dV-yss" secondAttribute="bottom" constant="30" id="fhS-GJ-xNk"/>
+                            <constraint firstItem="WKa-7i-n4f" firstAttribute="top" secondItem="68m-Ng-AGP" secondAttribute="bottom" constant="74" id="re6-3a-PBn"/>
+                            <constraint firstItem="68m-Ng-AGP" firstAttribute="top" secondItem="3qx-dV-yss" secondAttribute="bottom" constant="30" id="tuK-S2-SWG"/>
+                            <constraint firstItem="WKa-7i-n4f" firstAttribute="centerX" secondItem="Ir4-Ce-hNl" secondAttribute="centerX" id="u6N-Xv-VW4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="l92-F0-kHo"/>
+                                <exclude reference="68m-Ng-AGP"/>
+                                <exclude reference="BtJ-uE-dwL"/>
+                                <exclude reference="WKa-7i-n4f"/>
+                                <exclude reference="gUc-DW-rMl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="09t-Mt-EG2"/>
+                                <exclude reference="AHL-YS-mw4"/>
+                                <exclude reference="4xc-WD-Hkc"/>
+                                <exclude reference="LHi-t5-YAg"/>
+                                <exclude reference="M49-sG-0C2"/>
+                                <exclude reference="tuK-S2-SWG"/>
+                                <exclude reference="re6-3a-PBn"/>
+                                <exclude reference="u6N-Xv-VW4"/>
+                                <exclude reference="Kcj-jD-kGD"/>
+                                <exclude reference="fhS-GJ-xNk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="l92-F0-kHo"/>
+                                <include reference="68m-Ng-AGP"/>
+                                <include reference="BtJ-uE-dwL"/>
+                                <include reference="WKa-7i-n4f"/>
+                                <include reference="gUc-DW-rMl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="09t-Mt-EG2"/>
+                                <include reference="AHL-YS-mw4"/>
+                                <include reference="4xc-WD-Hkc"/>
+                                <include reference="LHi-t5-YAg"/>
+                                <include reference="M49-sG-0C2"/>
+                                <include reference="tuK-S2-SWG"/>
+                                <include reference="re6-3a-PBn"/>
+                                <include reference="u6N-Xv-VW4"/>
+                                <include reference="Kcj-jD-kGD"/>
+                                <include reference="fhS-GJ-xNk"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="openTorchButton" destination="gUc-DW-rMl" id="Swh-IY-dmb"/>
+                        <outlet property="scanView" destination="WKa-7i-n4f" id="9zQ-o1-LVj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aaR-CP-A4m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6651" y="-2340"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="1fz-OG-G7K">
@@ -86,7 +303,7 @@
                                     <segue destination="UNQ-g5-PHg" kind="show" id="kw3-oe-p0q"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="x7N-XY-tWy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x7N-XY-tWy">
                                 <rect key="frame" x="0.0" y="246" width="320" height="157"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="148" id="gqb-eu-ciB"/>
@@ -226,6 +443,7 @@
                         <segue destination="GAK-6e-CwY" kind="show" identifier="CoreGraphicsSegue" id="wPd-ez-b6G"/>
                         <segue destination="pcu-5I-kAh" kind="show" identifier="HeadSegue" id="AgY-Kc-Tg0"/>
                         <segue destination="32s-pi-B0v" kind="show" identifier="FFmpegSegue" id="J1Z-P2-lwR"/>
+                        <segue destination="tAv-vV-SUV" kind="show" identifier="AssertSegue" id="mGO-Jd-ccD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lla-R9-m4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1775,7 +1993,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1.jpg" width="48" height="48"/>
         <image name="6.png" width="878" height="1024"/>
+        <image name="bg_erweima_scan" width="162" height="162"/>
     </resources>
 </document>

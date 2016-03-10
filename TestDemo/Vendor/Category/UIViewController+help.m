@@ -12,6 +12,10 @@
 #import "Toast+UIView.h"
 #import <objc/runtime.h>
 
+#define is_iOS_7                  ([[[UIDevice currentDevice]systemVersion] floatValue] >= 7.0)
+#define is_iOS_8                  ([[[UIDevice currentDevice]systemVersion] floatValue] >= 8.0)
+#define is_iOS_9                  ([[[UIDevice currentDevice]systemVersion] floatValue] >= 9.0)
+
 #define SetNavigationBarWithBlueColor(navigationController)            [navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:1 / 255.0f green:143 / 255.0f blue:219 / 255.0f alpha:1]]
 #define SetNavigationBarTitleAttribute(navigationController)           [navigationController.navigationBar setTitleTextAttributes: @{ NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont systemFontOfSize:18.f] }]
 

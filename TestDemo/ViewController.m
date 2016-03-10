@@ -67,6 +67,7 @@
 //    NSString *s1 = [NSString stringWithFormat:@"%@",1]; crash
 //    NSLog(@"s1==%@==",s1);
     
+    
     if([@"null" integerValue] == 1)
     {
         NSLog(@"=======等于1====");
@@ -119,7 +120,7 @@
     _segmentControl.layer.cornerRadius = 20;
     _segmentControl.layer.masksToBounds = YES;
     
-    _dataArray = [NSMutableArray arrayWithObjects:@"webview与交互",@"RAC学习",@"AVFoundataion", @"NSTimer",@"pop动画",@"FMDB和storyboard textView控制父控件",@"UIDynamic动力",@"Lock锁",@"CoreGraphics",@"头部视图",@"FFmpeg",nil];
+    _dataArray = [NSMutableArray arrayWithObjects:@"webview与交互",@"RAC学习",@"AVFoundataion", @"NSTimer",@"pop动画",@"FMDB和storyboard textView控制父控件",@"UIDynamic动力",@"Lock锁",@"CoreGraphics",@"头部视图",@"FFmpeg",@"Assert",nil];
     [self setUpNaivigationItem];
     [self effectVisualView];
     [self test1];
@@ -728,6 +729,10 @@
     else if ([title isEqualToString:@"FFmpeg"])
     {
         [self performSegueWithIdentifier:@"FFmpegSegue" sender:nil];
+    }
+    else if ([title isEqualToString:@"Assert"])
+    {
+        [self performSegueWithIdentifier:@"AssertSegue" sender:nil];
     }
 }
 

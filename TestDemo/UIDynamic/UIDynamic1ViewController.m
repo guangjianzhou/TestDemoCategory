@@ -22,7 +22,8 @@
 
 @implementation UIDynamic1ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 }
 
@@ -103,9 +104,6 @@
 {
     [self.presentingViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
-
-
-
 
 #pragma mark - UIDynamicAnimatorDelegate
 - (void)dynamicAnimatorWillResume:(UIDynamicAnimator *)animator
