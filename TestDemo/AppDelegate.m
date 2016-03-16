@@ -19,14 +19,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //白色
-    //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
     [self confing];
     return YES;
 }
 
 - (void)confing
 {
-    [NSThread sleepForTimeInterval:3.0];//设置启动页面时间
+    [NSThread sleepForTimeInterval:1.0];//设置启动页面时间
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

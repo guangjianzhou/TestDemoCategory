@@ -22,10 +22,13 @@
 		FD578E591C1E76D100F13038 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD578E581C1E76D000F13038 /* CustomView.m */; };
 		FD578E5B1C1E76E700F13038 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD578E5A1C1E76E700F13038 /* CustomView.xib */; };
 		FD6A760F1C7C315C00D7E5D8 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6A760E1C7C315C00D7E5D8 /* share.png */; };
+		FD76AB531C97B9120071F9AB /* BLEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76AB521C97B9120071F9AB /* BLEViewController.m */; };
+		FD76AB561C97D03A0071F9AB /* DelayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76AB551C97D03A0071F9AB /* DelayViewController.m */; };
 		FD7E27031C1914E4002D4CDD /* NSDate+DateHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E27021C1914E4002D4CDD /* NSDate+DateHelp.m */; };
 		FD7FF4571C3B4C4E00DDB21E /* NSTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7FF4561C3B4C4E00DDB21E /* NSTimerViewController.m */; };
 		FD8A99AB1C22864800AB4E6B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8A99AA1C22864800AB4E6B /* SecondViewController.m */; };
 		FD8A99AE1C229A1800AB4E6B /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8A99AD1C229A1800AB4E6B /* ThirdViewController.m */; };
+		FD8D32F41C90FFB500AD9638 /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8D32F31C90FFB500AD9638 /* AutoLayoutViewController.m */; };
 		FD9456961C33CECC00CB6FA9 /* AVFoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9456951C33CECC00CB6FA9 /* AVFoundationViewController.m */; };
 		FD9456981C33D15A00CB6FA9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9456971C33D15A00CB6FA9 /* AVFoundation.framework */; };
 		FD94569A1C33D65400CB6FA9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9456991C33D65400CB6FA9 /* AudioToolbox.framework */; };
@@ -289,6 +292,9 @@
 		FDAE2ABC1C16A9D200E0A6D4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAE2ABB1C16A9D200E0A6D4 /* QuartzCore.framework */; };
 		FDAE2ABE1C16A9DD00E0A6D4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAE2ABD1C16A9DD00E0A6D4 /* CoreGraphics.framework */; };
 		FDAE2AC01C16AA4200E0A6D4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAE2ABF1C16AA4200E0A6D4 /* libz.tbd */; };
+		FDB06A951C99473A00056F10 /* AFNHTTPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB06A941C99473A00056F10 /* AFNHTTPSViewController.m */; };
+		FDB06A981C99476C00056F10 /* adn.cer in Resources */ = {isa = PBXBuildFile; fileRef = FDB06A971C99476C00056F10 /* adn.cer */; };
+		FDB06A9B1C99477D00056F10 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB06A9A1C99477D00056F10 /* HttpRequest.m */; };
 		FDBB58C01C434C65007DE015 /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBB58BF1C434C65007DE015 /* FMDBViewController.m */; };
 		FDC29C801C2CCF7700F51079 /* UIImage+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC29C7F1C2CCF7700F51079 /* UIImage+help.m */; };
 		FDC29D071C2D3A1F00F51079 /* PopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC29D061C2D3A1F00F51079 /* PopViewController.m */; };
@@ -302,6 +308,11 @@
 		FDD05BB11C7FEEEF00B2F930 /* FFmpegViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FDD05BB01C7FEEEF00B2F930 /* FFmpegViewController.mm */; };
 		FDD05BB41C7FF4F800B2F930 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD05BB31C7FF4F800B2F930 /* libbz2.tbd */; };
 		FDD05BB61C7FF50B00B2F930 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD05BB51C7FF50B00B2F930 /* libiconv.tbd */; };
+		FDD343F41C92595100F4677A /* TransferAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD343F31C92595100F4677A /* TransferAnimationViewController.m */; };
+		FDD343F81C925EF600F4677A /* TestTransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD343F71C925EF600F4677A /* TestTransferViewController.m */; };
+		FDD343FB1C92707400F4677A /* PushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD343FA1C92707400F4677A /* PushTransition.m */; };
+		FDD343FE1C9290B500F4677A /* InteractionTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD343FD1C9290B500F4677A /* InteractionTransitionAnimation.m */; };
+		FDD344011C929B7800F4677A /* TransferView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD344001C929B7800F4677A /* TransferView.m */; };
 		FDD9382C1C87D2F500DABD8C /* ThrowLineTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9382B1C87D2F500DABD8C /* ThrowLineTool.m */; };
 		FDD9383B1C8817FD00DABD8C /* UIBarButtonItem+WNXBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9383A1C8817FD00DABD8C /* UIBarButtonItem+WNXBarButtonItem.m */; };
 		FDD938431C88184A00DABD8C /* NSString+Emojize.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9383F1C88184A00DABD8C /* NSString+Emojize.m */; };
@@ -389,6 +400,10 @@
 		FD578E581C1E76D000F13038 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		FD578E5A1C1E76E700F13038 /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		FD6A760E1C7C315C00D7E5D8 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		FD76AB511C97B9120071F9AB /* BLEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEViewController.h; sourceTree = "<group>"; };
+		FD76AB521C97B9120071F9AB /* BLEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEViewController.m; sourceTree = "<group>"; };
+		FD76AB541C97D03A0071F9AB /* DelayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelayViewController.h; sourceTree = "<group>"; };
+		FD76AB551C97D03A0071F9AB /* DelayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelayViewController.m; sourceTree = "<group>"; };
 		FD7E27011C1914E4002D4CDD /* NSDate+DateHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+DateHelp.h"; path = "../../NSDate+DateHelp.h"; sourceTree = "<group>"; };
 		FD7E27021C1914E4002D4CDD /* NSDate+DateHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+DateHelp.m"; path = "../../NSDate+DateHelp.m"; sourceTree = "<group>"; };
 		FD7FF4551C3B4C4E00DDB21E /* NSTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimerViewController.h; sourceTree = "<group>"; };
@@ -397,6 +412,8 @@
 		FD8A99AA1C22864800AB4E6B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		FD8A99AC1C229A1800AB4E6B /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		FD8A99AD1C229A1800AB4E6B /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		FD8D32F21C90FFB500AD9638 /* AutoLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutViewController.h; sourceTree = "<group>"; };
+		FD8D32F31C90FFB500AD9638 /* AutoLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutViewController.m; sourceTree = "<group>"; };
 		FD9456941C33CECC00CB6FA9 /* AVFoundationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVFoundationViewController.h; sourceTree = "<group>"; };
 		FD9456951C33CECC00CB6FA9 /* AVFoundationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVFoundationViewController.m; sourceTree = "<group>"; };
 		FD9456971C33D15A00CB6FA9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -909,6 +926,11 @@
 		FDAE2ABB1C16A9D200E0A6D4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FDAE2ABD1C16A9DD00E0A6D4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		FDAE2ABF1C16AA4200E0A6D4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		FDB06A931C99473A00056F10 /* AFNHTTPSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNHTTPSViewController.h; sourceTree = "<group>"; };
+		FDB06A941C99473A00056F10 /* AFNHTTPSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNHTTPSViewController.m; sourceTree = "<group>"; };
+		FDB06A971C99476C00056F10 /* adn.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = adn.cer; sourceTree = "<group>"; };
+		FDB06A991C99477D00056F10 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
+		FDB06A9A1C99477D00056F10 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
 		FDBB58BE1C434C65007DE015 /* FMDBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBViewController.h; sourceTree = "<group>"; };
 		FDBB58BF1C434C65007DE015 /* FMDBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBViewController.m; sourceTree = "<group>"; };
 		FDC29C7E1C2CCF7700F51079 /* UIImage+help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+help.h"; sourceTree = "<group>"; };
@@ -931,6 +953,16 @@
 		FDD05BB01C7FEEEF00B2F930 /* FFmpegViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FFmpegViewController.mm; sourceTree = "<group>"; };
 		FDD05BB31C7FF4F800B2F930 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		FDD05BB51C7FF50B00B2F930 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		FDD343F21C92595100F4677A /* TransferAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferAnimationViewController.h; sourceTree = "<group>"; };
+		FDD343F31C92595100F4677A /* TransferAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferAnimationViewController.m; sourceTree = "<group>"; };
+		FDD343F61C925EF600F4677A /* TestTransferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTransferViewController.h; sourceTree = "<group>"; };
+		FDD343F71C925EF600F4677A /* TestTransferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTransferViewController.m; sourceTree = "<group>"; };
+		FDD343F91C92707400F4677A /* PushTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushTransition.h; sourceTree = "<group>"; };
+		FDD343FA1C92707400F4677A /* PushTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushTransition.m; sourceTree = "<group>"; };
+		FDD343FC1C9290B500F4677A /* InteractionTransitionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractionTransitionAnimation.h; sourceTree = "<group>"; };
+		FDD343FD1C9290B500F4677A /* InteractionTransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractionTransitionAnimation.m; sourceTree = "<group>"; };
+		FDD343FF1C929B7800F4677A /* TransferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferView.h; sourceTree = "<group>"; };
+		FDD344001C929B7800F4677A /* TransferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferView.m; sourceTree = "<group>"; };
 		FDD9382A1C87D2F500DABD8C /* ThrowLineTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThrowLineTool.h; sourceTree = "<group>"; };
 		FDD9382B1C87D2F500DABD8C /* ThrowLineTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThrowLineTool.m; sourceTree = "<group>"; };
 		FDD938391C8817FD00DABD8C /* UIBarButtonItem+WNXBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WNXBarButtonItem.h"; sourceTree = "<group>"; };
@@ -1108,6 +1140,24 @@
 			path = CustomUIAlertView;
 			sourceTree = "<group>";
 		};
+		FD76AB501C97B8DF0071F9AB /* 蓝牙 */ = {
+			isa = PBXGroup;
+			children = (
+				FD76AB511C97B9120071F9AB /* BLEViewController.h */,
+				FD76AB521C97B9120071F9AB /* BLEViewController.m */,
+			);
+			name = "蓝牙";
+			sourceTree = "<group>";
+		};
+		FD76AB571C97D03F0071F9AB /* 延迟调用 */ = {
+			isa = PBXGroup;
+			children = (
+				FD76AB541C97D03A0071F9AB /* DelayViewController.h */,
+				FD76AB551C97D03A0071F9AB /* DelayViewController.m */,
+			);
+			name = "延迟调用";
+			sourceTree = "<group>";
+		};
 		FD7FF4541C3B4C2400DDB21E /* NSTimerVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1134,6 +1184,15 @@
 				FDC95CAE1C34F51D00F6BD76 /* MyView.xib */,
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		FD8D32F51C90FFBB00AD9638 /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				FD8D32F21C90FFB500AD9638 /* AutoLayoutViewController.h */,
+				FD8D32F31C90FFB500AD9638 /* AutoLayoutViewController.m */,
+			);
+			name = AutoLayout;
 			sourceTree = "<group>";
 		};
 		FD9456931C33CE2700CB6FA9 /* AVFoundation */ = {
@@ -1172,7 +1231,7 @@
 				FD07E5561C55BDA900FA7890 /* UIDynamic */,
 				FD7FF4541C3B4C2400DDB21E /* NSTimerVC */,
 				FD9456931C33CE2700CB6FA9 /* AVFoundation */,
-				FDA9D44B1C2938BF00CB9369 /* StatusBarDemo */,
+				FDA9D44B1C2938BF00CB9369 /* StatusBar和多选 */,
 				FDA9D44C1C2938FD00CB9369 /* ViewPage切换Demo */,
 				FDE3CA401C2A62E400636C40 /* WebView */,
 				FDE3CA531C2A8B9900636C40 /* RAC */,
@@ -1181,17 +1240,24 @@
 				FDDB6DA01C7A9AFC00E49D8B /* HeaderVC */,
 				FDD05BB21C7FEEF500B2F930 /* FFmpeg */,
 				FDE5AC221C8D181C006562E8 /* AssertAndQRCode */,
+				FD8D32F51C90FFBB00AD9638 /* AutoLayout */,
+				FDD343F51C92596000F4677A /* 转场动画 */,
+				FD76AB501C97B8DF0071F9AB /* 蓝牙 */,
+				FD76AB571C97D03F0071F9AB /* 延迟调用 */,
+				FDB06A961C99473E00056F10 /* HTTPS */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		FDA9D44B1C2938BF00CB9369 /* StatusBarDemo */ = {
+		FDA9D44B1C2938BF00CB9369 /* StatusBar和多选 */ = {
 			isa = PBXGroup;
 			children = (
+				FDF592451C0EB4DA00AF8B5C /* FirstViewController.h */,
+				FDF592461C0EB4DA00AF8B5C /* FirstViewController.m */,
 				FDA0C3A51C1FB8870087B5CE /* RootViewController.h */,
 				FDA0C3A61C1FB8870087B5CE /* RootViewController.m */,
 			);
-			name = StatusBarDemo;
+			name = "StatusBar和多选";
 			sourceTree = "<group>";
 		};
 		FDA9D44C1C2938FD00CB9369 /* ViewPage切换Demo */ = {
@@ -2040,6 +2106,18 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		FDB06A961C99473E00056F10 /* HTTPS */ = {
+			isa = PBXGroup;
+			children = (
+				FDB06A991C99477D00056F10 /* HttpRequest.h */,
+				FDB06A9A1C99477D00056F10 /* HttpRequest.m */,
+				FDB06A971C99476C00056F10 /* adn.cer */,
+				FDB06A931C99473A00056F10 /* AFNHTTPSViewController.h */,
+				FDB06A941C99473A00056F10 /* AFNHTTPSViewController.m */,
+			);
+			name = HTTPS;
+			sourceTree = "<group>";
+		};
 		FDBB58C11C434C69007DE015 /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
@@ -2077,6 +2155,23 @@
 				FDD05BB01C7FEEEF00B2F930 /* FFmpegViewController.mm */,
 			);
 			name = FFmpeg;
+			sourceTree = "<group>";
+		};
+		FDD343F51C92596000F4677A /* 转场动画 */ = {
+			isa = PBXGroup;
+			children = (
+				FDD343F21C92595100F4677A /* TransferAnimationViewController.h */,
+				FDD343F31C92595100F4677A /* TransferAnimationViewController.m */,
+				FDD343F61C925EF600F4677A /* TestTransferViewController.h */,
+				FDD343F71C925EF600F4677A /* TestTransferViewController.m */,
+				FDD343F91C92707400F4677A /* PushTransition.h */,
+				FDD343FA1C92707400F4677A /* PushTransition.m */,
+				FDD343FC1C9290B500F4677A /* InteractionTransitionAnimation.h */,
+				FDD343FD1C9290B500F4677A /* InteractionTransitionAnimation.m */,
+				FDD343FF1C929B7800F4677A /* TransferView.h */,
+				FDD344001C929B7800F4677A /* TransferView.m */,
+			);
+			name = "转场动画";
 			sourceTree = "<group>";
 		};
 		FDD9382E1C87D30300DABD8C /* ThrowLineTool */ = {
@@ -2212,8 +2307,6 @@
 				FDEF1B781C214A0300187029 /* NetWorking */,
 				FDF592181C0EB43C00AF8B5C /* ViewController.h */,
 				FDF592191C0EB43C00AF8B5C /* ViewController.m */,
-				FDF592451C0EB4DA00AF8B5C /* FirstViewController.h */,
-				FDF592461C0EB4DA00AF8B5C /* FirstViewController.m */,
 				FDF5921B1C0EB43C00AF8B5C /* Main.storyboard */,
 				FDF5921E1C0EB43C00AF8B5C /* Assets.xcassets */,
 				FDF592201C0EB43C00AF8B5C /* LaunchScreen.storyboard */,
@@ -2428,6 +2521,7 @@
 				FDA9D48A1C294EB700CB9369 /* pop_Task@3x.png in Resources */,
 				FDA9D4631C293F3D00CB9369 /* contacts_add_voip@2x.png in Resources */,
 				FDA9D48C1C294EB700CB9369 /* pop_Tweet@3x.png in Resources */,
+				FDB06A981C99476C00056F10 /* adn.cer in Resources */,
 				FD6A760F1C7C315C00D7E5D8 /* share.png in Resources */,
 				FDA9D4831C294EB700CB9369 /* pop_2FA@2x.png in Resources */,
 				FD211F6A1C2BF45900C7ACCC /* 3.png in Resources */,
@@ -2532,10 +2626,12 @@
 				FDDB6DA81C7AE61300E49D8B /* Student.m in Sources */,
 				FDAAAF161C8EBF8300CEF5CA /* ZXEmailDoCoMoResultParser.m in Sources */,
 				FDAAAFCD1C8EBF8300CEF5CA /* ZXQRCodeDetector.m in Sources */,
+				FDD343FE1C9290B500F4677A /* InteractionTransitionAnimation.m in Sources */,
 				FDE9040B1C608ED800798583 /* CoreGraphicsView.m in Sources */,
 				FDAAAF3B1C8EBF8300CEF5CA /* ZXBitArray.m in Sources */,
 				FD8A99AB1C22864800AB4E6B /* SecondViewController.m in Sources */,
 				FDD05BB11C7FEEEF00B2F930 /* FFmpegViewController.mm in Sources */,
+				FDD343FB1C92707400F4677A /* PushTransition.m in Sources */,
 				FDEF1B951C21580600187029 /* FDRoot.m in Sources */,
 				FDAAAF8E1C8EBF8300CEF5CA /* ZXCodaBarReader.m in Sources */,
 				FDAAAFAE1C8EBF8300CEF5CA /* ZXPDF417Codeword.m in Sources */,
@@ -2594,6 +2690,7 @@
 				FDA9D4571C293DBC00CB9369 /* XHPopMenu.m in Sources */,
 				FDAAAF3E1C8EBF8300CEF5CA /* ZXBoolArray.m in Sources */,
 				FDAAAF901C8EBF8300CEF5CA /* ZXCode128Reader.m in Sources */,
+				FD76AB531C97B9120071F9AB /* BLEViewController.m in Sources */,
 				FDA9D4581C293DBC00CB9369 /* XHPopMenuItem.m in Sources */,
 				FD7E27031C1914E4002D4CDD /* NSDate+DateHelp.m in Sources */,
 				FDAAAFB61C8EBF8300CEF5CA /* ZXPDF417DetectorResult.m in Sources */,
@@ -2623,6 +2720,7 @@
 				FDAAAF641C8EBF8300CEF5CA /* ZXDataMatrixHighLevelEncoder.m in Sources */,
 				FDAAAF181C8EBF8300CEF5CA /* ZXExpandedProductResultParser.m in Sources */,
 				FDC95CA91C34D68E00F6BD76 /* CustomPopView.m in Sources */,
+				FDD344011C929B7800F4677A /* TransferView.m in Sources */,
 				FDAAAF781C8EBF8300CEF5CA /* ZXAI01AndOtherAIs.m in Sources */,
 				FDA9D4701C29457C00CB9369 /* MenuButton.m in Sources */,
 				FDAAAFA71C8EBF8300CEF5CA /* ZXUPCEReader.m in Sources */,
@@ -2632,6 +2730,8 @@
 				FDA9D46F1C29457C00CB9369 /* GlowImageView.m in Sources */,
 				FDAAAF6D1C8EBF8300CEF5CA /* ZXMaxiCodeDecoder.m in Sources */,
 				FDD9382C1C87D2F500DABD8C /* ThrowLineTool.m in Sources */,
+				FDB06A951C99473A00056F10 /* AFNHTTPSViewController.m in Sources */,
+				FD76AB561C97D03A0071F9AB /* DelayViewController.m in Sources */,
 				FDAAAF7A1C8EBF8300CEF5CA /* ZXAI01weightDecoder.m in Sources */,
 				FDAAAF3F1C8EBF8300CEF5CA /* ZXByteArray.m in Sources */,
 				FD0C19BF1C338306008AE06F /* WCAlertview.m in Sources */,
@@ -2722,6 +2822,7 @@
 				FDAAAF021C8EBF8300CEF5CA /* ZXAztecDetector.m in Sources */,
 				FDAAAF111C8EBF8300CEF5CA /* ZXBizcardResultParser.m in Sources */,
 				FDAAAFBF1C8EBF8300CEF5CA /* ZXPDF417ResultMetadata.m in Sources */,
+				FDD343F41C92595100F4677A /* TransferAnimationViewController.m in Sources */,
 				FDAAAFAB1C8EBF8300CEF5CA /* ZXPDF417BarcodeMetadata.m in Sources */,
 				FDAAAFD81C8EBF8300CEF5CA /* ZXQRCodeMultiReader.m in Sources */,
 				FDD938471C88188500DABD8C /* UIColor+help.m in Sources */,
@@ -2739,6 +2840,7 @@
 				FDAAAF061C8EBF8300CEF5CA /* ZXAztecHighLevelEncoder.m in Sources */,
 				FD23ED7E1C1EC19F0013BDC2 /* Status.m in Sources */,
 				FDAAAF921C8EBF8300CEF5CA /* ZXCode39Reader.m in Sources */,
+				FD8D32F41C90FFB500AD9638 /* AutoLayoutViewController.m in Sources */,
 				FDAAAF241C8EBF8300CEF5CA /* ZXSMTPResultParser.m in Sources */,
 				FDAAAF731C8EBF8300CEF5CA /* ZXAI01320xDecoder.m in Sources */,
 				FDAAAF0F1C8EBF8300CEF5CA /* ZXAddressBookDoCoMoResultParser.m in Sources */,
@@ -2783,6 +2885,7 @@
 				FDAAAF0C1C8EBF8300CEF5CA /* ZXAztecWriter.m in Sources */,
 				FDAAAFC61C8EBF8300CEF5CA /* ZXQRCodeDecoderMetaData.m in Sources */,
 				FDE3CA4C1C2A703400636C40 /* WKWebViewJavascriptBridge.m in Sources */,
+				FDB06A9B1C99477D00056F10 /* HttpRequest.m in Sources */,
 				FD9456961C33CECC00CB6FA9 /* AVFoundationViewController.m in Sources */,
 				FDAAAF2D1C8EBF8300CEF5CA /* ZXVINParsedResult.m in Sources */,
 				FDAAAF451C8EBF8300CEF5CA /* ZXGridSampler.m in Sources */,
@@ -2793,6 +2896,7 @@
 				FDAAAF9C1C8EBF8300CEF5CA /* ZXMultiFormatOneDReader.m in Sources */,
 				FDAAAF771C8EBF8300CEF5CA /* ZXAI013x0xDecoder.m in Sources */,
 				FDAAAF441C8EBF8300CEF5CA /* ZXGlobalHistogramBinarizer.m in Sources */,
+				FDD343F81C925EF600F4677A /* TestTransferViewController.m in Sources */,
 				FDAAAFC71C8EBF8300CEF5CA /* ZXQRCodeErrorCorrectionLevel.m in Sources */,
 				FDAAAF541C8EBF8300CEF5CA /* ZXResult.m in Sources */,
 				FDAAAF1A1C8EBF8300CEF5CA /* ZXGeoResultParser.m in Sources */,

@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+
+@protocol TestProtocol <NSObject>
+
+@property (nonatomic, copy) NSString *testStr;
+
+@end
+
 @interface ViewController : UIViewController
 
 

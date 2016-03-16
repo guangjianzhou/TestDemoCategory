@@ -120,7 +120,7 @@
     _segmentControl.layer.cornerRadius = 20;
     _segmentControl.layer.masksToBounds = YES;
     
-    _dataArray = [NSMutableArray arrayWithObjects:@"webview与交互",@"RAC学习",@"AVFoundataion", @"NSTimer",@"pop动画",@"FMDB和storyboard textView控制父控件",@"UIDynamic动力",@"Lock锁",@"CoreGraphics",@"头部视图",@"FFmpeg",@"Assert",nil];
+    _dataArray = [NSMutableArray arrayWithObjects:@"webview与交互",@"RAC学习",@"AVFoundataion", @"NSTimer",@"FMDB和storyboard textView控制父控件",@"UIDynamic动力",@"Lock锁",@"CoreGraphics",@"头部视图",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",nil];
     [self setUpNaivigationItem];
     [self effectVisualView];
     [self test1];
@@ -277,7 +277,7 @@
         
         _popMenu = [[XHPopMenu alloc] initWithMenus:popMenuItems];
         _popMenu.popMenuDidSlectedCompled = ^(NSInteger index, XHPopMenuItem *popMenuItems) {
-            NSLog(@"点击了第%d行----",index);
+            NSLog(@"点击了第%ld行----",(long)index);
         };
     }
     return _popMenu;
@@ -730,11 +730,34 @@
     {
         [self performSegueWithIdentifier:@"FFmpegSegue" sender:nil];
     }
-    else if ([title isEqualToString:@"Assert"])
+    else if ([title isEqualToString:@"Assert和摇一摇 二维码"])
     {
         [self performSegueWithIdentifier:@"AssertSegue" sender:nil];
     }
+    else if ([title isEqualToString:@"AutoLayout"])
+    {
+        [self performSegueWithIdentifier:@"AutoLayoutSegue" sender:nil];
+    }
+    else if([title isEqualToString:@"转场动画"])
+    {
+        [self performSegueWithIdentifier:@"TransferSegue" sender:nil];
+    }
+    else if ([title isEqualToString:@"StatusBar"])
+    {
+        [self performSegueWithIdentifier:@"StatusBarSegue" sender:nil];
+    }
+    else if ([title isEqualToString:@"蓝牙"])
+    {
+        [self performSegueWithIdentifier:@"BLESegue" sender:nil];
+    }
+    else if([title isEqualToString:@"延迟调用与取消"])
+    {
+        [self performSegueWithIdentifier:@"DelaySegue" sender:nil];
+    }
 }
+
+
+
 
 #pragma mark - Segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

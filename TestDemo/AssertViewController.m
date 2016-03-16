@@ -36,6 +36,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [[UIApplication sharedApplication] setApplicationSupportsShakeToEdit:NO];
     [self tapVC];
     self.scanView.hidden = YES;
 }
@@ -676,37 +677,49 @@ static int x = 0;
     
     
     
-    if (isLightOpened) {
-        
-        //        [torchBtn setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"scan_flash_closed" ofType:@"png"]] forState:UIControlStateNormal];
-        
-        [torchBtn setBackgroundColor:[UIColor clearColor]];
-        
-        [torchBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        
-        [self.openTorchButton setTitle:@"开灯" forState:UIControlStateNormal];
-        
-    }
-    
-    else
-        
+    if (isLightOpened)
     {
-        
-        //        [torchBtn setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"scan_flash_opened" ofType:@"png"]] forState:UIControlStateNormal];
-        
-        [torchBtn setBackgroundColor:[UIColor whiteColor]];
-        
-        [torchBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        
-        [self.openTorchButton setTitle:@"关灯" forState:UIControlStateNormal];
-        
+        //        [torchBtn setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"scan_flash_closed" ofType:@"png"]] forState:UIControlStateNormal];
+        [torchBtn setBackgroundColor:[UIColor clearColor]];
+        [torchBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.openTorchButton setTitle:@"开灯" forState:UIControlStateNormal];
     }
-    
-    
-    
+    else
+    {
+        //        [torchBtn setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"scan_flash_opened" ofType:@"png"]] forState:UIControlStateNormal];
+        [torchBtn setBackgroundColor:[UIColor whiteColor]];
+        [torchBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self.openTorchButton setTitle:@"关灯" forState:UIControlStateNormal];
+    }
     [self openLight:!isLightOpened];
     
 }
+
+#pragma mark  - 摇一摇
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    NSLog(@"motionBegan===========");
+    AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);
+    AudioServicesPlaySystemSound (1007);//声音
+    
+}
+
+- (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    NSLog(@"motionCancelled===========");
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+     NSLog(@"motionEnded===========");
+}
+
+- (BOOL)canBecomeFirstResponder
+{
+    //默认是NO，所以得重写此方法，设成YES
+    return NO;
+}
+
 
 - (void)didReceiveMemoryWarning
 {

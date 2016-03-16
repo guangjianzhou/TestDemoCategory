@@ -11,11 +11,18 @@
 
 #import "Son.h"
 
+@interface Son()
+{
+    NSError *error;
+}
+@end
+
 @implementation Son
 
 - (void)eat
 {
     NSLog(@"====eat==");
+    NSLog(@"=====%@==",error);
 }
 
 - (void)play

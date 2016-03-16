@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURL *url = [NSURL URLWithString:@"http://www.sina.com.cn/"];
+    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [_webView loadRequest:request];
     //属性
@@ -103,9 +103,20 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     NSLog(@"--webViewDidFinishLoad----------");
+//    获取所有html
+    NSString *lJs = @"document.documentElement.innerHTML";
+    
+    //获取网页title
+    NSString *lJs2 = @"document.title";
+    NSString *lHtml1 = [webView stringByEvaluatingJavaScriptFromString:lJs];
+    NSLog(@"==lHtml1=%@========",lHtml1);
+　　 NSString *lHtml2 = [webView stringByEvaluatingJavaScriptFromString:lJs2];
+    NSLog(@"title========%@",lHtml2);
+//    self.navigationController.
+    
     //
-    [_webView stringByEvaluatingJavaScriptFromString:@"function test(){ alert(123123123)}"];
-    [_webView stringByEvaluatingJavaScriptFromString:@"test();"];//调用
+//    [_webView stringByEvaluatingJavaScriptFromString:@"function test(){ alert(123123123)}"];
+//    [_webView stringByEvaluatingJavaScriptFromString:@"test();"];//调用
     
 }
 
