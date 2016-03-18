@@ -120,7 +120,7 @@
     _segmentControl.layer.cornerRadius = 20;
     _segmentControl.layer.masksToBounds = YES;
     
-    _dataArray = [NSMutableArray arrayWithObjects:@"webview与交互",@"RAC学习",@"AVFoundataion", @"NSTimer",@"FMDB和storyboard textView控制父控件",@"UIDynamic动力",@"Lock锁",@"CoreGraphics",@"头部视图",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",nil];
+    _dataArray = [NSMutableArray arrayWithObjects:@"webview与交互",@"RAC学习",@"AVFoundataion", @"NSTimer",@"FMDB和storyboard textView控制父控件",@"UIDynamic动力",@"Lock锁",@"CoreGraphics",@"头部视图",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",nil];
     [self setUpNaivigationItem];
     [self effectVisualView];
     [self test1];
@@ -753,6 +753,10 @@
     else if([title isEqualToString:@"延迟调用与取消"])
     {
         [self performSegueWithIdentifier:@"DelaySegue" sender:nil];
+    }
+    else if([title isEqualToString:@"支付"])
+    {
+        [self performSegueWithIdentifier:@"PaySegue" sender:nil];
     }
 }
 

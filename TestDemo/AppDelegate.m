@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import <AlipaySDK/AlipaySDK.h>
+#import "WXApi.h"
 
-@interface AppDelegate ()
+
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -27,7 +30,54 @@
 - (void)confing
 {
     [NSThread sleepForTimeInterval:1.0];//设置启动页面时间
+    
+    
+    
+    //向微信注册appid.
+    //Description :  更新后的api 没有什么作用,只是给开发者一种解释作用.
+    [WXApi registerApp:@"wx920fde9f97d60569" withDescription:@"微信支付"];
 }
+
+#pragma mark - WXApiDelegate
+-(void)onResp:(BaseResp*)resp
+{
+    if ([resp isKindOfClass:[PayResp class]]){
+        PayResp*response=(PayResp*)resp;
+        switch(response.errCode){
+            case WXSuccess:
+                //服务器端查询支付通知或查询API返回的结果再提示成功
+                NSLog(@"支付成功");
+                break;
+            default:
+                NSLog(@"支付失败，retcode=%d",resp.errCode);
+                break;
+        }
+    }
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(nonnull NSURL *)url options:(nonnull NSDictionary<NSString *,id> *)options
+{
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    
+    if ([url.host isEqualToString:@"safepay"]) {
+        //跳转支付宝钱包进行支付，处理支付结果
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);
+        }];
+    }
+    
+    return [WXApi handleOpenURL:url delegate:self];
+    
+    return YES;
+}
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -50,5 +100,8 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
 
 @end

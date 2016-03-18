@@ -876,6 +876,7 @@
                         <segue destination="sBE-u2-pn0" kind="show" identifier="TransferSegue" id="NhQ-Y8-8xT"/>
                         <segue destination="90i-9O-JEd" kind="show" identifier="BLESegue" id="IpQ-6F-HtJ"/>
                         <segue destination="qI8-St-zfA" kind="show" identifier="DelaySegue" id="jTY-Ws-5WR"/>
+                        <segue destination="X1w-9M-cjd" kind="show" identifier="PaySegue" id="5l6-5y-woA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lla-R9-m4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1015,6 +1016,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PaF-0P-ZZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-8119.5" y="-3375.75"/>
+        </scene>
+        <!--Pay View Controller-->
+        <scene sceneID="mP1-cJ-nnL">
+            <objects>
+                <viewController id="X1w-9M-cjd" customClass="PayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6sO-qW-TDD"/>
+                        <viewControllerLayoutGuide type="bottom" id="jLU-px-Qmg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oVL-3w-Hs1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uMw-aE-L5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8143.5" y="-4731.75"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cd4-D8-qkL">

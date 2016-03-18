@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
+    NSURL *url = [NSURL URLWithString:@"http://www.sina.com.cn/"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [_webView loadRequest:request];
     //属性
@@ -34,9 +34,9 @@
     _webView.dataDetectorTypes = UIDataDetectorTypeNone;
     
     [self setUpLeftNaviItem];
-//    self.bridge = [WebViewJavascriptBridge bridgeForWebView:self.webView handler:^(id data, WVJBResponseCallback responseCallback) {
-//        NSLog(@"-----WebViewJavascriptBridge--------------");
-//    }];
+    self.bridge = [WebViewJavascriptBridge bridgeForWebView:self.webView handler:^(id data, WVJBResponseCallback responseCallback) {
+        NSLog(@"-----WebViewJavascriptBridge--------------");
+    }];
     
 }
 
@@ -115,8 +115,8 @@
 //    self.navigationController.
     
     //
-//    [_webView stringByEvaluatingJavaScriptFromString:@"function test(){ alert(123123123)}"];
-//    [_webView stringByEvaluatingJavaScriptFromString:@"test();"];//调用
+    [_webView stringByEvaluatingJavaScriptFromString:@"function test(){ alert(123123123)}"];
+    [_webView stringByEvaluatingJavaScriptFromString:@"test();"];//调用
     
 }
 
