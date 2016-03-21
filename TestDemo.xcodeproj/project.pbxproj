@@ -42,6 +42,8 @@
 		FD68F55D1C9BCB7800771B3C /* ApiXml.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD68F5571C9BCB7800771B3C /* ApiXml.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FD68F55E1C9BCB7800771B3C /* payRequsestHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD68F5591C9BCB7800771B3C /* payRequsestHandler.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FD68F55F1C9BCB7800771B3C /* WXUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD68F55B1C9BCB7800771B3C /* WXUtil.mm */; };
+		FD68F5611C9BE55800771B3C /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68F5601C9BE55800771B3C /* GameKit.framework */; };
+		FD68F5641C9BE9D600771B3C /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68F5631C9BE9D600771B3C /* CoreBluetooth.framework */; };
 		FD6A760F1C7C315C00D7E5D8 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6A760E1C7C315C00D7E5D8 /* share.png */; };
 		FD76AB531C97B9120071F9AB /* BLEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76AB521C97B9120071F9AB /* BLEViewController.m */; };
 		FD76AB561C97D03A0071F9AB /* DelayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76AB551C97D03A0071F9AB /* DelayViewController.m */; };
@@ -535,6 +537,8 @@
 		FD68F5591C9BCB7800771B3C /* payRequsestHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = payRequsestHandler.mm; sourceTree = "<group>"; };
 		FD68F55A1C9BCB7800771B3C /* WXUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXUtil.h; sourceTree = "<group>"; };
 		FD68F55B1C9BCB7800771B3C /* WXUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WXUtil.mm; sourceTree = "<group>"; };
+		FD68F5601C9BE55800771B3C /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		FD68F5631C9BE9D600771B3C /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		FD6A760E1C7C315C00D7E5D8 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		FD76AB511C97B9120071F9AB /* BLEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEViewController.h; sourceTree = "<group>"; };
 		FD76AB521C97B9120071F9AB /* BLEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEViewController.m; sourceTree = "<group>"; };
@@ -1196,6 +1200,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD68F5641C9BE9D600771B3C /* CoreBluetooth.framework in Frameworks */,
+				FD68F5611C9BE55800771B3C /* GameKit.framework in Frameworks */,
 				FD7E2EB11C9A87A900D292CC /* CoreMotion.framework in Frameworks */,
 				FD7E2EAF1C9A872700D292CC /* CoreTelephony.framework in Frameworks */,
 				FD68DE611C9A852D00E73EF5 /* libc++.tbd in Frameworks */,
@@ -1242,6 +1248,8 @@
 		B3FF0BA1D689D6EE88C7A45B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD68F5631C9BE9D600771B3C /* CoreBluetooth.framework */,
+				FD68F5601C9BE55800771B3C /* GameKit.framework */,
 				FD7E2EB01C9A87A900D292CC /* CoreMotion.framework */,
 				FD7E2EAE1C9A872700D292CC /* CoreTelephony.framework */,
 				FD68DE601C9A852D00E73EF5 /* libc++.tbd */,

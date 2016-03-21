@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface BLEViewController : UIViewController
+{
+
+}
+
+
+
+@property (nonatomic, strong) NSMutableDictionary *dict;
 
 @end

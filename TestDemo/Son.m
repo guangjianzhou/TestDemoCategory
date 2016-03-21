@@ -19,6 +19,8 @@
 
 @implementation Son
 
+@synthesize sonName = _sonName;
+
 - (void)eat
 {
     NSLog(@"====eat==");
@@ -31,6 +33,18 @@
     [self wash];
 }
 
+
+- (NSString *)sonName
+{
+//    return @"zgj";
+    return _sonName;
+}
+
+
+- (void)setSonName:(NSString *)sonName
+{
+    _sonName = @"zgjhaha";
+}
 
 
 @end

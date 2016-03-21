@@ -24,6 +24,7 @@
 #import "MyView.h"
 #import "NSTimerViewController.h"
 #import "MBProgressHUD.h"
+#import "BLEViewController.h"
 
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -766,9 +767,11 @@
 #pragma mark - Segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"WebViewCosntrollerSegue"])
+    if ([segue.identifier isEqualToString:@"BLESegue"])
     {
-        
+        BLEViewController *bleVC = segue.destinationViewController;
+        bleVC.dict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"124",@"first", nil];
+//        bleVC.dict = @{@"first":@"124"};
     }
 }
 
