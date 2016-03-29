@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURL *url = [NSURL URLWithString:@"http://www.sina.com.cn/"];
+    NSURL *url = [NSURL URLWithString:@"http://mlearning.vanke.com:8033/APP/index.htm"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [_webView loadRequest:request];
     //属性

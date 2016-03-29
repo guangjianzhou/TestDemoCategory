@@ -25,6 +25,8 @@
 #import "NSTimerViewController.h"
 #import "MBProgressHUD.h"
 #import "BLEViewController.h"
+#import "DataSetObject.h"
+#import <SDWebImage/SDWebImageManager.h>
 
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -51,6 +53,7 @@
 @property (strong, nonatomic)     CustomPopView *popView;
 @property (strong, nonatomic) MBProgressHUD *hud;
 
+@property (strong, nonatomic) DataSetObject *emptyDataSet;
 @property (strong, nonatomic) UIView *subView;
 
 @end
@@ -121,12 +124,13 @@
     _segmentControl.layer.cornerRadius = 20;
     _segmentControl.layer.masksToBounds = YES;
     
-    _dataArray = [NSMutableArray arrayWithObjects:@"webview与交互",@"RAC学习",@"AVFoundataion", @"NSTimer",@"FMDB和storyboard textView控制父控件",@"UIDynamic动力",@"Lock锁",@"CoreGraphics",@"头部视图",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",nil];
+    _dataArray = [NSMutableArray arrayWithObjects:@"webview与交互",@"RAC学习",@"AVFoundataion", @"NSTimer",@"FMDB和storyboard textView控制父控件",@"UIDynamic动力",@"Lock锁",@"CoreGraphics",@"头部视图",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",nil];
     [self setUpNaivigationItem];
     [self effectVisualView];
     [self test1];
     [self gcdSerialQueue];
     [self gcdGlobalQueue];
+    [self setEmptyView];
 //    [self gcdAfterQueue];
     {
         //键盘事件监听
@@ -136,10 +140,20 @@
         self.inputTextField.inputView = [views lastObject];
     }
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"topbar"] forBarMetrics:UIBarMetricsDefault];
-    
-    
-    
-    
+}
+
+- (void)setEmptyView
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+
+            self.emptyDataSet = [[DataSetObject alloc]initWithSuperScrollView:self.tableView];
+            self.emptyDataSet.state = loadingState;
+            self.emptyDataSet.reloading = ^{
+                
+            };
+        });
+    });
 }
 
 - (void)testNotifi:(NSNotification *)notifi
@@ -690,6 +704,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    
     NSString *title = _dataArray[indexPath.row];
     if ([title isEqualToString:@"webview与交互"])
     {
@@ -758,6 +774,10 @@
     else if([title isEqualToString:@"支付"])
     {
         [self performSegueWithIdentifier:@"PaySegue" sender:nil];
+    }
+    else if([title isEqualToString:@"CaseView"])
+    {
+        [self performSegueWithIdentifier:@"CaseSegue" sender:nil];
     }
 }
 

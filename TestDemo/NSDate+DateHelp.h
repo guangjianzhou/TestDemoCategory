@@ -80,6 +80,9 @@ typedef NS_ENUM (NSUInteger, IntervalType) {
 //判断今天、昨天 还是日期
 + (NSString *)compareDate:(NSDate *)date;
 
+//根据日期计算距离今天的  刚刚 昨天 天前 一个月前
++ (NSString *)intervalSinceNow:(NSString *)dateStr;
+
 //给个date 返回星期几
 + (NSString *)getOfWeek;
 + (NSString *)getOfWeekWithDate:(NSDate *)date;

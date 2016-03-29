@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ShowCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nex-b8-WiM">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXm-Y4-gcm">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="e2m-fY-CDe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="QXm-Y4-gcm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DnF-fX-d3N"/>
+                <constraint firstAttribute="bottom" secondItem="Nex-b8-WiM" secondAttribute="bottom" id="IlD-gH-WDk"/>
+                <constraint firstItem="QXm-Y4-gcm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="U9b-AK-SqN"/>
+                <constraint firstAttribute="trailing" secondItem="QXm-Y4-gcm" secondAttribute="trailing" id="eja-ka-9Cv"/>
+                <constraint firstItem="Nex-b8-WiM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gIc-Oc-8jm"/>
+                <constraint firstAttribute="trailing" secondItem="Nex-b8-WiM" secondAttribute="trailing" id="gWj-9Z-UHf"/>
+                <constraint firstItem="Nex-b8-WiM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ix6-FY-afu"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="Nex-b8-WiM" id="jG1-ge-CTW"/>
+                <outlet property="titleLabel" destination="QXm-Y4-gcm" id="pXB-1Y-sr6"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

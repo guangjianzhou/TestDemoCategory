@@ -7,9 +7,11 @@
 //
 
 #import "AssertViewController.h"
-#import <ZXingObjC/ZXingObjC.h>
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <CoreMotion/CoreMotion.h>
+#import <ZXingObjC.h>
+
 
 @interface AssertViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,ZXCaptureDelegate,AVCaptureMetadataOutputObjectsDelegate,UIAlertViewDelegate>
 
@@ -20,17 +22,29 @@
 
 @property (nonatomic, strong) UIImagePickerController *imagePickerController;
 @property (nonatomic, strong) ZXCapture *capture;
-@property (weak, nonatomic) IBOutlet UIView *scanView;
 
+@property (weak, nonatomic) IBOutlet UIView *scanView;
 @property (weak, nonatomic) IBOutlet UIButton *openTorchButton;
 
+
+@property (nonatomic, strong) CMMotionManager * motionManager;
+@property (nonatomic, strong) NSOperationQueue * operationQueue;
+@property (nonatomic, assign) BOOL isShaking;
+
 @end
+
+static const double accelerationThreshold = 2.0f;
 
 @implementation AssertViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    {
+        _operationQueue = [NSOperationQueue new];
+        _motionManager = [CMMotionManager new];
+        _motionManager.accelerometerUpdateInterval = 0.1;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -39,7 +53,31 @@
     [[UIApplication sharedApplication] setApplicationSupportsShakeToEdit:NO];
     [self tapVC];
     self.scanView.hidden = YES;
+    
+    //监听
+    [self startAccelerometer];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:)
+                                                 name:UIApplicationDidEnterBackgroundNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveNotification:)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:nil];
 }
+
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [_motionManager stopAccelerometerUpdates];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidEnterBackgroundNotification  object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:nil];
+    
+    [super viewDidDisappear:animated];
+}
+
+
 
 static int x = 0;
 
@@ -695,30 +733,119 @@ static int x = 0;
     
 }
 
-#pragma mark  - 摇一摇
-- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+#pragma mark  - 摇一摇1
+//- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+//{
+//    NSLog(@"motionBegan===========");
+//    AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);
+//    AudioServicesPlaySystemSound (1007);//声音
+//    
+//}
+//
+//- (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event
+//{
+//    NSLog(@"motionCancelled===========");
+//}
+//
+//- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+//{
+//     NSLog(@"motionEnded===========");
+//}
+//
+//- (BOOL)canBecomeFirstResponder
+//{
+//    //默认是NO，所以得重写此方法，设成YES
+//    return NO;
+//}
+
+
+#pragma mark - 另一种摇一摇
+#pragma mark - 监听动作
+
+-(void)startAccelerometer
 {
-    NSLog(@"motionBegan===========");
-    AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);
-    AudioServicesPlaySystemSound (1007);//声音
+    //以push的方式更新并在block中接收加速度
     
+    [_motionManager startAccelerometerUpdatesToQueue:_operationQueue
+                                         withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
+                                             [self outputAccelertionData:accelerometerData.acceleration];
+                                         }];
 }
 
-- (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event
+-(void)outputAccelertionData:(CMAcceleration)acceleration
 {
-    NSLog(@"motionCancelled===========");
+    double accelerameter = sqrt(pow(acceleration.x, 2) + pow(acceleration.y, 2) + pow(acceleration.z, 2));
+    
+    if (accelerameter > accelerationThreshold) {
+        [_motionManager stopAccelerometerUpdates];
+        [_operationQueue cancelAllOperations];
+        if (_isShaking) {return;}
+        _isShaking = YES;
+        
+        AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);
+        AudioServicesPlaySystemSound (1007);//声音
+        dispatch_async(dispatch_get_main_queue(), ^{
+//            [self rotate:imageView];
+            [self startAccelerometer];
+            _isShaking = NO;
+        });
+    }
 }
 
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+-(void)receiveNotification:(NSNotification *)notification
 {
-     NSLog(@"motionEnded===========");
+    if ([notification.name isEqualToString:UIApplicationDidEnterBackgroundNotification]) {
+        [_motionManager stopAccelerometerUpdates];
+    } else {
+        [self startAccelerometer];
+    }
 }
 
-- (BOOL)canBecomeFirstResponder
+#pragma mark - 动画效果
+
+- (void)rotate:(UIView *)view
 {
-    //默认是NO，所以得重写此方法，设成YES
-    return NO;
+    CABasicAnimation *rotate = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    rotate.fromValue = [NSNumber numberWithFloat:0];
+    rotate.toValue = [NSNumber numberWithFloat:M_PI / 3.0];
+    rotate.duration = 0.18;
+    rotate.repeatCount = 2;
+    rotate.autoreverses = YES;
+    
+    [CATransaction begin];
+    [self setAnchorPoint:CGPointMake(-0.2, 0.9) forView:view];
+    [CATransaction setCompletionBlock:^{
+//        [self getFetchProject]; 获取数据
+    }];
+    [view.layer addAnimation:rotate forKey:nil];
+    [CATransaction commit];
 }
+
+
+// 参考 http://stackoverflow.com/questions/1968017/changing-my-calayers-anchorpoint-moves-the-view
+
+-(void)setAnchorPoint:(CGPoint)anchorPoint forView:(UIView *)view
+{
+    CGPoint newPoint = CGPointMake(view.bounds.size.width * anchorPoint.x,
+                                   view.bounds.size.height * anchorPoint.y);
+    CGPoint oldPoint = CGPointMake(view.bounds.size.width * view.layer.anchorPoint.x,
+                                   view.bounds.size.height * view.layer.anchorPoint.y);
+    
+    newPoint = CGPointApplyAffineTransform(newPoint, view.transform);
+    oldPoint = CGPointApplyAffineTransform(oldPoint, view.transform);
+    
+    CGPoint position = view.layer.position;
+    
+    position.x -= oldPoint.x;
+    position.x += newPoint.x;
+    
+    position.y -= oldPoint.y;
+    position.y += newPoint.y;
+    
+    view.layer.position = position;
+    view.layer.anchorPoint = anchorPoint;
+}
+
 
 
 - (void)didReceiveMemoryWarning
