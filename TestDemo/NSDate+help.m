@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 ShareMerge. All rights reserved.
 //
 
-#import "NSDate+DateHelp.h"
+#import "NSDate+help.h"
 
 typedef enum{
     SUN,
@@ -19,7 +19,7 @@ typedef enum{
 }WEEK;
 
 
-@implementation NSDate (DateHelp)
+@implementation NSDate (help)
 
 #pragma mark - 获取时间
 //时间戳（格式为yyyyMMddHHmmss）

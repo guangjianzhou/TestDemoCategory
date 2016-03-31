@@ -47,7 +47,7 @@
 		FD6A760F1C7C315C00D7E5D8 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6A760E1C7C315C00D7E5D8 /* share.png */; };
 		FD76AB531C97B9120071F9AB /* BLEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76AB521C97B9120071F9AB /* BLEViewController.m */; };
 		FD76AB561C97D03A0071F9AB /* DelayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76AB551C97D03A0071F9AB /* DelayViewController.m */; };
-		FD7E27031C1914E4002D4CDD /* NSDate+DateHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E27021C1914E4002D4CDD /* NSDate+DateHelp.m */; };
+		FD7E27031C1914E4002D4CDD /* NSDate+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E27021C1914E4002D4CDD /* NSDate+help.m */; };
 		FD7E2EAF1C9A872700D292CC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7E2EAE1C9A872700D292CC /* CoreTelephony.framework */; };
 		FD7E2EB11C9A87A900D292CC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7E2EB01C9A87A900D292CC /* CoreMotion.framework */; };
 		FD7FF4571C3B4C4E00DDB21E /* NSTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7FF4561C3B4C4E00DDB21E /* NSTimerViewController.m */; };
@@ -417,6 +417,421 @@
 		FDF5924A1C0EC40B00AF8B5C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF592491C0EC40B00AF8B5C /* User.m */; };
 		FDFA16231C5EEF5C007D27C7 /* LockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFA16221C5EEF5C007D27C7 /* LockViewController.m */; };
 		FDFA16261C5EF11D007D27C7 /* LockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFA16251C5EF11D007D27C7 /* LockManager.m */; };
+		FDFDC50F1CACC460002A6B03 /* ZXCode39Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE5F1C8EBF8300CEF5CA /* ZXCode39Writer.m */; };
+		FDFDC5101CACC460002A6B03 /* ZXTelParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD691C8EBF8300CEF5CA /* ZXTelParsedResult.m */; };
+		FDFDC5111CACC460002A6B03 /* ZXRSSExpandedRow.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE471C8EBF8300CEF5CA /* ZXRSSExpandedRow.m */; };
+		FDFDC5121CACC460002A6B03 /* ZXMultiFormatWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAF001C8EBF8300CEF5CA /* ZXMultiFormatWriter.m */; };
+		FDFDC5131CACC460002A6B03 /* ZXISBNParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD541C8EBF8300CEF5CA /* ZXISBNParsedResult.m */; };
+		FDFDC5141CACC460002A6B03 /* ZXPDF417Reader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEBC1C8EBF8300CEF5CA /* ZXPDF417Reader.m */; };
+		FDFDC5151CACC460002A6B03 /* ZXOneDimensionalCodeWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE761C8EBF8300CEF5CA /* ZXOneDimensionalCodeWriter.m */; };
+		FDFDC5161CACC460002A6B03 /* ZXSMSParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD631C8EBF8300CEF5CA /* ZXSMSParsedResult.m */; };
+		FDFDC5171CACC460002A6B03 /* CoreGraphicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDCCF04A1C605DC30012F928 /* CoreGraphicsViewController.m */; };
+		FDFDC5181CACC460002A6B03 /* ZXUPCAWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE7C1C8EBF8300CEF5CA /* ZXUPCAWriter.m */; };
+		FDFDC5191CACC460002A6B03 /* ZXQRCodeBlockPair.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEE81C8EBF8300CEF5CA /* ZXQRCodeBlockPair.m */; };
+		FDFDC51A1CACC460002A6B03 /* ZXBinarizer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADB91C8EBF8300CEF5CA /* ZXBinarizer.m */; };
+		FDFDC51B1CACC460002A6B03 /* CaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDFDDAD1CA50F750038B658 /* CaseViewController.m */; };
+		FDFDC51C1CACC460002A6B03 /* PopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9D46E1C29457C00CB9369 /* PopMenu.m */; };
+		FDFDC51D1CACC460002A6B03 /* ZXPDF417BarcodeValue.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE951C8EBF8300CEF5CA /* ZXPDF417BarcodeValue.m */; };
+		FDFDC51E1CACC460002A6B03 /* ZXRSSExpandedDecodedNumeric.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE391C8EBF8300CEF5CA /* ZXRSSExpandedDecodedNumeric.m */; };
+		FDFDC51F1CACC460002A6B03 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAA34DA1C9FC9C000FF5594 /* UITextView+Placeholder.m */; };
+		FDFDC5201CACC460002A6B03 /* DataSetObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF3E8F01CA1234300E517D5 /* DataSetObject.m */; };
+		FDFDC5211CACC460002A6B03 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDB6DA71C7AE61300E49D8B /* Student.m */; };
+		FDFDC5221CACC460002A6B03 /* ZXEmailDoCoMoResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD4A1C8EBF8300CEF5CA /* ZXEmailDoCoMoResultParser.m */; };
+		FDFDC5231CACC460002A6B03 /* ZXQRCodeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEDD1C8EBF8300CEF5CA /* ZXQRCodeDetector.m */; };
+		FDFDC5241CACC460002A6B03 /* InteractionTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD343FD1C9290B500F4677A /* InteractionTransitionAnimation.m */; };
+		FDFDC5251CACC460002A6B03 /* CoreGraphicsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE9040A1C608ED800798583 /* CoreGraphicsView.m */; };
+		FDFDC5261CACC460002A6B03 /* ZXBitArray.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD991C8EBF8300CEF5CA /* ZXBitArray.m */; };
+		FDFDC5271CACC460002A6B03 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8A99AA1C22864800AB4E6B /* SecondViewController.m */; };
+		FDFDC5281CACC460002A6B03 /* FFmpegViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FDD05BB01C7FEEEF00B2F930 /* FFmpegViewController.mm */; };
+		FDFDC5291CACC460002A6B03 /* PushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD343FA1C92707400F4677A /* PushTransition.m */; };
+		FDFDC52A1CACC460002A6B03 /* ApiXml.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD68F5571C9BCB7800771B3C /* ApiXml.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FDFDC52B1CACC460002A6B03 /* FDRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEF1B911C21580600187029 /* FDRoot.m */; };
+		FDFDC52C1CACC460002A6B03 /* ZXCodaBarReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE551C8EBF8300CEF5CA /* ZXCodaBarReader.m */; };
+		FDFDC52D1CACC460002A6B03 /* ZXPDF417Codeword.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE991C8EBF8300CEF5CA /* ZXPDF417Codeword.m */; };
+		FDFDC52E1CACC460002A6B03 /* ZXHybridBinarizer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADAF1C8EBF8300CEF5CA /* ZXHybridBinarizer.m */; };
+		FDFDC52F1CACC460002A6B03 /* ZXPDF417Dimensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEB31C8EBF8300CEF5CA /* ZXPDF417Dimensions.m */; };
+		FDFDC5301CACC460002A6B03 /* ZXEmailAddressResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD481C8EBF8300CEF5CA /* ZXEmailAddressResultParser.m */; };
+		FDFDC5311CACC460002A6B03 /* ZXPDF417BarcodeRow.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEB11C8EBF8300CEF5CA /* ZXPDF417BarcodeRow.m */; };
+		FDFDC5321CACC460002A6B03 /* ZXAddressBookParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD3E1C8EBF8300CEF5CA /* ZXAddressBookParsedResult.m */; };
+		FDFDC5331CACC460002A6B03 /* ZXUPCEANExtension2Support.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE7E1C8EBF8300CEF5CA /* ZXUPCEANExtension2Support.m */; };
+		FDFDC5341CACC460002A6B03 /* ZXEAN8Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE691C8EBF8300CEF5CA /* ZXEAN8Writer.m */; };
+		FDFDC5351CACC460002A6B03 /* ZXProductParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD5B1C8EBF8300CEF5CA /* ZXProductParsedResult.m */; };
+		FDFDC5361CACC460002A6B03 /* UIBarButtonItem+WNXBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9383A1C8817FD00DABD8C /* UIBarButtonItem+WNXBarButtonItem.m */; };
+		FDFDC5371CACC460002A6B03 /* ZXGenericMultipleBarcodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE141C8EBF8300CEF5CA /* ZXGenericMultipleBarcodeReader.m */; };
+		FDFDC5381CACC460002A6B03 /* ZXWhiteRectangleDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD8E1C8EBF8300CEF5CA /* ZXWhiteRectangleDetector.m */; };
+		FDFDC5391CACC460002A6B03 /* ZXVINResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD7B1C8EBF8300CEF5CA /* ZXVINResultParser.m */; };
+		FDFDC53A1CACC460002A6B03 /* ZXUPCEANExtensionSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE821C8EBF8300CEF5CA /* ZXUPCEANExtensionSupport.m */; };
+		FDFDC53B1CACC460002A6B03 /* RSADataVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = FD68DE561C9A83F800E73EF5 /* RSADataVerifier.m */; };
+		FDFDC53C1CACC460002A6B03 /* ZXMonochromeRectangleDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD8C1C8EBF8300CEF5CA /* ZXMonochromeRectangleDetector.m */; };
+		FDFDC53D1CACC460002A6B03 /* ImageCropperView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9EBFC1CA8D8E200217B92 /* ImageCropperView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FDFDC53E1CACC460002A6B03 /* ZXRSSExpandedCurrentParsingState.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE331C8EBF8300CEF5CA /* ZXRSSExpandedCurrentParsingState.m */; };
+		FDFDC53F1CACC460002A6B03 /* ZXOneDReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE781C8EBF8300CEF5CA /* ZXOneDReader.m */; };
+		FDFDC5401CACC460002A6B03 /* ZXSMSTOMMSTOResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD651C8EBF8300CEF5CA /* ZXSMSTOMMSTOResultParser.m */; };
+		FDFDC5411CACC460002A6B03 /* ZXQRCodeFinderPatternInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEE31C8EBF8300CEF5CA /* ZXQRCodeFinderPatternInfo.m */; };
+		FDFDC5421CACC460002A6B03 /* ZXQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEE61C8EBF8300CEF5CA /* ZXQRCode.m */; };
+		FDFDC5431CACC460002A6B03 /* ZXRSSFinderPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE4F1C8EBF8300CEF5CA /* ZXRSSFinderPattern.m */; };
+		FDFDC5441CACC460002A6B03 /* ZXQRCodeVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAED61C8EBF8300CEF5CA /* ZXQRCodeVersion.m */; };
+		FDFDC5451CACC460002A6B03 /* PopUpZgjView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDB814F1C3F56AA00BEBCB3 /* PopUpZgjView.m */; };
+		FDFDC5461CACC460002A6B03 /* ZXParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD581C8EBF8300CEF5CA /* ZXParsedResult.m */; };
+		FDFDC5471CACC460002A6B03 /* ZXDataMatrixDefaultPlacement.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADEE1C8EBF8300CEF5CA /* ZXDataMatrixDefaultPlacement.m */; };
+		FDFDC5481CACC460002A6B03 /* ZXPlanarYUVLuminanceSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADCC1C8EBF8300CEF5CA /* ZXPlanarYUVLuminanceSource.m */; };
+		FDFDC5491CACC460002A6B03 /* ZXRSSExpandedPair.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE431C8EBF8300CEF5CA /* ZXRSSExpandedPair.m */; };
+		FDFDC54A1CACC460002A6B03 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF592491C0EC40B00AF8B5C /* User.m */; };
+		FDFDC54B1CACC460002A6B03 /* TitleBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD91815B1CAA5F26001A0A73 /* TitleBarView.m */; };
+		FDFDC54C1CACC460002A6B03 /* ZXByQuadrantReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE121C8EBF8300CEF5CA /* ZXByQuadrantReader.m */; };
+		FDFDC54D1CACC460002A6B03 /* ZXQRCodeMatrixUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEEE1C8EBF8300CEF5CA /* ZXQRCodeMatrixUtil.m */; };
+		FDFDC54E1CACC460002A6B03 /* ZXIntArray.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADB11C8EBF8300CEF5CA /* ZXIntArray.m */; };
+		FDFDC54F1CACC460002A6B03 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3CA461C2A703400636C40 /* WebViewJavascriptBridgeBase.m */; };
+		FDFDC5501CACC460002A6B03 /* ZXAnyAIDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE2F1C8EBF8300CEF5CA /* ZXAnyAIDecoder.m */; };
+		FDFDC5511CACC460002A6B03 /* FDMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEF1B8B1C21580600187029 /* FDMethod.m */; };
+		FDFDC5521CACC460002A6B03 /* ZXMultiDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEF21C8EBF8300CEF5CA /* ZXMultiDetector.m */; };
+		FDFDC5531CACC460002A6B03 /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBB58BF1C434C65007DE015 /* FMDBViewController.m */; };
+		FDFDC5541CACC460002A6B03 /* ZXAztecToken.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD2D1C8EBF8200CEF5CA /* ZXAztecToken.m */; };
+		FDFDC5551CACC460002A6B03 /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = FD68DE471C9A83F800E73EF5 /* base64.m */; };
+		FDFDC5561CACC460002A6B03 /* ZXAztecReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD311C8EBF8200CEF5CA /* ZXAztecReader.m */; };
+		FDFDC5571CACC460002A6B03 /* VIPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDFDDB21CA5137E0038B658 /* VIPhotoView.m */; };
+		FDFDC5581CACC460002A6B03 /* CustomCategoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAB1EE71C5F0B41001EC186 /* CustomCategoView.m */; };
+		FDFDC5591CACC460002A6B03 /* ZXGenericGFPoly.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD931C8EBF8300CEF5CA /* ZXGenericGFPoly.m */; };
+		FDFDC55A1CACC460002A6B03 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF592191C0EB43C00AF8B5C /* ViewController.m */; };
+		FDFDC55B1CACC460002A6B03 /* ZXRSSExpandedGeneralAppIdDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE3F1C8EBF8300CEF5CA /* ZXRSSExpandedGeneralAppIdDecoder.m */; };
+		FDFDC55C1CACC460002A6B03 /* RACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3CA511C2A8B9500636C40 /* RACViewController.m */; };
+		FDFDC55D1CACC460002A6B03 /* ZXDataMatrixEncoderContext.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADF31C8EBF8300CEF5CA /* ZXDataMatrixEncoderContext.m */; };
+		FDFDC55E1CACC460002A6B03 /* ZXQRCodeFinderPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEDF1C8EBF8300CEF5CA /* ZXQRCodeFinderPattern.m */; };
+		FDFDC55F1CACC460002A6B03 /* ZXDetectorResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADA91C8EBF8300CEF5CA /* ZXDetectorResult.m */; };
+		FDFDC5601CACC460002A6B03 /* ZXQRCodeMaskUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEEC1C8EBF8300CEF5CA /* ZXQRCodeMaskUtil.m */; };
+		FDFDC5611CACC460002A6B03 /* ZXModulusGF.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE8D1C8EBF8300CEF5CA /* ZXModulusGF.m */; };
+		FDFDC5621CACC460002A6B03 /* ZXQRCodeAlignmentPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAED91C8EBF8300CEF5CA /* ZXQRCodeAlignmentPattern.m */; };
+		FDFDC5631CACC460002A6B03 /* ZXStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADB51C8EBF8300CEF5CA /* ZXStringUtils.m */; };
+		FDFDC5641CACC460002A6B03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF592161C0EB43C00AF8B5C /* AppDelegate.m */; };
+		FDFDC5651CACC460002A6B03 /* UIDynamic1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD07E55D1C55C1F100FA7890 /* UIDynamic1ViewController.m */; };
+		FDFDC5661CACC460002A6B03 /* ZXDataMatrixBase256Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADEA1C8EBF8300CEF5CA /* ZXDataMatrixBase256Encoder.m */; };
+		FDFDC5671CACC460002A6B03 /* XHPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9D4521C293DBC00CB9369 /* XHPopMenu.m */; };
+		FDFDC5681CACC460002A6B03 /* ZXBoolArray.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD9F1C8EBF8300CEF5CA /* ZXBoolArray.m */; };
+		FDFDC5691CACC460002A6B03 /* ZXCode128Reader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE591C8EBF8300CEF5CA /* ZXCode128Reader.m */; };
+		FDFDC56A1CACC460002A6B03 /* BLEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76AB521C97B9120071F9AB /* BLEViewController.m */; };
+		FDFDC56B1CACC460002A6B03 /* XHPopMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9D4541C293DBC00CB9369 /* XHPopMenuItem.m */; };
+		FDFDC56C1CACC460002A6B03 /* NSDate+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E27021C1914E4002D4CDD /* NSDate+help.m */; };
+		FDFDC56D1CACC460002A6B03 /* HFImageEditorFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9EC0A1CA8F30B00217B92 /* HFImageEditorFrameView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FDFDC56E1CACC460002A6B03 /* ZXPDF417DetectorResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEAA1C8EBF8300CEF5CA /* ZXPDF417DetectorResult.m */; };
+		FDFDC56F1CACC460002A6B03 /* ZXResultPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADD21C8EBF8300CEF5CA /* ZXResultPoint.m */; };
+		FDFDC5701CACC460002A6B03 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3CA441C2A703400636C40 /* WebViewJavascriptBridge.m */; };
+		FDFDC5711CACC460002A6B03 /* ZXAztecBinaryShiftToken.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD211C8EBF8200CEF5CA /* ZXAztecBinaryShiftToken.m */; };
+		FDFDC5721CACC460002A6B03 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE22E7B1CABBB430018E643 /* Address.m */; };
+		FDFDC5731CACC460002A6B03 /* PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDB81451C3F4E5400BEBCB3 /* PopupView.m */; };
+		FDFDC5741CACC460002A6B03 /* NetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEF1B7A1C214A0300187029 /* NetAPIClient.m */; };
+		FDFDC5751CACC460002A6B03 /* ZXCode128Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE5B1C8EBF8300CEF5CA /* ZXCode128Writer.m */; };
+		FDFDC5761CACC460002A6B03 /* UIView+PressMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD938561C8818EF00DABD8C /* UIView+PressMenu.m */; };
+		FDFDC5771CACC460002A6B03 /* ZXEncodeHints.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADC31C8EBF8300CEF5CA /* ZXEncodeHints.m */; };
+		FDFDC5781CACC460002A6B03 /* ZXPDF417Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEC01C8EBF8300CEF5CA /* ZXPDF417Writer.m */; };
+		FDFDC5791CACC460002A6B03 /* WebViewCosntroller.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3CA3E1C2A62E000636C40 /* WebViewCosntroller.m */; };
+		FDFDC57A1CACC460002A6B03 /* SwipableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9181591CAA5F26001A0A73 /* SwipableViewController.m */; };
+		FDFDC57B1CACC460002A6B03 /* HorizonalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9181571CAA5F26001A0A73 /* HorizonalTableViewController.m */; };
+		FDFDC57C1CACC460002A6B03 /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE22E781CABBB1D0018E643 /* Staff.m */; };
+		FDFDC57D1CACC460002A6B03 /* payRequsestHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD68F5591C9BCB7800771B3C /* payRequsestHandler.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FDFDC57E1CACC460002A6B03 /* Units.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9181611CAA6C1B001A0A73 /* Units.m */; };
+		FDFDC57F1CACC460002A6B03 /* ZXQRCodeWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEFB1C8EBF8300CEF5CA /* ZXQRCodeWriter.m */; };
+		FDFDC5801CACC460002A6B03 /* ZXDataMatrixDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADE51C8EBF8300CEF5CA /* ZXDataMatrixDetector.m */; };
+		FDFDC5811CACC460002A6B03 /* HFImageEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9EC0D1CA8F30B00217B92 /* HFImageEditorViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FDFDC5821CACC460002A6B03 /* ZXDecoderResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADA51C8EBF8300CEF5CA /* ZXDecoderResult.m */; };
+		FDFDC5831CACC460002A6B03 /* ZXCGImageLuminanceSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD841C8EBF8300CEF5CA /* ZXCGImageLuminanceSource.m */; };
+		FDFDC5841CACC460002A6B03 /* ZXURIParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD6F1C8EBF8300CEF5CA /* ZXURIParsedResult.m */; };
+		FDFDC5851CACC460002A6B03 /* ZXMaxiCodeBitMatrixParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE081C8EBF8300CEF5CA /* ZXMaxiCodeBitMatrixParser.m */; };
+		FDFDC5861CACC460002A6B03 /* ZXPDF417HighLevelEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEB71C8EBF8300CEF5CA /* ZXPDF417HighLevelEncoder.m */; };
+		FDFDC5871CACC460002A6B03 /* ZXAztecEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD251C8EBF8200CEF5CA /* ZXAztecEncoder.m */; };
+		FDFDC5881CACC460002A6B03 /* ZXBitMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD9B1C8EBF8300CEF5CA /* ZXBitMatrix.m */; };
+		FDFDC5891CACC460002A6B03 /* ZXAI01393xDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE231C8EBF8300CEF5CA /* ZXAI01393xDecoder.m */; };
+		FDFDC58A1CACC460002A6B03 /* LockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFA16221C5EEF5C007D27C7 /* LockViewController.m */; };
+		FDFDC58B1CACC460002A6B03 /* ZXCodaBarWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE571C8EBF8300CEF5CA /* ZXCodaBarWriter.m */; };
+		FDFDC58C1CACC460002A6B03 /* ZXRSSExpandedDecodedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE3B1C8EBF8300CEF5CA /* ZXRSSExpandedDecodedObject.m */; };
+		FDFDC58D1CACC460002A6B03 /* ZXDataMatrixHighLevelEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADF71C8EBF8300CEF5CA /* ZXDataMatrixHighLevelEncoder.m */; };
+		FDFDC58E1CACC460002A6B03 /* DataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = FD68DE4A1C9A83F800E73EF5 /* DataSigner.m */; };
+		FDFDC58F1CACC460002A6B03 /* ZXExpandedProductResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD4E1C8EBF8300CEF5CA /* ZXExpandedProductResultParser.m */; };
+		FDFDC5901CACC460002A6B03 /* CustomPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC95CA81C34D68E00F6BD76 /* CustomPopView.m */; };
+		FDFDC5911CACC460002A6B03 /* TransferView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD344001C929B7800F4677A /* TransferView.m */; };
+		FDFDC5921CACC460002A6B03 /* ZXAI01AndOtherAIs.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE291C8EBF8300CEF5CA /* ZXAI01AndOtherAIs.m */; };
+		FDFDC5931CACC460002A6B03 /* MenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9D46A1C29457C00CB9369 /* MenuButton.m */; };
+		FDFDC5941CACC460002A6B03 /* ZXUPCEReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE881C8EBF8300CEF5CA /* ZXUPCEReader.m */; };
+		FDFDC5951CACC460002A6B03 /* ZXAbstractDoCoMoResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD381C8EBF8300CEF5CA /* ZXAbstractDoCoMoResultParser.m */; };
+		FDFDC5961CACC460002A6B03 /* ZXVCardResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD751C8EBF8300CEF5CA /* ZXVCardResultParser.m */; };
+		FDFDC5971CACC460002A6B03 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = FD68DE441C9A83F800E73EF5 /* Order.m */; };
+		FDFDC5981CACC460002A6B03 /* ZXResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD5F1C8EBF8300CEF5CA /* ZXResultParser.m */; };
+		FDFDC5991CACC460002A6B03 /* GlowImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9D4681C29457C00CB9369 /* GlowImageView.m */; };
+		FDFDC59A1CACC460002A6B03 /* ZXMaxiCodeDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE0C1C8EBF8300CEF5CA /* ZXMaxiCodeDecoder.m */; };
+		FDFDC59B1CACC460002A6B03 /* ThrowLineTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9382B1C87D2F500DABD8C /* ThrowLineTool.m */; };
+		FDFDC59C1CACC460002A6B03 /* AFNHTTPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB06A941C99473A00056F10 /* AFNHTTPSViewController.m */; };
+		FDFDC59D1CACC460002A6B03 /* DelayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76AB551C97D03A0071F9AB /* DelayViewController.m */; };
+		FDFDC59E1CACC460002A6B03 /* ZXAI01weightDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE2D1C8EBF8300CEF5CA /* ZXAI01weightDecoder.m */; };
+		FDFDC59F1CACC460002A6B03 /* ZXByteArray.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADA11C8EBF8300CEF5CA /* ZXByteArray.m */; };
+		FDFDC5A01CACC460002A6B03 /* WCAlertview.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0C19BE1C338306008AE06F /* WCAlertview.m */; };
+		FDFDC5A11CACC460002A6B03 /* MD5DataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = FD68DE4E1C9A83F800E73EF5 /* MD5DataSigner.m */; };
+		FDFDC5A21CACC460002A6B03 /* ZXDataMatrixC40Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADEC1C8EBF8300CEF5CA /* ZXDataMatrixC40Encoder.m */; };
+		FDFDC5A31CACC460002A6B03 /* ZXDataMatrixSymbolInfo144.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADFB1C8EBF8300CEF5CA /* ZXDataMatrixSymbolInfo144.m */; };
+		FDFDC5A41CACC460002A6B03 /* FDResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEF1B8F1C21580600187029 /* FDResult.m */; };
+		FDFDC5A51CACC460002A6B03 /* ZXPDF417ECErrorCorrection.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE911C8EBF8300CEF5CA /* ZXPDF417ECErrorCorrection.m */; };
+		FDFDC5A61CACC460002A6B03 /* ShowCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC596591CA53BE700DA533D /* ShowCollectionViewCell.m */; };
+		FDFDC5A71CACC460002A6B03 /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9181641CAA76F3001A0A73 /* UIView+Common.m */; };
+		FDFDC5A81CACC460002A6B03 /* NSDataEx.m in Sources */ = {isa = PBXBuildFile; fileRef = FD68DE501C9A83F800E73EF5 /* NSDataEx.m */; };
+		FDFDC5A91CACC460002A6B03 /* ZXMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD8A1C8EBF8300CEF5CA /* ZXMathUtils.m */; };
+		FDFDC5AA1CACC460002A6B03 /* ZXQRCodeAlignmentPatternFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEDB1C8EBF8300CEF5CA /* ZXQRCodeAlignmentPatternFinder.m */; };
+		FDFDC5AB1CACC460002A6B03 /* ZXErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADC51C8EBF8300CEF5CA /* ZXErrors.m */; };
+		FDFDC5AC1CACC460002A6B03 /* ZXAztecState.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD2B1C8EBF8200CEF5CA /* ZXAztecState.m */; };
+		FDFDC5AD1CACC460002A6B03 /* ZXGeoParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD501C8EBF8300CEF5CA /* ZXGeoParsedResult.m */; };
+		FDFDC5AE1CACC460002A6B03 /* ZXPDF417BoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE971C8EBF8300CEF5CA /* ZXPDF417BoundingBox.m */; };
+		FDFDC5AF1CACC460002A6B03 /* ZXBookmarkDoCoMoResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD421C8EBF8300CEF5CA /* ZXBookmarkDoCoMoResultParser.m */; };
+		FDFDC5B01CACC460002A6B03 /* ZXDataMatrixWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE031C8EBF8300CEF5CA /* ZXDataMatrixWriter.m */; };
+		FDFDC5B11CACC460002A6B03 /* ZXURIResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD711C8EBF8300CEF5CA /* ZXURIResultParser.m */; };
+		FDFDC5B21CACC460002A6B03 /* ZXEAN8Reader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE671C8EBF8300CEF5CA /* ZXEAN8Reader.m */; };
+		FDFDC5B31CACC460002A6B03 /* ZXDataMatrixReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE011C8EBF8300CEF5CA /* ZXDataMatrixReader.m */; };
+		FDFDC5B41CACC460002A6B03 /* ZXQRCodeDataBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEC61C8EBF8300CEF5CA /* ZXQRCodeDataBlock.m */; };
+		FDFDC5B51CACC460002A6B03 /* NSTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7FF4561C3B4C4E00DDB21E /* NSTimerViewController.m */; };
+		FDFDC5B61CACC460002A6B03 /* ZXReedSolomonEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD971C8EBF8300CEF5CA /* ZXReedSolomonEncoder.m */; };
+		FDFDC5B71CACC460002A6B03 /* AssertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE5AC201C8D17FC006562E8 /* AssertViewController.m */; };
+		FDFDC5B81CACC460002A6B03 /* ZXAztecCode.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD231C8EBF8200CEF5CA /* ZXAztecCode.m */; };
+		FDFDC5B91CACC460002A6B03 /* ZXTelResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD6B1C8EBF8300CEF5CA /* ZXTelResultParser.m */; };
+		FDFDC5BA1CACC460002A6B03 /* ZXPDF417ErrorCorrection.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEB51C8EBF8300CEF5CA /* ZXPDF417ErrorCorrection.m */; };
+		FDFDC5BB1CACC460002A6B03 /* ZXDecodeHints.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADBF1C8EBF8300CEF5CA /* ZXDecodeHints.m */; };
+		FDFDC5BC1CACC460002A6B03 /* NSString+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9384C1C88189E00DABD8C /* NSString+help.m */; };
+		FDFDC5BD1CACC460002A6B03 /* ZXUPCEANWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE861C8EBF8300CEF5CA /* ZXUPCEANWriter.m */; };
+		FDFDC5BE1CACC460002A6B03 /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD68DDE71C9A828D00E73EF5 /* PayViewController.m */; };
+		FDFDC5BF1CACC460002A6B03 /* ZXRSSExpandedDecodedChar.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE351C8EBF8300CEF5CA /* ZXRSSExpandedDecodedChar.m */; };
+		FDFDC5C01CACC460002A6B03 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC95CAD1C34F51D00F6BD76 /* MyView.m */; };
+		FDFDC5C11CACC460002A6B03 /* FileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE22E711CABAA870018E643 /* FileManagerViewController.m */; };
+		FDFDC5C21CACC460002A6B03 /* ZXAztecDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD1B1C8EBF8200CEF5CA /* ZXAztecDecoder.m */; };
+		FDFDC5C31CACC460002A6B03 /* ZXWifiParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD7D1C8EBF8300CEF5CA /* ZXWifiParsedResult.m */; };
+		FDFDC5C41CACC460002A6B03 /* ZXCode93Reader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE611C8EBF8300CEF5CA /* ZXCode93Reader.m */; };
+		FDFDC5C51CACC460002A6B03 /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9EC121CA9201400217B92 /* DraggableView.m */; };
+		FDFDC5C61CACC460002A6B03 /* ZXAI01decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE2B1C8EBF8300CEF5CA /* ZXAI01decoder.m */; };
+		FDFDC5C71CACC460002A6B03 /* ZXRGBLuminanceSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADD51C8EBF8300CEF5CA /* ZXRGBLuminanceSource.m */; };
+		FDFDC5C81CACC460002A6B03 /* ZXGenericGF.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD911C8EBF8300CEF5CA /* ZXGenericGF.m */; };
+		FDFDC5C91CACC460002A6B03 /* ZXDataMatrixErrorCorrection.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADF51C8EBF8300CEF5CA /* ZXDataMatrixErrorCorrection.m */; };
+		FDFDC5CA1CACC460002A6B03 /* NSString+Emojize.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9383F1C88184A00DABD8C /* NSString+Emojize.m */; };
+		FDFDC5CB1CACC460002A6B03 /* ZXDataMatrixASCIIEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADE81C8EBF8300CEF5CA /* ZXDataMatrixASCIIEncoder.m */; };
+		FDFDC5CC1CACC460002A6B03 /* ZXDataMatrixDecodedBitStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADDE1C8EBF8300CEF5CA /* ZXDataMatrixDecodedBitStreamParser.m */; };
+		FDFDC5CD1CACC460002A6B03 /* ZXRSSExpandedFieldParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE3D1C8EBF8300CEF5CA /* ZXRSSExpandedFieldParser.m */; };
+		FDFDC5CE1CACC460002A6B03 /* ZXQRCodeFinderPatternFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEE11C8EBF8300CEF5CA /* ZXQRCodeFinderPatternFinder.m */; };
+		FDFDC5CF1CACC460002A6B03 /* ZXPDF417Common.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEBA1C8EBF8300CEF5CA /* ZXPDF417Common.m */; };
+		FDFDC5D01CACC460002A6B03 /* ZXLuminanceSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADCA1C8EBF8300CEF5CA /* ZXLuminanceSource.m */; };
+		FDFDC5D11CACC460002A6B03 /* ZXUPCEANReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE841C8EBF8300CEF5CA /* ZXUPCEANReader.m */; };
+		FDFDC5D21CACC460002A6B03 /* ZXQRCodeFormatInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAED21C8EBF8300CEF5CA /* ZXQRCodeFormatInformation.m */; };
+		FDFDC5D31CACC460002A6B03 /* ZXVEventResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD771C8EBF8300CEF5CA /* ZXVEventResultParser.m */; };
+		FDFDC5D41CACC460002A6B03 /* ZXEAN13Reader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE631C8EBF8300CEF5CA /* ZXEAN13Reader.m */; };
+		FDFDC5D51CACC460002A6B03 /* ZXPDF417Detector.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEA81C8EBF8300CEF5CA /* ZXPDF417Detector.m */; };
+		FDFDC5D61CACC460002A6B03 /* ZXInvertedLuminanceSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADC81C8EBF8300CEF5CA /* ZXInvertedLuminanceSource.m */; };
+		FDFDC5D71CACC460002A6B03 /* ZXRSSDataCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE4D1C8EBF8300CEF5CA /* ZXRSSDataCharacter.m */; };
+		FDFDC5D81CACC460002A6B03 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA0C3A61C1FB8870087B5CE /* RootViewController.m */; };
+		FDFDC5D91CACC460002A6B03 /* XHRealTimeBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9D4741C294D0F00CB9369 /* XHRealTimeBlur.m */; };
+		FDFDC5DA1CACC460002A6B03 /* ZXRSSExpandedBlockParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE311C8EBF8300CEF5CA /* ZXRSSExpandedBlockParsedResult.m */; };
+		FDFDC5DB1CACC460002A6B03 /* UIViewController+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD938591C88190400DABD8C /* UIViewController+help.m */; };
+		FDFDC5DC1CACC460002A6B03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF592131C0EB43C00AF8B5C /* main.m */; };
+		FDFDC5DD1CACC460002A6B03 /* ZXDataMatrixTextEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADFD1C8EBF8300CEF5CA /* ZXDataMatrixTextEncoder.m */; };
+		FDFDC5DE1CACC460002A6B03 /* UIImage+Rotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9EBFE1CA8D8E200217B92 /* UIImage+Rotation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FDFDC5DF1CACC460002A6B03 /* ZXPDF417DecodedBitStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE9D1C8EBF8300CEF5CA /* ZXPDF417DecodedBitStreamParser.m */; };
+		FDFDC5E01CACC460002A6B03 /* ZXAI013103decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE1D1C8EBF8300CEF5CA /* ZXAI013103decoder.m */; };
+		FDFDC5E11CACC460002A6B03 /* ZXBitArrayBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE411C8EBF8300CEF5CA /* ZXBitArrayBuilder.m */; };
+		FDFDC5E21CACC460002A6B03 /* ZXMultiFormatReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEFE1C8EBF8300CEF5CA /* ZXMultiFormatReader.m */; };
+		FDFDC5E31CACC460002A6B03 /* ZXAbstractExpandedDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE1B1C8EBF8300CEF5CA /* ZXAbstractExpandedDecoder.m */; };
+		FDFDC5E41CACC460002A6B03 /* ZXAbstractRSSReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE491C8EBF8300CEF5CA /* ZXAbstractRSSReader.m */; };
+		FDFDC5E51CACC460002A6B03 /* WXUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD68F55B1C9BCB7800771B3C /* WXUtil.mm */; };
+		FDFDC5E61CACC460002A6B03 /* UIImage+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC29C7F1C2CCF7700F51079 /* UIImage+help.m */; };
+		FDFDC5E71CACC460002A6B03 /* ZXEmailAddressParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD461C8EBF8300CEF5CA /* ZXEmailAddressParsedResult.m */; };
+		FDFDC5E81CACC460002A6B03 /* RSADataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = FD68DE541C9A83F800E73EF5 /* RSADataSigner.m */; };
+		FDFDC5E91CACC460002A6B03 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD578E581C1E76D000F13038 /* CustomView.m */; };
+		FDFDC5EA1CACC460002A6B03 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD938421C88184A00DABD8C /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FDFDC5EB1CACC460002A6B03 /* ZXMaxiCodeDecodedBitStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE0A1C8EBF8300CEF5CA /* ZXMaxiCodeDecodedBitStreamParser.m */; };
+		FDFDC5EC1CACC460002A6B03 /* ZXAddressBookAUResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD3A1C8EBF8300CEF5CA /* ZXAddressBookAUResultParser.m */; };
+		FDFDC5ED1CACC460002A6B03 /* ZXQRCodeMode.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAED41C8EBF8300CEF5CA /* ZXQRCodeMode.m */; };
+		FDFDC5EE1CACC460002A6B03 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF592461C0EB4DA00AF8B5C /* FirstViewController.m */; };
+		FDFDC5EF1CACC460002A6B03 /* ZXWifiResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD7F1C8EBF8300CEF5CA /* ZXWifiResultParser.m */; };
+		FDFDC5F01CACC460002A6B03 /* ZXRSSExpandedReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE451C8EBF8300CEF5CA /* ZXRSSExpandedReader.m */; };
+		FDFDC5F11CACC460002A6B03 /* ZXITFReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE6E1C8EBF8300CEF5CA /* ZXITFReader.m */; };
+		FDFDC5F21CACC460002A6B03 /* openssl_wrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = FD68DE521C9A83F800E73EF5 /* openssl_wrapper.m */; };
+		FDFDC5F31CACC460002A6B03 /* ZXQRCodeDataMask.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEC81C8EBF8300CEF5CA /* ZXQRCodeDataMask.m */; };
+		FDFDC5F41CACC460002A6B03 /* UIDevice+Info.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9384F1C8818AD00DABD8C /* UIDevice+Info.m */; };
+		FDFDC5F51CACC460002A6B03 /* ZXProductResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD5D1C8EBF8300CEF5CA /* ZXProductResultParser.m */; };
+		FDFDC5F61CACC460002A6B03 /* ZXPDF417.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEAD1C8EBF8300CEF5CA /* ZXPDF417.m */; };
+		FDFDC5F71CACC460002A6B03 /* ZXDataMatrixEdifactEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADF01C8EBF8300CEF5CA /* ZXDataMatrixEdifactEncoder.m */; };
+		FDFDC5F81CACC460002A6B03 /* ZXPDF417DetectionResultColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEA11C8EBF8300CEF5CA /* ZXPDF417DetectionResultColumn.m */; };
+		FDFDC5F91CACC460002A6B03 /* ZXQRCodeBitMatrixParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEC41C8EBF8300CEF5CA /* ZXQRCodeBitMatrixParser.m */; };
+		FDFDC5FA1CACC460002A6B03 /* ZXDataMatrixBitMatrixParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADDA1C8EBF8300CEF5CA /* ZXDataMatrixBitMatrixParser.m */; };
+		FDFDC5FB1CACC460002A6B03 /* ZXRSS14Reader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE4B1C8EBF8300CEF5CA /* ZXRSS14Reader.m */; };
+		FDFDC5FC1CACC460002A6B03 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8A99AD1C229A1800AB4E6B /* ThirdViewController.m */; };
+		FDFDC5FD1CACC460002A6B03 /* ZXRSSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE531C8EBF8300CEF5CA /* ZXRSSUtils.m */; };
+		FDFDC5FE1CACC460002A6B03 /* ZXAI01392xDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE211C8EBF8300CEF5CA /* ZXAI01392xDecoder.m */; };
+		FDFDC5FF1CACC460002A6B03 /* ZXExpandedProductParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD4C1C8EBF8300CEF5CA /* ZXExpandedProductParsedResult.m */; };
+		FDFDC6001CACC460002A6B03 /* ZXAztecDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD1E1C8EBF8200CEF5CA /* ZXAztecDetector.m */; };
+		FDFDC6011CACC460002A6B03 /* ZXBizcardResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD401C8EBF8300CEF5CA /* ZXBizcardResultParser.m */; };
+		FDFDC6021CACC460002A6B03 /* ZXPDF417ResultMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEBE1C8EBF8300CEF5CA /* ZXPDF417ResultMetadata.m */; };
+		FDFDC6031CACC460002A6B03 /* TransferAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD343F31C92595100F4677A /* TransferAnimationViewController.m */; };
+		FDFDC6041CACC460002A6B03 /* ZXPDF417BarcodeMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE931C8EBF8300CEF5CA /* ZXPDF417BarcodeMetadata.m */; };
+		FDFDC6051CACC460002A6B03 /* ZXQRCodeMultiReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEF61C8EBF8300CEF5CA /* ZXQRCodeMultiReader.m */; };
+		FDFDC6061CACC460002A6B03 /* UIColor+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD938461C88188500DABD8C /* UIColor+help.m */; };
+		FDFDC6071CACC460002A6B03 /* ZXDimension.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADC11C8EBF8300CEF5CA /* ZXDimension.m */; };
+		FDFDC6081CACC460002A6B03 /* ZXPDF417BarcodeMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEAF1C8EBF8300CEF5CA /* ZXPDF417BarcodeMatrix.m */; };
+		FDFDC6091CACC460002A6B03 /* XHPopMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9D4561C293DBC00CB9369 /* XHPopMenuItemView.m */; };
+		FDFDC60A1CACC460002A6B03 /* ZXITFWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE701C8EBF8300CEF5CA /* ZXITFWriter.m */; };
+		FDFDC60B1CACC460002A6B03 /* ZXEANManufacturerOrgSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE6B1C8EBF8300CEF5CA /* ZXEANManufacturerOrgSupport.m */; };
+		FDFDC60C1CACC460002A6B03 /* ZXDataMatrixDataBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADDC1C8EBF8300CEF5CA /* ZXDataMatrixDataBlock.m */; };
+		FDFDC60D1CACC460002A6B03 /* ZXURLTOResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD731C8EBF8300CEF5CA /* ZXURLTOResultParser.m */; };
+		FDFDC60E1CACC460002A6B03 /* Mather.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC6B7661C58763F00DCE172 /* Mather.m */; };
+		FDFDC60F1CACC460002A6B03 /* ZXTextParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD6D1C8EBF8300CEF5CA /* ZXTextParsedResult.m */; };
+		FDFDC6101CACC460002A6B03 /* ZXAztecSimpleToken.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD291C8EBF8200CEF5CA /* ZXAztecSimpleToken.m */; };
+		FDFDC6111CACC460002A6B03 /* HeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDB6D9E1C7A9AF700E49D8B /* HeaderViewController.m */; };
+		FDFDC6121CACC460002A6B03 /* ZXAztecHighLevelEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD271C8EBF8200CEF5CA /* ZXAztecHighLevelEncoder.m */; };
+		FDFDC6131CACC460002A6B03 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23ED7D1C1EC19F0013BDC2 /* Status.m */; };
+		FDFDC6141CACC460002A6B03 /* ZXCode39Reader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE5D1C8EBF8300CEF5CA /* ZXCode39Reader.m */; };
+		FDFDC6151CACC460002A6B03 /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8D32F31C90FFB500AD9638 /* AutoLayoutViewController.m */; };
+		FDFDC6161CACC460002A6B03 /* ZXSMTPResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD671C8EBF8300CEF5CA /* ZXSMTPResultParser.m */; };
+		FDFDC6171CACC460002A6B03 /* ZXAI01320xDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE1F1C8EBF8300CEF5CA /* ZXAI01320xDecoder.m */; };
+		FDFDC6181CACC460002A6B03 /* ZXAddressBookDoCoMoResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD3C1C8EBF8300CEF5CA /* ZXAddressBookDoCoMoResultParser.m */; };
+		FDFDC6191CACC460002A6B03 /* ZXAztecDetectorResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD2F1C8EBF8200CEF5CA /* ZXAztecDetectorResult.m */; };
+		FDFDC61A1CACC460002A6B03 /* ZXQRCodeEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEEA1C8EBF8300CEF5CA /* ZXQRCodeEncoder.m */; };
+		FDFDC61B1CACC460002A6B03 /* ZXCharacterSetECI.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADA31C8EBF8300CEF5CA /* ZXCharacterSetECI.m */; };
+		FDFDC61C1CACC460002A6B03 /* ZXUPCAReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE7A1C8EBF8300CEF5CA /* ZXUPCAReader.m */; };
+		FDFDC61D1CACC460002A6B03 /* ZXImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD861C8EBF8300CEF5CA /* ZXImage.m */; };
+		FDFDC61E1CACC460002A6B03 /* ZXSMSMMSResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD611C8EBF8300CEF5CA /* ZXSMSMMSResultParser.m */; };
+		FDFDC61F1CACC460002A6B03 /* ZXBinaryBitmap.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADBB1C8EBF8300CEF5CA /* ZXBinaryBitmap.m */; };
+		FDFDC6201CACC460002A6B03 /* ZXPDF417DetectionResultRowIndicatorColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEA31C8EBF8300CEF5CA /* ZXPDF417DetectionResultRowIndicatorColumn.m */; };
+		FDFDC6211CACC460002A6B03 /* DataVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = FD68DE4C1C9A83F800E73EF5 /* DataVerifier.m */; };
+		FDFDC6221CACC460002A6B03 /* ZXDefaultGridSampler.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADA71C8EBF8300CEF5CA /* ZXDefaultGridSampler.m */; };
+		FDFDC6231CACC460002A6B03 /* ZXQRCodeDecodedBitStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAECA1C8EBF8300CEF5CA /* ZXQRCodeDecodedBitStreamParser.m */; };
+		FDFDC6241CACC460002A6B03 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC6B7691C58764D00DCE172 /* Son.m */; };
+		FDFDC6251CACC460002A6B03 /* ZXAI013x0x1xDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE251C8EBF8300CEF5CA /* ZXAI013x0x1xDecoder.m */; };
+		FDFDC6261CACC460002A6B03 /* ZXBitSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD9D1C8EBF8300CEF5CA /* ZXBitSource.m */; };
+		FDFDC6271CACC460002A6B03 /* ZXDataMatrixDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADE01C8EBF8300CEF5CA /* ZXDataMatrixDecoder.m */; };
+		FDFDC6281CACC460002A6B03 /* CustomKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD578E531C1E69CB00F13038 /* CustomKeyboardView.m */; };
+		FDFDC6291CACC460002A6B03 /* ZXRSSExpandedDecodedInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE371C8EBF8300CEF5CA /* ZXRSSExpandedDecodedInformation.m */; };
+		FDFDC62A1CACC460002A6B03 /* ZXQRCodeDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAECC1C8EBF8300CEF5CA /* ZXQRCodeDecoder.m */; };
+		FDFDC62B1CACC460002A6B03 /* ZXReedSolomonDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD951C8EBF8300CEF5CA /* ZXReedSolomonDecoder.m */; };
+		FDFDC62C1CACC460002A6B03 /* NSObject+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD938491C88189300DABD8C /* NSObject+help.m */; };
+		FDFDC62D1CACC460002A6B03 /* ZXPDF417DetectionResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE9F1C8EBF8300CEF5CA /* ZXPDF417DetectionResult.m */; };
+		FDFDC62E1CACC460002A6B03 /* PopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC29D061C2D3A1F00F51079 /* PopViewController.m */; };
+		FDFDC62F1CACC460002A6B03 /* UIViewController+OverRite.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDB6DA41C7ADA3D00E49D8B /* UIViewController+OverRite.m */; };
+		FDFDC6301CACC460002A6B03 /* ZXCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD811C8EBF8300CEF5CA /* ZXCapture.m */; };
+		FDFDC6311CACC460002A6B03 /* ZXCalendarParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD441C8EBF8300CEF5CA /* ZXCalendarParsedResult.m */; };
+		FDFDC6321CACC460002A6B03 /* ZXPerspectiveTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADB31C8EBF8300CEF5CA /* ZXPerspectiveTransform.m */; };
+		FDFDC6331CACC460002A6B03 /* ZXDataMatrixX12Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADFF1C8EBF8300CEF5CA /* ZXDataMatrixX12Encoder.m */; };
+		FDFDC6341CACC460002A6B03 /* ZXDataMatrixSymbolInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADF91C8EBF8300CEF5CA /* ZXDataMatrixSymbolInfo.m */; };
+		FDFDC6351CACC460002A6B03 /* ZXDataMatrixVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADE21C8EBF8300CEF5CA /* ZXDataMatrixVersion.m */; };
+		FDFDC6361CACC460002A6B03 /* ZXPDF417CodewordDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE9B1C8EBF8300CEF5CA /* ZXPDF417CodewordDecoder.m */; };
+		FDFDC6371CACC460002A6B03 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9D46C1C29457C00CB9369 /* MenuItem.m */; };
+		FDFDC6381CACC460002A6B03 /* ZXMultiFormatUPCEANReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE741C8EBF8300CEF5CA /* ZXMultiFormatUPCEANReader.m */; };
+		FDFDC6391CACC460002A6B03 /* ZXEAN13Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE651C8EBF8300CEF5CA /* ZXEAN13Writer.m */; };
+		FDFDC63A1CACC460002A6B03 /* ZXRSSPair.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE511C8EBF8300CEF5CA /* ZXRSSPair.m */; };
+		FDFDC63B1CACC460002A6B03 /* ZXMultiFinderPatternFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEF41C8EBF8300CEF5CA /* ZXMultiFinderPatternFinder.m */; };
+		FDFDC63C1CACC460002A6B03 /* ZXModulusPoly.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE8F1C8EBF8300CEF5CA /* ZXModulusPoly.m */; };
+		FDFDC63D1CACC460002A6B03 /* ZXByteMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADBD1C8EBF8300CEF5CA /* ZXByteMatrix.m */; };
+		FDFDC63E1CACC460002A6B03 /* NSFileManager+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE22E751CABB4090018E643 /* NSFileManager+help.m */; };
+		FDFDC63F1CACC460002A6B03 /* UIScrollView+ScalableCover.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE22E7E1CABD35F0018E643 /* UIScrollView+ScalableCover.m */; };
+		FDFDC6401CACC460002A6B03 /* UITabBarController+showHide.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9385C1C88191800DABD8C /* UITabBarController+showHide.m */; };
+		FDFDC6411CACC460002A6B03 /* LockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFA16251C5EF11D007D27C7 /* LockManager.m */; };
+		FDFDC6421CACC460002A6B03 /* ZXAztecWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD331C8EBF8200CEF5CA /* ZXAztecWriter.m */; };
+		FDFDC6431CACC460002A6B03 /* ZXQRCodeDecoderMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAECE1C8EBF8300CEF5CA /* ZXQRCodeDecoderMetaData.m */; };
+		FDFDC6441CACC460002A6B03 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3CA481C2A703400636C40 /* WKWebViewJavascriptBridge.m */; };
+		FDFDC6451CACC460002A6B03 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB06A9A1C99477D00056F10 /* HttpRequest.m */; };
+		FDFDC6461CACC460002A6B03 /* AVFoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9456951C33CECC00CB6FA9 /* AVFoundationViewController.m */; };
+		FDFDC6471CACC460002A6B03 /* ZXVINParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD791C8EBF8300CEF5CA /* ZXVINParsedResult.m */; };
+		FDFDC6481CACC460002A6B03 /* ZXGridSampler.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADAD1C8EBF8300CEF5CA /* ZXGridSampler.m */; };
+		FDFDC6491CACC460002A6B03 /* ZXMaxiCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE0F1C8EBF8300CEF5CA /* ZXMaxiCodeReader.m */; };
+		FDFDC64A1CACC460002A6B03 /* UIImageViewEx.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC596561CA5301400DA533D /* UIImageViewEx.m */; };
+		FDFDC64B1CACC460002A6B03 /* ZXPDF417ScanningDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEA51C8EBF8300CEF5CA /* ZXPDF417ScanningDecoder.m */; };
+		FDFDC64C1CACC460002A6B03 /* ZXISBNResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD561C8EBF8300CEF5CA /* ZXISBNResultParser.m */; };
+		FDFDC64D1CACC460002A6B03 /* FDRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEF1B8D1C21580600187029 /* FDRecipe.m */; };
+		FDFDC64E1CACC460002A6B03 /* ZXMultiFormatOneDReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE721C8EBF8300CEF5CA /* ZXMultiFormatOneDReader.m */; };
+		FDFDC64F1CACC460002A6B03 /* ZXAI013x0xDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE271C8EBF8300CEF5CA /* ZXAI013x0xDecoder.m */; };
+		FDFDC6501CACC460002A6B03 /* ZXGlobalHistogramBinarizer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADAB1C8EBF8300CEF5CA /* ZXGlobalHistogramBinarizer.m */; };
+		FDFDC6511CACC460002A6B03 /* TestTransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD343F71C925EF600F4677A /* TestTransferViewController.m */; };
+		FDFDC6521CACC460002A6B03 /* ZXQRCodeErrorCorrectionLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAED01C8EBF8300CEF5CA /* ZXQRCodeErrorCorrectionLevel.m */; };
+		FDFDC6531CACC460002A6B03 /* ZXResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADCF1C8EBF8300CEF5CA /* ZXResult.m */; };
+		FDFDC6541CACC460002A6B03 /* ZXGeoResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD521C8EBF8300CEF5CA /* ZXGeoResultParser.m */; };
+		FDFDC6551CACC460002A6B03 /* ZXQRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEF91C8EBF8300CEF5CA /* ZXQRCodeReader.m */; };
+		FDFDC6561CACC460002A6B03 /* ZXUPCEANExtension5Support.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE801C8EBF8300CEF5CA /* ZXUPCEANExtension5Support.m */; };
+		FDFDC6581CACC460002A6B03 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68F5631C9BE9D600771B3C /* CoreBluetooth.framework */; };
+		FDFDC6591CACC460002A6B03 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68F5601C9BE55800771B3C /* GameKit.framework */; };
+		FDFDC65A1CACC460002A6B03 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7E2EB01C9A87A900D292CC /* CoreMotion.framework */; };
+		FDFDC65B1CACC460002A6B03 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7E2EAE1C9A872700D292CC /* CoreTelephony.framework */; };
+		FDFDC65C1CACC460002A6B03 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68DE601C9A852D00E73EF5 /* libc++.tbd */; };
+		FDFDC65D1CACC460002A6B03 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68DDEC1C9A83B800E73EF5 /* SystemConfiguration.framework */; };
+		FDFDC65E1CACC460002A6B03 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68DDEA1C9A83A200E73EF5 /* CoreText.framework */; };
+		FDFDC65F1CACC460002A6B03 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68DDF41C9A83E200E73EF5 /* AlipaySDK.framework */; };
+		FDFDC6601CACC460002A6B03 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68F54E1C9B928200771B3C /* libWeChatSDK.a */; };
+		FDFDC6611CACC460002A6B03 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68DDF01C9A83DD00E73EF5 /* libssl.a */; };
+		FDFDC6621CACC460002A6B03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAAAFE31C8EC2EC00CEF5CA /* UIKit.framework */; };
+		FDFDC6631CACC460002A6B03 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAAAFE11C8EC2E500CEF5CA /* CoreFoundation.framework */; };
+		FDFDC6641CACC460002A6B03 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68DDEF1C9A83DD00E73EF5 /* libcrypto.a */; };
+		FDFDC6651CACC460002A6B03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAAAFDF1C8EC2C700CEF5CA /* Foundation.framework */; };
+		FDFDC6661CACC460002A6B03 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAAAFDD1C8EC17C00CEF5CA /* AddressBook.framework */; };
+		FDFDC6671CACC460002A6B03 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD05BB51C7FF50B00B2F930 /* libiconv.tbd */; };
+		FDFDC6681CACC460002A6B03 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD05BB31C7FF4F800B2F930 /* libbz2.tbd */; };
+		FDFDC6691CACC460002A6B03 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAE2ABF1C16AA4200E0A6D4 /* libz.tbd */; };
+		FDFDC66A1CACC460002A6B03 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9456991C33D65400CB6FA9 /* AudioToolbox.framework */; };
+		FDFDC66B1CACC460002A6B03 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9456971C33D15A00CB6FA9 /* AVFoundation.framework */; };
+		FDFDC66C1CACC460002A6B03 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAE2ABD1C16A9DD00E0A6D4 /* CoreGraphics.framework */; };
+		FDFDC66D1CACC460002A6B03 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAE2ABB1C16A9D200E0A6D4 /* QuartzCore.framework */; };
+		FDFDC66E1CACC460002A6B03 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAE2AB91C16A9A800E0A6D4 /* CFNetwork.framework */; };
+		FDFDC66F1CACC460002A6B03 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A42AF65CD15431AAEEC9C4 /* libPods.a */; };
+		FDFDC6701CACC460002A6B03 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAE2AB71C16A71C00E0A6D4 /* Reveal.framework */; };
+		FDFDC6721CACC460002A6B03 /* contacts_add_newmessage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D45B1C293F3D00CB9369 /* contacts_add_newmessage@2x.png */; };
+		FDFDC6731CACC460002A6B03 /* pop_Project@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D47C1C294EB700CB9369 /* pop_Project@3x.png */; };
+		FDFDC6741CACC460002A6B03 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDDFDDB41CA513DD0038B658 /* test.jpg */; };
+		FDFDC6751CACC460002A6B03 /* page_icon_network.png in Resources */ = {isa = PBXBuildFile; fileRef = FDF3E8F61CA128B400E517D5 /* page_icon_network.png */; };
+		FDFDC6761CACC460002A6B03 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = FD211F651C2BF45900C7ACCC /* 2.png */; };
+		FDFDC6771CACC460002A6B03 /* PopUpZgjView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDDB81511C3F56EF00BEBCB3 /* PopUpZgjView.xib */; };
+		FDFDC6781CACC460002A6B03 /* blankpage_image_loadFail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD91816A1CAA7BF8001A0A73 /* blankpage_image_loadFail@2x.png */; };
+		FDFDC6791CACC460002A6B03 /* ShowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDC5965A1CA53BE700DA533D /* ShowCollectionViewCell.xib */; };
+		FDFDC67A1CACC460002A6B03 /* pop_Tweet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D47F1C294EB700CB9369 /* pop_Tweet@2x.png */; };
+		FDFDC67B1CACC460002A6B03 /* 技巧.txt in Resources */ = {isa = PBXBuildFile; fileRef = FDAA34DC1C9FD34100FF5594 /* 技巧.txt */; };
+		FDFDC67C1CACC460002A6B03 /* page_icon_emptyMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = FDF3E8F41CA1265800E517D5 /* page_icon_emptyMessage.png */; };
+		FDFDC67D1CACC460002A6B03 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = FD211F631C2BF45900C7ACCC /* 6.png */; };
+		FDFDC67E1CACC460002A6B03 /* MyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDC95CAE1C34F51D00F6BD76 /* MyView.xib */; };
+		FDFDC67F1CACC460002A6B03 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = FD211F611C2BF45900C7ACCC /* 4.png */; };
+		FDFDC6801CACC460002A6B03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF592201C0EB43C00AF8B5C /* LaunchScreen.storyboard */; };
+		FDFDC6811CACC460002A6B03 /* contacts_add_friend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D45A1C293F3D00CB9369 /* contacts_add_friend@2x.png */; };
+		FDFDC6821CACC460002A6B03 /* pop_Message@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D47A1C294EB700CB9369 /* pop_Message@3x.png */; };
+		FDFDC6831CACC460002A6B03 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = FD211F661C2BF45900C7ACCC /* 1.png */; };
+		FDFDC6841CACC460002A6B03 /* pop_Message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D4791C294EB700CB9369 /* pop_Message@2x.png */; };
+		FDFDC6851CACC460002A6B03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF5921E1C0EB43C00AF8B5C /* Assets.xcassets */; };
+		FDFDC6861CACC460002A6B03 /* CustomCategoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDAB1EE91C5F0B50001EC186 /* CustomCategoView.xib */; };
+		FDFDC6871CACC460002A6B03 /* contacts_add_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D45C1C293F3D00CB9369 /* contacts_add_photo@2x.png */; };
+		FDFDC6881CACC460002A6B03 /* WebViewJavascriptBridge.js.txt in Resources */ = {isa = PBXBuildFile; fileRef = FDE3CA431C2A703400636C40 /* WebViewJavascriptBridge.js.txt */; };
+		FDFDC6891CACC460002A6B03 /* blankpage_button_reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD9181701CAA7C10001A0A73 /* blankpage_button_reload@2x.png */; };
+		FDFDC68A1CACC460002A6B03 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = FD211F621C2BF45900C7ACCC /* 5.png */; };
+		FDFDC68B1CACC460002A6B03 /* video_call_sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = FD94569B1C33D6EE00CB6FA9 /* video_call_sound.caf */; };
+		FDFDC68C1CACC460002A6B03 /* CustomPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDC95CF71C35132800F6BD76 /* CustomPopView.xib */; };
+		FDFDC68D1CACC460002A6B03 /* un_180.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDFDDB61CA5183B0038B658 /* un_180.png */; };
+		FDFDC68E1CACC460002A6B03 /* pop_User@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D4821C294EB700CB9369 /* pop_User@3x.png */; };
+		FDFDC68F1CACC460002A6B03 /* loading_loop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD9181661CAA7948001A0A73 /* loading_loop@2x.png */; };
+		FDFDC6901CACC460002A6B03 /* iOSDeviceModelMapping.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDD938501C8818AD00DABD8C /* iOSDeviceModelMapping.plist */; };
+		FDFDC6911CACC460002A6B03 /* pop_Task@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D47D1C294EB700CB9369 /* pop_Task@2x.png */; };
+		FDFDC6921CACC460002A6B03 /* pop_Task@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D47E1C294EB700CB9369 /* pop_Task@3x.png */; };
+		FDFDC6931CACC460002A6B03 /* contacts_add_voip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D45E1C293F3D00CB9369 /* contacts_add_voip@2x.png */; };
+		FDFDC6941CACC460002A6B03 /* pop_Tweet@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D4801C294EB700CB9369 /* pop_Tweet@3x.png */; };
+		FDFDC6951CACC460002A6B03 /* adn.cer in Resources */ = {isa = PBXBuildFile; fileRef = FDB06A971C99476C00056F10 /* adn.cer */; };
+		FDFDC6961CACC460002A6B03 /* loading_monkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD9181681CAA7957001A0A73 /* loading_monkey@2x.png */; };
+		FDFDC6971CACC460002A6B03 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6A760E1C7C315C00D7E5D8 /* share.png */; };
+		FDFDC6981CACC460002A6B03 /* pop_2FA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D4771C294EB700CB9369 /* pop_2FA@2x.png */; };
+		FDFDC6991CACC460002A6B03 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = FD211F641C2BF45900C7ACCC /* 3.png */; };
+		FDFDC69A1CACC460002A6B03 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FD68DDF31C9A83E200E73EF5 /* AlipaySDK.bundle */; };
+		FDFDC69B1CACC460002A6B03 /* contacts_add_scan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D45D1C293F3D00CB9369 /* contacts_add_scan@2x.png */; };
+		FDFDC69C1CACC460002A6B03 /* page_icon_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = FDF3E8F21CA1264800E517D5 /* page_icon_empty.png */; };
+		FDFDC69D1CACC460002A6B03 /* pop_User@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D4811C294EB700CB9369 /* pop_User@2x.png */; };
+		FDFDC69E1CACC460002A6B03 /* pop_Project@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D47B1C294EB700CB9369 /* pop_Project@2x.png */; };
+		FDFDC69F1CACC460002A6B03 /* UIDynamic1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDDB6DA11C7AA69300E49D8B /* UIDynamic1ViewController.xib */; };
+		FDFDC6A01CACC460002A6B03 /* RingBackground.caf in Resources */ = {isa = PBXBuildFile; fileRef = FD94569C1C33D6EE00CB6FA9 /* RingBackground.caf */; };
+		FDFDC6A11CACC460002A6B03 /* pop_2FA@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D4781C294EB700CB9369 /* pop_2FA@3x.png */; };
+		FDFDC6A21CACC460002A6B03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF5921B1C0EB43C00AF8B5C /* Main.storyboard */; };
+		FDFDC6A31CACC460002A6B03 /* MoreFunctionFrame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA9D4641C29403000CB9369 /* MoreFunctionFrame@2x.png */; };
+		FDFDC6A41CACC460002A6B03 /* blankpage_image_Sleep@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD91816B1CAA7BF8001A0A73 /* blankpage_image_Sleep@2x.png */; };
+		FDFDC6A51CACC460002A6B03 /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDDB81461C3F4E5400BEBCB3 /* PopupView.xib */; };
+		FDFDC6A61CACC460002A6B03 /* CustomKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD578E551C1E69E200F13038 /* CustomKeyboardView.xib */; };
+		FDFDC6A71CACC460002A6B03 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD578E5A1C1E76E700F13038 /* CustomView.xib */; };
+		FDFDC6A81CACC460002A6B03 /* blankpage_image_Hi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD91816C1CAA7BF8001A0A73 /* blankpage_image_Hi@2x.png */; };
+		FDFDC6B71CACF957002A6B03 /* UIView+SizeHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFDC6B61CACF957002A6B03 /* UIView+SizeHeight.m */; };
+		FDFDC6BC1CACFFA8002A6B03 /* UIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFDC6BB1CACFFA8002A6B03 /* UIWindow+Hierarchy.m */; };
+		FDFDC6C11CAD0074002A6B03 /* UIDevice+PasscodeStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFDC6BE1CAD0074002A6B03 /* UIDevice+PasscodeStatus.m */; };
+		FDFDC6C21CAD0074002A6B03 /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFDC6C01CAD0074002A6B03 /* UIDevice+Hardware.m */; };
+		FDFDC6C51CAD027B002A6B03 /* UIView+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFDC6C41CAD027B002A6B03 /* UIView+help.m */; };
+		FDFDC6C91CAD04A5002A6B03 /* UIApplication+BackgroundRunning.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFDC6C81CAD04A5002A6B03 /* UIApplication+BackgroundRunning.m */; };
+		FDFDC6CC1CAD087E002A6B03 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFDC6CB1CAD087E002A6B03 /* UIButton+Badge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -578,8 +993,8 @@
 		FD76AB521C97B9120071F9AB /* BLEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEViewController.m; sourceTree = "<group>"; };
 		FD76AB541C97D03A0071F9AB /* DelayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelayViewController.h; sourceTree = "<group>"; };
 		FD76AB551C97D03A0071F9AB /* DelayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelayViewController.m; sourceTree = "<group>"; };
-		FD7E27011C1914E4002D4CDD /* NSDate+DateHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+DateHelp.h"; path = "../../NSDate+DateHelp.h"; sourceTree = "<group>"; };
-		FD7E27021C1914E4002D4CDD /* NSDate+DateHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+DateHelp.m"; path = "../../NSDate+DateHelp.m"; sourceTree = "<group>"; };
+		FD7E27011C1914E4002D4CDD /* NSDate+help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+help.h"; path = "../../NSDate+help.h"; sourceTree = "<group>"; };
+		FD7E27021C1914E4002D4CDD /* NSDate+help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+help.m"; path = "../../NSDate+help.m"; sourceTree = "<group>"; };
 		FD7E2EAE1C9A872700D292CC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		FD7E2EB01C9A87A900D292CC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		FD7FF4551C3B4C4E00DDB21E /* NSTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimerViewController.h; sourceTree = "<group>"; };
@@ -1152,12 +1567,12 @@
 		FDC6B7661C58763F00DCE172 /* Mather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mather.m; sourceTree = "<group>"; };
 		FDC6B7681C58764D00DCE172 /* Son.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
 		FDC6B7691C58764D00DCE172 /* Son.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
-		FDC95CA71C34D68E00F6BD76 /* CustomPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPopView.h; sourceTree = "<group>"; };
-		FDC95CA81C34D68E00F6BD76 /* CustomPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPopView.m; sourceTree = "<group>"; };
-		FDC95CAC1C34F51D00F6BD76 /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
-		FDC95CAD1C34F51D00F6BD76 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
-		FDC95CAE1C34F51D00F6BD76 /* MyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyView.xib; sourceTree = "<group>"; };
-		FDC95CF71C35132800F6BD76 /* CustomPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPopView.xib; sourceTree = "<group>"; };
+		FDC95CA71C34D68E00F6BD76 /* CustomPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomPopView.h; path = Vendor/CustomPopView.h; sourceTree = "<group>"; };
+		FDC95CA81C34D68E00F6BD76 /* CustomPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomPopView.m; path = Vendor/CustomPopView.m; sourceTree = "<group>"; };
+		FDC95CAC1C34F51D00F6BD76 /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyView.h; path = Vendor/MyView.h; sourceTree = "<group>"; };
+		FDC95CAD1C34F51D00F6BD76 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyView.m; path = Vendor/MyView.m; sourceTree = "<group>"; };
+		FDC95CAE1C34F51D00F6BD76 /* MyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyView.xib; path = Vendor/MyView.xib; sourceTree = "<group>"; };
+		FDC95CF71C35132800F6BD76 /* CustomPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomPopView.xib; path = Vendor/CustomPopView.xib; sourceTree = "<group>"; };
 		FDCCF0491C605DC30012F928 /* CoreGraphicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGraphicsViewController.h; sourceTree = "<group>"; };
 		FDCCF04A1C605DC30012F928 /* CoreGraphicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreGraphicsViewController.m; sourceTree = "<group>"; };
 		FDD05BAF1C7FEEEF00B2F930 /* FFmpegViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFmpegViewController.h; sourceTree = "<group>"; };
@@ -1283,6 +1698,23 @@
 		FDFA16221C5EEF5C007D27C7 /* LockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockViewController.m; sourceTree = "<group>"; };
 		FDFA16241C5EF11D007D27C7 /* LockManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockManager.h; sourceTree = "<group>"; };
 		FDFA16251C5EF11D007D27C7 /* LockManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockManager.m; sourceTree = "<group>"; };
+		FDFDC6AE1CACC460002A6B03 /* TestDemo_Product.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDemo_Product.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDFDC6AF1CACC461002A6B03 /* TestDemo_Develop copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TestDemo_Develop copy-Info.plist"; path = "/Users/ZGJ/Documents/XcodeProject/TestDemo/TestDemo_Develop copy-Info.plist"; sourceTree = "<absolute>"; };
+		FDFDC6B51CACF957002A6B03 /* UIView+SizeHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SizeHeight.h"; sourceTree = "<group>"; };
+		FDFDC6B61CACF957002A6B03 /* UIView+SizeHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SizeHeight.m"; sourceTree = "<group>"; };
+		FDFDC6BA1CACFFA8002A6B03 /* UIWindow+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Hierarchy.h"; sourceTree = "<group>"; };
+		FDFDC6BB1CACFFA8002A6B03 /* UIWindow+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Hierarchy.m"; sourceTree = "<group>"; };
+		FDFDC6BD1CAD0074002A6B03 /* UIDevice+PasscodeStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+PasscodeStatus.h"; sourceTree = "<group>"; };
+		FDFDC6BE1CAD0074002A6B03 /* UIDevice+PasscodeStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+PasscodeStatus.m"; sourceTree = "<group>"; };
+		FDFDC6BF1CAD0074002A6B03 /* UIDevice+Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Hardware.h"; sourceTree = "<group>"; };
+		FDFDC6C01CAD0074002A6B03 /* UIDevice+Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Hardware.m"; sourceTree = "<group>"; };
+		FDFDC6C31CAD027A002A6B03 /* UIView+help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+help.h"; sourceTree = "<group>"; };
+		FDFDC6C41CAD027B002A6B03 /* UIView+help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+help.m"; sourceTree = "<group>"; };
+		FDFDC6C61CAD03ED002A6B03 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		FDFDC6C71CAD04A5002A6B03 /* UIApplication+BackgroundRunning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+BackgroundRunning.h"; sourceTree = "<group>"; };
+		FDFDC6C81CAD04A5002A6B03 /* UIApplication+BackgroundRunning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+BackgroundRunning.m"; sourceTree = "<group>"; };
+		FDFDC6CA1CAD087E002A6B03 /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
+		FDFDC6CB1CAD087E002A6B03 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1329,6 +1761,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDFDC6571CACC460002A6B03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFDC6581CACC460002A6B03 /* CoreBluetooth.framework in Frameworks */,
+				FDFDC6591CACC460002A6B03 /* GameKit.framework in Frameworks */,
+				FDFDC65A1CACC460002A6B03 /* CoreMotion.framework in Frameworks */,
+				FDFDC65B1CACC460002A6B03 /* CoreTelephony.framework in Frameworks */,
+				FDFDC65C1CACC460002A6B03 /* libc++.tbd in Frameworks */,
+				FDFDC65D1CACC460002A6B03 /* SystemConfiguration.framework in Frameworks */,
+				FDFDC65E1CACC460002A6B03 /* CoreText.framework in Frameworks */,
+				FDFDC65F1CACC460002A6B03 /* AlipaySDK.framework in Frameworks */,
+				FDFDC6601CACC460002A6B03 /* libWeChatSDK.a in Frameworks */,
+				FDFDC6611CACC460002A6B03 /* libssl.a in Frameworks */,
+				FDFDC6621CACC460002A6B03 /* UIKit.framework in Frameworks */,
+				FDFDC6631CACC460002A6B03 /* CoreFoundation.framework in Frameworks */,
+				FDFDC6641CACC460002A6B03 /* libcrypto.a in Frameworks */,
+				FDFDC6651CACC460002A6B03 /* Foundation.framework in Frameworks */,
+				FDFDC6661CACC460002A6B03 /* AddressBook.framework in Frameworks */,
+				FDFDC6671CACC460002A6B03 /* libiconv.tbd in Frameworks */,
+				FDFDC6681CACC460002A6B03 /* libbz2.tbd in Frameworks */,
+				FDFDC6691CACC460002A6B03 /* libz.tbd in Frameworks */,
+				FDFDC66A1CACC460002A6B03 /* AudioToolbox.framework in Frameworks */,
+				FDFDC66B1CACC460002A6B03 /* AVFoundation.framework in Frameworks */,
+				FDFDC66C1CACC460002A6B03 /* CoreGraphics.framework in Frameworks */,
+				FDFDC66D1CACC460002A6B03 /* QuartzCore.framework in Frameworks */,
+				FDFDC66E1CACC460002A6B03 /* CFNetwork.framework in Frameworks */,
+				FDFDC66F1CACC460002A6B03 /* libPods.a in Frameworks */,
+				FDFDC6701CACC460002A6B03 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1583,12 +2047,6 @@
 				FDA9D4661C29457300CB9369 /* popMenu2 */,
 				FDA9D4501C293DBC00CB9369 /* PopMenu */,
 				FDA9D44E1C2939C800CB9369 /* Category */,
-				FDC95CA71C34D68E00F6BD76 /* CustomPopView.h */,
-				FDC95CA81C34D68E00F6BD76 /* CustomPopView.m */,
-				FDC95CF71C35132800F6BD76 /* CustomPopView.xib */,
-				FDC95CAC1C34F51D00F6BD76 /* MyView.h */,
-				FDC95CAD1C34F51D00F6BD76 /* MyView.m */,
-				FDC95CAE1C34F51D00F6BD76 /* MyView.xib */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -1629,6 +2087,12 @@
 		FDA9D4491C29389400CB9369 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FDC95CA71C34D68E00F6BD76 /* CustomPopView.h */,
+				FDC95CA81C34D68E00F6BD76 /* CustomPopView.m */,
+				FDC95CF71C35132800F6BD76 /* CustomPopView.xib */,
+				FDC95CAC1C34F51D00F6BD76 /* MyView.h */,
+				FDC95CAD1C34F51D00F6BD76 /* MyView.m */,
+				FDC95CAE1C34F51D00F6BD76 /* MyView.xib */,
 				FDDB81441C3F4E5400BEBCB3 /* PopupView.h */,
 				FDDB81451C3F4E5400BEBCB3 /* PopupView.m */,
 				FDDB81461C3F4E5400BEBCB3 /* PopupView.xib */,
@@ -1711,6 +2175,7 @@
 		FDA9D44E1C2939C800CB9369 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				FDFDC6C61CAD03ED002A6B03 /* Macro.h */,
 				FDE22E801CABD3630018E643 /* 头像拉伸 */,
 				FDAA34D81C9FC9C000FF5594 /* UITextView+Placeholder */,
 				FDD9383C1C88184A00DABD8C /* NSStringEmojize */,
@@ -1718,26 +2183,19 @@
 				FDD938541C8818C900DABD8C /* Device */,
 				FD9181601CAA6C1B001A0A73 /* Units.h */,
 				FD9181611CAA6C1B001A0A73 /* Units.m */,
-				FDD938391C8817FD00DABD8C /* UIBarButtonItem+WNXBarButtonItem.h */,
-				FDD9383A1C8817FD00DABD8C /* UIBarButtonItem+WNXBarButtonItem.m */,
-				FDD938581C88190400DABD8C /* UIViewController+help.h */,
-				FDD938591C88190400DABD8C /* UIViewController+help.m */,
 				FDD9384B1C88189E00DABD8C /* NSString+help.h */,
 				FDD9384C1C88189E00DABD8C /* NSString+help.m */,
 				FDD938481C88189300DABD8C /* NSObject+help.h */,
 				FDD938491C88189300DABD8C /* NSObject+help.m */,
-				FDD938551C8818EF00DABD8C /* UIView+PressMenu.h */,
-				FDD938561C8818EF00DABD8C /* UIView+PressMenu.m */,
 				FDD938451C88188500DABD8C /* UIColor+help.h */,
 				FDD938461C88188500DABD8C /* UIColor+help.m */,
-				FDC29C7E1C2CCF7700F51079 /* UIImage+help.h */,
-				FDC29C7F1C2CCF7700F51079 /* UIImage+help.m */,
-				FD7E27011C1914E4002D4CDD /* NSDate+DateHelp.h */,
-				FD7E27021C1914E4002D4CDD /* NSDate+DateHelp.m */,
-				FDD9385B1C88191800DABD8C /* UITabBarController+showHide.h */,
-				FDD9385C1C88191800DABD8C /* UITabBarController+showHide.m */,
+				FD7E27011C1914E4002D4CDD /* NSDate+help.h */,
+				FD7E27021C1914E4002D4CDD /* NSDate+help.m */,
 				FDE22E741CABB4090018E643 /* NSFileManager+help.h */,
 				FDE22E751CABB4090018E643 /* NSFileManager+help.m */,
+				FDFDC6C71CAD04A5002A6B03 /* UIApplication+BackgroundRunning.h */,
+				FDFDC6C81CAD04A5002A6B03 /* UIApplication+BackgroundRunning.m */,
+				FDFDC6B81CACF95D002A6B03 /* UIView */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -2670,6 +3128,10 @@
 		FDD938541C8818C900DABD8C /* Device */ = {
 			isa = PBXGroup;
 			children = (
+				FDFDC6BD1CAD0074002A6B03 /* UIDevice+PasscodeStatus.h */,
+				FDFDC6BE1CAD0074002A6B03 /* UIDevice+PasscodeStatus.m */,
+				FDFDC6BF1CAD0074002A6B03 /* UIDevice+Hardware.h */,
+				FDFDC6C01CAD0074002A6B03 /* UIDevice+Hardware.m */,
 				FDD9384E1C8818AD00DABD8C /* UIDevice+Info.h */,
 				FDD9384F1C8818AD00DABD8C /* UIDevice+Info.m */,
 				FDD938501C8818AD00DABD8C /* iOSDeviceModelMapping.plist */,
@@ -2823,6 +3285,7 @@
 				FDF592101C0EB43C00AF8B5C /* Products */,
 				E3EDFCFA967AA13AB6A49481 /* Pods */,
 				B3FF0BA1D689D6EE88C7A45B /* Frameworks */,
+				FDFDC6AF1CACC461002A6B03 /* TestDemo_Develop copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2832,6 +3295,7 @@
 				FDF5920F1C0EB43C00AF8B5C /* TestDemo_Develop.app */,
 				FDF592281C0EB43C00AF8B5C /* TestDemoTests.xctest */,
 				FDF592331C0EB43C00AF8B5C /* TestDemoUITests.xctest */,
+				FDFDC6AE1CACC460002A6B03 /* TestDemo_Product.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2925,6 +3389,39 @@
 			path = Lock;
 			sourceTree = "<group>";
 		};
+		FDFDC6B81CACF95D002A6B03 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				FDFDC6CA1CAD087E002A6B03 /* UIButton+Badge.h */,
+				FDFDC6CB1CAD087E002A6B03 /* UIButton+Badge.m */,
+				FDFDC6B91CACFD28002A6B03 /* UIImage */,
+				FDFDC6B51CACF957002A6B03 /* UIView+SizeHeight.h */,
+				FDFDC6B61CACF957002A6B03 /* UIView+SizeHeight.m */,
+				FDFDC6C31CAD027A002A6B03 /* UIView+help.h */,
+				FDFDC6C41CAD027B002A6B03 /* UIView+help.m */,
+				FDD938551C8818EF00DABD8C /* UIView+PressMenu.h */,
+				FDD938561C8818EF00DABD8C /* UIView+PressMenu.m */,
+				FDFDC6BA1CACFFA8002A6B03 /* UIWindow+Hierarchy.h */,
+				FDFDC6BB1CACFFA8002A6B03 /* UIWindow+Hierarchy.m */,
+				FDD938581C88190400DABD8C /* UIViewController+help.h */,
+				FDD938591C88190400DABD8C /* UIViewController+help.m */,
+				FDD938391C8817FD00DABD8C /* UIBarButtonItem+WNXBarButtonItem.h */,
+				FDD9383A1C8817FD00DABD8C /* UIBarButtonItem+WNXBarButtonItem.m */,
+				FDD9385B1C88191800DABD8C /* UITabBarController+showHide.h */,
+				FDD9385C1C88191800DABD8C /* UITabBarController+showHide.m */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
+		FDFDC6B91CACFD28002A6B03 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				FDC29C7E1C2CCF7700F51079 /* UIImage+help.h */,
+				FDC29C7F1C2CCF7700F51079 /* UIImage+help.m */,
+			);
+			name = UIImage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2984,6 +3481,26 @@
 			productReference = FDF592331C0EB43C00AF8B5C /* TestDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		FDFDC50C1CACC460002A6B03 /* TestDemo_Product */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDFDC6AB1CACC460002A6B03 /* Build configuration list for PBXNativeTarget "TestDemo_Product" */;
+			buildPhases = (
+				FDFDC50D1CACC460002A6B03 /* Check Pods Manifest.lock */,
+				FDFDC50E1CACC460002A6B03 /* Sources */,
+				FDFDC6571CACC460002A6B03 /* Frameworks */,
+				FDFDC6711CACC460002A6B03 /* Resources */,
+				FDFDC6A91CACC460002A6B03 /* Embed Pods Frameworks */,
+				FDFDC6AA1CACC460002A6B03 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestDemo_Product;
+			productName = TestDemo;
+			productReference = FDFDC6AE1CACC460002A6B03 /* TestDemo_Product.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -3023,6 +3540,7 @@
 				FDF5920E1C0EB43C00AF8B5C /* TestDemo_Develop */,
 				FDF592271C0EB43C00AF8B5C /* TestDemoTests */,
 				FDF592321C0EB43C00AF8B5C /* TestDemoUITests */,
+				FDFDC50C1CACC460002A6B03 /* TestDemo_Product */,
 			);
 		};
 /* End PBXProject section */
@@ -3104,6 +3622,68 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDFDC6711CACC460002A6B03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFDC6721CACC460002A6B03 /* contacts_add_newmessage@2x.png in Resources */,
+				FDFDC6731CACC460002A6B03 /* pop_Project@3x.png in Resources */,
+				FDFDC6741CACC460002A6B03 /* test.jpg in Resources */,
+				FDFDC6751CACC460002A6B03 /* page_icon_network.png in Resources */,
+				FDFDC6761CACC460002A6B03 /* 2.png in Resources */,
+				FDFDC6771CACC460002A6B03 /* PopUpZgjView.xib in Resources */,
+				FDFDC6781CACC460002A6B03 /* blankpage_image_loadFail@2x.png in Resources */,
+				FDFDC6791CACC460002A6B03 /* ShowCollectionViewCell.xib in Resources */,
+				FDFDC67A1CACC460002A6B03 /* pop_Tweet@2x.png in Resources */,
+				FDFDC67B1CACC460002A6B03 /* 技巧.txt in Resources */,
+				FDFDC67C1CACC460002A6B03 /* page_icon_emptyMessage.png in Resources */,
+				FDFDC67D1CACC460002A6B03 /* 6.png in Resources */,
+				FDFDC67E1CACC460002A6B03 /* MyView.xib in Resources */,
+				FDFDC67F1CACC460002A6B03 /* 4.png in Resources */,
+				FDFDC6801CACC460002A6B03 /* LaunchScreen.storyboard in Resources */,
+				FDFDC6811CACC460002A6B03 /* contacts_add_friend@2x.png in Resources */,
+				FDFDC6821CACC460002A6B03 /* pop_Message@3x.png in Resources */,
+				FDFDC6831CACC460002A6B03 /* 1.png in Resources */,
+				FDFDC6841CACC460002A6B03 /* pop_Message@2x.png in Resources */,
+				FDFDC6851CACC460002A6B03 /* Assets.xcassets in Resources */,
+				FDFDC6861CACC460002A6B03 /* CustomCategoView.xib in Resources */,
+				FDFDC6871CACC460002A6B03 /* contacts_add_photo@2x.png in Resources */,
+				FDFDC6881CACC460002A6B03 /* WebViewJavascriptBridge.js.txt in Resources */,
+				FDFDC6891CACC460002A6B03 /* blankpage_button_reload@2x.png in Resources */,
+				FDFDC68A1CACC460002A6B03 /* 5.png in Resources */,
+				FDFDC68B1CACC460002A6B03 /* video_call_sound.caf in Resources */,
+				FDFDC68C1CACC460002A6B03 /* CustomPopView.xib in Resources */,
+				FDFDC68D1CACC460002A6B03 /* un_180.png in Resources */,
+				FDFDC68E1CACC460002A6B03 /* pop_User@3x.png in Resources */,
+				FDFDC68F1CACC460002A6B03 /* loading_loop@2x.png in Resources */,
+				FDFDC6901CACC460002A6B03 /* iOSDeviceModelMapping.plist in Resources */,
+				FDFDC6911CACC460002A6B03 /* pop_Task@2x.png in Resources */,
+				FDFDC6921CACC460002A6B03 /* pop_Task@3x.png in Resources */,
+				FDFDC6931CACC460002A6B03 /* contacts_add_voip@2x.png in Resources */,
+				FDFDC6941CACC460002A6B03 /* pop_Tweet@3x.png in Resources */,
+				FDFDC6951CACC460002A6B03 /* adn.cer in Resources */,
+				FDFDC6961CACC460002A6B03 /* loading_monkey@2x.png in Resources */,
+				FDFDC6971CACC460002A6B03 /* share.png in Resources */,
+				FDFDC6981CACC460002A6B03 /* pop_2FA@2x.png in Resources */,
+				FDFDC6991CACC460002A6B03 /* 3.png in Resources */,
+				FDFDC69A1CACC460002A6B03 /* AlipaySDK.bundle in Resources */,
+				FDFDC69B1CACC460002A6B03 /* contacts_add_scan@2x.png in Resources */,
+				FDFDC69C1CACC460002A6B03 /* page_icon_empty.png in Resources */,
+				FDFDC69D1CACC460002A6B03 /* pop_User@2x.png in Resources */,
+				FDFDC69E1CACC460002A6B03 /* pop_Project@2x.png in Resources */,
+				FDFDC69F1CACC460002A6B03 /* UIDynamic1ViewController.xib in Resources */,
+				FDFDC6A01CACC460002A6B03 /* RingBackground.caf in Resources */,
+				FDFDC6A11CACC460002A6B03 /* pop_2FA@3x.png in Resources */,
+				FDFDC6A21CACC460002A6B03 /* Main.storyboard in Resources */,
+				FDFDC6A31CACC460002A6B03 /* MoreFunctionFrame@2x.png in Resources */,
+				FDFDC6A41CACC460002A6B03 /* blankpage_image_Sleep@2x.png in Resources */,
+				FDFDC6A51CACC460002A6B03 /* PopupView.xib in Resources */,
+				FDFDC6A61CACC460002A6B03 /* CustomKeyboardView.xib in Resources */,
+				FDFDC6A71CACC460002A6B03 /* CustomView.xib in Resources */,
+				FDFDC6A81CACC460002A6B03 /* blankpage_image_Hi@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -3152,6 +3732,51 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		FDFDC50D1CACC460002A6B03 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FDFDC6A91CACC460002A6B03 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDFDC6AA1CACC460002A6B03 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -3183,6 +3808,7 @@
 				FDD343FE1C9290B500F4677A /* InteractionTransitionAnimation.m in Sources */,
 				FDE9040B1C608ED800798583 /* CoreGraphicsView.m in Sources */,
 				FDAAAF3B1C8EBF8300CEF5CA /* ZXBitArray.m in Sources */,
+				FDFDC6B71CACF957002A6B03 /* UIView+SizeHeight.m in Sources */,
 				FD8A99AB1C22864800AB4E6B /* SecondViewController.m in Sources */,
 				FDD05BB11C7FEEEF00B2F930 /* FFmpegViewController.mm in Sources */,
 				FDD343FB1C92707400F4677A /* PushTransition.m in Sources */,
@@ -3252,7 +3878,7 @@
 				FDAAAF901C8EBF8300CEF5CA /* ZXCode128Reader.m in Sources */,
 				FD76AB531C97B9120071F9AB /* BLEViewController.m in Sources */,
 				FDA9D4581C293DBC00CB9369 /* XHPopMenuItem.m in Sources */,
-				FD7E27031C1914E4002D4CDD /* NSDate+DateHelp.m in Sources */,
+				FD7E27031C1914E4002D4CDD /* NSDate+help.m in Sources */,
 				FDA9EC0E1CA8F30B00217B92 /* HFImageEditorFrameView.m in Sources */,
 				FDAAAFB61C8EBF8300CEF5CA /* ZXPDF417DetectorResult.m in Sources */,
 				FDAAAF551C8EBF8300CEF5CA /* ZXResultPoint.m in Sources */,
@@ -3283,6 +3909,7 @@
 				FDAAAF3C1C8EBF8300CEF5CA /* ZXBitMatrix.m in Sources */,
 				FDAAAF751C8EBF8300CEF5CA /* ZXAI01393xDecoder.m in Sources */,
 				FDFA16231C5EEF5C007D27C7 /* LockViewController.m in Sources */,
+				FDFDC6C21CAD0074002A6B03 /* UIDevice+Hardware.m in Sources */,
 				FDAAAF8F1C8EBF8300CEF5CA /* ZXCodaBarWriter.m in Sources */,
 				FDAAAF811C8EBF8300CEF5CA /* ZXRSSExpandedDecodedObject.m in Sources */,
 				FDAAAF641C8EBF8300CEF5CA /* ZXDataMatrixHighLevelEncoder.m in Sources */,
@@ -3311,6 +3938,7 @@
 				FDEF1B941C21580600187029 /* FDResult.m in Sources */,
 				FDAAAFAA1C8EBF8300CEF5CA /* ZXPDF417ECErrorCorrection.m in Sources */,
 				FDC5965B1CA53BE700DA533D /* ShowCollectionViewCell.m in Sources */,
+				FDFDC6C91CAD04A5002A6B03 /* UIApplication+BackgroundRunning.m in Sources */,
 				FD9181651CAA76F3001A0A73 /* UIView+Common.m in Sources */,
 				FD68DE5C1C9A83F800E73EF5 /* NSDataEx.m in Sources */,
 				FDAAAF341C8EBF8300CEF5CA /* ZXMathUtils.m in Sources */,
@@ -3343,6 +3971,7 @@
 				FDAAAF941C8EBF8300CEF5CA /* ZXCode93Reader.m in Sources */,
 				FDA9EC131CA9201400217B92 /* DraggableView.m in Sources */,
 				FDAAAF791C8EBF8300CEF5CA /* ZXAI01decoder.m in Sources */,
+				FDFDC6CC1CAD087E002A6B03 /* UIButton+Badge.m in Sources */,
 				FDAAAF561C8EBF8300CEF5CA /* ZXRGBLuminanceSource.m in Sources */,
 				FDAAAF371C8EBF8300CEF5CA /* ZXGenericGF.m in Sources */,
 				FDAAAF631C8EBF8300CEF5CA /* ZXDataMatrixErrorCorrection.m in Sources */,
@@ -3412,9 +4041,11 @@
 				FDA9D4591C293DBC00CB9369 /* XHPopMenuItemView.m in Sources */,
 				FDAAAF9B1C8EBF8300CEF5CA /* ZXITFWriter.m in Sources */,
 				FDAAAF991C8EBF8300CEF5CA /* ZXEANManufacturerOrgSupport.m in Sources */,
+				FDFDC6C51CAD027B002A6B03 /* UIView+help.m in Sources */,
 				FDAAAF581C8EBF8300CEF5CA /* ZXDataMatrixDataBlock.m in Sources */,
 				FDAAAF2A1C8EBF8300CEF5CA /* ZXURLTOResultParser.m in Sources */,
 				FDC6B7671C58763F00DCE172 /* Mather.m in Sources */,
+				FDFDC6BC1CACFFA8002A6B03 /* UIWindow+Hierarchy.m in Sources */,
 				FDAAAF271C8EBF8300CEF5CA /* ZXTextParsedResult.m in Sources */,
 				FDAAAF071C8EBF8300CEF5CA /* ZXAztecSimpleToken.m in Sources */,
 				FDDB6D9F1C7A9AF700E49D8B /* HeaderViewController.m in Sources */,
@@ -3437,6 +4068,7 @@
 				FDAAAF421C8EBF8300CEF5CA /* ZXDefaultGridSampler.m in Sources */,
 				FDAAAFC41C8EBF8300CEF5CA /* ZXQRCodeDecodedBitStreamParser.m in Sources */,
 				FDC6B76A1C58764D00DCE172 /* Son.m in Sources */,
+				FDFDC6C11CAD0074002A6B03 /* UIDevice+PasscodeStatus.m in Sources */,
 				FDAAAF761C8EBF8300CEF5CA /* ZXAI013x0x1xDecoder.m in Sources */,
 				FDAAAF3D1C8EBF8300CEF5CA /* ZXBitSource.m in Sources */,
 				FDAAAF5A1C8EBF8300CEF5CA /* ZXDataMatrixDecoder.m in Sources */,
@@ -3503,6 +4135,341 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDF592381C0EB43C00AF8B5C /* TestDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDFDC50E1CACC460002A6B03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFDC50F1CACC460002A6B03 /* ZXCode39Writer.m in Sources */,
+				FDFDC5101CACC460002A6B03 /* ZXTelParsedResult.m in Sources */,
+				FDFDC5111CACC460002A6B03 /* ZXRSSExpandedRow.m in Sources */,
+				FDFDC5121CACC460002A6B03 /* ZXMultiFormatWriter.m in Sources */,
+				FDFDC5131CACC460002A6B03 /* ZXISBNParsedResult.m in Sources */,
+				FDFDC5141CACC460002A6B03 /* ZXPDF417Reader.m in Sources */,
+				FDFDC5151CACC460002A6B03 /* ZXOneDimensionalCodeWriter.m in Sources */,
+				FDFDC5161CACC460002A6B03 /* ZXSMSParsedResult.m in Sources */,
+				FDFDC5171CACC460002A6B03 /* CoreGraphicsViewController.m in Sources */,
+				FDFDC5181CACC460002A6B03 /* ZXUPCAWriter.m in Sources */,
+				FDFDC5191CACC460002A6B03 /* ZXQRCodeBlockPair.m in Sources */,
+				FDFDC51A1CACC460002A6B03 /* ZXBinarizer.m in Sources */,
+				FDFDC51B1CACC460002A6B03 /* CaseViewController.m in Sources */,
+				FDFDC51C1CACC460002A6B03 /* PopMenu.m in Sources */,
+				FDFDC51D1CACC460002A6B03 /* ZXPDF417BarcodeValue.m in Sources */,
+				FDFDC51E1CACC460002A6B03 /* ZXRSSExpandedDecodedNumeric.m in Sources */,
+				FDFDC51F1CACC460002A6B03 /* UITextView+Placeholder.m in Sources */,
+				FDFDC5201CACC460002A6B03 /* DataSetObject.m in Sources */,
+				FDFDC5211CACC460002A6B03 /* Student.m in Sources */,
+				FDFDC5221CACC460002A6B03 /* ZXEmailDoCoMoResultParser.m in Sources */,
+				FDFDC5231CACC460002A6B03 /* ZXQRCodeDetector.m in Sources */,
+				FDFDC5241CACC460002A6B03 /* InteractionTransitionAnimation.m in Sources */,
+				FDFDC5251CACC460002A6B03 /* CoreGraphicsView.m in Sources */,
+				FDFDC5261CACC460002A6B03 /* ZXBitArray.m in Sources */,
+				FDFDC5271CACC460002A6B03 /* SecondViewController.m in Sources */,
+				FDFDC5281CACC460002A6B03 /* FFmpegViewController.mm in Sources */,
+				FDFDC5291CACC460002A6B03 /* PushTransition.m in Sources */,
+				FDFDC52A1CACC460002A6B03 /* ApiXml.mm in Sources */,
+				FDFDC52B1CACC460002A6B03 /* FDRoot.m in Sources */,
+				FDFDC52C1CACC460002A6B03 /* ZXCodaBarReader.m in Sources */,
+				FDFDC52D1CACC460002A6B03 /* ZXPDF417Codeword.m in Sources */,
+				FDFDC52E1CACC460002A6B03 /* ZXHybridBinarizer.m in Sources */,
+				FDFDC52F1CACC460002A6B03 /* ZXPDF417Dimensions.m in Sources */,
+				FDFDC5301CACC460002A6B03 /* ZXEmailAddressResultParser.m in Sources */,
+				FDFDC5311CACC460002A6B03 /* ZXPDF417BarcodeRow.m in Sources */,
+				FDFDC5321CACC460002A6B03 /* ZXAddressBookParsedResult.m in Sources */,
+				FDFDC5331CACC460002A6B03 /* ZXUPCEANExtension2Support.m in Sources */,
+				FDFDC5341CACC460002A6B03 /* ZXEAN8Writer.m in Sources */,
+				FDFDC5351CACC460002A6B03 /* ZXProductParsedResult.m in Sources */,
+				FDFDC5361CACC460002A6B03 /* UIBarButtonItem+WNXBarButtonItem.m in Sources */,
+				FDFDC5371CACC460002A6B03 /* ZXGenericMultipleBarcodeReader.m in Sources */,
+				FDFDC5381CACC460002A6B03 /* ZXWhiteRectangleDetector.m in Sources */,
+				FDFDC5391CACC460002A6B03 /* ZXVINResultParser.m in Sources */,
+				FDFDC53A1CACC460002A6B03 /* ZXUPCEANExtensionSupport.m in Sources */,
+				FDFDC53B1CACC460002A6B03 /* RSADataVerifier.m in Sources */,
+				FDFDC53C1CACC460002A6B03 /* ZXMonochromeRectangleDetector.m in Sources */,
+				FDFDC53D1CACC460002A6B03 /* ImageCropperView.m in Sources */,
+				FDFDC53E1CACC460002A6B03 /* ZXRSSExpandedCurrentParsingState.m in Sources */,
+				FDFDC53F1CACC460002A6B03 /* ZXOneDReader.m in Sources */,
+				FDFDC5401CACC460002A6B03 /* ZXSMSTOMMSTOResultParser.m in Sources */,
+				FDFDC5411CACC460002A6B03 /* ZXQRCodeFinderPatternInfo.m in Sources */,
+				FDFDC5421CACC460002A6B03 /* ZXQRCode.m in Sources */,
+				FDFDC5431CACC460002A6B03 /* ZXRSSFinderPattern.m in Sources */,
+				FDFDC5441CACC460002A6B03 /* ZXQRCodeVersion.m in Sources */,
+				FDFDC5451CACC460002A6B03 /* PopUpZgjView.m in Sources */,
+				FDFDC5461CACC460002A6B03 /* ZXParsedResult.m in Sources */,
+				FDFDC5471CACC460002A6B03 /* ZXDataMatrixDefaultPlacement.m in Sources */,
+				FDFDC5481CACC460002A6B03 /* ZXPlanarYUVLuminanceSource.m in Sources */,
+				FDFDC5491CACC460002A6B03 /* ZXRSSExpandedPair.m in Sources */,
+				FDFDC54A1CACC460002A6B03 /* User.m in Sources */,
+				FDFDC54B1CACC460002A6B03 /* TitleBarView.m in Sources */,
+				FDFDC54C1CACC460002A6B03 /* ZXByQuadrantReader.m in Sources */,
+				FDFDC54D1CACC460002A6B03 /* ZXQRCodeMatrixUtil.m in Sources */,
+				FDFDC54E1CACC460002A6B03 /* ZXIntArray.m in Sources */,
+				FDFDC54F1CACC460002A6B03 /* WebViewJavascriptBridgeBase.m in Sources */,
+				FDFDC5501CACC460002A6B03 /* ZXAnyAIDecoder.m in Sources */,
+				FDFDC5511CACC460002A6B03 /* FDMethod.m in Sources */,
+				FDFDC5521CACC460002A6B03 /* ZXMultiDetector.m in Sources */,
+				FDFDC5531CACC460002A6B03 /* FMDBViewController.m in Sources */,
+				FDFDC5541CACC460002A6B03 /* ZXAztecToken.m in Sources */,
+				FDFDC5551CACC460002A6B03 /* base64.m in Sources */,
+				FDFDC5561CACC460002A6B03 /* ZXAztecReader.m in Sources */,
+				FDFDC5571CACC460002A6B03 /* VIPhotoView.m in Sources */,
+				FDFDC5581CACC460002A6B03 /* CustomCategoView.m in Sources */,
+				FDFDC5591CACC460002A6B03 /* ZXGenericGFPoly.m in Sources */,
+				FDFDC55A1CACC460002A6B03 /* ViewController.m in Sources */,
+				FDFDC55B1CACC460002A6B03 /* ZXRSSExpandedGeneralAppIdDecoder.m in Sources */,
+				FDFDC55C1CACC460002A6B03 /* RACViewController.m in Sources */,
+				FDFDC55D1CACC460002A6B03 /* ZXDataMatrixEncoderContext.m in Sources */,
+				FDFDC55E1CACC460002A6B03 /* ZXQRCodeFinderPattern.m in Sources */,
+				FDFDC55F1CACC460002A6B03 /* ZXDetectorResult.m in Sources */,
+				FDFDC5601CACC460002A6B03 /* ZXQRCodeMaskUtil.m in Sources */,
+				FDFDC5611CACC460002A6B03 /* ZXModulusGF.m in Sources */,
+				FDFDC5621CACC460002A6B03 /* ZXQRCodeAlignmentPattern.m in Sources */,
+				FDFDC5631CACC460002A6B03 /* ZXStringUtils.m in Sources */,
+				FDFDC5641CACC460002A6B03 /* AppDelegate.m in Sources */,
+				FDFDC5651CACC460002A6B03 /* UIDynamic1ViewController.m in Sources */,
+				FDFDC5661CACC460002A6B03 /* ZXDataMatrixBase256Encoder.m in Sources */,
+				FDFDC5671CACC460002A6B03 /* XHPopMenu.m in Sources */,
+				FDFDC5681CACC460002A6B03 /* ZXBoolArray.m in Sources */,
+				FDFDC5691CACC460002A6B03 /* ZXCode128Reader.m in Sources */,
+				FDFDC56A1CACC460002A6B03 /* BLEViewController.m in Sources */,
+				FDFDC56B1CACC460002A6B03 /* XHPopMenuItem.m in Sources */,
+				FDFDC56C1CACC460002A6B03 /* NSDate+help.m in Sources */,
+				FDFDC56D1CACC460002A6B03 /* HFImageEditorFrameView.m in Sources */,
+				FDFDC56E1CACC460002A6B03 /* ZXPDF417DetectorResult.m in Sources */,
+				FDFDC56F1CACC460002A6B03 /* ZXResultPoint.m in Sources */,
+				FDFDC5701CACC460002A6B03 /* WebViewJavascriptBridge.m in Sources */,
+				FDFDC5711CACC460002A6B03 /* ZXAztecBinaryShiftToken.m in Sources */,
+				FDFDC5721CACC460002A6B03 /* Address.m in Sources */,
+				FDFDC5731CACC460002A6B03 /* PopupView.m in Sources */,
+				FDFDC5741CACC460002A6B03 /* NetAPIClient.m in Sources */,
+				FDFDC5751CACC460002A6B03 /* ZXCode128Writer.m in Sources */,
+				FDFDC5761CACC460002A6B03 /* UIView+PressMenu.m in Sources */,
+				FDFDC5771CACC460002A6B03 /* ZXEncodeHints.m in Sources */,
+				FDFDC5781CACC460002A6B03 /* ZXPDF417Writer.m in Sources */,
+				FDFDC5791CACC460002A6B03 /* WebViewCosntroller.m in Sources */,
+				FDFDC57A1CACC460002A6B03 /* SwipableViewController.m in Sources */,
+				FDFDC57B1CACC460002A6B03 /* HorizonalTableViewController.m in Sources */,
+				FDFDC57C1CACC460002A6B03 /* Staff.m in Sources */,
+				FDFDC57D1CACC460002A6B03 /* payRequsestHandler.mm in Sources */,
+				FDFDC57E1CACC460002A6B03 /* Units.m in Sources */,
+				FDFDC57F1CACC460002A6B03 /* ZXQRCodeWriter.m in Sources */,
+				FDFDC5801CACC460002A6B03 /* ZXDataMatrixDetector.m in Sources */,
+				FDFDC5811CACC460002A6B03 /* HFImageEditorViewController.m in Sources */,
+				FDFDC5821CACC460002A6B03 /* ZXDecoderResult.m in Sources */,
+				FDFDC5831CACC460002A6B03 /* ZXCGImageLuminanceSource.m in Sources */,
+				FDFDC5841CACC460002A6B03 /* ZXURIParsedResult.m in Sources */,
+				FDFDC5851CACC460002A6B03 /* ZXMaxiCodeBitMatrixParser.m in Sources */,
+				FDFDC5861CACC460002A6B03 /* ZXPDF417HighLevelEncoder.m in Sources */,
+				FDFDC5871CACC460002A6B03 /* ZXAztecEncoder.m in Sources */,
+				FDFDC5881CACC460002A6B03 /* ZXBitMatrix.m in Sources */,
+				FDFDC5891CACC460002A6B03 /* ZXAI01393xDecoder.m in Sources */,
+				FDFDC58A1CACC460002A6B03 /* LockViewController.m in Sources */,
+				FDFDC58B1CACC460002A6B03 /* ZXCodaBarWriter.m in Sources */,
+				FDFDC58C1CACC460002A6B03 /* ZXRSSExpandedDecodedObject.m in Sources */,
+				FDFDC58D1CACC460002A6B03 /* ZXDataMatrixHighLevelEncoder.m in Sources */,
+				FDFDC58E1CACC460002A6B03 /* DataSigner.m in Sources */,
+				FDFDC58F1CACC460002A6B03 /* ZXExpandedProductResultParser.m in Sources */,
+				FDFDC5901CACC460002A6B03 /* CustomPopView.m in Sources */,
+				FDFDC5911CACC460002A6B03 /* TransferView.m in Sources */,
+				FDFDC5921CACC460002A6B03 /* ZXAI01AndOtherAIs.m in Sources */,
+				FDFDC5931CACC460002A6B03 /* MenuButton.m in Sources */,
+				FDFDC5941CACC460002A6B03 /* ZXUPCEReader.m in Sources */,
+				FDFDC5951CACC460002A6B03 /* ZXAbstractDoCoMoResultParser.m in Sources */,
+				FDFDC5961CACC460002A6B03 /* ZXVCardResultParser.m in Sources */,
+				FDFDC5971CACC460002A6B03 /* Order.m in Sources */,
+				FDFDC5981CACC460002A6B03 /* ZXResultParser.m in Sources */,
+				FDFDC5991CACC460002A6B03 /* GlowImageView.m in Sources */,
+				FDFDC59A1CACC460002A6B03 /* ZXMaxiCodeDecoder.m in Sources */,
+				FDFDC59B1CACC460002A6B03 /* ThrowLineTool.m in Sources */,
+				FDFDC59C1CACC460002A6B03 /* AFNHTTPSViewController.m in Sources */,
+				FDFDC59D1CACC460002A6B03 /* DelayViewController.m in Sources */,
+				FDFDC59E1CACC460002A6B03 /* ZXAI01weightDecoder.m in Sources */,
+				FDFDC59F1CACC460002A6B03 /* ZXByteArray.m in Sources */,
+				FDFDC5A01CACC460002A6B03 /* WCAlertview.m in Sources */,
+				FDFDC5A11CACC460002A6B03 /* MD5DataSigner.m in Sources */,
+				FDFDC5A21CACC460002A6B03 /* ZXDataMatrixC40Encoder.m in Sources */,
+				FDFDC5A31CACC460002A6B03 /* ZXDataMatrixSymbolInfo144.m in Sources */,
+				FDFDC5A41CACC460002A6B03 /* FDResult.m in Sources */,
+				FDFDC5A51CACC460002A6B03 /* ZXPDF417ECErrorCorrection.m in Sources */,
+				FDFDC5A61CACC460002A6B03 /* ShowCollectionViewCell.m in Sources */,
+				FDFDC5A71CACC460002A6B03 /* UIView+Common.m in Sources */,
+				FDFDC5A81CACC460002A6B03 /* NSDataEx.m in Sources */,
+				FDFDC5A91CACC460002A6B03 /* ZXMathUtils.m in Sources */,
+				FDFDC5AA1CACC460002A6B03 /* ZXQRCodeAlignmentPatternFinder.m in Sources */,
+				FDFDC5AB1CACC460002A6B03 /* ZXErrors.m in Sources */,
+				FDFDC5AC1CACC460002A6B03 /* ZXAztecState.m in Sources */,
+				FDFDC5AD1CACC460002A6B03 /* ZXGeoParsedResult.m in Sources */,
+				FDFDC5AE1CACC460002A6B03 /* ZXPDF417BoundingBox.m in Sources */,
+				FDFDC5AF1CACC460002A6B03 /* ZXBookmarkDoCoMoResultParser.m in Sources */,
+				FDFDC5B01CACC460002A6B03 /* ZXDataMatrixWriter.m in Sources */,
+				FDFDC5B11CACC460002A6B03 /* ZXURIResultParser.m in Sources */,
+				FDFDC5B21CACC460002A6B03 /* ZXEAN8Reader.m in Sources */,
+				FDFDC5B31CACC460002A6B03 /* ZXDataMatrixReader.m in Sources */,
+				FDFDC5B41CACC460002A6B03 /* ZXQRCodeDataBlock.m in Sources */,
+				FDFDC5B51CACC460002A6B03 /* NSTimerViewController.m in Sources */,
+				FDFDC5B61CACC460002A6B03 /* ZXReedSolomonEncoder.m in Sources */,
+				FDFDC5B71CACC460002A6B03 /* AssertViewController.m in Sources */,
+				FDFDC5B81CACC460002A6B03 /* ZXAztecCode.m in Sources */,
+				FDFDC5B91CACC460002A6B03 /* ZXTelResultParser.m in Sources */,
+				FDFDC5BA1CACC460002A6B03 /* ZXPDF417ErrorCorrection.m in Sources */,
+				FDFDC5BB1CACC460002A6B03 /* ZXDecodeHints.m in Sources */,
+				FDFDC5BC1CACC460002A6B03 /* NSString+help.m in Sources */,
+				FDFDC5BD1CACC460002A6B03 /* ZXUPCEANWriter.m in Sources */,
+				FDFDC5BE1CACC460002A6B03 /* PayViewController.m in Sources */,
+				FDFDC5BF1CACC460002A6B03 /* ZXRSSExpandedDecodedChar.m in Sources */,
+				FDFDC5C01CACC460002A6B03 /* MyView.m in Sources */,
+				FDFDC5C11CACC460002A6B03 /* FileManagerViewController.m in Sources */,
+				FDFDC5C21CACC460002A6B03 /* ZXAztecDecoder.m in Sources */,
+				FDFDC5C31CACC460002A6B03 /* ZXWifiParsedResult.m in Sources */,
+				FDFDC5C41CACC460002A6B03 /* ZXCode93Reader.m in Sources */,
+				FDFDC5C51CACC460002A6B03 /* DraggableView.m in Sources */,
+				FDFDC5C61CACC460002A6B03 /* ZXAI01decoder.m in Sources */,
+				FDFDC5C71CACC460002A6B03 /* ZXRGBLuminanceSource.m in Sources */,
+				FDFDC5C81CACC460002A6B03 /* ZXGenericGF.m in Sources */,
+				FDFDC5C91CACC460002A6B03 /* ZXDataMatrixErrorCorrection.m in Sources */,
+				FDFDC5CA1CACC460002A6B03 /* NSString+Emojize.m in Sources */,
+				FDFDC5CB1CACC460002A6B03 /* ZXDataMatrixASCIIEncoder.m in Sources */,
+				FDFDC5CC1CACC460002A6B03 /* ZXDataMatrixDecodedBitStreamParser.m in Sources */,
+				FDFDC5CD1CACC460002A6B03 /* ZXRSSExpandedFieldParser.m in Sources */,
+				FDFDC5CE1CACC460002A6B03 /* ZXQRCodeFinderPatternFinder.m in Sources */,
+				FDFDC5CF1CACC460002A6B03 /* ZXPDF417Common.m in Sources */,
+				FDFDC5D01CACC460002A6B03 /* ZXLuminanceSource.m in Sources */,
+				FDFDC5D11CACC460002A6B03 /* ZXUPCEANReader.m in Sources */,
+				FDFDC5D21CACC460002A6B03 /* ZXQRCodeFormatInformation.m in Sources */,
+				FDFDC5D31CACC460002A6B03 /* ZXVEventResultParser.m in Sources */,
+				FDFDC5D41CACC460002A6B03 /* ZXEAN13Reader.m in Sources */,
+				FDFDC5D51CACC460002A6B03 /* ZXPDF417Detector.m in Sources */,
+				FDFDC5D61CACC460002A6B03 /* ZXInvertedLuminanceSource.m in Sources */,
+				FDFDC5D71CACC460002A6B03 /* ZXRSSDataCharacter.m in Sources */,
+				FDFDC5D81CACC460002A6B03 /* RootViewController.m in Sources */,
+				FDFDC5D91CACC460002A6B03 /* XHRealTimeBlur.m in Sources */,
+				FDFDC5DA1CACC460002A6B03 /* ZXRSSExpandedBlockParsedResult.m in Sources */,
+				FDFDC5DB1CACC460002A6B03 /* UIViewController+help.m in Sources */,
+				FDFDC5DC1CACC460002A6B03 /* main.m in Sources */,
+				FDFDC5DD1CACC460002A6B03 /* ZXDataMatrixTextEncoder.m in Sources */,
+				FDFDC5DE1CACC460002A6B03 /* UIImage+Rotation.m in Sources */,
+				FDFDC5DF1CACC460002A6B03 /* ZXPDF417DecodedBitStreamParser.m in Sources */,
+				FDFDC5E01CACC460002A6B03 /* ZXAI013103decoder.m in Sources */,
+				FDFDC5E11CACC460002A6B03 /* ZXBitArrayBuilder.m in Sources */,
+				FDFDC5E21CACC460002A6B03 /* ZXMultiFormatReader.m in Sources */,
+				FDFDC5E31CACC460002A6B03 /* ZXAbstractExpandedDecoder.m in Sources */,
+				FDFDC5E41CACC460002A6B03 /* ZXAbstractRSSReader.m in Sources */,
+				FDFDC5E51CACC460002A6B03 /* WXUtil.mm in Sources */,
+				FDFDC5E61CACC460002A6B03 /* UIImage+help.m in Sources */,
+				FDFDC5E71CACC460002A6B03 /* ZXEmailAddressParsedResult.m in Sources */,
+				FDFDC5E81CACC460002A6B03 /* RSADataSigner.m in Sources */,
+				FDFDC5E91CACC460002A6B03 /* CustomView.m in Sources */,
+				FDFDC5EA1CACC460002A6B03 /* Toast+UIView.m in Sources */,
+				FDFDC5EB1CACC460002A6B03 /* ZXMaxiCodeDecodedBitStreamParser.m in Sources */,
+				FDFDC5EC1CACC460002A6B03 /* ZXAddressBookAUResultParser.m in Sources */,
+				FDFDC5ED1CACC460002A6B03 /* ZXQRCodeMode.m in Sources */,
+				FDFDC5EE1CACC460002A6B03 /* FirstViewController.m in Sources */,
+				FDFDC5EF1CACC460002A6B03 /* ZXWifiResultParser.m in Sources */,
+				FDFDC5F01CACC460002A6B03 /* ZXRSSExpandedReader.m in Sources */,
+				FDFDC5F11CACC460002A6B03 /* ZXITFReader.m in Sources */,
+				FDFDC5F21CACC460002A6B03 /* openssl_wrapper.m in Sources */,
+				FDFDC5F31CACC460002A6B03 /* ZXQRCodeDataMask.m in Sources */,
+				FDFDC5F41CACC460002A6B03 /* UIDevice+Info.m in Sources */,
+				FDFDC5F51CACC460002A6B03 /* ZXProductResultParser.m in Sources */,
+				FDFDC5F61CACC460002A6B03 /* ZXPDF417.m in Sources */,
+				FDFDC5F71CACC460002A6B03 /* ZXDataMatrixEdifactEncoder.m in Sources */,
+				FDFDC5F81CACC460002A6B03 /* ZXPDF417DetectionResultColumn.m in Sources */,
+				FDFDC5F91CACC460002A6B03 /* ZXQRCodeBitMatrixParser.m in Sources */,
+				FDFDC5FA1CACC460002A6B03 /* ZXDataMatrixBitMatrixParser.m in Sources */,
+				FDFDC5FB1CACC460002A6B03 /* ZXRSS14Reader.m in Sources */,
+				FDFDC5FC1CACC460002A6B03 /* ThirdViewController.m in Sources */,
+				FDFDC5FD1CACC460002A6B03 /* ZXRSSUtils.m in Sources */,
+				FDFDC5FE1CACC460002A6B03 /* ZXAI01392xDecoder.m in Sources */,
+				FDFDC5FF1CACC460002A6B03 /* ZXExpandedProductParsedResult.m in Sources */,
+				FDFDC6001CACC460002A6B03 /* ZXAztecDetector.m in Sources */,
+				FDFDC6011CACC460002A6B03 /* ZXBizcardResultParser.m in Sources */,
+				FDFDC6021CACC460002A6B03 /* ZXPDF417ResultMetadata.m in Sources */,
+				FDFDC6031CACC460002A6B03 /* TransferAnimationViewController.m in Sources */,
+				FDFDC6041CACC460002A6B03 /* ZXPDF417BarcodeMetadata.m in Sources */,
+				FDFDC6051CACC460002A6B03 /* ZXQRCodeMultiReader.m in Sources */,
+				FDFDC6061CACC460002A6B03 /* UIColor+help.m in Sources */,
+				FDFDC6071CACC460002A6B03 /* ZXDimension.m in Sources */,
+				FDFDC6081CACC460002A6B03 /* ZXPDF417BarcodeMatrix.m in Sources */,
+				FDFDC6091CACC460002A6B03 /* XHPopMenuItemView.m in Sources */,
+				FDFDC60A1CACC460002A6B03 /* ZXITFWriter.m in Sources */,
+				FDFDC60B1CACC460002A6B03 /* ZXEANManufacturerOrgSupport.m in Sources */,
+				FDFDC60C1CACC460002A6B03 /* ZXDataMatrixDataBlock.m in Sources */,
+				FDFDC60D1CACC460002A6B03 /* ZXURLTOResultParser.m in Sources */,
+				FDFDC60E1CACC460002A6B03 /* Mather.m in Sources */,
+				FDFDC60F1CACC460002A6B03 /* ZXTextParsedResult.m in Sources */,
+				FDFDC6101CACC460002A6B03 /* ZXAztecSimpleToken.m in Sources */,
+				FDFDC6111CACC460002A6B03 /* HeaderViewController.m in Sources */,
+				FDFDC6121CACC460002A6B03 /* ZXAztecHighLevelEncoder.m in Sources */,
+				FDFDC6131CACC460002A6B03 /* Status.m in Sources */,
+				FDFDC6141CACC460002A6B03 /* ZXCode39Reader.m in Sources */,
+				FDFDC6151CACC460002A6B03 /* AutoLayoutViewController.m in Sources */,
+				FDFDC6161CACC460002A6B03 /* ZXSMTPResultParser.m in Sources */,
+				FDFDC6171CACC460002A6B03 /* ZXAI01320xDecoder.m in Sources */,
+				FDFDC6181CACC460002A6B03 /* ZXAddressBookDoCoMoResultParser.m in Sources */,
+				FDFDC6191CACC460002A6B03 /* ZXAztecDetectorResult.m in Sources */,
+				FDFDC61A1CACC460002A6B03 /* ZXQRCodeEncoder.m in Sources */,
+				FDFDC61B1CACC460002A6B03 /* ZXCharacterSetECI.m in Sources */,
+				FDFDC61C1CACC460002A6B03 /* ZXUPCAReader.m in Sources */,
+				FDFDC61D1CACC460002A6B03 /* ZXImage.m in Sources */,
+				FDFDC61E1CACC460002A6B03 /* ZXSMSMMSResultParser.m in Sources */,
+				FDFDC61F1CACC460002A6B03 /* ZXBinaryBitmap.m in Sources */,
+				FDFDC6201CACC460002A6B03 /* ZXPDF417DetectionResultRowIndicatorColumn.m in Sources */,
+				FDFDC6211CACC460002A6B03 /* DataVerifier.m in Sources */,
+				FDFDC6221CACC460002A6B03 /* ZXDefaultGridSampler.m in Sources */,
+				FDFDC6231CACC460002A6B03 /* ZXQRCodeDecodedBitStreamParser.m in Sources */,
+				FDFDC6241CACC460002A6B03 /* Son.m in Sources */,
+				FDFDC6251CACC460002A6B03 /* ZXAI013x0x1xDecoder.m in Sources */,
+				FDFDC6261CACC460002A6B03 /* ZXBitSource.m in Sources */,
+				FDFDC6271CACC460002A6B03 /* ZXDataMatrixDecoder.m in Sources */,
+				FDFDC6281CACC460002A6B03 /* CustomKeyboardView.m in Sources */,
+				FDFDC6291CACC460002A6B03 /* ZXRSSExpandedDecodedInformation.m in Sources */,
+				FDFDC62A1CACC460002A6B03 /* ZXQRCodeDecoder.m in Sources */,
+				FDFDC62B1CACC460002A6B03 /* ZXReedSolomonDecoder.m in Sources */,
+				FDFDC62C1CACC460002A6B03 /* NSObject+help.m in Sources */,
+				FDFDC62D1CACC460002A6B03 /* ZXPDF417DetectionResult.m in Sources */,
+				FDFDC62E1CACC460002A6B03 /* PopViewController.m in Sources */,
+				FDFDC62F1CACC460002A6B03 /* UIViewController+OverRite.m in Sources */,
+				FDFDC6301CACC460002A6B03 /* ZXCapture.m in Sources */,
+				FDFDC6311CACC460002A6B03 /* ZXCalendarParsedResult.m in Sources */,
+				FDFDC6321CACC460002A6B03 /* ZXPerspectiveTransform.m in Sources */,
+				FDFDC6331CACC460002A6B03 /* ZXDataMatrixX12Encoder.m in Sources */,
+				FDFDC6341CACC460002A6B03 /* ZXDataMatrixSymbolInfo.m in Sources */,
+				FDFDC6351CACC460002A6B03 /* ZXDataMatrixVersion.m in Sources */,
+				FDFDC6361CACC460002A6B03 /* ZXPDF417CodewordDecoder.m in Sources */,
+				FDFDC6371CACC460002A6B03 /* MenuItem.m in Sources */,
+				FDFDC6381CACC460002A6B03 /* ZXMultiFormatUPCEANReader.m in Sources */,
+				FDFDC6391CACC460002A6B03 /* ZXEAN13Writer.m in Sources */,
+				FDFDC63A1CACC460002A6B03 /* ZXRSSPair.m in Sources */,
+				FDFDC63B1CACC460002A6B03 /* ZXMultiFinderPatternFinder.m in Sources */,
+				FDFDC63C1CACC460002A6B03 /* ZXModulusPoly.m in Sources */,
+				FDFDC63D1CACC460002A6B03 /* ZXByteMatrix.m in Sources */,
+				FDFDC63E1CACC460002A6B03 /* NSFileManager+help.m in Sources */,
+				FDFDC63F1CACC460002A6B03 /* UIScrollView+ScalableCover.m in Sources */,
+				FDFDC6401CACC460002A6B03 /* UITabBarController+showHide.m in Sources */,
+				FDFDC6411CACC460002A6B03 /* LockManager.m in Sources */,
+				FDFDC6421CACC460002A6B03 /* ZXAztecWriter.m in Sources */,
+				FDFDC6431CACC460002A6B03 /* ZXQRCodeDecoderMetaData.m in Sources */,
+				FDFDC6441CACC460002A6B03 /* WKWebViewJavascriptBridge.m in Sources */,
+				FDFDC6451CACC460002A6B03 /* HttpRequest.m in Sources */,
+				FDFDC6461CACC460002A6B03 /* AVFoundationViewController.m in Sources */,
+				FDFDC6471CACC460002A6B03 /* ZXVINParsedResult.m in Sources */,
+				FDFDC6481CACC460002A6B03 /* ZXGridSampler.m in Sources */,
+				FDFDC6491CACC460002A6B03 /* ZXMaxiCodeReader.m in Sources */,
+				FDFDC64A1CACC460002A6B03 /* UIImageViewEx.m in Sources */,
+				FDFDC64B1CACC460002A6B03 /* ZXPDF417ScanningDecoder.m in Sources */,
+				FDFDC64C1CACC460002A6B03 /* ZXISBNResultParser.m in Sources */,
+				FDFDC64D1CACC460002A6B03 /* FDRecipe.m in Sources */,
+				FDFDC64E1CACC460002A6B03 /* ZXMultiFormatOneDReader.m in Sources */,
+				FDFDC64F1CACC460002A6B03 /* ZXAI013x0xDecoder.m in Sources */,
+				FDFDC6501CACC460002A6B03 /* ZXGlobalHistogramBinarizer.m in Sources */,
+				FDFDC6511CACC460002A6B03 /* TestTransferViewController.m in Sources */,
+				FDFDC6521CACC460002A6B03 /* ZXQRCodeErrorCorrectionLevel.m in Sources */,
+				FDFDC6531CACC460002A6B03 /* ZXResult.m in Sources */,
+				FDFDC6541CACC460002A6B03 /* ZXGeoResultParser.m in Sources */,
+				FDFDC6551CACC460002A6B03 /* ZXQRCodeReader.m in Sources */,
+				FDFDC6561CACC460002A6B03 /* ZXUPCEANExtension5Support.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3791,6 +4758,128 @@
 			};
 			name = Release;
 		};
+		FDFDC6AC1CACC460002A6B03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17F3B43B1EF844193FBFA510 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Product";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tools",
+					"$(PROJECT_DIR)/Tools/Alipay",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TestDemo/TestDemo.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/BlocksKit\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/ICViewPager\"",
+					"\"${PODS_ROOT}/Headers/Public/KVNProgress\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactiveViewModel\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/pop\"",
+					"\"$(PROJECT_DIR)/Tools/ZXingObjc\"",
+					"\"$(PROJECT_DIR)/Tools/Alipay\"",
+				);
+				INFOPLIST_FILE = "TestDemo_Develop copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Tools",
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestDemo/Vendor/FFmpeg-iOS/lib",
+					"$(PROJECT_DIR)/Tools/Alipay",
+					"$(PROJECT_DIR)/Tools/WeChatSDK",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"BlocksKit\"",
+					"-l\"MJExtension\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"Reveal\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cyberway.TestDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		FDFDC6AD1CACC460002A6B03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7270217CDD125CBAC7320A0F /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Product";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tools",
+					"$(PROJECT_DIR)/Tools/Alipay",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TestDemo/TestDemo.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/BlocksKit\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/ICViewPager\"",
+					"\"${PODS_ROOT}/Headers/Public/KVNProgress\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactiveViewModel\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/pop\"",
+					"\"$(PROJECT_DIR)/Tools/ZXingObjc\"",
+					"\"$(PROJECT_DIR)/Tools/Alipay\"",
+				);
+				INFOPLIST_FILE = "TestDemo_Develop copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Tools",
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestDemo/Vendor/FFmpeg-iOS/lib",
+					"$(PROJECT_DIR)/Tools/Alipay",
+					"$(PROJECT_DIR)/Tools/WeChatSDK",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"BlocksKit\"",
+					"-l\"MJExtension\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"Reveal\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cyberway.TestDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -3826,6 +4915,15 @@
 			buildConfigurations = (
 				FDF592431C0EB43C00AF8B5C /* Debug */,
 				FDF592441C0EB43C00AF8B5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDFDC6AB1CACC460002A6B03 /* Build configuration list for PBXNativeTarget "TestDemo_Product" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDFDC6AC1CACC460002A6B03 /* Debug */,
+				FDFDC6AD1CACC460002A6B03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

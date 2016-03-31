@@ -37,7 +37,7 @@ typedef NS_ENUM (NSUInteger, IntervalType) {
 
 #define kTimeFormat                     @"HH:mm:ss"
 
-@interface NSDate (DateHelp)
+@interface NSDate (help)
 
 //时间戳（格式为yyyyMMddHHmmss）
 + (NSString *)getCurrentTimestamp;

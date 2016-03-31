@@ -7,7 +7,7 @@
 //
 
 #import "NSTimerViewController.h"
-#import "NSDate+DateHelp.h"
+#import "NSDate+help.h"
 
 @interface NSTimerViewController ()
 @property (nonatomic, strong) NSTimer *timer;

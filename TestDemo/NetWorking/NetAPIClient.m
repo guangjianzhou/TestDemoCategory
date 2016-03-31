@@ -8,7 +8,7 @@
 
 #import "NetAPIClient.h"
 #import <AFNetWorking/AFNetworking.h>
-#import "NSDate+DateHelp.h"
+#import "NSDate+help.h"
 
 NSString *const kAPIErrorDomain = @"kXPAPIErrorDomain";
 NSString *const kAPIErrorDescription = @"请求失败，请稍后重试!";
