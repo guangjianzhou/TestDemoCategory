@@ -116,5 +116,13 @@
 //sha1  转十六进制
 - (NSString *)sha1ForHex;
 
+#pragma mark  - 判断
+/**
+ *  对链接URL进行判断
+ *
+ */
++ (BOOL)isURL:(NSString *)string;
+
+
 @end
 

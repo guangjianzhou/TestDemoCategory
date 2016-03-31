@@ -34,7 +34,12 @@ typedef NS_ENUM (NSUInteger, NetHostType)
 
 @interface NetAPIClient : NSObject
 
+@property (nonatomic, assign) BOOL isShowLoadView;//是否显示加载图
+
+
 + (instancetype)sharedClient;
+
+
 
 /**
  *  数据请求
@@ -86,6 +91,14 @@ typedef NS_ENUM (NSUInteger, NetHostType)
                 upLoadingBlock:(NetUpLodingBlock)upLodingBlock
             upLoadSuccessBlock:(NetUpLoadCompletionBlock)successBlock
               upLoadFailBlock:(NetUpLoadFailBlock)failBlock;
+
+//头像上传
+- (void)uploadImage:(UIImage *)image
+                url:(NSString *)url
+            params:(NSMutableDictionary *)params
+     upLoadingBlock:(NetUpLodingBlock)upLodingBlock
+ upLoadSuccessBlock:(NetUpLoadCompletionBlock)successBlock
+    upLoadFailBlock:(NetUpLoadFailBlock)failBlock;
 
 
 @end

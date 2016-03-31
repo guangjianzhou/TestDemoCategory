@@ -34,4 +34,94 @@
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
 
-4.
+4.uitabbar自定义
+{
+    self.tabBar.translucent = NO;
+    self.viewControllers = @[
+            [self addNavigationItemForViewController:newsSVC],
+            [self addNavigationItemForViewController:tweetsSVC],
+            [UIViewController new],
+            discoverNav,
+            homepageNav,
+    ];
+
+    NSArray *titles = @[@"综合", @"动弹", @"", @"发现", @"我"];
+    NSArray *images = @[@"tabbar-news", @"tabbar-tweet", @"", @"tabbar-discover", @"tabbar-me"];
+    [self.tabBar.items enumerateObjectsUsingBlock:^(UITabBarItem *item, NSUInteger idx, BOOL *stop) {
+        [item setTitle:titles[idx]];
+        [item setImage:[UIImage imageNamed:images[idx]]];
+        [item setSelectedImage:[UIImage imageNamed:[images[idx] stringByAppendingString:@"-selected"]]];
+    }];
+
+    [self.tabBar.items[2] setEnabled:NO];
+    //第三按钮进行自定义
+    [self addCenterButtonWithImage:[UIImage imageNamed:@"tabbar-more"]];
+    [self.tabBar addObserver:self
+    forKeyPath:@"selectedItem"
+    options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew
+    context:nil];
+}
+
+-(void)addCenterButtonWithImage:(UIImage *)buttonImage
+{
+    _centerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+
+    CGPoint origin = [self.view convertPoint:self.tabBar.center toView:self.tabBar];
+    CGSize buttonSize = CGSizeMake(self.tabBar.frame.size.width / 5 - 6, self.tabBar.frame.size.height - 4);
+
+    _centerButton.frame = CGRectMake(origin.x - buttonSize.height/2, origin.y - buttonSize.height/2, buttonSize.height, buttonSize.height);
+
+    [_centerButton setCornerRadius:buttonSize.height/2];
+    [_centerButton setBackgroundColor:[UIColor colorWithHex:0x24a83d]];
+    [_centerButton setImage:buttonImage forState:UIControlStateNormal];
+    [_centerButton addTarget:self action:@selector(buttonPressed) forControlEvents:UIControlEventTouchUpInside];
+
+    [self.tabBar addSubview:_centerButton];
+}
+
+5.小型表情图文混排
+_didSelectEmoji = ^(NSTextAttachment *textAttachment) {
+    NSAttributedString *emojiAttributedString = [NSAttributedString attributedStringWithAttachment:textAttachment];
+    NSMutableAttributedString *mutableAttributeString = [[NSMutableAttributedString alloc] initWithAttributedString:textView.attributedText];
+    [mutableAttributeString replaceCharactersInRange:textView.selectedRange withAttributedString:emojiAttributedString];
+    textView.attributedText = mutableAttributeString;
+    textView.textColor = [UIColor titleColor];
+    [textView insertText:@""];
+    textView.font = [UIFont systemFontOfSize:16];
+};
+
+6.plist配置
+
+https-->http 网络请求
+App Transport Security Settings
+<key>NSAppTransportSecurity</key>
+<dict>
+<key>NSAllowsArbitraryLoads</key>
+<true/>
+</dict>
+
+调用的URL scheme列为白名单(微信 qq 等app)
+URL Scheme来调起你的APP的请求
+
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>wechat</string>
+    <string>weixin</string>
+    <string>sinaweibohd</string>
+    <string>sinaweibo</string>
+    <string>sinaweibosso</string>
+    <string>weibosdk</string>
+    <string>weibosdk2.5</string>
+    <string>mqqapi</string>
+    <string>mqq</string>
+</array>
+
+URL-Type 别人使用固定格式 调起APP
+
+7.使用两个开发环境: 开发、测试
+
+
+
+
+
+

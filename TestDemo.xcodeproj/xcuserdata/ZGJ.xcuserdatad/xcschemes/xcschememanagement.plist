@@ -4,8 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>TestDemo.xcscheme</key>
+		<key>TestDemo_Develop.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>TestDemo_Product.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
@@ -23,6 +32,11 @@
 			<true/>
 		</dict>
 		<key>FDF592321C0EB43C00AF8B5C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FDFDC3681CACBB6B002A6B03</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -35,6 +35,13 @@
  */
 -(UIImage*)scaledToSize:(CGSize)targetSize;
 
+
+/**
+ *  图片压缩
+ *  默认 500 * 1024
+ */
++ (NSData *)compressImage:(UIImage *)image;
+
 /**
  *  图片是否高质量
  *
@@ -63,8 +70,6 @@
 + (UIImage *)fullResolutionImageFromALAsset:(ALAsset *)asset;
 + (UIImage *)fullScreenImageALAsset:(ALAsset *)asset;
 
-+ (UIImage *)imageWithFileType:(NSString *)fileType;
-
 
 - (UIImage *)getSubImage:(CGRect)rect;
 - (UIImage *)scaleToSize:(CGSize)size;
@@ -73,6 +78,8 @@
 //图片旋转
 + (UIImage *)image:(UIImage *)image rotation:(UIImageOrientation)orientation;
 
+//生成二维码图片
++ (UIImage *)createQRCodeFromString:(NSString *)string;
 
 
 @end

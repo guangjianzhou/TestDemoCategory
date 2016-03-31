@@ -304,4 +304,42 @@ const NSInteger kAPI_Timeout = 15;
     }
 }
 
+#pragma mark - 头像
+
+- (void)uploadImage:(UIImage *)image
+                url:(NSString *)url
+             params:(NSMutableDictionary *)params
+     upLoadingBlock:(NetUpLodingBlock)upLodingBlock
+ upLoadSuccessBlock:(NetUpLoadCompletionBlock)successBlock
+    upLoadFailBlock:(NetUpLoadFailBlock)failBlock
+{
+    
+    NSString *fileName = @"";
+    NSString *name = @"";
+    NSData *data = UIImageJPEGRepresentation(image, 1.0);
+    
+    AFHTTPRequestOperationManager *manager = [self manager];
+    __weak typeof(self) weakSelf = self;
+   AFHTTPRequestOperation *operation = [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [formData appendPartWithFileData:data name:name fileName:fileName mimeType:@"image/jpeg"];
+    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        [weakSelf handleRequestSuccessDataWithTask:operation responseObject:responseObject hostType:NetHostTypeNone failBlock:failBlock successBlock:successBlock];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failBlock) failBlock(error);
+    }];
+    
+    //这是上传进度
+    [operation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
+        CGFloat progressValue = (float)totalBytesWritten/(float)totalBytesExpectedToWrite;
+        if (upLodingBlock)
+        {
+            upLodingBlock(progressValue);
+        }
+    }];
+    [operation start];
+}
+
+
 @end

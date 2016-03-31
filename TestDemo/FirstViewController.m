@@ -9,6 +9,8 @@
 #import "FirstViewController.h"
 #import <CoreTelephony/CTCallCenter.h>
 #import <CoreTelephony/CTCall.h>
+#import "SwipableViewController.h"
+#import "ThirdViewController.h"
 
 @interface FirstViewController ()<UISearchControllerDelegate,UISearchResultsUpdating>
 
@@ -166,7 +168,31 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     _selectIndexPath = indexPath;
-    [self performSegueWithIdentifier:@"FirstViewController1" sender:nil];
+    if(indexPath.row == 0)
+    {
+        
+        ThirdViewController *newsViewCtl = [self.storyboard instantiateViewControllerWithIdentifier:@"ThirdViewController"];
+        newsViewCtl.view.backgroundColor = [UIColor lightGrayColor];
+        
+        ThirdViewController *hotNewsViewCtl = [self.storyboard instantiateViewControllerWithIdentifier:@"ThirdViewController"];
+        ThirdViewController *blogViewCtl = [self.storyboard instantiateViewControllerWithIdentifier:@"ThirdViewController"];
+        blogViewCtl.view.backgroundColor = [UIColor orangeColor];
+        
+        ThirdViewController *recommendBlogViewCtl = [self.storyboard instantiateViewControllerWithIdentifier:@"ThirdViewController"];
+        
+        
+        
+        SwipableViewController *newsSVC = [[SwipableViewController alloc] initWithTitle:@"综合"
+                                                                           andSubTitles:@[@"资讯", @"热点", @"博客", @"推荐"]
+                                                                         andControllers:@[newsViewCtl, hotNewsViewCtl, blogViewCtl,recommendBlogViewCtl]
+                                                                            underTabbar:NO];
+        [self.navigationController pushViewController:newsSVC animated:YES];
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"FirstViewController1" sender:nil];    
+    }
+    
 }
 
 #pragma mark - UISearchResultsUpdating

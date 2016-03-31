@@ -878,6 +878,7 @@
                         <segue destination="qI8-St-zfA" kind="show" identifier="DelaySegue" id="jTY-Ws-5WR"/>
                         <segue destination="X1w-9M-cjd" kind="show" identifier="PaySegue" id="5l6-5y-woA"/>
                         <segue destination="D77-JA-YsN" kind="push" identifier="CaseSegue" id="opE-Vw-hxV"/>
+                        <segue destination="yI9-3Z-dRi" kind="push" identifier="WriteSegue" id="bbY-6u-nSm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lla-R9-m4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1017,6 +1018,105 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PaF-0P-ZZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-8119.5" y="-3375.75"/>
+        </scene>
+        <!--File Manager View Controller-->
+        <scene sceneID="OZZ-13-DHh">
+            <objects>
+                <viewController id="yI9-3Z-dRi" customClass="FileManagerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tQI-sQ-6Ne"/>
+                        <viewControllerLayoutGuide type="bottom" id="DQL-IY-lla"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pk4-Iy-lpp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8H-eH-zQn">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.87058823529999996" green="0.89411764709999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="DnH-pn-ewY"/>
+                                    <constraint firstAttribute="height" constant="30" id="anx-8U-jMZ"/>
+                                </constraints>
+                                <state key="normal" title="读写1"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DnH-pn-ewY"/>
+                                        <exclude reference="anx-8U-jMZ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="DnH-pn-ewY"/>
+                                        <include reference="anx-8U-jMZ"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="readWrite1:" destination="yI9-3Z-dRi" eventType="touchUpInside" id="mPC-x0-gRY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdT-q3-O24">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.20000001789999999" green="0.93333339689999995" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="i41-FG-Lda"/>
+                                    <constraint firstAttribute="height" constant="30" id="rWl-un-X3S"/>
+                                </constraints>
+                                <state key="normal" title="读写"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="i41-FG-Lda"/>
+                                        <exclude reference="rWl-un-X3S"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="i41-FG-Lda"/>
+                                        <include reference="rWl-un-X3S"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="readWrite:" destination="yI9-3Z-dRi" eventType="touchUpInside" id="URw-9G-6QG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tdT-q3-O24" firstAttribute="leading" secondItem="Pk4-Iy-lpp" secondAttribute="leading" constant="29" id="4oD-bE-Qxz"/>
+                            <constraint firstItem="tdT-q3-O24" firstAttribute="top" secondItem="X8H-eH-zQn" secondAttribute="bottom" constant="21" id="qll-FG-nDb"/>
+                            <constraint firstItem="X8H-eH-zQn" firstAttribute="top" secondItem="tQI-sQ-6Ne" secondAttribute="bottom" constant="14" id="qtO-4I-tnq"/>
+                            <constraint firstItem="X8H-eH-zQn" firstAttribute="leading" secondItem="Pk4-Iy-lpp" secondAttribute="leading" constant="29" id="ySh-DB-kyG"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="X8H-eH-zQn"/>
+                                <exclude reference="tdT-q3-O24"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="qtO-4I-tnq"/>
+                                <exclude reference="ySh-DB-kyG"/>
+                                <exclude reference="4oD-bE-Qxz"/>
+                                <exclude reference="qll-FG-nDb"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="X8H-eH-zQn"/>
+                                <include reference="tdT-q3-O24"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="qtO-4I-tnq"/>
+                                <include reference="ySh-DB-kyG"/>
+                                <include reference="4oD-bE-Qxz"/>
+                                <include reference="qll-FG-nDb"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="qw3-Vb-Emy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="abn-NU-aB6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8137.5" y="-6055.5"/>
         </scene>
         <!--Case View Controller-->
         <scene sceneID="xSu-Qa-1Fw">
@@ -1222,6 +1322,9 @@
                                         <exclude reference="4eC-aP-qm4"/>
                                         <exclude reference="aJ2-gc-DSy"/>
                                     </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">

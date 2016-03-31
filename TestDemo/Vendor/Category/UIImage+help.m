@@ -56,12 +56,50 @@
     UIGraphicsEndImageContext();
     return newImage;
 }
+
 -(UIImage*)scaledToSize:(CGSize)targetSize highQuality:(BOOL)highQuality{
     if (highQuality) {
         targetSize = CGSizeMake(2*targetSize.width, 2*targetSize.height);
     }
     return [self scaledToSize:targetSize];
 }
+
++ (NSData *)compressImage:(UIImage *)image
+{
+    CGSize size = [self scaleSize:image.size];
+    UIGraphicsBeginImageContext(size);
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage * scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    NSUInteger maxFileSize = 500 * 1024;
+    CGFloat compressionRatio = 0.7f;
+    CGFloat maxCompressionRatio = 0.1f;
+    
+    NSData *imageData = UIImageJPEGRepresentation(scaledImage, compressionRatio);
+    
+    while (imageData.length > maxFileSize && compressionRatio > maxCompressionRatio) {
+        compressionRatio -= 0.1f;
+        imageData = UIImageJPEGRepresentation(image, compressionRatio);
+    }
+    
+    return imageData;
+}
+
++ (CGSize)scaleSize:(CGSize)sourceSize
+{
+    float width = sourceSize.width;
+    float height = sourceSize.height;
+    if (width >= height)
+    {
+        return CGSizeMake(800, 800 * height / width);
+    }
+    else
+    {
+        return CGSizeMake(800 * width / height, 800);
+    }
+}
+
 
 -(UIImage *)scaledToMaxSize:(CGSize)size{
     
@@ -104,70 +142,7 @@
     return img;
 }
 
-+ (UIImage *)imageWithFileType:(NSString *)fileType{
-    fileType = [fileType lowercaseString];
-    NSString *iconName;
-    //XXX(s)
-    if ([fileType hasPrefix:@"doc"]) {
-        iconName = @"icon_file_doc";
-    }else if ([fileType hasPrefix:@"ppt"]) {
-        iconName = @"icon_file_ppt";
-    }else if ([fileType hasPrefix:@"pdf"]) {
-        iconName = @"icon_file_pdf";
-    }else if ([fileType hasPrefix:@"xls"]) {
-        iconName = @"icon_file_xls";
-    }
-    //XXX
-    else if ([fileType isEqualToString:@"txt"]) {
-        iconName = @"icon_file_txt";
-    }else if ([fileType isEqualToString:@"ai"]) {
-        iconName = @"icon_file_ai";
-    }else if ([fileType isEqualToString:@"apk"]) {
-        iconName = @"icon_file_apk";
-    }else if ([fileType isEqualToString:@"md"]) {
-        iconName = @"icon_file_md";
-    }else if ([fileType isEqualToString:@"psd"]) {
-        iconName = @"icon_file_psd";
-    }
-    //XXX||YYY
-    else if ([fileType isEqualToString:@"zip"] || [fileType isEqualToString:@"rar"] || [fileType isEqualToString:@"arj"]) {
-        iconName = @"icon_file_zip";
-    }else if ([fileType isEqualToString:@"html"]
-              || [fileType isEqualToString:@"xml"]
-              || [fileType isEqualToString:@"java"]
-              || [fileType isEqualToString:@"h"]
-              || [fileType isEqualToString:@"m"]
-              || [fileType isEqualToString:@"cpp"]
-              || [fileType isEqualToString:@"json"]
-              || [fileType isEqualToString:@"cs"]
-              || [fileType isEqualToString:@"go"]) {
-        iconName = @"icon_file_code";
-    }else if ([fileType isEqualToString:@"avi"]
-              || [fileType isEqualToString:@"rmvb"]
-              || [fileType isEqualToString:@"rm"]
-              || [fileType isEqualToString:@"asf"]
-              || [fileType isEqualToString:@"divx"]
-              || [fileType isEqualToString:@"mpeg"]
-              || [fileType isEqualToString:@"mpe"]
-              || [fileType isEqualToString:@"wmv"]
-              || [fileType isEqualToString:@"mp4"]
-              || [fileType isEqualToString:@"mkv"]
-              || [fileType isEqualToString:@"vob"]) {
-        iconName = @"icon_file_movie";
-    }else if ([fileType isEqualToString:@"mp3"]
-              || [fileType isEqualToString:@"wav"]
-              || [fileType isEqualToString:@"mid"]
-              || [fileType isEqualToString:@"asf"]
-              || [fileType isEqualToString:@"mpg"]
-              || [fileType isEqualToString:@"tti"]) {
-        iconName = @"icon_file_music";
-    }
-    //unknown
-    else{
-        iconName = @"icon_file_unknown";
-    }
-    return [UIImage imageNamed:iconName];
-}
+
 
 
 //截取部分图像
@@ -338,6 +313,33 @@
     
     // 关闭上下文
     UIGraphicsEndImageContext();
+    
+    return image;
+}
+
++ (UIImage *)createQRCodeFromString:(NSString *)string
+{
+    NSData *stringData = [string dataUsingEncoding:NSUTF8StringEncoding];
+    
+    CIFilter *QRFilter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    // Set the message content and error-correction level
+    [QRFilter setValue:stringData forKey:@"inputMessage"];
+    [QRFilter setValue:@"M" forKey:@"inputCorrectionLevel"];
+    
+    CGFloat scale = 5;
+    CGImageRef cgImage = [[CIContext contextWithOptions:nil] createCGImage:QRFilter.outputImage fromRect:QRFilter.outputImage.extent];
+    
+    //Scale the image usign CoreGraphics
+    CGFloat width = QRFilter.outputImage.extent.size.width * scale;
+    UIGraphicsBeginImageContext(CGSizeMake(width, width));
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetInterpolationQuality(context, kCGInterpolationNone);
+    CGContextDrawImage(context, CGContextGetClipBoundingBox(context), cgImage);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    //Cleaning up
+    UIGraphicsEndImageContext();
+    CGImageRelease(cgImage);
     
     return image;
 }
