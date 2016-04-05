@@ -24,18 +24,73 @@
     //白色
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
     [self confing];
-    return YES;
+    
+//    在launchOptions中有UIApplicationLaunchOptionsShortcutItemKey这样一个键，通过它，我们可以区别是否是从标签进入的app，如果是则处理结束逻辑后，返回NO，防止处理逻辑被反复回调。
+    if (launchOptions[@"UIApplicationLaunchOptionsShortcutItemKey"] == nil)
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
 }
 
 - (void)confing
 {
     [NSThread sleepForTimeInterval:1.0];//设置启动页面时间
     
-    
+    [self confing3DTouch];
     
     //向微信注册appid.
     //Description :  更新后的api 没有什么作用,只是给开发者一种解释作用.
     [WXApi registerApp:@"wx920fde9f97d60569" withDescription:@"微信支付"];
+}
+
+- (void)confing3DTouch
+{
+    //    UIApplicationShortcutItem
+    //    UIMutableApplicationShortcutItem
+    //    UIApplicationShortcutIcon
+    
+//    1、快捷标签最多可以创建四个，包括静态的和动态的。
+//    2、每个标签的题目和icon最多两行，多出的会用...省略
+    
+    /** 创建shortcutItems */
+    NSMutableArray *shortcutItems = [NSMutableArray array];
+    UIApplicationShortcutItem *item1 = [[UIApplicationShortcutItem alloc] initWithType:@"1" localizedTitle:@"测试1"];
+    UIApplicationShortcutItem *item2 = [[UIApplicationShortcutItem alloc] initWithType:@"2" localizedTitle:@"测试2"];
+    [shortcutItems addObject:item1];
+    [shortcutItems addObject:item2];
+    
+    [[UIApplication sharedApplication] setShortcutItems:shortcutItems];
+}
+
+/**
+ *  Called when the user activates your application by selecting a shortcut on the home screen,当我们点击标签进入应用程序时，也可以进行一些操作
+ */
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void(^)(BOOL succeeded))completionHandler NS_AVAILABLE_IOS(9_0) __TVOS_PROHIBITED
+{
+    /** 处理shortcutItem */
+    switch (shortcutItem.type.integerValue)
+    {
+        case 1: { // 测试1
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"gotoTestVc" object:self userInfo:@{@"type":@"1"}];
+        }
+        case 2: { // 测试2
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"gotoTestVc" object:self userInfo:@{@"type":@"2"}];
+        }   break;
+        default:
+            break;
+    }
+//    if([shortcutItem.type isEqualToString:@"com.test.static1"])
+//    {
+//        NSArray *arr = @[@"hello 3D Touch"];
+//        UIActivityViewController *vc = [[UIActivityViewController alloc]initWithActivityItems:arr applicationActivities:nil];
+//            //设置当前的VC 为rootVC
+//            [self.window.rootViewController presentViewController:vc animated:YES completion:^{
+//            }];
+//    }
 }
 
 #pragma mark - WXApiDelegate

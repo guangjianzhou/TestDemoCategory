@@ -51,6 +51,11 @@
 		FD7E2EAF1C9A872700D292CC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7E2EAE1C9A872700D292CC /* CoreTelephony.framework */; };
 		FD7E2EB11C9A87A900D292CC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7E2EB01C9A87A900D292CC /* CoreMotion.framework */; };
 		FD7FF4571C3B4C4E00DDB21E /* NSTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7FF4561C3B4C4E00DDB21E /* NSTimerViewController.m */; };
+		FD87E0D21CB38092009BE457 /* 3DTouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD87E0D11CB38092009BE457 /* 3DTouchViewController.m */; };
+		FD87E0DA1CB393FF009BE457 /* TZTestOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD87E0D51CB393FF009BE457 /* TZTestOneViewController.m */; };
+		FD87E0DB1CB393FF009BE457 /* TZTestOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD87E0D61CB393FF009BE457 /* TZTestOneViewController.xib */; };
+		FD87E0DC1CB393FF009BE457 /* TZTestTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD87E0D81CB393FF009BE457 /* TZTestTwoViewController.m */; };
+		FD87E0DD1CB393FF009BE457 /* TZTestTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD87E0D91CB393FF009BE457 /* TZTestTwoViewController.xib */; };
 		FD8A99AB1C22864800AB4E6B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8A99AA1C22864800AB4E6B /* SecondViewController.m */; };
 		FD8A99AE1C229A1800AB4E6B /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8A99AD1C229A1800AB4E6B /* ThirdViewController.m */; };
 		FD8D32F41C90FFB500AD9638 /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8D32F31C90FFB500AD9638 /* AutoLayoutViewController.m */; };
@@ -1002,6 +1007,14 @@
 		FD7E2EB01C9A87A900D292CC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		FD7FF4551C3B4C4E00DDB21E /* NSTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimerViewController.h; sourceTree = "<group>"; };
 		FD7FF4561C3B4C4E00DDB21E /* NSTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimerViewController.m; sourceTree = "<group>"; };
+		FD87E0D01CB38092009BE457 /* 3DTouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 3DTouchViewController.h; sourceTree = "<group>"; };
+		FD87E0D11CB38092009BE457 /* 3DTouchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = 3DTouchViewController.m; sourceTree = "<group>"; };
+		FD87E0D41CB393FF009BE457 /* TZTestOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZTestOneViewController.h; sourceTree = "<group>"; };
+		FD87E0D51CB393FF009BE457 /* TZTestOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZTestOneViewController.m; sourceTree = "<group>"; };
+		FD87E0D61CB393FF009BE457 /* TZTestOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TZTestOneViewController.xib; sourceTree = "<group>"; };
+		FD87E0D71CB393FF009BE457 /* TZTestTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZTestTwoViewController.h; sourceTree = "<group>"; };
+		FD87E0D81CB393FF009BE457 /* TZTestTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZTestTwoViewController.m; sourceTree = "<group>"; };
+		FD87E0D91CB393FF009BE457 /* TZTestTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TZTestTwoViewController.xib; sourceTree = "<group>"; };
 		FD8A99A91C22864800AB4E6B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		FD8A99AA1C22864800AB4E6B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		FD8A99AC1C229A1800AB4E6B /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
@@ -2046,6 +2059,21 @@
 			path = NSTimerVC;
 			sourceTree = "<group>";
 		};
+		FD87E0D31CB38097009BE457 /* 3DTouch */ = {
+			isa = PBXGroup;
+			children = (
+				FD87E0D01CB38092009BE457 /* 3DTouchViewController.h */,
+				FD87E0D11CB38092009BE457 /* 3DTouchViewController.m */,
+				FD87E0D41CB393FF009BE457 /* TZTestOneViewController.h */,
+				FD87E0D51CB393FF009BE457 /* TZTestOneViewController.m */,
+				FD87E0D61CB393FF009BE457 /* TZTestOneViewController.xib */,
+				FD87E0D71CB393FF009BE457 /* TZTestTwoViewController.h */,
+				FD87E0D81CB393FF009BE457 /* TZTestTwoViewController.m */,
+				FD87E0D91CB393FF009BE457 /* TZTestTwoViewController.xib */,
+			);
+			name = 3DTouch;
+			sourceTree = "<group>";
+		};
 		FD8A99A41C22850300AB4E6B /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -2144,6 +2172,7 @@
 				FDDFDDAF1CA50F790038B658 /* 拖动图片 */,
 				FDE22E731CABAA8D0018E643 /* 文件读写 */,
 				FDFDC6D01CAD0E41002A6B03 /* cell自适应高度/打印 */,
+				FD87E0D31CB38097009BE457 /* 3DTouch */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -3577,6 +3606,7 @@
 				FDA9D4881C294EB700CB9369 /* pop_Project@3x.png in Resources */,
 				FDDFDDB51CA513DD0038B658 /* test.jpg in Resources */,
 				FDF3E8F71CA128B400E517D5 /* page_icon_network.png in Resources */,
+				FD87E0DD1CB393FF009BE457 /* TZTestTwoViewController.xib in Resources */,
 				FD211F6B1C2BF45900C7ACCC /* 2.png in Resources */,
 				FDDB81521C3F56EF00BEBCB3 /* PopUpZgjView.xib in Resources */,
 				FD91816D1CAA7BF8001A0A73 /* blankpage_image_loadFail@2x.png in Resources */,
@@ -3584,6 +3614,7 @@
 				FDA9D48B1C294EB700CB9369 /* pop_Tweet@2x.png in Resources */,
 				FDAA34DD1C9FD34100FF5594 /* 技巧.txt in Resources */,
 				FDF3E8F51CA1265800E517D5 /* page_icon_emptyMessage.png in Resources */,
+				FD87E0DB1CB393FF009BE457 /* TZTestOneViewController.xib in Resources */,
 				FD211F691C2BF45900C7ACCC /* 6.png in Resources */,
 				FDC95CB01C34F51D00F6BD76 /* MyView.xib in Resources */,
 				FD211F671C2BF45900C7ACCC /* 4.png in Resources */,
@@ -3894,6 +3925,7 @@
 				FDAAAFCB1C8EBF8300CEF5CA /* ZXQRCodeAlignmentPattern.m in Sources */,
 				FDAAAF491C8EBF8300CEF5CA /* ZXStringUtils.m in Sources */,
 				FDF592171C0EB43C00AF8B5C /* AppDelegate.m in Sources */,
+				FD87E0D21CB38092009BE457 /* 3DTouchViewController.m in Sources */,
 				FD07E55E1C55C1F100FA7890 /* UIDynamic1ViewController.m in Sources */,
 				FDAAAF5E1C8EBF8300CEF5CA /* ZXDataMatrixBase256Encoder.m in Sources */,
 				FDA9D4571C293DBC00CB9369 /* XHPopMenu.m in Sources */,
@@ -3933,6 +3965,7 @@
 				FDAAAF3C1C8EBF8300CEF5CA /* ZXBitMatrix.m in Sources */,
 				FDAAAF751C8EBF8300CEF5CA /* ZXAI01393xDecoder.m in Sources */,
 				FDFA16231C5EEF5C007D27C7 /* LockViewController.m in Sources */,
+				FD87E0DA1CB393FF009BE457 /* TZTestOneViewController.m in Sources */,
 				FDFDC6C21CAD0074002A6B03 /* UIDevice+Hardware.m in Sources */,
 				FDAAAF8F1C8EBF8300CEF5CA /* ZXCodaBarWriter.m in Sources */,
 				FDAAAF811C8EBF8300CEF5CA /* ZXRSSExpandedDecodedObject.m in Sources */,
@@ -3996,6 +4029,7 @@
 				FDAAAF941C8EBF8300CEF5CA /* ZXCode93Reader.m in Sources */,
 				FDA9EC131CA9201400217B92 /* DraggableView.m in Sources */,
 				FDAAAF791C8EBF8300CEF5CA /* ZXAI01decoder.m in Sources */,
+				FD87E0DC1CB393FF009BE457 /* TZTestTwoViewController.m in Sources */,
 				FDFDC6CC1CAD087E002A6B03 /* UIButton+Badge.m in Sources */,
 				FDAAAF561C8EBF8300CEF5CA /* ZXRGBLuminanceSource.m in Sources */,
 				FDAAAF371C8EBF8300CEF5CA /* ZXGenericGF.m in Sources */,
