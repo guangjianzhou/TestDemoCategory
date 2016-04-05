@@ -379,6 +379,7 @@
 		FDDB81481C3F4E5400BEBCB3 /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDDB81461C3F4E5400BEBCB3 /* PopupView.xib */; };
 		FDDB81501C3F56AA00BEBCB3 /* PopUpZgjView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDB814F1C3F56AA00BEBCB3 /* PopUpZgjView.m */; };
 		FDDB81521C3F56EF00BEBCB3 /* PopUpZgjView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDDB81511C3F56EF00BEBCB3 /* PopUpZgjView.xib */; };
+		FDDF578E1CAE54C500F78DEF /* AvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDF578D1CAE54C500F78DEF /* AvatarView.m */; };
 		FDDFDDAE1CA50F750038B658 /* CaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDFDDAD1CA50F750038B658 /* CaseViewController.m */; };
 		FDDFDDB31CA5137E0038B658 /* VIPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDFDDB21CA5137E0038B658 /* VIPhotoView.m */; };
 		FDDFDDB51CA513DD0038B658 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDDFDDB41CA513DD0038B658 /* test.jpg */; };
@@ -832,6 +833,8 @@
 		FDFDC6C51CAD027B002A6B03 /* UIView+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFDC6C41CAD027B002A6B03 /* UIView+help.m */; };
 		FDFDC6C91CAD04A5002A6B03 /* UIApplication+BackgroundRunning.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFDC6C81CAD04A5002A6B03 /* UIApplication+BackgroundRunning.m */; };
 		FDFDC6CC1CAD087E002A6B03 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFDC6CB1CAD087E002A6B03 /* UIButton+Badge.m */; };
+		FDFDC6CF1CAD0E3B002A6B03 /* AutoHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFDC6CE1CAD0E3B002A6B03 /* AutoHeightViewController.m */; };
+		FDFDC6D31CAD1138002A6B03 /* AutoHeightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFDC6D21CAD1138002A6B03 /* AutoHeightCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1626,6 +1629,8 @@
 		FDDB814E1C3F56AA00BEBCB3 /* PopUpZgjView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpZgjView.h; sourceTree = "<group>"; };
 		FDDB814F1C3F56AA00BEBCB3 /* PopUpZgjView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopUpZgjView.m; sourceTree = "<group>"; };
 		FDDB81511C3F56EF00BEBCB3 /* PopUpZgjView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpZgjView.xib; sourceTree = "<group>"; };
+		FDDF578C1CAE54C500F78DEF /* AvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarView.h; sourceTree = "<group>"; };
+		FDDF578D1CAE54C500F78DEF /* AvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarView.m; sourceTree = "<group>"; };
 		FDDFDDAC1CA50F750038B658 /* CaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaseViewController.h; sourceTree = "<group>"; };
 		FDDFDDAD1CA50F750038B658 /* CaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaseViewController.m; sourceTree = "<group>"; };
 		FDDFDDB11CA5137E0038B658 /* VIPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPhotoView.h; sourceTree = "<group>"; };
@@ -1675,7 +1680,7 @@
 		FDF3E8F41CA1265800E517D5 /* page_icon_emptyMessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page_icon_emptyMessage.png; sourceTree = "<group>"; };
 		FDF3E8F61CA128B400E517D5 /* page_icon_network.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page_icon_network.png; sourceTree = "<group>"; };
 		FDF5920F1C0EB43C00AF8B5C /* TestDemo_Develop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDemo_Develop.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDF592131C0EB43C00AF8B5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FDF592131C0EB43C00AF8B5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../main.m; sourceTree = "<group>"; };
 		FDF592151C0EB43C00AF8B5C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TestDemo/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		FDF592161C0EB43C00AF8B5C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TestDemo/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		FDF592181C0EB43C00AF8B5C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -1715,6 +1720,10 @@
 		FDFDC6C81CAD04A5002A6B03 /* UIApplication+BackgroundRunning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+BackgroundRunning.m"; sourceTree = "<group>"; };
 		FDFDC6CA1CAD087E002A6B03 /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
 		FDFDC6CB1CAD087E002A6B03 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
+		FDFDC6CD1CAD0E3B002A6B03 /* AutoHeightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoHeightViewController.h; sourceTree = "<group>"; };
+		FDFDC6CE1CAD0E3B002A6B03 /* AutoHeightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoHeightViewController.m; sourceTree = "<group>"; };
+		FDFDC6D11CAD1138002A6B03 /* AutoHeightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoHeightCell.h; sourceTree = "<group>"; };
+		FDFDC6D21CAD1138002A6B03 /* AutoHeightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoHeightCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2103,6 +2112,8 @@
 				FDDB814E1C3F56AA00BEBCB3 /* PopUpZgjView.h */,
 				FDDB814F1C3F56AA00BEBCB3 /* PopUpZgjView.m */,
 				FDDB81511C3F56EF00BEBCB3 /* PopUpZgjView.xib */,
+				FDDF578C1CAE54C500F78DEF /* AvatarView.h */,
+				FDDF578D1CAE54C500F78DEF /* AvatarView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -2132,6 +2143,7 @@
 				FD68DDE91C9A829200E73EF5 /* 支付 */,
 				FDDFDDAF1CA50F790038B658 /* 拖动图片 */,
 				FDE22E731CABAA8D0018E643 /* 文件读写 */,
+				FDFDC6D01CAD0E41002A6B03 /* cell自适应高度/打印 */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -2206,6 +2218,7 @@
 				FDF592151C0EB43C00AF8B5C /* AppDelegate.h */,
 				FDF592161C0EB43C00AF8B5C /* AppDelegate.m */,
 				FDAA34DC1C9FD34100FF5594 /* 技巧.txt */,
+				FDF592131C0EB43C00AF8B5C /* main.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -3330,7 +3343,6 @@
 				FD211F641C2BF45900C7ACCC /* 3.png */,
 				FD211F651C2BF45900C7ACCC /* 2.png */,
 				FD211F661C2BF45900C7ACCC /* 1.png */,
-				FDF592131C0EB43C00AF8B5C /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -3420,6 +3432,17 @@
 				FDC29C7F1C2CCF7700F51079 /* UIImage+help.m */,
 			);
 			name = UIImage;
+			sourceTree = "<group>";
+		};
+		FDFDC6D01CAD0E41002A6B03 /* cell自适应高度/打印 */ = {
+			isa = PBXGroup;
+			children = (
+				FDFDC6CD1CAD0E3B002A6B03 /* AutoHeightViewController.h */,
+				FDFDC6CE1CAD0E3B002A6B03 /* AutoHeightViewController.m */,
+				FDFDC6D11CAD1138002A6B03 /* AutoHeightCell.h */,
+				FDFDC6D21CAD1138002A6B03 /* AutoHeightCell.m */,
+			);
+			name = "cell自适应高度/打印";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3886,6 +3909,7 @@
 				FDAAAF031C8EBF8300CEF5CA /* ZXAztecBinaryShiftToken.m in Sources */,
 				FDE22E7C1CABBB430018E643 /* Address.m in Sources */,
 				FDDB81471C3F4E5400BEBCB3 /* PopupView.m in Sources */,
+				FDFDC6CF1CAD0E3B002A6B03 /* AutoHeightViewController.m in Sources */,
 				FDEF1B7C1C214A0300187029 /* NetAPIClient.m in Sources */,
 				FDAAAF911C8EBF8300CEF5CA /* ZXCode128Writer.m in Sources */,
 				FDD938571C8818EF00DABD8C /* UIView+PressMenu.m in Sources */,
@@ -3968,6 +3992,7 @@
 				FDE22E721CABAA870018E643 /* FileManagerViewController.m in Sources */,
 				FDAAAF011C8EBF8300CEF5CA /* ZXAztecDecoder.m in Sources */,
 				FDAAAF2F1C8EBF8300CEF5CA /* ZXWifiParsedResult.m in Sources */,
+				FDFDC6D31CAD1138002A6B03 /* AutoHeightCell.m in Sources */,
 				FDAAAF941C8EBF8300CEF5CA /* ZXCode93Reader.m in Sources */,
 				FDA9EC131CA9201400217B92 /* DraggableView.m in Sources */,
 				FDAAAF791C8EBF8300CEF5CA /* ZXAI01decoder.m in Sources */,
@@ -4049,6 +4074,7 @@
 				FDAAAF271C8EBF8300CEF5CA /* ZXTextParsedResult.m in Sources */,
 				FDAAAF071C8EBF8300CEF5CA /* ZXAztecSimpleToken.m in Sources */,
 				FDDB6D9F1C7A9AF700E49D8B /* HeaderViewController.m in Sources */,
+				FDDF578E1CAE54C500F78DEF /* AvatarView.m in Sources */,
 				FDAAAF061C8EBF8300CEF5CA /* ZXAztecHighLevelEncoder.m in Sources */,
 				FD23ED7E1C1EC19F0013BDC2 /* Status.m in Sources */,
 				FDAAAF921C8EBF8300CEF5CA /* ZXCode39Reader.m in Sources */,

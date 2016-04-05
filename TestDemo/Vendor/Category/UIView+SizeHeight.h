@@ -37,4 +37,6 @@
 + (CGFloat)getTextSizeHeight:(NSString *)text font:(CGFloat)textFont withSize:(CGSize)size;
 
 
+- (float) heightForString:(UIView *)view andWidth:(float)width;
+
 @end
