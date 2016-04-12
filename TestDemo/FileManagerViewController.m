@@ -18,12 +18,14 @@
 #import "NSDate+help.h"
 #import "Staff.h"
 #import "Address.h"
+#import "NSFileManager+help.h"
 
 @interface FileManagerViewController ()
 
 {
     Staff *staff;
     NSMutableArray *array;
+    NSMutableArray *fileArray;
 }
 
 @end
@@ -75,6 +77,27 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    fileArray = [NSMutableArray array];
+    
+    
+    /**
+     *  两种方法：获取文件夹下面的文件
+     * 1.enumeratorAtPath 一次可以枚举指定目录中的每个文件。默认情况下，如果其中一个文件为目录，那么也会递归枚举它的内容。在这个过程中，通过向枚举对象发送一条skipDescendants消息，可以动态地阻止递归过程，从而不再枚举目录中的内容。
+     *  2.directoryContentsAtPath 不递归
+     */
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSDirectoryEnumerator *dirEnum = [[NSFileManager defaultManager] enumeratorAtPath:path];
+    while ((path = [dirEnum nextObject]) != nil)
+    {
+        NSLog(@"%@",path);
+        [fileArray addObject:path];
+    }
+    
+    //遍历目录的另一种方法：（不递归枚举文件夹种的内容）
+    [fileArray removeAllObjects];
+    [fileArray addObjectsFromArray:[[NSFileManager defaultManager] directoryContentsAtPath:path]];
+    NSLog(@"fileArray=====%@",fileArray);
+    
 }
 
 
@@ -139,6 +162,8 @@
     }
     
 }
+
+
 
 
 

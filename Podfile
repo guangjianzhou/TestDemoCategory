@@ -15,3 +15,5 @@ pod 'MBProgressHUD', '~> 0.9.1'
 pod 'DZNEmptyDataSet', '~> 1.7.2'  #tableview 无数据提示
 
 pod 'RESideMenu', '~> 4.0.7' #侧滑显示
+
+pod 'AYCheckVersion',:git => "https://github.com/guangjianzhou/AYCheckVersion.git" 

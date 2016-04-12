@@ -56,6 +56,8 @@
 		FD87E0DB1CB393FF009BE457 /* TZTestOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD87E0D61CB393FF009BE457 /* TZTestOneViewController.xib */; };
 		FD87E0DC1CB393FF009BE457 /* TZTestTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD87E0D81CB393FF009BE457 /* TZTestTwoViewController.m */; };
 		FD87E0DD1CB393FF009BE457 /* TZTestTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD87E0D91CB393FF009BE457 /* TZTestTwoViewController.xib */; };
+		FD87E0E11CB3AAD2009BE457 /* FileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD87E0E01CB3AAD2009BE457 /* FileCell.m */; };
+		FD87E0E41CB3B26C009BE457 /* FileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD87E0E31CB3B26C009BE457 /* FileModel.m */; };
 		FD8A99AB1C22864800AB4E6B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8A99AA1C22864800AB4E6B /* SecondViewController.m */; };
 		FD8A99AE1C229A1800AB4E6B /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8A99AD1C229A1800AB4E6B /* ThirdViewController.m */; };
 		FD8D32F41C90FFB500AD9638 /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8D32F31C90FFB500AD9638 /* AutoLayoutViewController.m */; };
@@ -344,6 +346,7 @@
 		FDB06A981C99476C00056F10 /* adn.cer in Resources */ = {isa = PBXBuildFile; fileRef = FDB06A971C99476C00056F10 /* adn.cer */; };
 		FDB06A9B1C99477D00056F10 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB06A9A1C99477D00056F10 /* HttpRequest.m */; };
 		FDBB58C01C434C65007DE015 /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBB58BF1C434C65007DE015 /* FMDBViewController.m */; };
+		FDBE74321CBCE19F0062C5B6 /* SystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBE74311CBCE19F0062C5B6 /* SystemViewController.m */; };
 		FDC29C801C2CCF7700F51079 /* UIImage+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC29C7F1C2CCF7700F51079 /* UIImage+help.m */; };
 		FDC29D071C2D3A1F00F51079 /* PopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC29D061C2D3A1F00F51079 /* PopViewController.m */; };
 		FDC596571CA5301400DA533D /* UIImageViewEx.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC596561CA5301400DA533D /* UIImageViewEx.m */; };
@@ -1015,6 +1018,11 @@
 		FD87E0D71CB393FF009BE457 /* TZTestTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZTestTwoViewController.h; sourceTree = "<group>"; };
 		FD87E0D81CB393FF009BE457 /* TZTestTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZTestTwoViewController.m; sourceTree = "<group>"; };
 		FD87E0D91CB393FF009BE457 /* TZTestTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TZTestTwoViewController.xib; sourceTree = "<group>"; };
+		FD87E0DE1CB395F4009BE457 /* TestDemo_Develop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestDemo_Develop.entitlements; sourceTree = "<group>"; };
+		FD87E0DF1CB3AAD2009BE457 /* FileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileCell.h; sourceTree = "<group>"; };
+		FD87E0E01CB3AAD2009BE457 /* FileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCell.m; sourceTree = "<group>"; };
+		FD87E0E21CB3B26C009BE457 /* FileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileModel.h; sourceTree = "<group>"; };
+		FD87E0E31CB3B26C009BE457 /* FileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileModel.m; sourceTree = "<group>"; };
 		FD8A99A91C22864800AB4E6B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		FD8A99AA1C22864800AB4E6B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		FD8A99AC1C229A1800AB4E6B /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
@@ -1570,6 +1578,10 @@
 		FDB06A9A1C99477D00056F10 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
 		FDBB58BE1C434C65007DE015 /* FMDBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBViewController.h; sourceTree = "<group>"; };
 		FDBB58BF1C434C65007DE015 /* FMDBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBViewController.m; sourceTree = "<group>"; };
+		FDBE74301CBCE19F0062C5B6 /* SystemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemViewController.h; sourceTree = "<group>"; };
+		FDBE74311CBCE19F0062C5B6 /* SystemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemViewController.m; sourceTree = "<group>"; };
+		FDBE74341CBCF5E80062C5B6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		FDBE74351CBCF5E80062C5B6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		FDC29C7E1C2CCF7700F51079 /* UIImage+help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+help.h"; sourceTree = "<group>"; };
 		FDC29C7F1C2CCF7700F51079 /* UIImage+help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+help.m"; sourceTree = "<group>"; };
 		FDC29D051C2D3A1F00F51079 /* PopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopViewController.h; sourceTree = "<group>"; };
@@ -1744,6 +1756,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD9456981C33D15A00CB6FA9 /* AVFoundation.framework in Frameworks */,
 				FD68F5641C9BE9D600771B3C /* CoreBluetooth.framework in Frameworks */,
 				FD68F5611C9BE55800771B3C /* GameKit.framework in Frameworks */,
 				FD7E2EB11C9A87A900D292CC /* CoreMotion.framework in Frameworks */,
@@ -1763,7 +1776,6 @@
 				FDD05BB41C7FF4F800B2F930 /* libbz2.tbd in Frameworks */,
 				FDAE2AC01C16AA4200E0A6D4 /* libz.tbd in Frameworks */,
 				FD94569A1C33D65400CB6FA9 /* AudioToolbox.framework in Frameworks */,
-				FD9456981C33D15A00CB6FA9 /* AVFoundation.framework in Frameworks */,
 				FDAE2ABE1C16A9DD00E0A6D4 /* CoreGraphics.framework in Frameworks */,
 				FDAE2ABC1C16A9D200E0A6D4 /* QuartzCore.framework in Frameworks */,
 				FDAE2ABA1C16A9A800E0A6D4 /* CFNetwork.framework in Frameworks */,
@@ -2173,6 +2185,7 @@
 				FDE22E731CABAA8D0018E643 /* 文件读写 */,
 				FDFDC6D01CAD0E41002A6B03 /* cell自适应高度/打印 */,
 				FD87E0D31CB38097009BE457 /* 3DTouch */,
+				FDBE74331CBCE1AC0062C5B6 /* 系统VC */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -3092,6 +3105,15 @@
 			name = FMDB;
 			sourceTree = "<group>";
 		};
+		FDBE74331CBCE1AC0062C5B6 /* 系统VC */ = {
+			isa = PBXGroup;
+			children = (
+				FDBE74301CBCE19F0062C5B6 /* SystemViewController.h */,
+				FDBE74311CBCE19F0062C5B6 /* SystemViewController.m */,
+			);
+			name = "系统VC";
+			sourceTree = "<group>";
+		};
 		FDC29D081C2D3A2300F51079 /* Pop */ = {
 			isa = PBXGroup;
 			children = (
@@ -3233,6 +3255,10 @@
 				FDE22E781CABBB1D0018E643 /* Staff.m */,
 				FDE22E7A1CABBB430018E643 /* Address.h */,
 				FDE22E7B1CABBB430018E643 /* Address.m */,
+				FD87E0DF1CB3AAD2009BE457 /* FileCell.h */,
+				FD87E0E01CB3AAD2009BE457 /* FileCell.m */,
+				FD87E0E21CB3B26C009BE457 /* FileModel.h */,
+				FD87E0E31CB3B26C009BE457 /* FileModel.m */,
 			);
 			name = "文件读写";
 			sourceTree = "<group>";
@@ -3320,6 +3346,7 @@
 		FDF592061C0EB43C00AF8B5C = {
 			isa = PBXGroup;
 			children = (
+				FD87E0DE1CB395F4009BE457 /* TestDemo_Develop.entitlements */,
 				FDF592111C0EB43C00AF8B5C /* TestDemo */,
 				FDAE2AB61C16A71000E0A6D4 /* Tools */,
 				FDF5922B1C0EB43C00AF8B5C /* TestDemoTests */,
@@ -3565,6 +3592,11 @@
 					FDF5920E1C0EB43C00AF8B5C = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 78885LJ926;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					FDF592271C0EB43C00AF8B5C = {
 						CreatedOnToolsVersion = 7.1;
@@ -3990,6 +4022,7 @@
 				FDAAAF3F1C8EBF8300CEF5CA /* ZXByteArray.m in Sources */,
 				FD0C19BF1C338306008AE06F /* WCAlertview.m in Sources */,
 				FD68DE5B1C9A83F800E73EF5 /* MD5DataSigner.m in Sources */,
+				FD87E0E41CB3B26C009BE457 /* FileModel.m in Sources */,
 				FDAAAF5F1C8EBF8300CEF5CA /* ZXDataMatrixC40Encoder.m in Sources */,
 				FDAAAF661C8EBF8300CEF5CA /* ZXDataMatrixSymbolInfo144.m in Sources */,
 				FDEF1B941C21580600187029 /* FDResult.m in Sources */,
@@ -4123,6 +4156,7 @@
 				FDAAAF331C8EBF8300CEF5CA /* ZXImage.m in Sources */,
 				FDAAAF211C8EBF8300CEF5CA /* ZXSMSMMSResultParser.m in Sources */,
 				FDAAAF4B1C8EBF8300CEF5CA /* ZXBinaryBitmap.m in Sources */,
+				FD87E0E11CB3AAD2009BE457 /* FileCell.m in Sources */,
 				FDAAAFB31C8EBF8300CEF5CA /* ZXPDF417DetectionResultRowIndicatorColumn.m in Sources */,
 				FD68DE5A1C9A83F800E73EF5 /* DataVerifier.m in Sources */,
 				FDAAAF421C8EBF8300CEF5CA /* ZXDefaultGridSampler.m in Sources */,
@@ -4169,6 +4203,7 @@
 				FDC596571CA5301400DA533D /* UIImageViewEx.m in Sources */,
 				FDAAAFB41C8EBF8300CEF5CA /* ZXPDF417ScanningDecoder.m in Sources */,
 				FDAAAF1C1C8EBF8300CEF5CA /* ZXISBNResultParser.m in Sources */,
+				FDBE74321CBCE19F0062C5B6 /* SystemViewController.m in Sources */,
 				FDEF1B931C21580600187029 /* FDRecipe.m in Sources */,
 				FDAAAF9C1C8EBF8300CEF5CA /* ZXMultiFormatOneDReader.m in Sources */,
 				FDAAAF771C8EBF8300CEF5CA /* ZXAI013x0xDecoder.m in Sources */,
@@ -4553,6 +4588,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FDF5921C1C0EB43C00AF8B5C /* Base */,
+				FDBE74341CBCF5E80062C5B6 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -4561,6 +4597,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FDF592211C0EB43C00AF8B5C /* Base */,
+				FDBE74351CBCF5E80062C5B6 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -4654,6 +4691,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = TestDemo_Develop.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -4717,6 +4755,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = TestDemo_Develop.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (

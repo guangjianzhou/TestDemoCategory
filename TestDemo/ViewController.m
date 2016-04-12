@@ -27,6 +27,7 @@
 #import "BLEViewController.h"
 #import "DataSetObject.h"
 #import <SDWebImage/SDWebImageManager.h>
+#import "SystemViewController.h"
 
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -125,7 +126,7 @@
     _segmentControl.layer.cornerRadius = 20;
     _segmentControl.layer.masksToBounds = YES;
     
-    _dataArray = [NSMutableArray arrayWithObjects:@"webview与交互",@"RAC学习",@"AVFoundataion", @"NSTimer",@"FMDB和storyboard textView控制父控件",@"UIDynamic动力",@"Lock锁",@"CoreGraphics",@"头部视图",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",nil];
+    _dataArray = [NSMutableArray arrayWithObjects:@"webview与交互",@"RAC学习",@"AVFoundataion", @"NSTimer",@"FMDB和storyboard textView控制父控件",@"UIDynamic动力",@"Lock锁",@"CoreGraphics",@"头部视图",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",nil];
     [self setUpNaivigationItem];
     [self effectVisualView];
     [self test1];
@@ -789,6 +790,11 @@
     else if ([title isEqualToString:@"3DTouch"])
     {
         [self performSegueWithIdentifier:@"3DTouchSeuge" sender:nil];
+    }
+    else if ([title isEqualToString:@"系统界面"])
+    {
+        SystemViewController *systemVC = [[SystemViewController alloc] init];
+        [self.navigationController pushViewController:systemVC animated:YES];
     }
     
 }

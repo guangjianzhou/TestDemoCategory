@@ -101,11 +101,11 @@
 + (NSArray *)pathsForBundleDocumentsMatchingExtension:(NSString *)ext;
 
 /**
- *  @brief  搜索Bundle中带有ext后缀名的所有文件
+ *  @brief  文件夹下所有文件，如果其中一个文件为目录，那么也会递归枚举它的内容
  *
- *  @param  ext   后缀名称
+ *  @param
  *
- *  @return         Bunble所有包含ext后缀的文件
+ *  @return         
  */
 + (NSArray *)filesInFolder:(NSString *)path;
 
