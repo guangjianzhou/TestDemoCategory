@@ -13,42 +13,42 @@
 
 
 
-#define NSNullObjects @[@"",@0,@{},@[]]
-
-@interface NSNull (InternalNullExtention)
-@end
-
-@implementation NSNull (InternalNullExtention)
-
-- (NSMethodSignature*)methodSignatureForSelector:(SEL)selector
-{
-    NSMethodSignature* signature = [super methodSignatureForSelector:selector];
-    if (!signature) {
-        for (NSObject *object in NSNullObjects) {
-            signature = [object methodSignatureForSelector:selector];
-            if (signature) {
-                break;
-            }
-        }
-        
-    }
-    return signature;
-}
-
-- (void)forwardInvocation:(NSInvocation *)anInvocation
-{
-    SEL aSelector = [anInvocation selector];
-    
-    for (NSObject *object in NSNullObjects) {
-        if ([object respondsToSelector:aSelector]) {
-            [anInvocation invokeWithTarget:object];
-            return;
-        }
-    }
-    
-    [self doesNotRecognizeSelector:aSelector];
-}
-@end
+//#define NSNullObjects @[@"",@0,@{},@[]]
+//
+//@interface NSNull (InternalNullExtention)
+//@end
+//
+//@implementation NSNull (InternalNullExtention)
+//
+//- (NSMethodSignature*)methodSignatureForSelector:(SEL)selector
+//{
+//    NSMethodSignature* signature = [super methodSignatureForSelector:selector];
+//    if (!signature) {
+//        for (NSObject *object in NSNullObjects) {
+//            signature = [object methodSignatureForSelector:selector];
+//            if (signature) {
+//                break;
+//            }
+//        }
+//        
+//    }
+//    return signature;
+//}
+//
+//- (void)forwardInvocation:(NSInvocation *)anInvocation
+//{
+//    SEL aSelector = [anInvocation selector];
+//    
+//    for (NSObject *object in NSNullObjects) {
+//        if ([object respondsToSelector:aSelector]) {
+//            [anInvocation invokeWithTarget:object];
+//            return;
+//        }
+//    }
+//    
+//    [self doesNotRecognizeSelector:aSelector];
+//}
+//@end
 
 
 @interface BLEViewController ()<CBPeripheralManagerDelegate,GKPeerPickerControllerDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
@@ -89,24 +89,30 @@
      NSArray  *exitClientArray =[NSJSONSerialization JSONObjectWithData:[obj dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:nil];
     
     
-    _dict = nil;
+//    _dict = nil;
     NSInteger length = [[_dict objectForKey:@"nokeyforthis"] length];
-//    [_dict setObject:@"2" forKey:@"second"];
+    [_dict setObject:@"2" forKey:@"second"];
     NSLog(@"==_dict==%@========",_dict);
     
     NSString *value = [_dict objectForKey:@"nokeyforthis"];
     NSLog(@"没有key 能取值 为nil===%@",value);
 }
 
-- (void)dict:(NSMutableDictionary *)dict
+//- (void)dict:(NSMutableDictionary *)dict
+//{
+//    NSLog(@"====重新设置Set方法=1=====%@===dict=%@====",_dict,dict);
+////    _dict = [[NSMutableDictionary alloc] initWithDictionary:dict];
+//    NSLog(@"====重新设置Set方法==2====%@===dict=%@====",_dict,dict);
+//    _dict = dict;
+//}
+
+
+
+- (void)setDict:(NSMutableDictionary *)dict
 {
-    NSLog(@"====重新设置Set方法=1=====%@===dict=%@====",_dict,dict);
-//    _dict = [[NSMutableDictionary alloc] initWithDictionary:dict];
-    NSLog(@"====重新设置Set方法==2====%@===dict=%@====",_dict,dict);
-    _dict = dict;
+    NSLog(@"重新设置==========");
+    _dict = [[NSMutableDictionary alloc] initWithDictionary:dict];
 }
-
-
 
 #pragma mark - CBPeripheralManagerDelegate
 

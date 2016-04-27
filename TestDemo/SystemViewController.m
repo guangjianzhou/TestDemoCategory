@@ -9,6 +9,8 @@
 #import "SystemViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "Masonry.h"
+#import "UIImage+help.h"
+#import "UIColor+help.h"
 
 @interface SystemViewController ()<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
@@ -33,7 +35,6 @@
     [self.view addSubview:_tableView];
     
     self.view.backgroundColor= [UIColor whiteColor];
-    
     
     _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 200, 80, 80)];
     [self.view addSubview:_imageView];
@@ -152,6 +153,13 @@
     picker.sourceType = sourceType;
     picker.delegate = self;
     picker.allowsEditing = YES;
+    
+    
+    //设置图片选择 VC的导航栏
+    UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
+    [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"topbar"] forBarMetrics:UIBarMetricsDefault];
+
+    
     
     return picker;
 }

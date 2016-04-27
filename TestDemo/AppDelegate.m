@@ -9,7 +9,19 @@
 #import "AppDelegate.h"
 #import <AlipaySDK/AlipaySDK.h>
 #import "WXApi.h"
+#import "UIColor+help.h"
+#import "UIImage+help.h"
+#import <RongIMKit/RongIMKit.h>
+#import "RongCloudManager.h"
+#include <AudioToolbox/AudioToolbox.h>
 
+#define  kBackButtonFontSize 16
+#define  kNavTitleFontSize 18
+#define kColorTableSectionBg [UIColor colorWithHexString:@"0xeeeeee"]
+
+NSString * const NotificationCategoryIdent  = @"ACTIONABLE";
+NSString * const NotificationActionOneIdent = @"ACTION_ONE";
+NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
 
 @interface AppDelegate ()<WXApiDelegate>
 
@@ -23,7 +35,114 @@
     // Override point for customization after application launch.
     //白色
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    
+    
+    if ([[UIDevice currentDevice].systemVersion integerValue] > 7)
+    {
+        //1.创建消息上面要添加的动作(按钮的形式显示出来)
+        UIMutableUserNotificationAction *action1;
+        action1 = [[UIMutableUserNotificationAction alloc] init];
+        [action1 setActivationMode:UIUserNotificationActivationModeBackground];
+        [action1 setTitle:@"Action 1"];
+        [action1 setIdentifier:NotificationActionOneIdent];
+        [action1 setDestructive:NO];
+        [action1 setAuthenticationRequired:NO];
+        
+        UIMutableUserNotificationAction *action2;
+        action2 = [[UIMutableUserNotificationAction alloc] init];
+        [action2 setActivationMode:UIUserNotificationActivationModeBackground];
+        [action2 setTitle:@"Action 2"];
+        [action2 setIdentifier:NotificationActionTwoIdent];
+        [action2 setDestructive:NO];
+        [action2 setAuthenticationRequired:NO];
+        
+        UIMutableUserNotificationCategory *actionCategory;
+        actionCategory = [[UIMutableUserNotificationCategory alloc] init];
+        [actionCategory setIdentifier:NotificationCategoryIdent];
+        [actionCategory setActions:@[action1, action2]
+                        forContext:UIUserNotificationActionContextDefault];
+        
+        NSSet *categories = [NSSet setWithObject:actionCategory];
+        UIUserNotificationType types = (UIUserNotificationTypeAlert|
+                                        UIUserNotificationTypeSound|
+                                        UIUserNotificationTypeBadge);
+        
+        UIUserNotificationSettings *settings;
+        settings = [UIUserNotificationSettings settingsForTypes:types
+                                                     categories:categories];
+        
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        
+        /*
+        //1.创建消息上面要添加的动作(按钮的形式显示出来)
+        UIMutableUserNotificationAction *action = [[UIMutableUserNotificationAction alloc] init];
+        action.identifier = @"action";//按钮的标示
+        action.title=@"Accept";//按钮的标题
+        action.activationMode = UIUserNotificationActivationModeForeground;//当点击的时候启动程序
+        //    action.authenticationRequired = YES;
+        //    action.destructive = YES;
+        
+        UIMutableUserNotificationAction *action2 = [[UIMutableUserNotificationAction alloc] init];
+        action2.identifier = @"action2";
+        action2.title=@"Reject";
+        action2.activationMode = UIUserNotificationActivationModeBackground;//当点击的时候不启动程序，在后台处理
+        action.authenticationRequired = YES;//需要解锁才能处理，如果action.activationMode = UIUserNotificationActivationModeForeground;则这个属性被忽略；
+        action.destructive = YES;
+        
+        //2.创建动作(按钮)的类别集合
+        UIMutableUserNotificationCategory *categorys = [[UIMutableUserNotificationCategory alloc] init];
+        categorys.identifier = @"alert";//这组动作的唯一标示,推送通知的时候也是根据这个来区分
+        [categorys setActions:@[action,action2] forContext:(UIUserNotificationActionContextMinimal)];
+        
+        //3.创建UIUserNotificationSettings，并设置消息的显示类类型
+        UIUserNotificationSettings *notiSettings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:[NSSet setWithObjects:categorys, nil]];
+        [application registerUserNotificationSettings:notiSettings];
+        */
+    }
+    else
+    {
+        [application registerForRemoteNotificationTypes: UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
+    }
+    
+//    /**
+//     * 推送处理1
+//     */
+//    if ([application
+//         respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+//        //注册推送, 用于iOS8以及iOS8之后的系统
+//        UIUserNotificationSettings *settings = [UIUserNotificationSettings
+//                                                settingsForTypes:(UIUserNotificationTypeBadge |
+//                                                                  UIUserNotificationTypeSound |
+//                                                                  UIUserNotificationTypeAlert)
+//                                                categories:nil];
+//        [application registerUserNotificationSettings:settings];
+//    } else {
+//        //注册推送，用于iOS8之前的系统
+//        UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge |
+//        UIRemoteNotificationTypeAlert |
+//        UIRemoteNotificationTypeSound;
+//        [application registerForRemoteNotificationTypes:myTypes];
+//    }
+//    
+    
     [self confing];
+    /**
+     * 统计推送打开率1
+     */
+    [[RCIMClient sharedRCIMClient] recordLaunchOptionsEvent:launchOptions];
+    /**
+     * 获取融云推送服务扩展字段1
+     */
+    NSDictionary *pushServiceData = [[RCIMClient sharedRCIMClient] getPushExtraFromLaunchOptions:launchOptions];
+    if (pushServiceData) {
+        NSLog(@"该启动事件包含来自融云的推送服务");
+        for (id key in [pushServiceData allKeys]) {
+            NSLog(@"%@", pushServiceData[key]);
+        }
+    } else {
+        NSLog(@"该启动事件不包含来自融云的推送服务");
+    }
+
     
 //    在launchOptions中有UIApplicationLaunchOptionsShortcutItemKey这样一个键，通过它，我们可以区别是否是从标签进入的app，如果是则处理结束逻辑后，返回NO，防止处理逻辑被反复回调。
     if (launchOptions[@"UIApplicationLaunchOptionsShortcutItemKey"] == nil)
@@ -34,6 +153,9 @@
     {
         return NO;
     }
+    
+    
+    
 }
 
 - (void)confing
@@ -41,10 +163,68 @@
     [NSThread sleepForTimeInterval:1.0];//设置启动页面时间
     
     [self confing3DTouch];
+    [self customizeInterface];
+    [self configRongCloud];
+    [self configLocalNotification];
     
     //向微信注册appid.
     //Description :  更新后的api 没有什么作用,只是给开发者一种解释作用.
     [WXApi registerApp:@"wx920fde9f97d60569" withDescription:@"微信支付"];
+    
+    
+    //
+    self.errorVC = [[NSErrorViewController alloc] initWithNibName:@"NSErrorViewController" bundle:nil];
+}
+
+
+
+- (void)configRongCloud
+{
+    [[RCIM sharedRCIM] initWithAppKey:kRongCloud_AppKey];
+    [[RongCloudManager sharedClient] connectRongCloudWithToken:@"PTTJNs+2OZG2hKvtjBrw9E/vU2PbNVbN6a7wKvjww07IIhbLBBnkpewMkhXeLWns2lvXNkyZZQ8=" finishBlock:^(id obj) {
+        
+    } failBlock:^(id error) {
+        
+    }];
+    
+}
+
+
+- (void)configLocalNotification
+{
+    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:6];
+    
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    //推送通知的触发时间(何时发出推送通知)
+    
+    notification.fireDate = date;
+    notification.alertBody = @"hello,zgj";
+    
+    notification.alertAction = @"view List";
+    notification.category = @"ACTIONABLE";
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    
+}
+
+- (void)customizeInterface {
+    //设置Nav的背景色和title色
+    UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
+//    [navigationBarAppearance setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHexString:@"0x28303b"]] forBarMetrics:UIBarMetricsDefault];
+    [navigationBarAppearance setTintColor:[UIColor whiteColor]];//返回按钮的箭头颜色
+    NSDictionary *textAttributes = @{
+                                     NSFontAttributeName: [UIFont boldSystemFontOfSize:kNavTitleFontSize],
+                                     NSForegroundColorAttributeName: [UIColor redColor],
+                                     };
+    [navigationBarAppearance setTitleTextAttributes:textAttributes];
+    
+    
+    
+    
+//    [[UITextField appearance] setTintColor:[UIColor colorWithHexString:@"0x3bbc79"]];//设置UITextField的光标颜色
+//    [[UITextView appearance] setTintColor:[UIColor colorWithHexString:@"0x3bbc79"]];//设置UITextView的光标颜色
+//    [[UISearchBar appearance] setBackgroundImage:[UIImage imageWithColor:kColorTableSectionBg] forBarPosition:0 barMetrics:UIBarMetricsDefault];
+    
+    [[UIApplication sharedApplication] keyWindow].tintColor = [UIColor orangeColor];
 }
 
 - (void)confing3DTouch
@@ -132,16 +312,100 @@
     return YES;
 }
 
+#pragma mark  - Push
+/**
+ * 推送处理2
+ */
+//注册用户通知设置
+- (void)application:(UIApplication *)application
+didRegisterUserNotificationSettings:
+(UIUserNotificationSettings *)notificationSettings {
+    // register to receive notifications
+    [application registerForRemoteNotifications];
+}
+
+/**
+ * 推送处理3
+ */
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSString *token =
+    [[[[deviceToken description] stringByReplacingOccurrencesOfString:@"<"
+                                                           withString:@""]
+      stringByReplacingOccurrencesOfString:@">"
+      withString:@""]
+     stringByReplacingOccurrencesOfString:@" "
+     withString:@""];
+    
+    [[RCIMClient sharedRCIMClient] setDeviceToken:token];
+}
+
+- (void)onlineConfigCallBack:(NSNotification *)note {
+    
+    NSLog(@"online config has fininshed and note = %@", note.userInfo);
+}
+
+/**
+ * 推送处理4
+ * userInfo内容请参考官网文档
+ */
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    /**
+     * 统计推送打开率2
+     */
+    [[RCIMClient sharedRCIMClient] recordRemoteNotificationEvent:userInfo];
+    /**
+     * 获取融云推送服务扩展字段2
+     */
+    NSDictionary *pushServiceData = [[RCIMClient sharedRCIMClient] getPushExtraFromRemoteNotification:userInfo];
+    if (pushServiceData) {
+        NSLog(@"该远程推送包含来自融云的推送服务");
+        for (id key in [pushServiceData allKeys]) {
+            NSLog(@"key = %@, value = %@", key, pushServiceData[key]);
+        }
+    } else {
+        NSLog(@"该远程推送不包含来自融云的推送服务");
+    }
+}
+
+- (void)application:(UIApplication *)application
+didReceiveLocalNotification:(UILocalNotification *)notification {
+    /**
+     * 统计推送打开率3
+     */
+    [[RCIMClient sharedRCIMClient] recordLocalNotificationEvent:notification];
+    
+    //震动
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    AudioServicesPlaySystemSound(1007);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    // Sent when the application is about to move from active to inactive state.
+    // This can occur for certain types of temporary interruptions (such as an
+    // incoming phone call or SMS message) or when the user quits the application
+    // and it begins the transition to the background state.
+    // Use this method to pause ongoing tasks, disable timers, and throttle down
+    // OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    // Use this method to release shared resources, save user data, invalidate
+    // timers, and store enough application state information to restore your
+    // application to its current state in case it is terminated later.
+    // If your application supports background execution, this method is called
+    // instead of applicationWillTerminate: when the user quits.
+    int unreadMsgCount = [[RCIMClient sharedRCIMClient] getUnreadCount:@[
+                                                                         @(ConversationType_PRIVATE),
+                                                                         @(ConversationType_DISCUSSION),
+                                                                         @(ConversationType_APPSERVICE),
+                                                                         @(ConversationType_PUBLICSERVICE),
+                                                                         @(ConversationType_GROUP)
+                                                                         ]];
+    application.applicationIconBadgeNumber = unreadMsgCount;
 }
+
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.

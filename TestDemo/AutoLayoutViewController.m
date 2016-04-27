@@ -12,6 +12,8 @@
 
 
 @interface AutoLayoutViewController ()
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomViewHeightConstraint;
 
 @end
 
@@ -38,6 +40,15 @@
             }];
         });
     });
+    
+    //1.隐藏灰色view
+//    _bottomView.hidden = YES;
+    
+    //2.设置 灰色view的高度 不行
+    _bottomViewHeightConstraint.constant = 0;
+    //加上这句 可以了
+    self.bottomView.clipsToBounds = YES;
+    
 }
 
 - (void)didReceiveMemoryWarning

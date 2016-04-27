@@ -8,10 +8,12 @@
 
 #import "CoreGraphicsViewController.h"
 #import "CoreGraphicsView.h"
-
+#import <Masonry.h>
+#import "KCView.h"
 @interface CoreGraphicsViewController ()
 {
     CoreGraphicsView *cgView;
+    KCView *view;
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -88,9 +90,18 @@
 
 - (void)setUp
 {
-    cgView  = [[CoreGraphicsView alloc] initWithFrame:CGRectMake(0, 64, 320, 300)];
-    cgView.backgroundColor = [UIColor yellowColor];
-    [self.view addSubview:cgView];
+//    cgView  = [[CoreGraphicsView alloc] initWithFrame:CGRectMake(0, 64, 320, 300)];
+    view = [[KCView alloc] initWithFrame:CGRectZero];
+    view.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:view];
+    
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left);
+        make.right.equalTo(self.view.mas_right);
+        make.top.equalTo(self.view.mas_top);
+        make.height.equalTo(@300);
+        
+    }];
     
     
 //    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, 200, 200)];

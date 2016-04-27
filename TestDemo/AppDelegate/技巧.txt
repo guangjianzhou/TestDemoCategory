@@ -122,6 +122,15 @@ URL-Type 别人使用固定格式 调起APP
 
 
 
+8.主题切换 appearance 、TintColor
+
+UIAppearance 设置UI全局效果，实现自定义效果又能简单的实现
+TintColor是描述线条轮廓的一种颜色,该颜色默认具有传递性,默认状态下最底部的视图的tintcolor会一直往上面的视图传递
+
+
+9.全程统一的ErrorVC
+
+
 
 
 

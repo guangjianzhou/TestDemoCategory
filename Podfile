@@ -15,5 +15,10 @@ pod 'MBProgressHUD', '~> 0.9.1'
 pod 'DZNEmptyDataSet', '~> 1.7.2'  #tableview 无数据提示
 
 pod 'RESideMenu', '~> 4.0.7' #侧滑显示
+pod 'REFrostedViewController', '~> 2.4.8' #侧滑压住Menu
 
-pod 'AYCheckVersion',:git => "https://github.com/guangjianzhou/AYCheckVersion.git" 
+
+pod 'AYCheckVersion',:git => "https://github.com/guangjianzhou/AYCheckVersion.git"
+
+#融云
+ pod 'RongCloudIMKit', '~> 2.4.11'

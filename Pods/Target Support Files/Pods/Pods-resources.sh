@@ -59,9 +59,17 @@ install_resource()
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "KVNProgress/KVNProgress/Resources/KVNProgressView.xib"
+  install_resource "RongCloudIMKit/Rong_Cloud_iOS_IMKit_SDK_v2_4_11_stable/RongCloud.bundle"
+  install_resource "RongCloudIMKit/Rong_Cloud_iOS_IMKit_SDK_v2_4_11_stable/en.lproj"
+  install_resource "RongCloudIMKit/Rong_Cloud_iOS_IMKit_SDK_v2_4_11_stable/zh-Hans.lproj"
+  install_resource "RongCloudIMKit/Rong_Cloud_iOS_IMKit_SDK_v2_4_11_stable/Emoji.plist"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "KVNProgress/KVNProgress/Resources/KVNProgressView.xib"
+  install_resource "RongCloudIMKit/Rong_Cloud_iOS_IMKit_SDK_v2_4_11_stable/RongCloud.bundle"
+  install_resource "RongCloudIMKit/Rong_Cloud_iOS_IMKit_SDK_v2_4_11_stable/en.lproj"
+  install_resource "RongCloudIMKit/Rong_Cloud_iOS_IMKit_SDK_v2_4_11_stable/zh-Hans.lproj"
+  install_resource "RongCloudIMKit/Rong_Cloud_iOS_IMKit_SDK_v2_4_11_stable/Emoji.plist"
 fi
 
 mkdir -p "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

@@ -28,6 +28,46 @@
 #import "DataSetObject.h"
 #import <SDWebImage/SDWebImageManager.h>
 #import "SystemViewController.h"
+#import "RongCloudViewController.h"
+#import "TSMessage.h"
+
+#define NSNullObjects @[@"",@0,@{},@[]]
+
+@interface NSNull (InternalNullExtention)
+@end
+
+@implementation NSNull (InternalNullExtention)
+
+- (NSMethodSignature*)methodSignatureForSelector:(SEL)selector
+{
+    NSMethodSignature* signature = [super methodSignatureForSelector:selector];
+    if (!signature) {
+        for (NSObject *object in NSNullObjects) {
+            signature = [object methodSignatureForSelector:selector];
+            if (signature) {
+                break;
+            }
+        }
+        
+    }
+    return signature;
+}
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation
+{
+    SEL aSelector = [anInvocation selector];
+    
+    for (NSObject *object in NSNullObjects) {
+        if ([object respondsToSelector:aSelector]) {
+            [anInvocation invokeWithTarget:object];
+            return;
+        }
+    }
+    
+    [self doesNotRecognizeSelector:aSelector];
+}
+@end
+
 
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -42,6 +82,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *inputTextField;
 @property (weak, nonatomic) IBOutlet UIButton *pushBtn;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UIButton *testBtn;
 
 //弹出框
 @property (strong, nonatomic) XHPopMenu *popMenu;
@@ -51,7 +92,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *dataArray;
 
-@property (strong, nonatomic)     CustomPopView *popView;
+@property (strong, nonatomic) CustomPopView *popView;
 @property (strong, nonatomic) MBProgressHUD *hud;
 
 @property (strong, nonatomic) DataSetObject *emptyDataSet;
@@ -65,24 +106,16 @@
 {
     [super viewDidLoad];
     
+    [self bugTest];
+    [self btnStatus];
+    
+    
     _subView = [[UIView alloc] initWithFrame:CGRectMake(20, 70, 50, 50)];
     _subView.backgroundColor = [UIColor redColor];
     [self.view addSubview:_subView];
     
 //    NSString *s1 = [NSString stringWithFormat:@"%@",1]; crash
 //    NSLog(@"s1==%@==",s1);
-    
-    
-    
-    if([@"null" integerValue] == 1)
-    {
-        NSLog(@"=======等于1====");
-    }
-    else
-    {
-        NSLog(@"======不等于1========");
-    }
-    
     
     int i = 0;
     while (i<5)
@@ -126,10 +159,11 @@
     _segmentControl.layer.cornerRadius = 20;
     _segmentControl.layer.masksToBounds = YES;
     
-    _dataArray = [NSMutableArray arrayWithObjects:@"webview与交互",@"RAC学习",@"AVFoundataion", @"NSTimer",@"FMDB和storyboard textView控制父控件",@"UIDynamic动力",@"Lock锁",@"CoreGraphics",@"头部视图",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",nil];
+    _dataArray = [NSMutableArray arrayWithObjects:@"webview与交互",@"RAC学习",@"AVFoundataion", @"NSTimer",@"FMDB和storyboard textView控制父控件",@"UIDynamic动力",@"Lock锁",@"CoreGraphics",@"头部视图",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",nil];
     [self setUpNaivigationItem];
     [self effectVisualView];
     [self test1];
+    [self gcdOneQueue];
     [self gcdSerialQueue];
     [self gcdGlobalQueue];
     [self setEmptyView];
@@ -173,6 +207,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self configClass];
     
     _hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
     _hud.labelText = @"拨打中,请稍等";
@@ -408,6 +443,20 @@
     
 }
 
+#pragma makr  - 
+- (void)configClass
+{
+    User *user1 = [[User alloc] init];
+    user1.name = @"哈哈";
+    
+    Class user2 = NSClassFromString(@"User");
+    User *user3 = [[user2 alloc] init];
+    user3.name = @"呵呵";
+    NSLog(@"=======");
+    
+    
+}
+
 #pragma mark  - 自定义UINavigationBar
 - (void)customNavigationBar
 {
@@ -528,6 +577,20 @@
 }
 
 #pragma mark - GCD
+
+/*
+同步和异步决定了要不要开启新的线程
+同步：在当前线程中执行任务，不具备开启新线程的能力
+异步：在新的线程中执行任务，具备开启新线程的能力
+
+
+并发和串行决定了任务的执行方式
+并发：多个任务并发（同时）执行
+串行：一个任务执行完毕后，再执行下一个任务
+*/
+
+
+
 /**
  *  主队列/全局队列
  *
@@ -535,34 +598,37 @@
 
 - (void)gcdOneQueue
 {
+    NSLog(@"gcdOneQueue========");
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
        //耗时操作
-        
+        NSLog(@"gcdOneQueue======%@==",[NSThread currentThread]);
        //完成后刷新ui
         dispatch_async(dispatch_get_main_queue(), ^{
-            
+            NSLog(@"gcdOneQueue=main完成=====%@==",[NSThread currentThread]);
         });
     });
 }
 
 
 //串行队列:执行完一个任务才会执行下一个任务
+//会开启线程，但是只开启一个线程
 - (void)gcdSerialQueue
 {
     dispatch_queue_t queue = dispatch_queue_create("SerialQueue", DISPATCH_QUEUE_SERIAL);
     NSLog(@"任务开始了哈哈哈哈");
-//    任务1-->任务2--->任务3
+//    任务1-->任务2--->任务3,  任务1 2 3 全部是同一个线程 0x7fc77b4b5130
     dispatch_async(queue, ^{
-        NSLog(@"queue1 --------");
+        
+        NSLog(@"queue1 -----%@---",[NSThread currentThread]);
     });
     
     dispatch_async(queue, ^{
-        NSLog(@"queue2 --------");
+        NSLog(@"queue2 ------%@--",[NSThread currentThread]);
         sleep(3);
     });
     
     dispatch_async(queue, ^{
-        NSLog(@"queue3 --------");
+        NSLog(@"queue3 -----%@---",[NSThread currentThread]);
         sleep(2);
         
     });
@@ -570,7 +636,8 @@
 }
 
 
-//并发队列
+//并发队列 多个任务并发（同时）执行
+//同时开启三个子线程
 //输出: 任务2--》任务3--》任务1  ==》任务完成
 - (void)gcdGlobalQueue
 {
@@ -617,6 +684,49 @@
         NSLog(@"-----%d,打印-------",i);
     }
 }
+
+
+//不会开启新的线程，并发队列失去了并发的功能
+//同步并发队列
+- (void)sycGlobalQueue
+{
+    dispatch_queue_t  queue= dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_sync(queue, ^{
+        NSLog(@"下载图片1----%@",[NSThread currentThread]);
+    });
+    
+    dispatch_sync(queue, ^{
+        NSLog(@"下载图片2----%@",[NSThread currentThread]);
+    });
+    
+    dispatch_sync(queue, ^{
+        NSLog(@"下载图片3----%@",[NSThread currentThread]);
+    });
+    
+}
+
+
+//不会开启新的线程
+//同步串行队列
+- (void)sycSerialQueue
+{
+    dispatch_queue_t  queue= dispatch_queue_create("wedding", NULL);
+    dispatch_sync(queue, ^{
+        NSLog(@"下载图片1----%@",[NSThread currentThread]);
+    });
+    
+    dispatch_sync(queue, ^{
+        NSLog(@"下载图片2----%@",[NSThread currentThread]);
+    });
+    
+    dispatch_sync(queue, ^{
+        NSLog(@"下载图片3----%@",[NSThread currentThread]);
+    });
+    
+}
+
+
+
 
 
 - (void)operationQueue
@@ -796,7 +906,18 @@
         SystemViewController *systemVC = [[SystemViewController alloc] init];
         [self.navigationController pushViewController:systemVC animated:YES];
     }
-    
+    else if ([title isEqualToString:@"ScrollVC"])
+    {
+        [self performSegueWithIdentifier:@"ScrollVCSegue" sender:nil];
+    }
+    else if([title isEqualToString:@"融云"])
+    {
+        [self performSegueWithIdentifier:@"RongCloudSegue" sender:nil];
+    }
+    else if ([title isEqualToString:@"会话列表"])
+    {
+        [self performSegueWithIdentifier:@"RoundListSegue" sender:nil];
+    }
 }
 
 
@@ -808,9 +929,78 @@
     if ([segue.identifier isEqualToString:@"BLESegue"])
     {
         BLEViewController *bleVC = segue.destinationViewController;
-        bleVC.dict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"124",@"first", nil];
-//        bleVC.dict = @{@"first":@"124"};
+//        bleVC.dict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"124",@"first", nil];
+        bleVC.dict = @{@"first":@"124"};
     }
+    else if ([segue.identifier isEqualToString:@"RongCloudSegue"])
+    {
+        RongCloudViewController *rongCloudVC = segue.destinationViewController;
+        //设置会话的类型，如单聊、讨论组、群聊、聊天室、客服、公众服务会话等
+        rongCloudVC.conversationType = ConversationType_PRIVATE;
+        //设置会话的目标会话ID。（单聊、客服、公众服务会话为对方的ID，讨论组、群聊、聊天室为会话的ID）
+        rongCloudVC.targetId = @"zgj";
+        rongCloudVC.title = @"私聊";
+    }
+}
+
+#pragma mark  - BugTest
+- (void)bugTest
+{
+    //没问题
+    NSMutableArray *array = [NSMutableArray arrayWithArray:nil];
+    
+    if([@"null" integerValue] == 1)
+    {
+        NSLog(@"=======等于1====");
+    }
+    else
+    {
+        NSLog(@"======不等于1========");
+    }
+    
+    
+    [TSMessage showNotificationWithTitle:nil subtitle:nil type:TSMessageNotificationTypeSuccess];
+    
+    
+    NSMutableDictionary *resultDic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"zgj",@"name", nil];
+    
+    
+//    id obj = [resultDic objectForKey:@"returnObj"];
+    id obj = [NSNull null];
+    
+    // dataUsingEncoding 不能为nil
+    NSArray  *exitClientArray =[NSJSONSerialization JSONObjectWithData:[obj dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:nil];
+    
+    
+    NSAssert(obj, @"object不能为nil");
+    [resultDic setObject:obj forKey:@"address"];
+    
+    
+    NSString *text = @(5);
+    
+    id num = @5;
+    if ([num isKindOfClass:[NSNumber class]])
+    {
+        NSLog(@"数数字");
+    }
+    else
+    {
+        NSLog(@"拼音");
+    }
+}
+
+#pragma mark  - Button状态
+- (void)btnStatus
+{
+    
+    [self.testBtn setTitle:@"helloNormal" forState:UIControlStateNormal];
+    [self.testBtn setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    
+    
+    //按下状态
+    [self.testBtn setTitle:@"呵呵" forState:UIControlStateHighlighted];
+    [self.testBtn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+    
 }
 
 
@@ -819,4 +1009,6 @@
     [super didReceiveMemoryWarning];
 }
 
+- (IBAction)testBtn:(UIButton *)sender {
+}
 @end

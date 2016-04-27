@@ -55,15 +55,16 @@ PODS:
     - ReactiveCocoa/Core
   - ReactiveViewModel (0.3):
     - ReactiveCocoa (~> 2.4)
+  - REFrostedViewController (2.4.8)
   - RESideMenu (4.0.7)
+  - RongCloudIMKit (2.4.11)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6.3)
-  - AYCheckVersion (from `https://github.com/guangjianzhou/AYCheckVersion.git`, tag
-    `1.0.1`)
+  - AYCheckVersion (from `https://github.com/guangjianzhou/AYCheckVersion.git`)
   - BlocksKit (~> 2.2.5)
   - DZNEmptyDataSet (~> 1.7.2)
   - FMDB (~> 2.5)
@@ -75,22 +76,23 @@ DEPENDENCIES:
   - pop (~> 1.0.8)
   - ReactiveCocoa (~> 2.5)
   - ReactiveViewModel (>= 0.3)
+  - REFrostedViewController (~> 2.4.8)
   - RESideMenu (~> 4.0.7)
+  - RongCloudIMKit (~> 2.4.11)
   - SDWebImage (~> 3.7.3)
 
 EXTERNAL SOURCES:
   AYCheckVersion:
     :git: https://github.com/guangjianzhou/AYCheckVersion.git
-    :tag: 1.0.1
 
 CHECKOUT OPTIONS:
   AYCheckVersion:
+    :commit: e68fc7aa24a02baf3d5a4181dbfa862480c149d3
     :git: https://github.com/guangjianzhou/AYCheckVersion.git
-    :tag: 1.0.1
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
-  AYCheckVersion: f2a2c4fad4dd67b7c43eed64967f78b96ca62261
+  AYCheckVersion: 7aa2cef04b050cc405c766122ba80bedfd06a780
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
@@ -102,7 +104,9 @@ SPEC CHECKSUMS:
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   ReactiveViewModel: 58918dcbcec2d3151195ab1ed9163c57a8163999
+  REFrostedViewController: a893b4979ba1f200c547aef9ff4c3fd5a18f5923
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
+  RongCloudIMKit: 40fefc63541927aad728e06c731d12d34de1c5fa
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
 
 COCOAPODS: 0.39.0

@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>AYCheckVersion.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>BlocksKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -55,6 +50,11 @@
 			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>REFrostedViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -102,17 +102,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4521B5E2766A64BDB1CD655D62DC297E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6DDD974F2C6904239377E93D280F73C1</key>
+		<key>675DA64FC6EF6A4361AA19779AD81115</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,17 +117,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88653690708D1CBBD7D00CAC3CBA29A8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>98221BC2947FDEEAFE18AD93B80FCBB3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>98BB06F71E8195A6122A28BD12F5BF1D</key>
+		<key>94696F961C3F4FD74479A2A18DB6960E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -147,17 +132,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE9BDC565436914F9F2A2EB8D090BB77</key>
+		<key>9F4B5AA529CC4F9D4DD99F35AD0294E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CC306FEF4CFC253BF180F0B6A76BB485</key>
+		<key>A4080B30BF006DF979E7331EDC8A985C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ACBD3CA811D5DA8FF36D0A4CE6D382A2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>DA1A7295DF2A99609DA0EEBF5E83233D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FC0C8B41D9F2ED010B4D04FD523A097C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FCFFC5DB23DEED03EB03F15D1AB42562</key>
 		<dict>
 			<key>primary</key>
 			<true/>
