@@ -61,6 +61,23 @@
 		FD6A760F1C7C315C00D7E5D8 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6A760E1C7C315C00D7E5D8 /* share.png */; };
 		FD76AB531C97B9120071F9AB /* BLEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76AB521C97B9120071F9AB /* BLEViewController.m */; };
 		FD76AB561C97D03A0071F9AB /* DelayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76AB551C97D03A0071F9AB /* DelayViewController.m */; };
+		FD7E110B1CD2FA8E000F9012 /* ThemeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E110A1CD2FA8E000F9012 /* ThemeConfig.m */; };
+		FD7E11231CD302BD000F9012 /* fontColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD7E11201CD302BD000F9012 /* fontColor.plist */; };
+		FD7E11241CD302BD000F9012 /* fontColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD7E11221CD302BD000F9012 /* fontColor.plist */; };
+		FD7E112D1CD302FB000F9012 /* add_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = FD7E11261CD302FB000F9012 /* add_btn.png */; };
+		FD7E112E1CD302FB000F9012 /* fontColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD7E11271CD302FB000F9012 /* fontColor.plist */; };
+		FD7E112F1CD302FB000F9012 /* navBack.png in Resources */ = {isa = PBXBuildFile; fileRef = FD7E11281CD302FB000F9012 /* navBack.png */; };
+		FD7E11301CD302FB000F9012 /* navImage.png in Resources */ = {isa = PBXBuildFile; fileRef = FD7E11291CD302FB000F9012 /* navImage.png */; };
+		FD7E11311CD302FB000F9012 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = FD7E112A1CD302FB000F9012 /* next.png */; };
+		FD7E11321CD302FB000F9012 /* previous.png in Resources */ = {isa = PBXBuildFile; fileRef = FD7E112B1CD302FB000F9012 /* previous.png */; };
+		FD7E11331CD302FB000F9012 /* setting_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = FD7E112C1CD302FB000F9012 /* setting_btn.png */; };
+		FD7E12851CD30A91000F9012 /* theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD7E12791CD30A91000F9012 /* theme.plist */; };
+		FD7E12861CD30A91000F9012 /* ThemeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E127B1CD30A91000F9012 /* ThemeButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FD7E12871CD30A91000F9012 /* ThemeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E127D1CD30A91000F9012 /* ThemeImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FD7E12881CD30A91000F9012 /* ThemeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E127F1CD30A91000F9012 /* ThemeLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FD7E12891CD30A91000F9012 /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E12811CD30A91000F9012 /* ThemeManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FD7E128B1CD30AA0000F9012 /* Skins in Resources */ = {isa = PBXBuildFile; fileRef = FD7E128A1CD30AA0000F9012 /* Skins */; };
+		FD7E128E1CD321C5000F9012 /* NSMutableDictionary+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E128D1CD321C5000F9012 /* NSMutableDictionary+help.m */; };
 		FD7E27031C1914E4002D4CDD /* NSDate+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E27021C1914E4002D4CDD /* NSDate+help.m */; };
 		FD7E2EAF1C9A872700D292CC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7E2EAE1C9A872700D292CC /* CoreTelephony.framework */; };
 		FD7E2EB11C9A87A900D292CC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7E2EB01C9A87A900D292CC /* CoreMotion.framework */; };
@@ -94,6 +111,9 @@
 		FD94569A1C33D65400CB6FA9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9456991C33D65400CB6FA9 /* AudioToolbox.framework */; };
 		FD94569D1C33D6EE00CB6FA9 /* video_call_sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = FD94569B1C33D6EE00CB6FA9 /* video_call_sound.caf */; };
 		FD94569E1C33D6EE00CB6FA9 /* RingBackground.caf in Resources */ = {isa = PBXBuildFile; fileRef = FD94569C1C33D6EE00CB6FA9 /* RingBackground.caf */; };
+		FD9B51221CD09EDF001E0E6D /* PopCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9B51211CD09EDF001E0E6D /* PopCustomView.m */; };
+		FD9B51261CD09F06001E0E6D /* PopZgjViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9B51251CD09F06001E0E6D /* PopZgjViewController.m */; };
+		FD9B51281CD0A7ED001E0E6D /* PopCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9B51271CD0A7ED001E0E6D /* PopCustomView.xib */; };
 		FDA0C3A71C1FB8870087B5CE /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA0C3A61C1FB8870087B5CE /* RootViewController.m */; };
 		FDA9D4571C293DBC00CB9369 /* XHPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9D4521C293DBC00CB9369 /* XHPopMenu.m */; };
 		FDA9D4581C293DBC00CB9369 /* XHPopMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA9D4541C293DBC00CB9369 /* XHPopMenuItem.m */; };
@@ -405,6 +425,10 @@
 		FDD343FB1C92707400F4677A /* PushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD343FA1C92707400F4677A /* PushTransition.m */; };
 		FDD343FE1C9290B500F4677A /* InteractionTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD343FD1C9290B500F4677A /* InteractionTransitionAnimation.m */; };
 		FDD344011C929B7800F4677A /* TransferView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD344001C929B7800F4677A /* TransferView.m */; };
+		FDD45C451CD1A24900C69F41 /* DCPaymentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD45C441CD1A24900C69F41 /* DCPaymentView.m */; };
+		FDD45C4E1CD1EFCC00C69F41 /* ThemeAndLanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD45C4D1CD1EFCC00C69F41 /* ThemeAndLanguageViewController.m */; };
+		FDD45C551CD1F2D100C69F41 /* ISULanguageManger.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD45C541CD1F2D100C69F41 /* ISULanguageManger.m */; };
+		FDD45C581CD1F4EF00C69F41 /* TestDemo.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDD45C5A1CD1F4EF00C69F41 /* TestDemo.strings */; };
 		FDD9382C1C87D2F500DABD8C /* ThrowLineTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9382B1C87D2F500DABD8C /* ThrowLineTool.m */; };
 		FDD9383B1C8817FD00DABD8C /* UIBarButtonItem+WNXBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9383A1C8817FD00DABD8C /* UIBarButtonItem+WNXBarButtonItem.m */; };
 		FDD938431C88184A00DABD8C /* NSString+Emojize.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9383F1C88184A00DABD8C /* NSString+Emojize.m */; };
@@ -1156,6 +1180,29 @@
 		FD76AB521C97B9120071F9AB /* BLEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEViewController.m; sourceTree = "<group>"; };
 		FD76AB541C97D03A0071F9AB /* DelayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelayViewController.h; sourceTree = "<group>"; };
 		FD76AB551C97D03A0071F9AB /* DelayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelayViewController.m; sourceTree = "<group>"; };
+		FD7E11091CD2FA8E000F9012 /* ThemeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeConfig.h; sourceTree = "<group>"; };
+		FD7E110A1CD2FA8E000F9012 /* ThemeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeConfig.m; sourceTree = "<group>"; };
+		FD7E11201CD302BD000F9012 /* fontColor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fontColor.plist; sourceTree = "<group>"; };
+		FD7E11221CD302BD000F9012 /* fontColor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fontColor.plist; sourceTree = "<group>"; };
+		FD7E11261CD302FB000F9012 /* add_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_btn.png; sourceTree = "<group>"; };
+		FD7E11271CD302FB000F9012 /* fontColor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fontColor.plist; sourceTree = "<group>"; };
+		FD7E11281CD302FB000F9012 /* navBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBack.png; sourceTree = "<group>"; };
+		FD7E11291CD302FB000F9012 /* navImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navImage.png; sourceTree = "<group>"; };
+		FD7E112A1CD302FB000F9012 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		FD7E112B1CD302FB000F9012 /* previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previous.png; sourceTree = "<group>"; };
+		FD7E112C1CD302FB000F9012 /* setting_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_btn.png; sourceTree = "<group>"; };
+		FD7E12791CD30A91000F9012 /* theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = theme.plist; sourceTree = "<group>"; };
+		FD7E127A1CD30A91000F9012 /* ThemeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeButton.h; sourceTree = "<group>"; };
+		FD7E127B1CD30A91000F9012 /* ThemeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeButton.m; sourceTree = "<group>"; };
+		FD7E127C1CD30A91000F9012 /* ThemeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeImageView.h; sourceTree = "<group>"; };
+		FD7E127D1CD30A91000F9012 /* ThemeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeImageView.m; sourceTree = "<group>"; };
+		FD7E127E1CD30A91000F9012 /* ThemeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeLabel.h; sourceTree = "<group>"; };
+		FD7E127F1CD30A91000F9012 /* ThemeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeLabel.m; sourceTree = "<group>"; };
+		FD7E12801CD30A91000F9012 /* ThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeManager.h; sourceTree = "<group>"; };
+		FD7E12811CD30A91000F9012 /* ThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeManager.m; sourceTree = "<group>"; };
+		FD7E128A1CD30AA0000F9012 /* Skins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Skins; sourceTree = "<group>"; };
+		FD7E128C1CD321C5000F9012 /* NSMutableDictionary+help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+help.h"; sourceTree = "<group>"; };
+		FD7E128D1CD321C5000F9012 /* NSMutableDictionary+help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+help.m"; sourceTree = "<group>"; };
 		FD7E27011C1914E4002D4CDD /* NSDate+help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+help.h"; path = "../../NSDate+help.h"; sourceTree = "<group>"; };
 		FD7E27021C1914E4002D4CDD /* NSDate+help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+help.m"; path = "../../NSDate+help.m"; sourceTree = "<group>"; };
 		FD7E2EAE1C9A872700D292CC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -1210,6 +1257,11 @@
 		FD9456991C33D65400CB6FA9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FD94569B1C33D6EE00CB6FA9 /* video_call_sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_call_sound.caf; sourceTree = "<group>"; };
 		FD94569C1C33D6EE00CB6FA9 /* RingBackground.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RingBackground.caf; sourceTree = "<group>"; };
+		FD9B51201CD09EDF001E0E6D /* PopCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopCustomView.h; sourceTree = "<group>"; };
+		FD9B51211CD09EDF001E0E6D /* PopCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopCustomView.m; sourceTree = "<group>"; };
+		FD9B51241CD09F06001E0E6D /* PopZgjViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopZgjViewController.h; sourceTree = "<group>"; };
+		FD9B51251CD09F06001E0E6D /* PopZgjViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopZgjViewController.m; sourceTree = "<group>"; };
+		FD9B51271CD0A7ED001E0E6D /* PopCustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopCustomView.xib; sourceTree = "<group>"; };
 		FDA0C3A51C1FB8870087B5CE /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		FDA0C3A61C1FB8870087B5CE /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		FDA9D4511C293DBC00CB9369 /* XHPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPopMenu.h; sourceTree = "<group>"; };
@@ -1802,6 +1854,18 @@
 		FDD343FD1C9290B500F4677A /* InteractionTransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractionTransitionAnimation.m; sourceTree = "<group>"; };
 		FDD343FF1C929B7800F4677A /* TransferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferView.h; sourceTree = "<group>"; };
 		FDD344001C929B7800F4677A /* TransferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferView.m; sourceTree = "<group>"; };
+		FDD45C431CD1A24900C69F41 /* DCPaymentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPaymentView.h; sourceTree = "<group>"; };
+		FDD45C441CD1A24900C69F41 /* DCPaymentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPaymentView.m; sourceTree = "<group>"; };
+		FDD45C4C1CD1EFCC00C69F41 /* ThemeAndLanguageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeAndLanguageViewController.h; sourceTree = "<group>"; };
+		FDD45C4D1CD1EFCC00C69F41 /* ThemeAndLanguageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeAndLanguageViewController.m; sourceTree = "<group>"; };
+		FDD45C531CD1F2D100C69F41 /* ISULanguageManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISULanguageManger.h; sourceTree = "<group>"; };
+		FDD45C541CD1F2D100C69F41 /* ISULanguageManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISULanguageManger.m; sourceTree = "<group>"; };
+		FDD45C591CD1F4EF00C69F41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TestDemo.strings; sourceTree = "<group>"; };
+		FDD45C5C1CD1F4F900C69F41 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TestDemo.strings"; sourceTree = "<group>"; };
+		FDD45C5D1CD1F5D400C69F41 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		FDD45C5E1CD1F5D400C69F41 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		FDD45C5F1CD1F5D400C69F41 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TestDemo.strings; sourceTree = "<group>"; };
+		FDD45C601CD1FF7800C69F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/TestDemo.strings; sourceTree = "<group>"; };
 		FDD9382A1C87D2F500DABD8C /* ThrowLineTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThrowLineTool.h; sourceTree = "<group>"; };
 		FDD9382B1C87D2F500DABD8C /* ThrowLineTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThrowLineTool.m; sourceTree = "<group>"; };
 		FDD938391C8817FD00DABD8C /* UIBarButtonItem+WNXBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WNXBarButtonItem.h"; sourceTree = "<group>"; };
@@ -2464,6 +2528,61 @@
 			name = "延迟调用";
 			sourceTree = "<group>";
 		};
+		FD7E111E1CD302BD000F9012 /* Skins */ = {
+			isa = PBXGroup;
+			children = (
+				FD7E111F1CD302BD000F9012 /* blue */,
+				FD7E11211CD302BD000F9012 /* pink */,
+			);
+			path = Skins;
+			sourceTree = "<group>";
+		};
+		FD7E111F1CD302BD000F9012 /* blue */ = {
+			isa = PBXGroup;
+			children = (
+				FD7E11201CD302BD000F9012 /* fontColor.plist */,
+			);
+			path = blue;
+			sourceTree = "<group>";
+		};
+		FD7E11211CD302BD000F9012 /* pink */ = {
+			isa = PBXGroup;
+			children = (
+				FD7E11221CD302BD000F9012 /* fontColor.plist */,
+			);
+			path = pink;
+			sourceTree = "<group>";
+		};
+		FD7E11251CD302FB000F9012 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				FD7E11261CD302FB000F9012 /* add_btn.png */,
+				FD7E11271CD302FB000F9012 /* fontColor.plist */,
+				FD7E11281CD302FB000F9012 /* navBack.png */,
+				FD7E11291CD302FB000F9012 /* navImage.png */,
+				FD7E112A1CD302FB000F9012 /* next.png */,
+				FD7E112B1CD302FB000F9012 /* previous.png */,
+				FD7E112C1CD302FB000F9012 /* setting_btn.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		FD7E12751CD30A91000F9012 /* ThemeManager */ = {
+			isa = PBXGroup;
+			children = (
+				FD7E12791CD30A91000F9012 /* theme.plist */,
+				FD7E127A1CD30A91000F9012 /* ThemeButton.h */,
+				FD7E127B1CD30A91000F9012 /* ThemeButton.m */,
+				FD7E127C1CD30A91000F9012 /* ThemeImageView.h */,
+				FD7E127D1CD30A91000F9012 /* ThemeImageView.m */,
+				FD7E127E1CD30A91000F9012 /* ThemeLabel.h */,
+				FD7E127F1CD30A91000F9012 /* ThemeLabel.m */,
+				FD7E12801CD30A91000F9012 /* ThemeManager.h */,
+				FD7E12811CD30A91000F9012 /* ThemeManager.m */,
+			);
+			path = ThemeManager;
+			sourceTree = "<group>";
+		};
 		FD7FF4541C3B4C2400DDB21E /* NSTimerVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -2558,6 +2677,20 @@
 			path = AVFoundation;
 			sourceTree = "<group>";
 		};
+		FD9B51231CD09EE4001E0E6D /* 自定义弹出框 */ = {
+			isa = PBXGroup;
+			children = (
+				FDD45C431CD1A24900C69F41 /* DCPaymentView.h */,
+				FDD45C441CD1A24900C69F41 /* DCPaymentView.m */,
+				FD9B51201CD09EDF001E0E6D /* PopCustomView.h */,
+				FD9B51211CD09EDF001E0E6D /* PopCustomView.m */,
+				FD9B51271CD0A7ED001E0E6D /* PopCustomView.xib */,
+				FD9B51241CD09F06001E0E6D /* PopZgjViewController.h */,
+				FD9B51251CD09F06001E0E6D /* PopZgjViewController.m */,
+			);
+			name = "自定义弹出框";
+			sourceTree = "<group>";
+		};
 		FDA9D4491C29389400CB9369 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -2613,6 +2746,8 @@
 				FDBE74331CBCE1AC0062C5B6 /* 系统VC */,
 				FDB3678C1CC5DBE20015E107 /* ScrollVC&更改Plist */,
 				FD8D8C9A1CC9E8C000429DCF /* 融云 */,
+				FD9B51231CD09EE4001E0E6D /* 自定义弹出框 */,
+				FDD45C4F1CD1EFD100C69F41 /* 切换主题和语言 */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -2677,6 +2812,8 @@
 				FDFDC6C71CAD04A5002A6B03 /* UIApplication+BackgroundRunning.h */,
 				FDFDC6C81CAD04A5002A6B03 /* UIApplication+BackgroundRunning.m */,
 				FDFDC6B81CACF95D002A6B03 /* UIView */,
+				FD7E128C1CD321C5000F9012 /* NSMutableDictionary+help.h */,
+				FD7E128D1CD321C5000F9012 /* NSMutableDictionary+help.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -3667,6 +3804,24 @@
 			name = "转场动画";
 			sourceTree = "<group>";
 		};
+		FDD45C4F1CD1EFD100C69F41 /* 切换主题和语言 */ = {
+			isa = PBXGroup;
+			children = (
+				FD7E128A1CD30AA0000F9012 /* Skins */,
+				FD7E12751CD30A91000F9012 /* ThemeManager */,
+				FD7E11251CD302FB000F9012 /* Image */,
+				FD7E111E1CD302BD000F9012 /* Skins */,
+				FDD45C531CD1F2D100C69F41 /* ISULanguageManger.h */,
+				FDD45C541CD1F2D100C69F41 /* ISULanguageManger.m */,
+				FDD45C4C1CD1EFCC00C69F41 /* ThemeAndLanguageViewController.h */,
+				FDD45C4D1CD1EFCC00C69F41 /* ThemeAndLanguageViewController.m */,
+				FDD45C5A1CD1F4EF00C69F41 /* TestDemo.strings */,
+				FD7E11091CD2FA8E000F9012 /* ThemeConfig.h */,
+				FD7E110A1CD2FA8E000F9012 /* ThemeConfig.m */,
+			);
+			name = "切换主题和语言";
+			sourceTree = "<group>";
+		};
 		FDD9382E1C87D30300DABD8C /* ThrowLineTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -4133,6 +4288,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				ja,
 			);
 			mainGroup = FDF592061C0EB43C00AF8B5C;
 			productRefGroup = FDF592101C0EB43C00AF8B5C /* Products */;
@@ -4157,6 +4314,7 @@
 				FDB943A61CCDFFF500449EB4 /* NotificationBackgroundError.png in Resources */,
 				FDB943B31CCDFFF500449EB4 /* NotificationBackgroundWarningIcon@2x.png in Resources */,
 				FDDFDDB51CA513DD0038B658 /* test.jpg in Resources */,
+				FD7E112F1CD302FB000F9012 /* navBack.png in Resources */,
 				FDB943AC1CCDFFF500449EB4 /* NotificationBackgroundSuccess.png in Resources */,
 				FDF3E8F71CA128B400E517D5 /* page_icon_network.png in Resources */,
 				FDE9BA651CC72F0E00E6239F /* NSErrorViewController.xib in Resources */,
@@ -4167,8 +4325,12 @@
 				FDC5965C1CA53BE700DA533D /* ShowCollectionViewCell.xib in Resources */,
 				FDA9D48B1C294EB700CB9369 /* pop_Tweet@2x.png in Resources */,
 				FDAA34DD1C9FD34100FF5594 /* 技巧.txt in Resources */,
+				FD7E11241CD302BD000F9012 /* fontColor.plist in Resources */,
+				FD9B51281CD0A7ED001E0E6D /* PopCustomView.xib in Resources */,
+				FD7E11331CD302FB000F9012 /* setting_btn.png in Resources */,
 				FDF3E8F51CA1265800E517D5 /* page_icon_emptyMessage.png in Resources */,
 				FD87E0DB1CB393FF009BE457 /* TZTestOneViewController.xib in Resources */,
+				FD7E12851CD30A91000F9012 /* theme.plist in Resources */,
 				FD211F691C2BF45900C7ACCC /* 6.png in Resources */,
 				FDB943A71CCDFFF500449EB4 /* NotificationBackgroundError@2x.png in Resources */,
 				FDC95CB01C34F51D00F6BD76 /* MyView.xib in Resources */,
@@ -4177,6 +4339,7 @@
 				FDA9D45F1C293F3D00CB9369 /* contacts_add_friend@2x.png in Resources */,
 				FDB943B21CCDFFF500449EB4 /* NotificationBackgroundWarningIcon.png in Resources */,
 				FDA9D4861C294EB700CB9369 /* pop_Message@3x.png in Resources */,
+				FD7E11321CD302FB000F9012 /* previous.png in Resources */,
 				FD211F6C1C2BF45900C7ACCC /* 1.png in Resources */,
 				FDA9D4851C294EB700CB9369 /* pop_Message@2x.png in Resources */,
 				FDF5921F1C0EB43C00AF8B5C /* Assets.xcassets in Resources */,
@@ -4184,6 +4347,7 @@
 				FDAB1EEA1C5F0B50001EC186 /* CustomCategoView.xib in Resources */,
 				FDA9D4611C293F3D00CB9369 /* contacts_add_photo@2x.png in Resources */,
 				FDE3CA491C2A703400636C40 /* WebViewJavascriptBridge.js.txt in Resources */,
+				FD7E112E1CD302FB000F9012 /* fontColor.plist in Resources */,
 				FDB943AF1CCDFFF500449EB4 /* NotificationBackgroundSuccessIcon@2x.png in Resources */,
 				FDB943B51CCDFFF500449EB4 /* NotificationButtonBackground@2x.png in Resources */,
 				FD9181711CAA7C10001A0A73 /* blankpage_button_reload@2x.png in Resources */,
@@ -4198,12 +4362,16 @@
 				FDD938521C8818AD00DABD8C /* iOSDeviceModelMapping.plist in Resources */,
 				FDA9D4891C294EB700CB9369 /* pop_Task@2x.png in Resources */,
 				FDA9D48A1C294EB700CB9369 /* pop_Task@3x.png in Resources */,
+				FD7E11301CD302FB000F9012 /* navImage.png in Resources */,
+				FD7E112D1CD302FB000F9012 /* add_btn.png in Resources */,
 				FDA9D4631C293F3D00CB9369 /* contacts_add_voip@2x.png in Resources */,
 				FDB943A81CCDFFF500449EB4 /* NotificationBackgroundErrorIcon.png in Resources */,
 				FDA9D48C1C294EB700CB9369 /* pop_Tweet@3x.png in Resources */,
 				FDB06A981C99476C00056F10 /* adn.cer in Resources */,
+				FD7E11231CD302BD000F9012 /* fontColor.plist in Resources */,
 				FD9181691CAA7957001A0A73 /* loading_monkey@2x.png in Resources */,
 				FD6A760F1C7C315C00D7E5D8 /* share.png in Resources */,
+				FDD45C581CD1F4EF00C69F41 /* TestDemo.strings in Resources */,
 				FDA9D4831C294EB700CB9369 /* pop_2FA@2x.png in Resources */,
 				FD211F6A1C2BF45900C7ACCC /* 3.png in Resources */,
 				FD68DDF51C9A83E200E73EF5 /* AlipaySDK.bundle in Resources */,
@@ -4218,12 +4386,14 @@
 				FDA9D4841C294EB700CB9369 /* pop_2FA@3x.png in Resources */,
 				FDB943AE1CCDFFF500449EB4 /* NotificationBackgroundSuccessIcon.png in Resources */,
 				FDB943AD1CCDFFF500449EB4 /* NotificationBackgroundSuccess@2x.png in Resources */,
+				FD7E128B1CD30AA0000F9012 /* Skins in Resources */,
 				FDF5921D1C0EB43C00AF8B5C /* Main.storyboard in Resources */,
 				FDA9D4651C29403000CB9369 /* MoreFunctionFrame@2x.png in Resources */,
 				FD91816E1CAA7BF8001A0A73 /* blankpage_image_Sleep@2x.png in Resources */,
 				FDB943B11CCDFFF500449EB4 /* NotificationBackgroundWarning@2x.png in Resources */,
 				FDDB81481C3F4E5400BEBCB3 /* PopupView.xib in Resources */,
 				FD578E561C1E69E200F13038 /* CustomKeyboardView.xib in Resources */,
+				FD7E11311CD302FB000F9012 /* next.png in Resources */,
 				FDB943AB1CCDFFF500449EB4 /* NotificationBackgroundMessage@2x.png in Resources */,
 				FD578E5B1C1E76E700F13038 /* CustomView.xib in Resources */,
 				FD91816F1CAA7BF8001A0A73 /* blankpage_image_Hi@2x.png in Resources */,
@@ -4416,6 +4586,7 @@
 				FDAAAF221C8EBF8300CEF5CA /* ZXSMSParsedResult.m in Sources */,
 				FDCCF04B1C605DC30012F928 /* CoreGraphicsViewController.m in Sources */,
 				FDAAAFA11C8EBF8300CEF5CA /* ZXUPCAWriter.m in Sources */,
+				FD7E12881CD30A91000F9012 /* ThemeLabel.m in Sources */,
 				FDAAAFD21C8EBF8300CEF5CA /* ZXQRCodeBlockPair.m in Sources */,
 				FDAAAF4A1C8EBF8300CEF5CA /* ZXBinarizer.m in Sources */,
 				FDDFDDAE1CA50F750038B658 /* CaseViewController.m in Sources */,
@@ -4432,6 +4603,7 @@
 				FDAAAF3B1C8EBF8300CEF5CA /* ZXBitArray.m in Sources */,
 				FDFDC6B71CACF957002A6B03 /* UIView+SizeHeight.m in Sources */,
 				FDB943A41CCDFFF500449EB4 /* HexColor.m in Sources */,
+				FD9B51261CD09F06001E0E6D /* PopZgjViewController.m in Sources */,
 				FD8A99AB1C22864800AB4E6B /* SecondViewController.m in Sources */,
 				FDD343FB1C92707400F4677A /* PushTransition.m in Sources */,
 				FD68F55D1C9BCB7800771B3C /* ApiXml.mm in Sources */,
@@ -4459,6 +4631,7 @@
 				FDAAAF231C8EBF8300CEF5CA /* ZXSMSTOMMSTOResultParser.m in Sources */,
 				FDAAAFD01C8EBF8300CEF5CA /* ZXQRCodeFinderPatternInfo.m in Sources */,
 				FDAAAFD11C8EBF8300CEF5CA /* ZXQRCode.m in Sources */,
+				FD7E12891CD30A91000F9012 /* ThemeManager.m in Sources */,
 				FDAAAF8B1C8EBF8300CEF5CA /* ZXRSSFinderPattern.m in Sources */,
 				FDAAAFCA1C8EBF8300CEF5CA /* ZXQRCodeVersion.m in Sources */,
 				FDDB81501C3F56AA00BEBCB3 /* PopUpZgjView.m in Sources */,
@@ -4477,6 +4650,7 @@
 				FDEF1B921C21580600187029 /* FDMethod.m in Sources */,
 				FDAAAFD61C8EBF8300CEF5CA /* ZXMultiDetector.m in Sources */,
 				FDBB58C01C434C65007DE015 /* FMDBViewController.m in Sources */,
+				FD7E12871CD30A91000F9012 /* ThemeImageView.m in Sources */,
 				FDAAAF091C8EBF8300CEF5CA /* ZXAztecToken.m in Sources */,
 				FD68DE581C9A83F800E73EF5 /* base64.m in Sources */,
 				FDAAAF0B1C8EBF8300CEF5CA /* ZXAztecReader.m in Sources */,
@@ -4486,6 +4660,7 @@
 				FDF5921A1C0EB43C00AF8B5C /* ViewController.m in Sources */,
 				FDAAAF831C8EBF8300CEF5CA /* ZXRSSExpandedGeneralAppIdDecoder.m in Sources */,
 				FDE3CA521C2A8B9500636C40 /* RACViewController.m in Sources */,
+				FD7E110B1CD2FA8E000F9012 /* ThemeConfig.m in Sources */,
 				FD4EC8A41CBDF57F00BA89C2 /* HMWaterflowLayout.m in Sources */,
 				FDAAAF621C8EBF8300CEF5CA /* ZXDataMatrixEncoderContext.m in Sources */,
 				FDAAAFCE1C8EBF8300CEF5CA /* ZXQRCodeFinderPattern.m in Sources */,
@@ -4520,6 +4695,7 @@
 				FDAAAFC01C8EBF8300CEF5CA /* ZXPDF417Writer.m in Sources */,
 				FDE3CA3F1C2A62E000636C40 /* WebViewCosntroller.m in Sources */,
 				FD91815D1CAA5F26001A0A73 /* SwipableViewController.m in Sources */,
+				FD9B51221CD09EDF001E0E6D /* PopCustomView.m in Sources */,
 				FD91815C1CAA5F26001A0A73 /* HorizonalTableViewController.m in Sources */,
 				FDE22E791CABBB1D0018E643 /* Staff.m in Sources */,
 				FD68F55E1C9BCB7800771B3C /* payRequsestHandler.mm in Sources */,
@@ -4591,6 +4767,7 @@
 				FDB943B81CCDFFF500449EB4 /* TSMessageView.m in Sources */,
 				FDAAAFBB1C8EBF8300CEF5CA /* ZXPDF417ErrorCorrection.m in Sources */,
 				FDAAAF4D1C8EBF8300CEF5CA /* ZXDecodeHints.m in Sources */,
+				FDD45C551CD1F2D100C69F41 /* ISULanguageManger.m in Sources */,
 				FDD9384D1C88189E00DABD8C /* NSString+help.m in Sources */,
 				FDAAAFA61C8EBF8300CEF5CA /* ZXUPCEANWriter.m in Sources */,
 				FD68DDE81C9A828D00E73EF5 /* PayViewController.m in Sources */,
@@ -4615,6 +4792,7 @@
 				FDAAAF5D1C8EBF8300CEF5CA /* ZXDataMatrixASCIIEncoder.m in Sources */,
 				FDAAAF591C8EBF8300CEF5CA /* ZXDataMatrixDecodedBitStreamParser.m in Sources */,
 				FDAAAF821C8EBF8300CEF5CA /* ZXRSSExpandedFieldParser.m in Sources */,
+				FDD45C451CD1A24900C69F41 /* DCPaymentView.m in Sources */,
 				FDAAAFCF1C8EBF8300CEF5CA /* ZXQRCodeFinderPatternFinder.m in Sources */,
 				FDAAAFBD1C8EBF8300CEF5CA /* ZXPDF417Common.m in Sources */,
 				FDAAAF521C8EBF8300CEF5CA /* ZXLuminanceSource.m in Sources */,
@@ -4622,7 +4800,9 @@
 				FDAAAFC81C8EBF8300CEF5CA /* ZXQRCodeFormatInformation.m in Sources */,
 				FDAAAF2C1C8EBF8300CEF5CA /* ZXVEventResultParser.m in Sources */,
 				FDAAAF951C8EBF8300CEF5CA /* ZXEAN13Reader.m in Sources */,
+				FD7E12861CD30A91000F9012 /* ThemeButton.m in Sources */,
 				FDAAAFB51C8EBF8300CEF5CA /* ZXPDF417Detector.m in Sources */,
+				FDD45C4E1CD1EFCC00C69F41 /* ThemeAndLanguageViewController.m in Sources */,
 				FDAAAF511C8EBF8300CEF5CA /* ZXInvertedLuminanceSource.m in Sources */,
 				FDAAAF8A1C8EBF8300CEF5CA /* ZXRSSDataCharacter.m in Sources */,
 				FDA0C3A71C1FB8870087B5CE /* RootViewController.m in Sources */,
@@ -4635,6 +4815,7 @@
 				FDAAAFB01C8EBF8300CEF5CA /* ZXPDF417DecodedBitStreamParser.m in Sources */,
 				FDAAAF721C8EBF8300CEF5CA /* ZXAI013103decoder.m in Sources */,
 				FDAAAF841C8EBF8300CEF5CA /* ZXBitArrayBuilder.m in Sources */,
+				FD7E128E1CD321C5000F9012 /* NSMutableDictionary+help.m in Sources */,
 				FDAAAFDB1C8EBF8300CEF5CA /* ZXMultiFormatReader.m in Sources */,
 				FDAAAF711C8EBF8300CEF5CA /* ZXAbstractExpandedDecoder.m in Sources */,
 				FDAAAF881C8EBF8300CEF5CA /* ZXAbstractRSSReader.m in Sources */,
@@ -5136,11 +5317,23 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FDD45C5A1CD1F4EF00C69F41 /* TestDemo.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDD45C591CD1F4EF00C69F41 /* en */,
+				FDD45C5C1CD1F4F900C69F41 /* zh-Hans */,
+				FDD45C5F1CD1F5D400C69F41 /* ja */,
+				FDD45C601CD1FF7800C69F41 /* Base */,
+			);
+			name = TestDemo.strings;
+			sourceTree = "<group>";
+		};
 		FDF5921B1C0EB43C00AF8B5C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FDF5921C1C0EB43C00AF8B5C /* Base */,
 				FDBE74341CBCF5E80062C5B6 /* zh-Hans */,
+				FDD45C5D1CD1F5D400C69F41 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -5150,6 +5343,7 @@
 			children = (
 				FDF592211C0EB43C00AF8B5C /* Base */,
 				FDBE74351CBCF5E80062C5B6 /* zh-Hans */,
+				FDD45C5E1CD1F5D400C69F41 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

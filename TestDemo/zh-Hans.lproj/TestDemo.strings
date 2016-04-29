@@ -1,0 +1,20 @@
+/* 
+  TestDemo.strings
+  TestDemo
+
+  Created by guangjianzhou on 16/4/28.
+  Copyright © 2016年 guangjianzhou. All rights reserved.
+*/
+
+"cancel" = "取消";
+"popMenu" = "弹出框";
+"webViewUserInterFaced" = "网页交互";
+"RACStudy" = "RAC学习";
+"AVFoundation" = "音视频";
+"NSTimer" = "定时器";
+"FMDB" = "数据库";
+"UIDynamic" = "粒子动画";
+"Lock" = "锁";
+"CoreGraphics" = "绘画";
+"ThemeTitle" = "切换主题";
+"LanguageTitle" = "切换语言";

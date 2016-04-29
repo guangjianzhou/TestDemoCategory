@@ -1,0 +1,17 @@
+/* 
+  TestDemo.strings
+  TestDemo
+
+  Created by guangjianzhou on 16/4/28.
+  Copyright © 2016年 guangjianzhou. All rights reserved.
+*/
+"cancel" = "キャンセル";
+"popMenu" = "ポップアップフレーム";
+"webViewUserInterFaced" = "ホームページ";
+"RACStudy" = "勉強する";
+"AVFoundation" = "動画のビデオ";
+"NSTimer" = "タイマー";
+"FMDB" = "データベース";
+"UIDynamic" = "粒子アニメーション";
+"Lock" = "ロック";
+"CoreGraphics" = "絵画";

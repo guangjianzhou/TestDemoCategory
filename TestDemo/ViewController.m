@@ -16,8 +16,6 @@
 #import "Status.h"
 #import "NetAPIClient.h"
 #import "FDRoot.h"
-#import "XHPopMenu.h"
-#import "PopMenu.h"
 #import "WebViewCosntroller.h"
 #import "RACViewController.h"
 #import "CustomPopView.h"
@@ -84,9 +82,7 @@
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UIButton *testBtn;
 
-//弹出框
-@property (strong, nonatomic) XHPopMenu *popMenu;
-@property (strong, nonatomic) PopMenu *myPopMenu;
+
 
 //
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -159,7 +155,6 @@
     _segmentControl.layer.cornerRadius = 20;
     _segmentControl.layer.masksToBounds = YES;
     
-    _dataArray = [NSMutableArray arrayWithObjects:@"webview与交互",@"RAC学习",@"AVFoundataion", @"NSTimer",@"FMDB和storyboard textView控制父控件",@"UIDynamic动力",@"Lock锁",@"CoreGraphics",@"头部视图",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",nil];
     [self setUpNaivigationItem];
     [self effectVisualView];
     [self test1];
@@ -207,6 +202,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"头部视图",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",nil];
     [self configClass];
     
     _hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
@@ -249,91 +245,14 @@
 
 - (void)pressRightBtn:(UIButton *)btn
 {
-
-
-
   _popView = [[CustomPopView alloc] initWithFrame:CGRectMake(0, 0,     [UIScreen mainScreen].bounds.size.width,     [UIScreen mainScreen].bounds.size.height)];
-//    [[UIApplication sharedApplication].keyWindow addSubview:_popView];
-//    [self.view addSubview:_popView];
 
     MyView *myView = [[MyView alloc] initWithFrame:CGRectMake(0,0,200,200)];
     [[UIApplication sharedApplication].keyWindow addSubview:myView];
-    
     return;
-//    [self showPopMenu];
-//    UIView *presentView=[[[UIApplication sharedApplication].keyWindow rootViewController] view];
-//    [_myPopMenu showMenuAtView:presentView startPoint:CGPointMake(0, -100) endPoint:CGPointMake(0, -100)];
 }
 
 
-- (void)showPopMenu
-{
-    //初始化弹出菜单
-    NSArray *menuItems = @[
-                           [MenuItem itemWithTitle:@"项目" iconName:@"pop_Project" index:0],
-                           [MenuItem itemWithTitle:@"任务" iconName:@"pop_Task" index:1],
-                           [MenuItem itemWithTitle:@"冒泡" iconName:@"pop_Tweet" index:2],
-                           [MenuItem itemWithTitle:@"添加好友" iconName:@"pop_User" index:3],
-                           [MenuItem itemWithTitle:@"私信" iconName:@"pop_Message" index:4],
-                           [MenuItem itemWithTitle:@"两步验证" iconName:@"pop_2FA" index:5],
-                           ];
-    if (!_myPopMenu)
-    {
-        _myPopMenu = [[PopMenu alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight-64) items:menuItems];
-        _myPopMenu.perRowItemCount = 3;
-        _myPopMenu.menuAnimationType = kPopMenuAnimationTypeSina;
-    }
-    _myPopMenu.didSelectedItemCompletion = ^(MenuItem *selectedItem){
-        NSLog(@"----点击的-%@----",selectedItem.title);
-    };
-}
-
-- (XHPopMenu *)popMenu {
-    if (!_popMenu) {
-        NSMutableArray *popMenuItems = [[NSMutableArray alloc] initWithCapacity:6];
-        for (int i = 0; i < 5; i ++) {
-            NSString *imageName;
-            NSString *title;
-            switch (i) {
-                case 0: {
-                    imageName = @"contacts_add_newmessage";
-                    title = @"发起群聊";
-                    break;
-                }
-                case 1: {
-                    imageName = @"contacts_add_friend";
-                    title = @"添加朋友";
-                    break;
-                }
-                case 2: {
-                    imageName = @"contacts_add_scan";
-                    title = @"扫一扫";
-                    break;
-                }
-                case 3: {
-                    imageName = @"contacts_add_photo";
-                    title = @"拍照分享";
-                    break;
-                }
-                case 4: {
-                    imageName = @"contacts_add_voip";
-                    title = @"视频聊天";
-                    break;
-                }
-                default:
-                    break;
-            }
-            XHPopMenuItem *popMenuItem = [[XHPopMenuItem alloc] initWithImage:[UIImage imageNamed:imageName] title:title];
-            [popMenuItems addObject:popMenuItem];
-        }
-        
-        _popMenu = [[XHPopMenu alloc] initWithMenus:popMenuItems];
-        _popMenu.popMenuDidSlectedCompled = ^(NSInteger index, XHPopMenuItem *popMenuItems) {
-            NSLog(@"点击了第%ld行----",(long)index);
-        };
-    }
-    return _popMenu;
-}
 
 - (void)test
 {
@@ -918,6 +837,14 @@
     {
         [self performSegueWithIdentifier:@"RoundListSegue" sender:nil];
     }
+    else if([title isEqualToString:@"自定义弹出框"])
+    {
+        [self performSegueWithIdentifier:@"PopSegue" sender:nil];
+    }
+    else if([title isEqualToString:@"切换主题和语言"])
+    {
+        [self performSegueWithIdentifier:@"TheamSegue" sender:nil];
+    }
 }
 
 
@@ -972,8 +899,7 @@
     NSArray  *exitClientArray =[NSJSONSerialization JSONObjectWithData:[obj dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:nil];
     
     
-    NSAssert(obj, @"object不能为nil");
-    [resultDic setObject:obj forKey:@"address"];
+    [resultDic setObject:@"" forKey:@"address"];
     
     
     NSString *text = @(5);

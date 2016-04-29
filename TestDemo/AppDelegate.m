@@ -14,6 +14,7 @@
 #import <RongIMKit/RongIMKit.h>
 #import "RongCloudManager.h"
 #include <AudioToolbox/AudioToolbox.h>
+#import "ISULanguageManger.h"
 
 #define  kBackButtonFontSize 16
 #define  kNavTitleFontSize 18
@@ -35,7 +36,7 @@ NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
     // Override point for customization after application launch.
     //白色
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
-    
+    [application setValue:[UIColor redColor] forKeyPath:@"statusBarWindow.statusBar.foregroundColor"];
     
     if ([[UIDevice currentDevice].systemVersion integerValue] > 7)
     {
@@ -167,11 +168,12 @@ NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
     [self configRongCloud];
     [self configLocalNotification];
     
+    [[ISULanguageManger shared] initUserLanguage];              //初始化多语种
+    
+    
     //向微信注册appid.
     //Description :  更新后的api 没有什么作用,只是给开发者一种解释作用.
     [WXApi registerApp:@"wx920fde9f97d60569" withDescription:@"微信支付"];
-    
-    
     //
     self.errorVC = [[NSErrorViewController alloc] initWithNibName:@"NSErrorViewController" bundle:nil];
 }

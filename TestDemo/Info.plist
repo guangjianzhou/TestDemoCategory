@@ -3,20 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>UIApplicationShortcutItems</key>
-		<array>
-			<dict>
-				<key>UIApplicationShortcutItemType</key>
-				<string>com.test.static1</string>
-				<key>UIApplicationShortcutItemTitle</key>
-				<string>Static ShortCut</string>
-				<key>UIApplicationShortcutItemSubtitle</key>
-				<string>avaliable at launch</string>
-				<key>UIApplicationShortcutItemIconFile</key>
-				<string>icon</string>
-			</dict>
-		</array>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.test.static1</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Static ShortCut</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>avaliable at launch</string>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>icon</string>
+		</dict>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

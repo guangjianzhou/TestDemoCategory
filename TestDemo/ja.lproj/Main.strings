@@ -1,0 +1,204 @@
+
+/* Class = "UINavigationItem"; title = "FMDBViewController"; ObjectID = "0Qk-x0-FIz"; */
+"0Qk-x0-FIz.title" = "FMDBViewController";
+
+/* Class = "UIButton"; normalTitle = "Button1"; ObjectID = "2Tc-WT-aVd"; */
+"2Tc-WT-aVd.normalTitle" = "Button1";
+
+/* Class = "UITextView"; text = "哈韩哈哈哈哈哈哈😄"; ObjectID = "2yE-j5-cDE"; */
+"2yE-j5-cDE.text" = "哈韩哈哈哈哈哈哈😄";
+
+/* Class = "UINavigationItem"; title = "动力学"; ObjectID = "3KB-8W-F4l"; */
+"3KB-8W-F4l.title" = "动力学";
+
+/* Class = "UIButton"; normalTitle = "Button3"; ObjectID = "3Ri-Gx-sTQ"; */
+"3Ri-Gx-sTQ.normalTitle" = "Button3";
+
+/* Class = "UIButton"; normalTitle = "弹出自定义View"; ObjectID = "4qd-MB-uay"; */
+"4qd-MB-uay.normalTitle" = "弹出自定义View";
+
+/* Class = "UIButton"; normalTitle = "选择图片"; ObjectID = "4rc-lf-q2O"; */
+"4rc-lf-q2O.normalTitle" = "选择图片";
+
+/* Class = "UIButton"; normalTitle = "发送"; ObjectID = "4x6-FT-YyM"; */
+"4x6-FT-YyM.normalTitle" = "发送";
+
+/* Class = "UILabel"; text = "RootVC"; ObjectID = "5GL-oy-aKU"; */
+"5GL-oy-aKU.text" = "RootVC";
+
+/* Class = "UIButton"; normalTitle = "相册二维码识别"; ObjectID = "68m-Ng-AGP"; */
+"68m-Ng-AGP.normalTitle" = "相册二维码识别";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, 上电脑科技发送死啦的昆明妇科老萨满的妇科马上的离开； 的卡萨免费卡拉什么的联发科是的妇女为佛IM我看见过呢R级那个接口方式的收到是贷款方面来喀什的每个女人爱离开"; ObjectID = "86K-qx-VAV"; */
+"86K-qx-VAV.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, 上电脑科技发送死啦的昆明妇科老萨满的妇科马上的离开； 的卡萨免费卡拉什么的联发科是的妇女为佛IM我看见过呢R级那个接口方式的收到是贷款方面来喀什的每个女人爱离开";
+
+/* Class = "UIViewController"; title = "BLE"; ObjectID = "90i-9O-JEd"; */
+"90i-9O-JEd.title" = "BLE";
+
+/* Class = "UIButton"; normalTitle = "切换语言"; ObjectID = "9Gr-nz-Jc9"; */
+"9Gr-nz-Jc9.normalTitle" = "切换语言";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "AGA-9U-Cja"; */
+"AGA-9U-Cja.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "AMj-P6-Mcg"; */
+"AMj-P6-Mcg.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "ASPect fit"; ObjectID = "BXX-MD-vNT"; */
+"BXX-MD-vNT.normalTitle" = "ASPect fit";
+
+/* Class = "UIButton"; normalTitle = "照相机识别"; ObjectID = "BtJ-uE-dwL"; */
+"BtJ-uE-dwL.normalTitle" = "照相机识别";
+
+/* Class = "UILabel"; text = "昨天23:38"; ObjectID = "DDK-Tj-gzk"; */
+"DDK-Tj-gzk.text" = "昨天23:38";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "H12-CG-AoM"; */
+"H12-CG-AoM.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Hag-vn-wAV"; */
+"Hag-vn-wAV.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button4"; ObjectID = "IIj-ei-jXb"; */
+"IIj-ei-jXb.normalTitle" = "Button4";
+
+/* Class = "UILabel"; text = "使肌肤看东方可容纳"; ObjectID = "JmX-r6-u6H"; */
+"JmX-r6-u6H.text" = "使肌肤看东方可容纳";
+
+/* Class = "UIButton"; normalTitle = "ToFill"; ObjectID = "LVb-nC-qby"; */
+"LVb-nC-qby.normalTitle" = "ToFill";
+
+/* Class = "UIButton"; normalTitle = "login"; ObjectID = "MYl-hs-Stp"; */
+"MYl-hs-Stp.normalTitle" = "login";
+
+/* Class = "UIButton"; normalTitle = "Push"; ObjectID = "Mh8-O6-iQI"; */
+"Mh8-O6-iQI.normalTitle" = "Push";
+
+/* Class = "UILabel"; text = "无锡南长区"; ObjectID = "NoF-8s-10p"; */
+"NoF-8s-10p.text" = "无锡南长区";
+
+/* Class = "UITabBarItem"; title = "呵呵"; ObjectID = "Oqu-ri-Ody"; */
+"Oqu-ri-Ody.title" = "呵呵";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "PD5-H9-XEu"; */
+"PD5-H9-XEu.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PeO-9i-ABH"; */
+"PeO-9i-ABH.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "恢复"; ObjectID = "QIH-DL-qna"; */
+"QIH-DL-qna.normalTitle" = "恢复";
+
+/* Class = "UIButton"; normalTitle = "push"; ObjectID = "RrF-3P-0TC"; */
+"RrF-3P-0TC.normalTitle" = "push";
+
+/* Class = "UISearchBar"; placeholder = "haha"; ObjectID = "SSe-HJ-R34"; */
+"SSe-HJ-R34.placeholder" = "haha";
+
+/* Class = "UIButton"; normalTitle = "Button1"; ObjectID = "T7C-cs-8ds"; */
+"T7C-cs-8ds.normalTitle" = "Button1";
+
+/* Class = "UIButton"; normalTitle = "Aspect fill"; ObjectID = "Tka-3r-BzZ"; */
+"Tka-3r-BzZ.normalTitle" = "Aspect fill";
+
+/* Class = "UIButton"; normalTitle = "Button2"; ObjectID = "UGJ-xm-ctU"; */
+"UGJ-xm-ctU.normalTitle" = "Button2";
+
+/* Class = "UIButton"; normalTitle = "Button1"; ObjectID = "Uwz-jl-86B"; */
+"Uwz-jl-86B.normalTitle" = "Button1";
+
+/* Class = "UILabel"; text = "姓名："; ObjectID = "Vzt-A5-e4g"; */
+"Vzt-A5-e4g.text" = "姓名：";
+
+/* Class = "UILabel"; text = "撒大家深刻的风景卡萨丁及开放接口撒旦法就看你撒打开就能发撒大家深刻的风景卡萨丁及开放接口撒旦法就看你撒打开就能发撒大家深刻的风景卡萨丁及开放接口撒旦法就看你撒打开就能发撒大家深刻的风景卡萨丁及开放接口撒旦法就看你撒打开就能发撒大家深刻的风景卡萨丁及开放接口撒旦法就看你撒打开就能发"; ObjectID = "Woj-Mx-rZj"; */
+"Woj-Mx-rZj.text" = "撒大家深刻的风景卡萨丁及开放接口撒旦法就看你撒打开就能发撒大家深刻的风景卡萨丁及开放接口撒旦法就看你撒打开就能发撒大家深刻的风景卡萨丁及开放接口撒旦法就看你撒打开就能发撒大家深刻的风景卡萨丁及开放接口撒旦法就看你撒打开就能发撒大家深刻的风景卡萨丁及开放接口撒旦法就看你撒打开就能发";
+
+/* Class = "UIButton"; normalTitle = "暂停"; ObjectID = "X1X-T9-YzE"; */
+"X1X-T9-YzE.normalTitle" = "暂停";
+
+/* Class = "UIButton"; normalTitle = "开始搜索"; ObjectID = "X1o-HG-UPo"; */
+"X1o-HG-UPo.normalTitle" = "开始搜索";
+
+/* Class = "UIButton"; normalTitle = "读写1"; ObjectID = "X8H-eH-zQn"; */
+"X8H-eH-zQn.normalTitle" = "读写1";
+
+/* Class = "UIButton"; normalTitle = "present"; ObjectID = "XHD-rz-Ey5"; */
+"XHD-rz-Ey5.normalTitle" = "present";
+
+/* Class = "UITabBarItem"; title = "😄"; ObjectID = "XxK-Gf-2vS"; */
+"XxK-Gf-2vS.title" = "😄";
+
+/* Class = "UILabel"; text = "密码"; ObjectID = "Ygs-V6-Z76"; */
+"Ygs-V6-Z76.text" = "密码";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ZBy-3V-2lA"; */
+"ZBy-3V-2lA.text" = "Label";
+
+/* Class = "UILabel"; text = "文章，1984年6月26日出生于陕西省西安市，中国内地男文章，1984年6月26日出生于陕西省西安市，中国内地男演员、导演。2006年毕业于中央戏剧学院表演系。\n2004年参演电视剧《与青春有关的日子》，开始在影视圈崭露头角[1]  。2005年拍摄古装剧《锦衣卫》。2007年主演赵宝刚导演的青春剧《奋斗》；[2]  同年，主演首部电影《走着瞧》。2008年主演滕华涛执导的电视剧《蜗居》，饰演80后城市青年小贝。[1]  2009年，在电影《海洋天堂》中扮演自闭症患者王大福；同年参演抗战题材的电视剧《雪豹》[4]  。2011年，主演的电视剧《裸婚时代》在各大卫视播出；[5]  2011年-2012年连续2年获得北京大学生电影节[6-7]  最受大学生欢迎男演员奖。2012年，凭借电影《失恋33天》获得第31届大众电影百花奖最佳男主角奖；[8]  同年成立自己经营的北京君竹影视文化有限公司，并导演第一部影视作品《小爸爸》。2013年2月，主演的电影《西游·降魔篇》在全国上映。[9] \n2014年3月28日，主演的中韩合资文艺爱情片《我在路上最爱你》在全国上映。2014年12月18日，在姜文执导的动作喜剧片《一步之遥》中扮演武七一角。[10]  "; ObjectID = "b3s-1e-3ZN"; */
+"b3s-1e-3ZN.text" = "文章，1984年6月26日出生于陕西省西安市，中国内地男文章，1984年6月26日出生于陕西省西安市，中国内地男演员、导演。2006年毕业于中央戏剧学院表演系。\n2004年参演电视剧《与青春有关的日子》，开始在影视圈崭露头角[1]  。2005年拍摄古装剧《锦衣卫》。2007年主演赵宝刚导演的青春剧《奋斗》；[2]  同年，主演首部电影《走着瞧》。2008年主演滕华涛执导的电视剧《蜗居》，饰演80后城市青年小贝。[1]  2009年，在电影《海洋天堂》中扮演自闭症患者王大福；同年参演抗战题材的电视剧《雪豹》[4]  。2011年，主演的电视剧《裸婚时代》在各大卫视播出；[5]  2011年-2012年连续2年获得北京大学生电影节[6-7]  最受大学生欢迎男演员奖。2012年，凭借电影《失恋33天》获得第31届大众电影百花奖最佳男主角奖；[8]  同年成立自己经营的北京君竹影视文化有限公司，并导演第一部影视作品《小爸爸》。2013年2月，主演的电影《西游·降魔篇》在全国上映。[9] \n2014年3月28日，主演的中韩合资文艺爱情片《我在路上最爱你》在全国上映。2014年12月18日，在姜文执导的动作喜剧片《一步之遥》中扮演武七一角。[10]  ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "bWc-lj-fSZ"; */
+"bWc-lj-fSZ.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dMU-h4-YAN"; */
+"dMU-h4-YAN.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "FirstVC"; ObjectID = "dYU-J3-tBI"; */
+"dYU-J3-tBI.title" = "FirstVC";
+
+/* Class = "UILabel"; text = "测试name"; ObjectID = "djP-mO-lDh"; */
+"djP-mO-lDh.text" = "测试name";
+
+/* Class = "UINavigationItem"; title = "RAC"; ObjectID = "eQH-VG-rt0"; */
+"eQH-VG-rt0.title" = "RAC";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ejl-yW-61n"; */
+"ejl-yW-61n.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "开始"; ObjectID = "f8R-vw-IiB"; */
+"f8R-vw-IiB.normalTitle" = "开始";
+
+/* Class = "UIButton"; normalTitle = "Button2"; ObjectID = "flP-f1-CvL"; */
+"flP-f1-CvL.normalTitle" = "Button2";
+
+/* Class = "UIButton"; normalTitle = "Button4"; ObjectID = "g2d-SO-uJk"; */
+"g2d-SO-uJk.normalTitle" = "Button4";
+
+/* Class = "UIButton"; normalTitle = "openTorchButton"; ObjectID = "gUc-DW-rMl"; */
+"gUc-DW-rMl.normalTitle" = "openTorchButton";
+
+/* Class = "UINavigationItem"; title = "webView"; ObjectID = "hey-LZ-QXv"; */
+"hey-LZ-QXv.title" = "webView";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "i25-Qi-SI8"; */
+"i25-Qi-SI8.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button2"; ObjectID = "kMi-nH-JCc"; */
+"kMi-nH-JCc.normalTitle" = "Button2";
+
+/* Class = "UIButton"; normalTitle = "生成二维码"; ObjectID = "l92-F0-kHo"; */
+"l92-F0-kHo.normalTitle" = "生成二维码";
+
+/* Class = "UIButton"; normalTitle = "Button3"; ObjectID = "nnB-gE-ItB"; */
+"nnB-gE-ItB.normalTitle" = "Button3";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ntz-vi-yY4"; */
+"ntz-vi-yY4.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button3"; ObjectID = "pa9-Jq-trg"; */
+"pa9-Jq-trg.normalTitle" = "Button3";
+
+/* Class = "UIViewController"; title = "转场"; ObjectID = "sBE-u2-pn0"; */
+"sBE-u2-pn0.title" = "转场";
+
+/* Class = "UIButton"; normalTitle = "读写"; ObjectID = "tdT-q3-O24"; */
+"tdT-q3-O24.normalTitle" = "读写";
+
+/* Class = "UIButton"; normalTitle = "切换主题"; ObjectID = "twN-Wk-2bV"; */
+"twN-Wk-2bV.normalTitle" = "切换主题";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uAz-sB-qeV"; */
+"uAz-sB-qeV.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "w6Y-OU-rV4"; */
+"w6Y-OU-rV4.normalTitle" = "Button";
