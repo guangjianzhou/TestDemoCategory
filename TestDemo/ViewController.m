@@ -202,7 +202,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"头部视图",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",nil];
+    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"头部视图",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",@"改变字体",@"IBDesignable",@"毛玻璃",nil];
     [self configClass];
     
     _hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
@@ -845,6 +845,18 @@
     {
         [self performSegueWithIdentifier:@"TheamSegue" sender:nil];
     }
+    else if ([title isEqualToString:@"改变字体"])
+    {
+        [self performSegueWithIdentifier:@"ChangeFontSegue" sender:nil];
+    }
+    else if([title isEqualToString:@"IBDesignable"])
+    {
+        [self performSegueWithIdentifier:@"IBDesignableSegue" sender:nil];
+    }
+    else if ([title isEqualToString:@"毛玻璃"])
+    {
+        [self performSegueWithIdentifier:@"OpaqueSegue" sender:nil];
+    }
 }
 
 
@@ -913,6 +925,18 @@
     {
         NSLog(@"拼音");
     }
+    
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:@"个个"];
+    
+//    -[NSConcreteAttributedString boundingRectWithSize:options:attributes:context:]:
+    
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"哈哈" message:@"呵呵" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    
+    NSArray *subViews = [alertView subviews];
+    NSLog(@"=========");
+    [alertView show];
+    
 }
 
 #pragma mark  - Button状态

@@ -28,9 +28,15 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        //方法1
         [[NSBundle mainBundle] loadNibNamed:@"PopCustomView" owner:self options:nil];
         [self addSubview:self.contentView];
         [self setUp];
+        
+        //方法2
+        //bundle 资源包 nil默认为 mainbundle
+//        UINib *nib = [UINib nibWithNibName:@"PopCustomView" bundle:[NSBundle mainBundle]];
+//        NSArray *subviews = [nib instantiateWithOwner:nil options:nil];
     }
     return self;
 }

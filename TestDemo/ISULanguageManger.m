@@ -32,10 +32,17 @@ static NSBundle *bundle = nil;
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
     NSString *string = [def valueForKey:@"userLanguage"];
     if(string.length == 0){
-        //获取系统当前语言版本(中文zh-Hans,英文en)  //zh-Hans-US   //en-US
+        //获取系统当前语言版本(中文zh-Hans,英文en)  //zh-Hans-US zh-Hans-CN   //en-US en-CN
         NSArray* languages = [def objectForKey:@"AppleLanguages"];
         NSString *current = [languages objectAtIndex:0];
-        string = [current stringByReplacingOccurrencesOfString:@"-US" withString:@""];
+        NSMutableArray *currentStr = [NSMutableArray arrayWithArray:[current componentsSeparatedByString:@"-"]];
+        if (currentStr.count > 0)
+        {
+            [currentStr removeLastObject];
+            current = [currentStr componentsJoinedByString:@"-"];
+        }
+        
+        string = current;
         [def setValue:string forKey:@"userLanguage"];
         [def synchronize];//持久化，不加的话不会保存
     }

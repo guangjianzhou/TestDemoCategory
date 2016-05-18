@@ -35,6 +35,9 @@
 		FD66FC471CCF6967007BE0B9 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD66FC401CCF6967007BE0B9 /* libswresample.a */; };
 		FD66FC481CCF6967007BE0B9 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD66FC411CCF6967007BE0B9 /* libswscale.a */; };
 		FD66FC4A1CCF6A0E007BE0B9 /* FFmpegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD66FC491CCF6A0E007BE0B9 /* FFmpegViewController.m */; };
+		FD681E431CE993610098A1C5 /* ChangeFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD681E421CE993610098A1C5 /* ChangeFontViewController.m */; };
+		FD681E461CE9973A0098A1C5 /* loveway.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD681E451CE9973A0098A1C5 /* loveway.ttf */; };
+		FD681E4A1CE9A9CA0098A1C5 /* UILabel+FontChange.m in Sources */ = {isa = PBXBuildFile; fileRef = FD681E491CE9A9CA0098A1C5 /* UILabel+FontChange.m */; };
 		FD68DDE81C9A828D00E73EF5 /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD68DDE71C9A828D00E73EF5 /* PayViewController.m */; };
 		FD68DDEB1C9A83A200E73EF5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68DDEA1C9A83A200E73EF5 /* CoreText.framework */; };
 		FD68DDED1C9A83B800E73EF5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68DDEC1C9A83B800E73EF5 /* SystemConfiguration.framework */; };
@@ -78,6 +81,7 @@
 		FD7E12891CD30A91000F9012 /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E12811CD30A91000F9012 /* ThemeManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FD7E128B1CD30AA0000F9012 /* Skins in Resources */ = {isa = PBXBuildFile; fileRef = FD7E128A1CD30AA0000F9012 /* Skins */; };
 		FD7E128E1CD321C5000F9012 /* NSMutableDictionary+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E128D1CD321C5000F9012 /* NSMutableDictionary+help.m */; };
+		FD7E12941CD3316F000F9012 /* ISUzbar.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E12931CD3316F000F9012 /* ISUzbar.m */; };
 		FD7E27031C1914E4002D4CDD /* NSDate+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E27021C1914E4002D4CDD /* NSDate+help.m */; };
 		FD7E2EAF1C9A872700D292CC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7E2EAE1C9A872700D292CC /* CoreTelephony.framework */; };
 		FD7E2EB11C9A87A900D292CC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7E2EB01C9A87A900D292CC /* CoreMotion.framework */; };
@@ -95,6 +99,14 @@
 		FD8D8C961CC9CED600429DCF /* RongCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8D8C951CC9CED600429DCF /* RongCloudManager.m */; };
 		FD8D8C9D1CC9E8EE00429DCF /* RongCloudViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8D8C9C1CC9E8EE00429DCF /* RongCloudViewController.m */; };
 		FD8D8CA01CC9F0A900429DCF /* RoundListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8D8C9F1CC9F0A900429DCF /* RoundListViewController.m */; };
+		FD9106961CEAAF7A00185386 /* IBDesignableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9106951CEAAF7A00185386 /* IBDesignableViewController.m */; };
+		FD91069A1CEAB17400185386 /* IBDesignableUIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9106991CEAB17400185386 /* IBDesignableUIImageView.m */; };
+		FD91069D1CEAB3B100185386 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD91069B1CEAB3B100185386 /* 11.jpg */; };
+		FD91069E1CEAB3B100185386 /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD91069C1CEAB3B100185386 /* 12.jpg */; };
+		FD9106A11CEAB4A800185386 /* UIView+MGO.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9106A01CEAB4A800185386 /* UIView+MGO.m */; };
+		FD9106E11CEAF1CD00185386 /* OpaqueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9106E01CEAF1CD00185386 /* OpaqueViewController.m */; };
+		FD9106E41CEB01FF00185386 /* normal.png in Resources */ = {isa = PBXBuildFile; fileRef = FD9106E31CEB01FE00185386 /* normal.png */; };
+		FD9106E71CEB023E00185386 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9106E61CEB023E00185386 /* UIImage+ImageEffects.m */; };
 		FD91815C1CAA5F26001A0A73 /* HorizonalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9181571CAA5F26001A0A73 /* HorizonalTableViewController.m */; };
 		FD91815D1CAA5F26001A0A73 /* SwipableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9181591CAA5F26001A0A73 /* SwipableViewController.m */; };
 		FD91815E1CAA5F26001A0A73 /* TitleBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD91815B1CAA5F26001A0A73 /* TitleBarView.m */; };
@@ -1060,6 +1072,11 @@
 		FD66FC401CCF6967007BE0B9 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
 		FD66FC411CCF6967007BE0B9 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
 		FD66FC491CCF6A0E007BE0B9 /* FFmpegViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFmpegViewController.m; sourceTree = "<group>"; };
+		FD681E411CE993610098A1C5 /* ChangeFontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeFontViewController.h; sourceTree = "<group>"; };
+		FD681E421CE993610098A1C5 /* ChangeFontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeFontViewController.m; sourceTree = "<group>"; };
+		FD681E451CE9973A0098A1C5 /* loveway.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = loveway.ttf; sourceTree = "<group>"; };
+		FD681E481CE9A9CA0098A1C5 /* UILabel+FontChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+FontChange.h"; sourceTree = "<group>"; };
+		FD681E491CE9A9CA0098A1C5 /* UILabel+FontChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+FontChange.m"; sourceTree = "<group>"; };
 		FD68DDE61C9A828D00E73EF5 /* PayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
 		FD68DDE71C9A828D00E73EF5 /* PayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
 		FD68DDEA1C9A83A200E73EF5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -1203,6 +1220,8 @@
 		FD7E128A1CD30AA0000F9012 /* Skins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Skins; sourceTree = "<group>"; };
 		FD7E128C1CD321C5000F9012 /* NSMutableDictionary+help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+help.h"; sourceTree = "<group>"; };
 		FD7E128D1CD321C5000F9012 /* NSMutableDictionary+help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+help.m"; sourceTree = "<group>"; };
+		FD7E12921CD3316F000F9012 /* ISUzbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISUzbar.h; sourceTree = "<group>"; };
+		FD7E12931CD3316F000F9012 /* ISUzbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISUzbar.m; sourceTree = "<group>"; };
 		FD7E27011C1914E4002D4CDD /* NSDate+help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+help.h"; path = "../../NSDate+help.h"; sourceTree = "<group>"; };
 		FD7E27021C1914E4002D4CDD /* NSDate+help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+help.m"; path = "../../NSDate+help.m"; sourceTree = "<group>"; };
 		FD7E2EAE1C9A872700D292CC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -1235,6 +1254,19 @@
 		FD8D8C9C1CC9E8EE00429DCF /* RongCloudViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RongCloudViewController.m; sourceTree = "<group>"; };
 		FD8D8C9E1CC9F0A900429DCF /* RoundListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundListViewController.h; sourceTree = "<group>"; };
 		FD8D8C9F1CC9F0A900429DCF /* RoundListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundListViewController.m; sourceTree = "<group>"; };
+		FD9106941CEAAF7A00185386 /* IBDesignableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBDesignableViewController.h; sourceTree = "<group>"; };
+		FD9106951CEAAF7A00185386 /* IBDesignableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBDesignableViewController.m; sourceTree = "<group>"; };
+		FD9106981CEAB17400185386 /* IBDesignableUIImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBDesignableUIImageView.h; sourceTree = "<group>"; };
+		FD9106991CEAB17400185386 /* IBDesignableUIImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBDesignableUIImageView.m; sourceTree = "<group>"; };
+		FD91069B1CEAB3B100185386 /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
+		FD91069C1CEAB3B100185386 /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
+		FD91069F1CEAB4A800185386 /* UIView+MGO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MGO.h"; sourceTree = "<group>"; };
+		FD9106A01CEAB4A800185386 /* UIView+MGO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MGO.m"; sourceTree = "<group>"; };
+		FD9106DF1CEAF1CD00185386 /* OpaqueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpaqueViewController.h; sourceTree = "<group>"; };
+		FD9106E01CEAF1CD00185386 /* OpaqueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpaqueViewController.m; sourceTree = "<group>"; };
+		FD9106E31CEB01FE00185386 /* normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normal.png; sourceTree = "<group>"; };
+		FD9106E51CEB023E00185386 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		FD9106E61CEB023E00185386 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		FD9181561CAA5F26001A0A73 /* HorizonalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizonalTableViewController.h; sourceTree = "<group>"; };
 		FD9181571CAA5F26001A0A73 /* HorizonalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizonalTableViewController.m; sourceTree = "<group>"; };
 		FD9181581CAA5F26001A0A73 /* SwipableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipableViewController.h; sourceTree = "<group>"; };
@@ -2354,6 +2386,18 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		FD681E441CE993670098A1C5 /* 一键改变字体 */ = {
+			isa = PBXGroup;
+			children = (
+				FD681E451CE9973A0098A1C5 /* loveway.ttf */,
+				FD681E411CE993610098A1C5 /* ChangeFontViewController.h */,
+				FD681E421CE993610098A1C5 /* ChangeFontViewController.m */,
+				FD681E481CE9A9CA0098A1C5 /* UILabel+FontChange.h */,
+				FD681E491CE9A9CA0098A1C5 /* UILabel+FontChange.m */,
+			);
+			name = "一键改变字体";
+			sourceTree = "<group>";
+		};
 		FD68DDE91C9A829200E73EF5 /* 支付 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2583,6 +2627,15 @@
 			path = ThemeManager;
 			sourceTree = "<group>";
 		};
+		FD7E12911CD3316F000F9012 /* ISUzbar */ = {
+			isa = PBXGroup;
+			children = (
+				FD7E12921CD3316F000F9012 /* ISUzbar.h */,
+				FD7E12931CD3316F000F9012 /* ISUzbar.m */,
+			);
+			path = ISUzbar;
+			sourceTree = "<group>";
+		};
 		FD7FF4541C3B4C2400DDB21E /* NSTimerVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -2610,6 +2663,7 @@
 		FD8A99A41C22850300AB4E6B /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FD7E12911CD3316F000F9012 /* ISUzbar */,
 				FDB943861CCDFFF500449EB4 /* TSMessages */,
 				FD4EC8A61CBDF59B00BA89C2 /* DOPNavbarMenu */,
 				FD4EC8A11CBDF57F00BA89C2 /* 瀑布流 */,
@@ -2651,6 +2705,33 @@
 				FD8D8C9F1CC9F0A900429DCF /* RoundListViewController.m */,
 			);
 			name = "融云";
+			sourceTree = "<group>";
+		};
+		FD9106971CEAAF8000185386 /* IBDesignable可视化效果 */ = {
+			isa = PBXGroup;
+			children = (
+				FD91069B1CEAB3B100185386 /* 11.jpg */,
+				FD91069C1CEAB3B100185386 /* 12.jpg */,
+				FD9106941CEAAF7A00185386 /* IBDesignableViewController.h */,
+				FD9106951CEAAF7A00185386 /* IBDesignableViewController.m */,
+				FD9106981CEAB17400185386 /* IBDesignableUIImageView.h */,
+				FD9106991CEAB17400185386 /* IBDesignableUIImageView.m */,
+				FD91069F1CEAB4A800185386 /* UIView+MGO.h */,
+				FD9106A01CEAB4A800185386 /* UIView+MGO.m */,
+			);
+			name = "IBDesignable可视化效果";
+			sourceTree = "<group>";
+		};
+		FD9106E21CEAF1EA00185386 /* 毛玻璃 */ = {
+			isa = PBXGroup;
+			children = (
+				FD9106E51CEB023E00185386 /* UIImage+ImageEffects.h */,
+				FD9106E61CEB023E00185386 /* UIImage+ImageEffects.m */,
+				FD9106E31CEB01FE00185386 /* normal.png */,
+				FD9106DF1CEAF1CD00185386 /* OpaqueViewController.h */,
+				FD9106E01CEAF1CD00185386 /* OpaqueViewController.m */,
+			);
+			name = "毛玻璃";
 			sourceTree = "<group>";
 		};
 		FD91815F1CAA5F2D001A0A73 /* 切换 */ = {
@@ -2748,6 +2829,9 @@
 				FD8D8C9A1CC9E8C000429DCF /* 融云 */,
 				FD9B51231CD09EE4001E0E6D /* 自定义弹出框 */,
 				FDD45C4F1CD1EFD100C69F41 /* 切换主题和语言 */,
+				FD681E441CE993670098A1C5 /* 一键改变字体 */,
+				FD9106971CEAAF8000185386 /* IBDesignable可视化效果 */,
+				FD9106E21CEAF1EA00185386 /* 毛玻璃 */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -4251,6 +4335,7 @@
 		FDF592071C0EB43C00AF8B5C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = guangjianzhou;
 				TargetAttributes = {
@@ -4335,6 +4420,7 @@
 				FDB943A71CCDFFF500449EB4 /* NotificationBackgroundError@2x.png in Resources */,
 				FDC95CB01C34F51D00F6BD76 /* MyView.xib in Resources */,
 				FD211F671C2BF45900C7ACCC /* 4.png in Resources */,
+				FD9106E41CEB01FF00185386 /* normal.png in Resources */,
 				FDF592221C0EB43C00AF8B5C /* LaunchScreen.storyboard in Resources */,
 				FDA9D45F1C293F3D00CB9369 /* contacts_add_friend@2x.png in Resources */,
 				FDB943B21CCDFFF500449EB4 /* NotificationBackgroundWarningIcon.png in Resources */,
@@ -4363,6 +4449,7 @@
 				FDA9D4891C294EB700CB9369 /* pop_Task@2x.png in Resources */,
 				FDA9D48A1C294EB700CB9369 /* pop_Task@3x.png in Resources */,
 				FD7E11301CD302FB000F9012 /* navImage.png in Resources */,
+				FD681E461CE9973A0098A1C5 /* loveway.ttf in Resources */,
 				FD7E112D1CD302FB000F9012 /* add_btn.png in Resources */,
 				FDA9D4631C293F3D00CB9369 /* contacts_add_voip@2x.png in Resources */,
 				FDB943A81CCDFFF500449EB4 /* NotificationBackgroundErrorIcon.png in Resources */,
@@ -4373,6 +4460,7 @@
 				FD6A760F1C7C315C00D7E5D8 /* share.png in Resources */,
 				FDD45C581CD1F4EF00C69F41 /* TestDemo.strings in Resources */,
 				FDA9D4831C294EB700CB9369 /* pop_2FA@2x.png in Resources */,
+				FD91069E1CEAB3B100185386 /* 12.jpg in Resources */,
 				FD211F6A1C2BF45900C7ACCC /* 3.png in Resources */,
 				FD68DDF51C9A83E200E73EF5 /* AlipaySDK.bundle in Resources */,
 				FDB943B01CCDFFF500449EB4 /* NotificationBackgroundWarning.png in Resources */,
@@ -4383,6 +4471,7 @@
 				FDDB6DA21C7AA69300E49D8B /* UIDynamic1ViewController.xib in Resources */,
 				FDB943AA1CCDFFF500449EB4 /* NotificationBackgroundMessage.png in Resources */,
 				FD94569E1C33D6EE00CB6FA9 /* RingBackground.caf in Resources */,
+				FD91069D1CEAB3B100185386 /* 11.jpg in Resources */,
 				FDA9D4841C294EB700CB9369 /* pop_2FA@3x.png in Resources */,
 				FDB943AE1CCDFFF500449EB4 /* NotificationBackgroundSuccessIcon.png in Resources */,
 				FDB943AD1CCDFFF500449EB4 /* NotificationBackgroundSuccess@2x.png in Resources */,
@@ -4590,9 +4679,11 @@
 				FDAAAFD21C8EBF8300CEF5CA /* ZXQRCodeBlockPair.m in Sources */,
 				FDAAAF4A1C8EBF8300CEF5CA /* ZXBinarizer.m in Sources */,
 				FDDFDDAE1CA50F750038B658 /* CaseViewController.m in Sources */,
+				FD9106E71CEB023E00185386 /* UIImage+ImageEffects.m in Sources */,
 				FDA9D4721C29457C00CB9369 /* PopMenu.m in Sources */,
 				FDAAAFAC1C8EBF8300CEF5CA /* ZXPDF417BarcodeValue.m in Sources */,
 				FDAAAF801C8EBF8300CEF5CA /* ZXRSSExpandedDecodedNumeric.m in Sources */,
+				FD9106961CEAAF7A00185386 /* IBDesignableViewController.m in Sources */,
 				FDAA34DB1C9FC9C000FF5594 /* UITextView+Placeholder.m in Sources */,
 				FDF3E8F11CA1234300E517D5 /* DataSetObject.m in Sources */,
 				FDDB6DA81C7AE61300E49D8B /* Student.m in Sources */,
@@ -4616,6 +4707,7 @@
 				FDAAAFB91C8EBF8300CEF5CA /* ZXPDF417BarcodeRow.m in Sources */,
 				FDAAAF101C8EBF8300CEF5CA /* ZXAddressBookParsedResult.m in Sources */,
 				FDAAAFA21C8EBF8300CEF5CA /* ZXUPCEANExtension2Support.m in Sources */,
+				FD9106A11CEAB4A800185386 /* UIView+MGO.m in Sources */,
 				FDAAAF981C8EBF8300CEF5CA /* ZXEAN8Writer.m in Sources */,
 				FDAAAF1E1C8EBF8300CEF5CA /* ZXProductParsedResult.m in Sources */,
 				FDD9383B1C8817FD00DABD8C /* UIBarButtonItem+WNXBarButtonItem.m in Sources */,
@@ -4653,6 +4745,7 @@
 				FD7E12871CD30A91000F9012 /* ThemeImageView.m in Sources */,
 				FDAAAF091C8EBF8300CEF5CA /* ZXAztecToken.m in Sources */,
 				FD68DE581C9A83F800E73EF5 /* base64.m in Sources */,
+				FD681E4A1CE9A9CA0098A1C5 /* UILabel+FontChange.m in Sources */,
 				FDAAAF0B1C8EBF8300CEF5CA /* ZXAztecReader.m in Sources */,
 				FDDFDDB31CA5137E0038B658 /* VIPhotoView.m in Sources */,
 				FDAB1EE81C5F0B41001EC186 /* CustomCategoView.m in Sources */,
@@ -4720,6 +4813,7 @@
 				FD68DE591C9A83F800E73EF5 /* DataSigner.m in Sources */,
 				FDAAAF181C8EBF8300CEF5CA /* ZXExpandedProductResultParser.m in Sources */,
 				FDC95CA91C34D68E00F6BD76 /* CustomPopView.m in Sources */,
+				FD9106E11CEAF1CD00185386 /* OpaqueViewController.m in Sources */,
 				FDD344011C929B7800F4677A /* TransferView.m in Sources */,
 				FDAAAF781C8EBF8300CEF5CA /* ZXAI01AndOtherAIs.m in Sources */,
 				FDA9D4701C29457C00CB9369 /* MenuButton.m in Sources */,
@@ -4815,6 +4909,7 @@
 				FDAAAFB01C8EBF8300CEF5CA /* ZXPDF417DecodedBitStreamParser.m in Sources */,
 				FDAAAF721C8EBF8300CEF5CA /* ZXAI013103decoder.m in Sources */,
 				FDAAAF841C8EBF8300CEF5CA /* ZXBitArrayBuilder.m in Sources */,
+				FD681E431CE993610098A1C5 /* ChangeFontViewController.m in Sources */,
 				FD7E128E1CD321C5000F9012 /* NSMutableDictionary+help.m in Sources */,
 				FDAAAFDB1C8EBF8300CEF5CA /* ZXMultiFormatReader.m in Sources */,
 				FDAAAF711C8EBF8300CEF5CA /* ZXAbstractExpandedDecoder.m in Sources */,
@@ -4910,6 +5005,7 @@
 				FDA9D4711C29457C00CB9369 /* MenuItem.m in Sources */,
 				FDAAAF9D1C8EBF8300CEF5CA /* ZXMultiFormatUPCEANReader.m in Sources */,
 				FDAAAF961C8EBF8300CEF5CA /* ZXEAN13Writer.m in Sources */,
+				FD91069A1CEAB17400185386 /* IBDesignableUIImageView.m in Sources */,
 				FDAAAF8C1C8EBF8300CEF5CA /* ZXRSSPair.m in Sources */,
 				FDAAAFD71C8EBF8300CEF5CA /* ZXMultiFinderPatternFinder.m in Sources */,
 				FDAAAFA91C8EBF8300CEF5CA /* ZXModulusPoly.m in Sources */,
@@ -4936,6 +5032,7 @@
 				FDEF1B931C21580600187029 /* FDRecipe.m in Sources */,
 				FD8D8C961CC9CED600429DCF /* RongCloudManager.m in Sources */,
 				FDAAAF9C1C8EBF8300CEF5CA /* ZXMultiFormatOneDReader.m in Sources */,
+				FD7E12941CD3316F000F9012 /* ISUzbar.m in Sources */,
 				FD4EC8AD1CBDF59B00BA89C2 /* UIView+DOPExtension.m in Sources */,
 				FDAAAF771C8EBF8300CEF5CA /* ZXAI013x0xDecoder.m in Sources */,
 				FDAAAF441C8EBF8300CEF5CA /* ZXGlobalHistogramBinarizer.m in Sources */,
@@ -5437,6 +5534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = TestDemo_Develop.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -5481,6 +5579,7 @@
 					"$(PROJECT_DIR)/Tools/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/TestDemo/FFmpeg-iOS/lib",
+					"$(PROJECT_DIR)/TestDemo/Vendor/ZBarSDK",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -5495,6 +5594,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cyberway.TestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestDemo/TestDemo_Develop-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -5504,6 +5605,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = TestDemo_Develop.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -5544,6 +5646,7 @@
 					"$(PROJECT_DIR)/Tools/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/TestDemo/FFmpeg-iOS/lib",
+					"$(PROJECT_DIR)/TestDemo/Vendor/ZBarSDK",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -5558,6 +5661,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cyberway.TestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestDemo/TestDemo_Develop-Bridging-Header.h";
 			};
 			name = Release;
 		};

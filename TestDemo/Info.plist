@@ -75,5 +75,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>loveway.ttf</string>
+	</array>
 </dict>
 </plist>
