@@ -35,6 +35,9 @@ NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //白色
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        exit(0);
+    });
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
     [application setValue:[UIColor redColor] forKeyPath:@"statusBarWindow.statusBar.foregroundColor"];
     
@@ -194,7 +197,7 @@ NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
 
 - (void)configLocalNotification
 {
-    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:6];
+    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:16];
     
     UILocalNotification *notification = [[UILocalNotification alloc] init];
     //推送通知的触发时间(何时发出推送通知)
@@ -411,13 +414,17 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    NSLog(@"applicationWillTerminate====");
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    NSLog(@"applicationWillTerminate====");
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+    NSLog(@"applicationWillTerminate====");
+    
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 @end

@@ -11,7 +11,7 @@
 #import "WebViewCosntroller.h"
 #import "WebViewJavascriptBridge.h"
 
-@interface WebViewCosntroller ()
+@interface WebViewCosntroller ()<UINavigationBarDelegate,UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) WebViewJavascriptBridge *bridge;
@@ -26,7 +26,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURL *url = [NSURL URLWithString:@"http://mlearning.vanke.com:8033/APP/index.htm"];
+    //1.加载网页html
+//    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
+    
+    
+    //2.加载本地html
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html"];
+    
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [_webView loadRequest:request];
     //属性
@@ -34,9 +40,6 @@
     _webView.dataDetectorTypes = UIDataDetectorTypeNone;
     
     [self setUpLeftNaviItem];
-    self.bridge = [WebViewJavascriptBridge bridgeForWebView:self.webView handler:^(id data, WVJBResponseCallback responseCallback) {
-        NSLog(@"-----WebViewJavascriptBridge--------------");
-    }];
     
 }
 
@@ -77,6 +80,12 @@
 }
 
 #pragma mark - UIWebViewDelegate
+/**
+ *  动态修改网页内容
+ *
+ */
+
+
 
 //UIWebViewNavigationTypeLinkClicked     用户触击了一个链接
 //UIWebViewNavigationTypeFormSubmitted   用户提交了一个表单
@@ -87,6 +96,21 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     NSLog(@"--shouldStartLoadWithRequest----%@------",request.URL);
+    
+    //拦截 点击相册
+    NSString *str = request.URL.absoluteString;
+    NSRange range = [str rangeOfString:@"xmg://"];
+    if (range.location != NSNotFound)
+    {
+        NSString *method = [str substringFromIndex:range.location+range.length];
+        
+        NSLog(@"method===%@==",method);
+//        SEL sel = NSSelectorFromString(method);
+//        [self performSelector:sel];
+        
+    }
+    
+    
     return YES;
 }
 
@@ -112,11 +136,13 @@
     NSLog(@"==lHtml1=%@========",lHtml1);
 　　 NSString *lHtml2 = [webView stringByEvaluatingJavaScriptFromString:lJs2];
     NSLog(@"title========%@",lHtml2);
-//    self.navigationController.
+
     
-    //
     [_webView stringByEvaluatingJavaScriptFromString:@"function test(){ alert(123123123)}"];
     [_webView stringByEvaluatingJavaScriptFromString:@"test();"];//调用
+    
+    
+    
     
 }
 
@@ -124,5 +150,61 @@
 {
     NSLog(@"--didFailLoadWithError---%@-------",error);
 }
+
+
+#pragma mark  - 网页的增删改  ios中调用html
+- (void)addDeleteUpdateWebView:(UIWebView *)webView
+{
+    //删除p标签
+    NSString *str1 = @"var word = document.getElementById('word')";
+    NSString *str2 = @"word.remove()";
+    
+    [webView stringByEvaluatingJavaScriptFromString:str1];
+    [webView stringByEvaluatingJavaScriptFromString:str2];
+    
+    
+    //更改
+    NSString *str3 = @"var change = document.getElementsByClassName('change')[0] ;change.innerHTML = '好你的哦';";
+    [webView stringByEvaluatingJavaScriptFromString:str3];
+    
+    
+    //插入
+    NSString *str4 = @"var img = document.createElement('img');"
+    "img.src = 'ico_appeal_03@3x.png';"
+    "img.width = 80;"
+    "img.height = 80;"
+    "document.body.appendChild(img);";
+    [webView stringByEvaluatingJavaScriptFromString:str4];
+}
+
+#pragma mark  - html 调用ios
+- (void)iosInHtml:(UIWebView *)webView
+{
+    //改变标题
+    NSString *str1 = @"var h1 = documentsByTagName('h1')[0] ;"
+    "h1.innerHTML = '一起来';";
+    [webView stringByEvaluatingJavaScriptFromString:str1];
+    
+    //删除
+    
+    
+    //获取所有网页内容
+    NSString *str3 = @"document.body.outHTML";
+    NSString *html = [webView stringByEvaluatingJavaScriptFromString:str3];
+    NSLog(@"==%@==",html);
+    
+}
+
+- (void)getImage
+{
+    UIImagePickerController *imageVC = [[UIImagePickerController alloc] init];
+    imageVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:imageVC animated:YES completion:^{
+        
+    }];
+}
+
+
+
 
 @end

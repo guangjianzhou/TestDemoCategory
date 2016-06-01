@@ -369,9 +369,37 @@
 {
     ShowCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ShowCollectionViewCell" forIndexPath:indexPath];
     cell.imageView.image = [UIImage imageNamed:@"un_180"];
+    
+    //圆角
+    //方法1
+//    cell.imageView.layer.cornerRadius = 30;
+//    cell.imageView.layer.masksToBounds = YES;
+    [self drawRectWithRoundedImageView:cell.imageView CornerRadius:30 ];
+    
     cell.titleLabel.text = [NSString stringWithFormat:@"%ld个",(long)indexPath.row];
     return cell;
 }
+
+
+#pragma mark - 图片圆角
+//方法2
+//https://github.com/liuzhiyi1992/ZYCornerRadius
+//https://github.com/panghaijiao/HJCornerRadius
+//为UIView 添加圆角
+- (void)drawRectWithRoundedImageView:(UIImageView *)originImageView
+                        CornerRadius: (CGFloat) radius
+{
+    UIImage *image = nil;
+    UIGraphicsBeginImageContextWithOptions(originImageView.bounds.size, NO, [UIScreen mainScreen].scale);
+    CGContextRef currnetContext = UIGraphicsGetCurrentContext();
+    CGContextAddPath(currnetContext, [UIBezierPath bezierPathWithRoundedRect:originImageView.bounds cornerRadius:radius].CGPath);
+    CGContextClip(currnetContext);
+    [originImageView.layer renderInContext:currnetContext];
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    originImageView.image = image;
+}
+
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {

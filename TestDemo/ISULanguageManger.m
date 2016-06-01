@@ -15,6 +15,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         lanagerManager = [[ISULanguageManger alloc] init];
+        [self getCurrentLanguage];
     });
     return lanagerManager;
 }
@@ -68,6 +69,14 @@ static NSBundle *bundle = nil;
     //2.持久化
     [def setValue:language forKey:@"userLanguage"];
     [def synchronize];
+}
+
++ (void)getCurrentLanguage
+{
+    NSArray *languages = [NSLocale preferredLanguages];
+    NSString *currentLanguage = [languages objectAtIndex:0];
+    NSLog(@"%@" , currentLanguage);
+    
 }
 
 @end

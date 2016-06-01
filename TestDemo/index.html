@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+<body>
+
+    <p id = "word"> 1212121212</p>
+    <ul>
+        <li class = "change">你好？</li>
+        <li>我好？</li>
+        <li>大家好？</li>
+    </ul>
+    
+    <span >用户名</span>
+    <input id = "username">
+    <p></p>
+    <span>密码</span>
+    <input type = "password" id = "pwd">
+    <p></p>
+
+    
+<!--    <button onClick = "getImage()">访问相册</button>-->
+<!--        function getImage(){-->
+<!--            window.location.href = "xmg://getImage";-->
+<!--        }-->
+    <button id= "btn" onClick = "getMessage()">登录</button>
+
+    <script>
+
+    var username = document.getElementById('username');
+    var pwd = document.getElementById('pwd');
+    var btn = document.getElementById('btn');
+    
+      function getMessage(){
+        var name = username.value;//拿到用户名
+        var password = pwd.value;//拿到用户名
+        window.location.href = 'xmg://'+ name + '?' + password;//利用js 获取页面值 进行传值
+    }
+    </script>
+    
+</body>
+
+</html>

@@ -24,8 +24,8 @@
     [super viewDidLoad];
     
     NSLog(@"view1  frame = %@",NSStringFromCGRect(_view1.frame));
-        NSLog(@"view2  frame = %@",NSStringFromCGRect(_view2.frame));
-        NSLog(@"view3  frame = %@",NSStringFromCGRect(_view3.frame));
+    NSLog(@"view2  frame = %@",NSStringFromCGRect(_view2.frame));
+    NSLog(@"view3  frame = %@",NSStringFromCGRect(_view3.frame));
     
 }
 

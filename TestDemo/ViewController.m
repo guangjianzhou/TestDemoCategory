@@ -28,6 +28,7 @@
 #import "SystemViewController.h"
 #import "RongCloudViewController.h"
 #import "TSMessage.h"
+#import "AnimationViewController.h"
 
 #define NSNullObjects @[@"",@0,@{},@[]]
 
@@ -202,7 +203,17 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"头部视图",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",@"改变字体",@"IBDesignable",@"毛玻璃",nil];
+    
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self checkNetStatus:^(BOOL isHaveNet) {
+            NSLog(@"==%d=isHaveNet==",isHaveNet);
+        }];
+    });
+    
+    
+    
+    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"头部视图",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",@"改变字体",@"IBDesignable",@"毛玻璃",@"CoreAnimation",nil];
     [self configClass];
     
     _hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
@@ -421,20 +432,20 @@
 #pragma mark AFNetworkingHttps
 - (void)afnRequest
 {
-    NSURL *url = [NSURL URLWithString:@""];
-    AFHTTPRequestOperationManager *requestOperationManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:url];
-    dispatch_queue_t requestQueue = dispatch_queue_create("kRequestCompletionQueue", DISPATCH_QUEUE_SERIAL);
-    requestOperationManager.completionQueue = requestQueue;
-    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
-    
-    //是否允许无效证书(也就是自建的证书)
-    securityPolicy.allowInvalidCertificates = YES;
-    
-    //是否需要验证域名
-    securityPolicy.validatesDomainName = YES;
-    
-    //是否验证整个证书链
-    requestOperationManager.securityPolicy = securityPolicy;
+//    NSURL *url = [NSURL URLWithString:@""];
+//    AFHTTPRequestOperationManager *requestOperationManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:url];
+//    dispatch_queue_t requestQueue = dispatch_queue_create("kRequestCompletionQueue", DISPATCH_QUEUE_SERIAL);
+//    requestOperationManager.completionQueue = requestQueue;
+//    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+//    
+//    //是否允许无效证书(也就是自建的证书)
+//    securityPolicy.allowInvalidCertificates = YES;
+//    
+//    //是否需要验证域名
+//    securityPolicy.validatesDomainName = YES;
+//    
+//    //是否验证整个证书链
+//    requestOperationManager.securityPolicy = securityPolicy;
 }
 
 
@@ -736,7 +747,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *title = _dataArray[indexPath.row];
-    if ([title isEqualToString:@"webview与交互"])
+    if ([title isEqualToString:@"网页交互"])
     {
         [self performSegueWithIdentifier:@"WebViewCosntrollerSegue" sender:nil];
     }
@@ -748,23 +759,23 @@
     {
         [self performSegueWithIdentifier:@"AVFoundationViewControllerSegue" sender:nil];
     }
-    else if ([title isEqualToString:@"NSTimer"])
+    else if ([title isEqualToString:@"定时器"])
     {
         [self performSegueWithIdentifier:@"NSTimerViewControllerSegue" sender:nil];
     }
-    else if([title isEqualToString:@"FMDB和storyboard textView控制父控件"])
+    else if([title isEqualToString:@"数据库"])
     {
         [self performSegueWithIdentifier:@"FMDBSegue" sender:nil];
     }
-    else if ([title isEqualToString:@"UIDynamic动力"])
+    else if ([title isEqualToString:@"粒子动画"])
     {
         [self performSegueWithIdentifier:@"UIDynamicSegue" sender:nil];
     }
-    else if ([title isEqualToString:@"Lock锁"])
+    else if ([title isEqualToString:@"锁"])
     {
         [self performSegueWithIdentifier:@"LockSegue" sender:nil];
     }
-    else if([title isEqualToString:@"CoreGraphics"])
+    else if([title isEqualToString:@"绘画"])
     {
         [self performSegueWithIdentifier:@"CoreGraphicsSegue" sender:nil];
     }
@@ -857,6 +868,11 @@
     {
         [self performSegueWithIdentifier:@"OpaqueSegue" sender:nil];
     }
+    else if ([title isEqualToString:@"CoreAnimation"])
+    {
+        AnimationViewController *vc = [[AnimationViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 
@@ -935,13 +951,20 @@
     
     NSArray *subViews = [alertView subviews];
     NSLog(@"=========");
-    [alertView show];
+//    [alertView show];
+    
+    NSString *urlString = @"http://123.57.181.249:8088/pic/lotLogo/南京中海凯旋门.png";
+    NSURL * url=[[NSURL alloc] initWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    
+    
+    NSLog(@"url=====%@",url);
     
 }
 
 #pragma mark  - Button状态
 - (void)btnStatus
 {
+    int a = 10.1;
     
     [self.testBtn setTitle:@"helloNormal" forState:UIControlStateNormal];
     [self.testBtn setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
@@ -953,11 +976,70 @@
     
 }
 
+- (BOOL)isSameString:(NSString *)key
+{
+    NSMutableArray *array = [NSMutableArray array];
+    for (id key in array)
+    {
+        if ([key isEqualToString:key])
+        {
+            return YES;
+        }
+        else
+        {
+            return NO;
+        }
+    }
+    return NO;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
 }
+
+- (void)checkNetStatus:(void (^)(BOOL))block
+{
+    //网络状态检查
+    AFNetworkReachabilityStatus netStatus = [AFNetworkReachabilityManager sharedManager].networkReachabilityStatus;
+    
+    switch (netStatus)
+    {
+        case AFNetworkReachabilityStatusUnknown:
+        {
+            block(NO);
+            break;
+        }
+            
+        case AFNetworkReachabilityStatusNotReachable:
+        {
+            block(NO);
+            break;
+        }
+            
+        case AFNetworkReachabilityStatusReachableViaWWAN:
+        {
+            block(YES);
+            break;
+        }
+            
+        case AFNetworkReachabilityStatusReachableViaWiFi:
+        {
+            block(YES);
+            break;
+        }
+            
+        default:
+        {
+            block(NO);
+            break;
+        }
+    }
+}
+
+
+
 
 - (IBAction)testBtn:(UIButton *)sender {
 }

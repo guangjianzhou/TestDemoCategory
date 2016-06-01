@@ -7,12 +7,19 @@
 //
 
 #import "OpaqueViewController.h"
+#import "UIImage+help.h"
 //模糊效果(渲染很耗费时间，建议在子线程中渲染)
 #import "UIImage+ImageEffects.h"
 
 
-
 @interface OpaqueViewController ()
+{
+    UIButton *btn;
+}
+
+
+@property (nonatomic, copy) void (^MyBlock)(int num);
+
 
 @end
 
@@ -23,6 +30,14 @@
     [super viewDidLoad];
     
     UIImage *image = [UIImage imageNamed:@"12.jpg"];
+    
+    self.MyBlock = ^(int num){
+        NSLog(@"block 调用 %d",num);
+    };
+    
+    
+    NSLog(@"=======block 初始化完成");
+    self.MyBlock(5);
     
     /**
        1. CoreImage
@@ -76,7 +91,7 @@
      */
     imageView.image = sourceImage;
     UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-    effectView.frame = CGRectMake(0, 100, 320, 200);
+    effectView.frame = CGRectMake(0, 100, kScreenWidth, 200);
     [self.view addSubview:effectView];
     
     
@@ -102,6 +117,20 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    
+    //Btn
+    btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 300, 60, 44)];
+    [btn addTarget:self action:@selector(touchTest) forControlEvents:UIControlEventTouchUpInside];
+    [btn setBackgroundImage:[UIImage imageWithColor:[UIColor blackColor]] forState:UIControlStateNormal];
+    [btn setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forState:UIControlStateHighlighted];
+    [btn setTitle:@"测试" forState:UIControlStateNormal];
+    [self.view addSubview:btn];
+}
+
+- (void)touchTest
+{
+    NSLog(@"%s",__FUNCTION__);
 }
 
 - (void)didReceiveMemoryWarning

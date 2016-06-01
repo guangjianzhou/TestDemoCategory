@@ -2,7 +2,7 @@ platform :ios, "7.0"
 
 pod 'MJExtension', '~> 3.0.7'
 pod 'BlocksKit', '~> 2.2.5'
-pod 'AFNetworking', '~> 2.6.3'
+pod 'AFNetworking','~>2.6.3'
 pod 'Masonry', '~> 0.6.3'
 pod 'ICViewPager', '~> 1.5.1'   #界面VC 滑动
 pod 'pop', '~> 1.0.8'
