@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<!--link rel="stylesheet" type="text/css" href="css/jquery.selectlist.css"/-->
+	</head>
+
+		<style>
+		.arrow-left {
+			    float: right;
+			top: -360px;
+			right: 0px;
+			width: 100%;
+			height: 0;
+			border-width: 360px 1920px 0 0;
+			border-style: solid;
+			border-color: transparent #fff transparent transparent;
+			margin: 0px auto;
+			position: relative;
+		}
+		</style>
+	<body>
+		
+		<div class="ekipo">
+			
+			<!--header -->
+			<div class="header">
+				<div class="banner">
+					<!--<img src="img/bask_02.jpg" />-->
+					<div style="position: absolute;height: 100%;width: 100%;z-index: 1;background-color: #000000;top: 0;opacity: 0.4;"></div>
+					<video id="head-video" src="video/basketball.mp4" style="min-width: 100%; min-height: 100%; width: 100%;  height: auto;right: 0; bottom: 0;  " autoplay="autoplay" loop="loop" >
+						<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that 
+							<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+						</p>
+					</video>	
+				</div>
+				<!--header top -->
+				<div class="top clearfix">
+					<div class="tlogo"><a href="www.sportty.com"><img src="img/logo.png" width="140" height="120" /></a></div>
+					<div class="nav">
+						<ul>
+							<li><a href="">Home</a></li>
+							<li><a href="#MyApps"">The App</a></li>
+							<li><a href="#contactUs">Contact Us</a></li>
+							<!--<li><a href="#ourPartner">our partner</a></li>
+							<li><a href="">privacy</a></li>-->
+						</ul>
+					</div>
+				</div>
+				
+				<!--banner img -->
+				<!--
+				-->
+				<!--phone download -->
+				<div class="dw-center"  style="top: 33%!important;">
+					<div><img src="img/sportty.png" /></div>
+					<div style="font-size: 60px; padding-top: 30px; padding-bottom: 30px; color: #fff;">The new way of sport</div>
+					<a href="#"><img src="img/download_05.png" onclick="comingsoon();"/></a>
+					<a href="https://geo.itunes.apple.com/de/app/sportty/id1100120184?mt=8" target="_blank"><img src="img/download_03.png" /></a>
+				</div>
+				
+				
+				
+			</div>
+			
+			
+			<!--contain -->
+			<div class="ekipo-intr">
+				<!--one -->
+				<div class="intr-one" id="MyApps">
+					<div class="sub-header">What is Sportty?</div>
+					<div class="one-wrap" id="videoBox">
+						<img src="img/sprot01.png" ><a class="video-play" id="showVideo"></a>
+					</div>
+					
+				</div>
+				
+				
+				<!--two -->
+				<div class="intr-two">
+					<div class="two-wrap clearfix">
+						<div class="intr-layer">
+							<img src="img/t1.png">
+							<!--<div class="layer01">
+								<div class="left-img"><img src="img/sp01.png"></div>
+								<div class="right-layer"><h5>Find</h5><p>Find Sport Events wherever you are. Search for Sport events nearby you and add them to your “My
+Events list”. Use the Filter to see only events for your desired sport and view them on the map view.</p></div>
+							</div>
+							<div class="layer02">
+								<div class="left-img"><img src="img/sp02.png"></div>
+								<div class="right-layer"><h5>Create</h5><p>Create Sport Events by choosing one of over 90 different Sports and add videos likewise photos to
+highlight your event.</p></div>
+							</div>-->
+						</div>
+						<div class="intr-layer">
+							<img src="img/t2.jpg" />
+							<!--<div class="layer03">
+								<div class="left-img"><img src="img/sp03.png"></div>
+								<div class="right-layer"><h5>Join</h5><p>Join Sport Events and start to text with other joined players and see the route to your event.</p></div>
+							</div>
+							<div class="layer04">
+								<div class="left-img"><img src="img/sp04.png"></div>
+								<div class="right-layer"><h5>Follow</h5><p>Follow your friends or new athletes you met. See all events they join and what’s going on in their
+sports life</p></div>
+							</div>
+							<div class="layer05">
+								<div class="left-img"><img src="img/sp05.png"></div>
+								<div class="right-layer"><h5>Deals</h5><p>Find the best sport deals in your town and get the best price for sport articles which you need.</p></div>
+							</div>-->
+						</div>
+					</div>
+				</div>
+				
+				
+				
+			</div>
+			
+			<!--submit -->
+			<div class="intr-sub"  id="contactUs">
+				<div class="submit-wrap">
+					<div class="sub-floor">
+						<div class="sub-header">
+							Contact Us
+						</div>
+						<div class="sub-input">
+							<span>Name or company</span>
+							<input type="text" />
+						</div>
+						<div class="sub-input">
+							<span>Email Address</span>
+							<input type="text" />
+						</div>
+						<div class="sub-input">
+							<span>Telephone</span>
+							<input type="text" />
+						</div>
+						<div class="sub-input">
+							<span>Comment</span>
+							<textarea></textarea>
+						</div>
+						
+						<div class="sub-btn"><button>Submit</button></div>
+					</div>
+				</div>
+			</div>
+			
+			<!--partner
+			<div class="intr-four">
+				<div class="four-wrap" id="ourPartner">
+					<h2>Our Partner</h2>
+					<ul class="clearfix">
+						<li><span><img src="img/op01.png" /></span></li>
+						<li><span><img src="img/op02.png" /></span></li>
+						<li><span><img src="img/op03.png" /></span></li>
+						<li><span><img src="img/op04.png" /></span></li>
+						<li><span><img src="img/op05.png" /></span></li>
+						<li><span><img src="img/op06.png" /></span></li>
+					</ul>
+				</div>
+			</div>
+			 -->
+			
+			
+			<!--footer -->
+			<div class="footer">
+				<div class="footer-wrap clearfix">
+					<div class="left-img">
+						<img class="limg" src="img/logo.png" />
+						<div class="clearfix"></div>
+						<div class="weblink">
+							<a href="https://www.facebook.com/sporttyapp/?fref=ts" target="_blank"><img src="img/icon-facebook.png"></a>
+							<a href="https://twitter.com/SporttyApp" target="_blank"><img src="img/icon-twitter.png"></a>
+							<a href="https://plus.google.com/u/0/115141733670183627821" target="_blank"><img src="img/icon-google.png"></a>
+						</div>
+					</div>
+					<div class="footer-right">
+						<div class="rightheader clearfix">
+							<a href="">Support</a>
+							<a href="">Company</a>
+							<a href="">Legal</a>
+							<a href="">Social</a>
+						</div>
+						<div class="cy">
+							<div class="cs">
+								<a dtype="helpAndsupport" id="helpAndsupport">Help&Support</a>
+								<a dtype="faq" id="faq">FAQ</a>
+								<a dtype="blog" id="blog">Blog</a>
+							</div>
+							<div class="cs">
+								<a dtype="ourMission" id="ourMission">Our Mission</a>
+								<a dtype="jobs" id="jobs">Jobs</a>
+								<a dtype="press" id="press">Press</a>
+							</div>
+							<div class="cs">
+								<a dtype="terms" id="terms">Terms</a>
+								<a dtype="privacy" id="privacy">Privacy</a>
+								<a dtype="imprint" id="imprint">Imprint</a>
+							</div>
+							<div class="cs">
+								<a href="https://www.facebook.com/sporttyapp/?fref=ts" target="_blank">Facebook</a>
+								<a href="https://plus.google.com/u/0/115141733670183627821" target="_blank">Google+</a>
+								<a href="https://twitter.com/SporttyApp" target="_blank">Twitter</a>
+								<!--a>Instagram</a-->
+								<a href="https://www.youtube.com/watch?v=fl817MrcgyM" target="_blank">YouTube</a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+
+
+		<!-- 弹框 -->
+		<div class="pop_win">
+			<div class="show_details clearfix">
+		        <div class="pop_outbox clearfix">
+		          <a class="close"></a>
+		        </div>
+		        <div class="pop_mainbox clearfix" id="scroll_bd">
+		          <!--内容-->
+		          
+		            <!--div class="boardcast">
+		            	<iframe id="iframes" src="Allgemeine.html" height="2350" width="745" frameborder="0" scrolling="no"></iframe>
+		              	
+	              	<!--<div class="pop_bottom"><a class="check">Agree</a><a>Against</a></div>>
+	            
+		          </div-->
+		          <!--滚动条 -->
+		        </div>
+		        <div class="scroller_bar"> <span class="city_scroller">  </span> </div>
+		        
+		      </div>
+		</div>
+		<div class="overlay"></div>
+
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.selectlist.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/iframe.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<!--script src="js/jquery.mousewheel.js" type="text/javascript" charset="utf-8"></script-->
+		<!--script src="js/nicescroll.js" type="text/javascript" charset="utf-8"></script-->
+		<script src="js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+
+		<script>
+      function comingsoon(){
+      	alert("Coming Soon!");
+      }
+      
+		$(function(){
+			
+			var _html = '<video id="my-video" src="video/PromoVideo.mp4" controls="controls" style="width: 100%; height: 480px;" autoplay="" onabort="videoEnd()" onended="videoEnd()">'+
+							'<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that '+
+							'			<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>'+
+							'</p>'+
+						'</video>';
+
+			//$('#showVideo').on('click', function(){
+			//		$('#videoBox').html(_html);
+			//});
+
+			$(document).on('click', '#showVideo', function(){
+					$('#videoBox').html(_html);
+			});
+		
+
+			$('#terms').on('click', function(){
+					layer.open({
+					  type: 2,
+					  title: 'Terms and Conditions',
+					  area: ['60%', '90%'],
+					  shade: 0.8,
+					  closeBtn: 1,
+					  shadeClose: true,
+					  content: 'html/foot/legal/Allgemeine.html'
+					});
+					//layer.msg('点击任意处关闭');
+			});
+			$('#privacy').on('click', function(){
+					layer.open({
+					  type: 2,
+					  title: 'Privacy Policy',
+					  area: ['60%', '90%'],
+					  shade: 0.8,
+					  closeBtn: 1,
+					  shadeClose: true,
+					  content: 'html/foot/legal/Datenschutz.html'
+					});
+					//layer.msg('点击任意处关闭');
+			});
+			$('#imprint').on('click', function(){
+					layer.open({
+					  type: 2,
+					  title: 'Imprint',
+					  area: ['60%', '90%'],
+					  shade: 0.8,
+					  closeBtn: 1,
+					  shadeClose: true,
+					  content: 'html/foot/legal/Impressum.html'
+					});
+					//layer.msg('点击任意处关闭');
+			});
+			
+			$('#helpAndsupport').on('click', function(){
+					layer.open({
+					  type: 2,
+					  title: 'Help&Support',
+					  area: ['60%', '90%'],
+					  shade: 0.8,
+					  closeBtn: 1,
+					  shadeClose: true,
+					  content: 'html/foot/support/helpAndsupport.html'
+					});
+					//layer.msg('点击任意处关闭');
+			});
+			
+			$('#faq').on('click', function(){
+					layer.open({
+					  type: 2,
+					  title: 'FAQ',
+					  area: ['60%', '90%'],
+					  shade: 0.8,
+					  closeBtn: 1,
+					  shadeClose: true,
+					  content: 'html/foot/support/faq.html'
+					});
+					//layer.msg('点击任意处关闭');
+			});
+			$('#blog').on('click', function(){
+					layer.open({
+					  type: 2,
+					  title: 'Blog',
+					  area: ['60%', '90%'],
+					  shade: 0.8,
+					  closeBtn: 1,
+					  shadeClose: true,
+					  content: 'html/foot/support/blog.html'
+					});
+					//layer.msg('点击任意处关闭');
+			});
+			
+			$('#ourMission').on('click', function(){
+					layer.open({
+					  type: 2,
+					  title: 'Our Mission',
+					  area: ['60%', '90%'],
+					  shade: 0.8,
+					  closeBtn: 1,
+					  shadeClose: true,
+					  content: 'html/foot/company/ourMission.html'
+					});
+					//layer.msg('点击任意处关闭');
+			});
+			
+			$('#jobs').on('click', function(){
+					layer.open({
+					  type: 2,
+					  title: 'Jobs',
+					  area: ['60%', '90%'],
+					  shade: 0.8,
+					  closeBtn: 1,
+					  shadeClose: true,
+					  content: 'html/foot/company/jobs.html'
+					});
+					//layer.msg('点击任意处关闭');
+			});
+			
+			$('#press').on('click', function(){
+					layer.open({
+					  type: 2,
+					  title: 'Press',
+					  area: ['60%', '90%'],
+					  shade: 0.8,
+					  closeBtn: 1,
+					  shadeClose: true,
+					  content: 'html/foot/company/press.html'
+					});
+					//layer.msg('点击任意处关闭');
+			});
+		});
+
+		function videoEnd(){
+			var _html2 = '<img src="img/sprot01.png" ><a class="video-play" id="showVideo"></a>';
+
+			$('#videoBox').html(_html2);
+		}
+		
+		
+		</script>
+		
+	</body>
+</html>

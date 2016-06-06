@@ -31,7 +31,7 @@
     
     
     //2.加载本地html
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html"];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"index-h5" withExtension:@"html"];
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [_webView loadRequest:request];

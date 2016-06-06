@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '074A5119CAC2B6FE5566DE3D'
+               BlueprintIdentifier = 'F532E2A74CE2C0CDC01556CC'
                BlueprintName = 'ICViewPager'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libICViewPager.a'>

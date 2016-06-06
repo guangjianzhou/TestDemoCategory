@@ -22,3 +22,12 @@ pod 'AYCheckVersion',:git => "https://github.com/guangjianzhou/AYCheckVersion.gi
 
 #融云
  pod 'RongCloudIMKit', '~> 2.4.11'
+
+# block
+pod 'BlocksKit', '~> 2.2.5'
+
+#人脸识别
+pod 'OpenCV', '~> 3.0.0'
+
+#解压缩
+pod 'SSZipArchive', '~> 1.1'

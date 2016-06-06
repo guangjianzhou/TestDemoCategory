@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 //
 //  FileManagerViewController.m
 //  TestDemo
@@ -20,8 +12,18 @@
 #import "Address.h"
 #import "NSFileManager+help.h"
 #import <QuickLook/QuickLook.h>
+#import "XMLParser.h"
 
-@interface FileManagerViewController ()<QLPreviewControllerDataSource,QLPreviewControllerDelegate,UIDocumentInteractionControllerDelegate>
+
+
+
+/**
+ *  读写docx的方法:
+    1.修改.docx 后缀为 zip，然后通过解压
+    2.得到document.xml 内容 
+    3.解析修改xml即可
+ */
+@interface FileManagerViewController ()<QLPreviewControllerDataSource,QLPreviewControllerDelegate,UIDocumentInteractionControllerDelegate,NSXMLParserDelegate>
 
 {
     Staff *staff;
@@ -72,6 +74,21 @@
     [array addObject:@"123"];
     
     
+    //解析
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ffmpeg" ofType:@"docx"];
+    NSLog(@"====localPath==%@",path);
+    
+    NSData *fileData = [NSData dataWithContentsOfFile:path];
+    NSXMLParser *parser = [[NSXMLParser alloc] initWithData:fileData];
+    parser.delegate = self;
+    
+    NSLog(@"===nodes=%@====",parser);
+}
+
+#pragma mark  - NSXMLParserDelegate
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(nullable NSString *)namespaceURI qualifiedName:(nullable NSString *)qName attributes:(NSDictionary<NSString *, NSString *> *)attributeDict
+{
+    NSLog(@"__%s=====方法",__func__);
 }
 
 
