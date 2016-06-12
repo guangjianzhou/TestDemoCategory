@@ -344,9 +344,6 @@ static int x = 0;
     
     
     //扫描框
-    
-    
-    
     _boxView = [[UIView alloc] initWithFrame:CGRectMake(60, 100, 200, 200)];
     
     _boxView.layer.borderColor = [UIColor greenColor].CGColor;

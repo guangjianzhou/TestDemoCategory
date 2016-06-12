@@ -10,8 +10,6 @@ pod 'ReactiveCocoa', '~> 2.5'
 pod 'ReactiveViewModel', '>= 0.3'
 pod 'SDWebImage', '~> 3.7.3'
 pod 'FMDB', '~> 2.5'
-pod 'KVNProgress', '~> 2.2.1'
-pod 'MBProgressHUD', '~> 0.9.1'
 pod 'DZNEmptyDataSet', '~> 1.7.2'  #tableview 无数据提示
 
 pod 'RESideMenu', '~> 4.0.7' #侧滑显示
@@ -31,3 +29,8 @@ pod 'OpenCV', '~> 3.0.0'
 
 #解压缩
 pod 'SSZipArchive', '~> 1.1'
+
+#提示语
+pod 'KVNProgress', '~> 2.2.1'
+pod 'MBProgressHUD', '~> 0.9.1'
+pod 'SVProgressHUD', '~> 2.0.3'

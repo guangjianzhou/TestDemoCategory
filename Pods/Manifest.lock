@@ -59,10 +59,11 @@ PODS:
   - REFrostedViewController (2.4.8)
   - RESideMenu (4.0.7)
   - RongCloudIMKit (2.4.11)
-  - SDWebImage (3.7.5):
-    - SDWebImage/Core (= 3.7.5)
-  - SDWebImage/Core (3.7.5)
-  - SSZipArchive (1.1)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+  - SSZipArchive (1.2)
+  - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6.3)
@@ -84,6 +85,7 @@ DEPENDENCIES:
   - RongCloudIMKit (~> 2.4.11)
   - SDWebImage (~> 3.7.3)
   - SSZipArchive (~> 1.1)
+  - SVProgressHUD (~> 2.0.3)
 
 EXTERNAL SOURCES:
   AYCheckVersion:
@@ -112,7 +114,8 @@ SPEC CHECKSUMS:
   REFrostedViewController: a893b4979ba1f200c547aef9ff4c3fd5a18f5923
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   RongCloudIMKit: 40fefc63541927aad728e06c731d12d34de1c5fa
-  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
-  SSZipArchive: de3d215ab73f87db627f81f2ce24f1731e3886c3
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SSZipArchive: 251093c65f98d6ea282c50bc404bfa631d9fd721
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
 COCOAPODS: 0.39.0

@@ -54,9 +54,6 @@
 		FD68DE5F1C9A83F800E73EF5 /* RSADataVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = FD68DE561C9A83F800E73EF5 /* RSADataVerifier.m */; };
 		FD68DE611C9A852D00E73EF5 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68DE601C9A852D00E73EF5 /* libc++.tbd */; };
 		FD68F5521C9B928200771B3C /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68F54E1C9B928200771B3C /* libWeChatSDK.a */; };
-		FD68F55D1C9BCB7800771B3C /* ApiXml.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD68F5571C9BCB7800771B3C /* ApiXml.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD68F55E1C9BCB7800771B3C /* payRequsestHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD68F5591C9BCB7800771B3C /* payRequsestHandler.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD68F55F1C9BCB7800771B3C /* WXUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD68F55B1C9BCB7800771B3C /* WXUtil.mm */; };
 		FD68F5611C9BE55800771B3C /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68F5601C9BE55800771B3C /* GameKit.framework */; };
 		FD68F5641C9BE9D600771B3C /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD68F5631C9BE9D600771B3C /* CoreBluetooth.framework */; };
 		FD6A760F1C7C315C00D7E5D8 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6A760E1C7C315C00D7E5D8 /* share.png */; };
@@ -491,6 +488,9 @@
 		FDD45C4E1CD1EFCC00C69F41 /* ThemeAndLanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD45C4D1CD1EFCC00C69F41 /* ThemeAndLanguageViewController.m */; };
 		FDD45C551CD1F2D100C69F41 /* ISULanguageManger.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD45C541CD1F2D100C69F41 /* ISULanguageManger.m */; };
 		FDD45C581CD1F4EF00C69F41 /* TestDemo.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDD45C5A1CD1F4EF00C69F41 /* TestDemo.strings */; };
+		FDD5642E1D0D61B600A3A16F /* ApiXml.mm in Sources */ = {isa = PBXBuildFile; fileRef = FDD564291D0D61B600A3A16F /* ApiXml.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FDD5642F1D0D61B600A3A16F /* payRequsestHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = FDD5642B1D0D61B600A3A16F /* payRequsestHandler.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FDD564301D0D61B600A3A16F /* WXUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = FDD5642D1D0D61B600A3A16F /* WXUtil.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FDD9382C1C87D2F500DABD8C /* ThrowLineTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9382B1C87D2F500DABD8C /* ThrowLineTool.m */; };
 		FDD9383B1C8817FD00DABD8C /* UIBarButtonItem+WNXBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9383A1C8817FD00DABD8C /* UIBarButtonItem+WNXBarButtonItem.m */; };
 		FDD938431C88184A00DABD8C /* NSString+Emojize.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9383F1C88184A00DABD8C /* NSString+Emojize.m */; };
@@ -580,7 +580,6 @@
 		FDFDC5261CACC460002A6B03 /* ZXBitArray.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD991C8EBF8300CEF5CA /* ZXBitArray.m */; };
 		FDFDC5271CACC460002A6B03 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8A99AA1C22864800AB4E6B /* SecondViewController.m */; };
 		FDFDC5291CACC460002A6B03 /* PushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD343FA1C92707400F4677A /* PushTransition.m */; };
-		FDFDC52A1CACC460002A6B03 /* ApiXml.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD68F5571C9BCB7800771B3C /* ApiXml.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FDFDC52B1CACC460002A6B03 /* FDRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEF1B911C21580600187029 /* FDRoot.m */; };
 		FDFDC52C1CACC460002A6B03 /* ZXCodaBarReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE551C8EBF8300CEF5CA /* ZXCodaBarReader.m */; };
 		FDFDC52D1CACC460002A6B03 /* ZXPDF417Codeword.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE991C8EBF8300CEF5CA /* ZXPDF417Codeword.m */; };
@@ -663,7 +662,6 @@
 		FDFDC57A1CACC460002A6B03 /* SwipableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9181591CAA5F26001A0A73 /* SwipableViewController.m */; };
 		FDFDC57B1CACC460002A6B03 /* HorizonalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9181571CAA5F26001A0A73 /* HorizonalTableViewController.m */; };
 		FDFDC57C1CACC460002A6B03 /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE22E781CABBB1D0018E643 /* Staff.m */; };
-		FDFDC57D1CACC460002A6B03 /* payRequsestHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD68F5591C9BCB7800771B3C /* payRequsestHandler.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FDFDC57E1CACC460002A6B03 /* Units.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9181611CAA6C1B001A0A73 /* Units.m */; };
 		FDFDC57F1CACC460002A6B03 /* ZXQRCodeWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEFB1C8EBF8300CEF5CA /* ZXQRCodeWriter.m */; };
 		FDFDC5801CACC460002A6B03 /* ZXDataMatrixDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAADE51C8EBF8300CEF5CA /* ZXDataMatrixDetector.m */; };
@@ -767,7 +765,6 @@
 		FDFDC5E21CACC460002A6B03 /* ZXMultiFormatReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAEFE1C8EBF8300CEF5CA /* ZXMultiFormatReader.m */; };
 		FDFDC5E31CACC460002A6B03 /* ZXAbstractExpandedDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE1B1C8EBF8300CEF5CA /* ZXAbstractExpandedDecoder.m */; };
 		FDFDC5E41CACC460002A6B03 /* ZXAbstractRSSReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAE491C8EBF8300CEF5CA /* ZXAbstractRSSReader.m */; };
-		FDFDC5E51CACC460002A6B03 /* WXUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD68F55B1C9BCB7800771B3C /* WXUtil.mm */; };
 		FDFDC5E61CACC460002A6B03 /* UIImage+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC29C7F1C2CCF7700F51079 /* UIImage+help.m */; };
 		FDFDC5E71CACC460002A6B03 /* ZXEmailAddressParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAD461C8EBF8300CEF5CA /* ZXEmailAddressParsedResult.m */; };
 		FDFDC5E81CACC460002A6B03 /* RSADataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = FD68DE541C9A83F800E73EF5 /* RSADataSigner.m */; };
@@ -1137,12 +1134,6 @@
 		FD68F54F1C9B928200771B3C /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		FD68F5501C9B928200771B3C /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		FD68F5511C9B928200771B3C /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		FD68F5561C9BCB7800771B3C /* ApiXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiXml.h; sourceTree = "<group>"; };
-		FD68F5571C9BCB7800771B3C /* ApiXml.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ApiXml.mm; sourceTree = "<group>"; };
-		FD68F5581C9BCB7800771B3C /* payRequsestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = payRequsestHandler.h; sourceTree = "<group>"; };
-		FD68F5591C9BCB7800771B3C /* payRequsestHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = payRequsestHandler.mm; sourceTree = "<group>"; };
-		FD68F55A1C9BCB7800771B3C /* WXUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXUtil.h; sourceTree = "<group>"; };
-		FD68F55B1C9BCB7800771B3C /* WXUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WXUtil.mm; sourceTree = "<group>"; };
 		FD68F5601C9BE55800771B3C /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		FD68F5631C9BE9D600771B3C /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		FD6A760E1C7C315C00D7E5D8 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
@@ -1905,6 +1896,12 @@
 		FDD45C5E1CD1F5D400C69F41 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		FDD45C5F1CD1F5D400C69F41 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TestDemo.strings; sourceTree = "<group>"; };
 		FDD45C601CD1FF7800C69F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/TestDemo.strings; sourceTree = "<group>"; };
+		FDD564281D0D61B600A3A16F /* ApiXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiXml.h; sourceTree = "<group>"; };
+		FDD564291D0D61B600A3A16F /* ApiXml.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ApiXml.mm; sourceTree = "<group>"; };
+		FDD5642A1D0D61B600A3A16F /* payRequsestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = payRequsestHandler.h; sourceTree = "<group>"; };
+		FDD5642B1D0D61B600A3A16F /* payRequsestHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = payRequsestHandler.mm; sourceTree = "<group>"; };
+		FDD5642C1D0D61B600A3A16F /* WXUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXUtil.h; sourceTree = "<group>"; };
+		FDD5642D1D0D61B600A3A16F /* WXUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WXUtil.mm; sourceTree = "<group>"; };
 		FDD9382A1C87D2F500DABD8C /* ThrowLineTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThrowLineTool.h; sourceTree = "<group>"; };
 		FDD9382B1C87D2F500DABD8C /* ThrowLineTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThrowLineTool.m; sourceTree = "<group>"; };
 		FDD938391C8817FD00DABD8C /* UIBarButtonItem+WNXBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WNXBarButtonItem.h"; sourceTree = "<group>"; };
@@ -2024,7 +2021,6 @@
 		FDFA16241C5EF11D007D27C7 /* LockManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockManager.h; sourceTree = "<group>"; };
 		FDFA16251C5EF11D007D27C7 /* LockManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockManager.m; sourceTree = "<group>"; };
 		FDFDC6AE1CACC460002A6B03 /* TestDemo_Product.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDemo_Product.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFDC6AF1CACC461002A6B03 /* TestDemo_Develop copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TestDemo_Develop copy-Info.plist"; path = "/Users/ZGJ/Documents/XcodeProject/TestDemo/TestDemo_Develop copy-Info.plist"; sourceTree = "<absolute>"; };
 		FDFDC6B51CACF957002A6B03 /* UIView+SizeHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SizeHeight.h"; sourceTree = "<group>"; };
 		FDFDC6B61CACF957002A6B03 /* UIView+SizeHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SizeHeight.m"; sourceTree = "<group>"; };
 		FDFDC6BA1CACFFA8002A6B03 /* UIWindow+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Hierarchy.h"; sourceTree = "<group>"; };
@@ -2367,27 +2363,13 @@
 		FD68F54D1C9B926F00771B3C /* WeChatSDK */ = {
 			isa = PBXGroup;
 			children = (
-				FD68F55C1C9BCB7800771B3C /* lib */,
+				FDD564271D0D61B600A3A16F /* lib */,
 				FD68F54E1C9B928200771B3C /* libWeChatSDK.a */,
 				FD68F54F1C9B928200771B3C /* WechatAuthSDK.h */,
 				FD68F5501C9B928200771B3C /* WXApi.h */,
 				FD68F5511C9B928200771B3C /* WXApiObject.h */,
 			);
 			path = WeChatSDK;
-			sourceTree = "<group>";
-		};
-		FD68F55C1C9BCB7800771B3C /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				FD68F5561C9BCB7800771B3C /* ApiXml.h */,
-				FD68F5571C9BCB7800771B3C /* ApiXml.mm */,
-				FD68F5581C9BCB7800771B3C /* payRequsestHandler.h */,
-				FD68F5591C9BCB7800771B3C /* payRequsestHandler.mm */,
-				FD68F55A1C9BCB7800771B3C /* WXUtil.h */,
-				FD68F55B1C9BCB7800771B3C /* WXUtil.mm */,
-			);
-			name = lib;
-			path = "../../../../../Desktop/Branches优你家开发分支/优你家分支/ZHProperty/wexinpay/lib";
 			sourceTree = "<group>";
 		};
 		FD6C82A11CFEB68700320D6B /* OpenCV */ = {
@@ -3897,6 +3879,19 @@
 			name = "切换主题和语言";
 			sourceTree = "<group>";
 		};
+		FDD564271D0D61B600A3A16F /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				FDD564281D0D61B600A3A16F /* ApiXml.h */,
+				FDD564291D0D61B600A3A16F /* ApiXml.mm */,
+				FDD5642A1D0D61B600A3A16F /* payRequsestHandler.h */,
+				FDD5642B1D0D61B600A3A16F /* payRequsestHandler.mm */,
+				FDD5642C1D0D61B600A3A16F /* WXUtil.h */,
+				FDD5642D1D0D61B600A3A16F /* WXUtil.mm */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		FDD9382E1C87D30300DABD8C /* ThrowLineTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -4105,7 +4100,6 @@
 				FDF592101C0EB43C00AF8B5C /* Products */,
 				E3EDFCFA967AA13AB6A49481 /* Pods */,
 				B3FF0BA1D689D6EE88C7A45B /* Frameworks */,
-				FDFDC6AF1CACC461002A6B03 /* TestDemo_Develop copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -4755,7 +4749,6 @@
 				FD9B51261CD09F06001E0E6D /* PopZgjViewController.m in Sources */,
 				FD8A99AB1C22864800AB4E6B /* SecondViewController.m in Sources */,
 				FDD343FB1C92707400F4677A /* PushTransition.m in Sources */,
-				FD68F55D1C9BCB7800771B3C /* ApiXml.mm in Sources */,
 				FDEF1B951C21580600187029 /* FDRoot.m in Sources */,
 				FDAAAF8E1C8EBF8300CEF5CA /* ZXCodaBarReader.m in Sources */,
 				FDAAAFAE1C8EBF8300CEF5CA /* ZXPDF417Codeword.m in Sources */,
@@ -4799,6 +4792,7 @@
 				FDAAAF7B1C8EBF8300CEF5CA /* ZXAnyAIDecoder.m in Sources */,
 				FDEF1B921C21580600187029 /* FDMethod.m in Sources */,
 				FDAAAFD61C8EBF8300CEF5CA /* ZXMultiDetector.m in Sources */,
+				FDD5642E1D0D61B600A3A16F /* ApiXml.mm in Sources */,
 				FDBB58C01C434C65007DE015 /* FMDBViewController.m in Sources */,
 				FD7E12871CD30A91000F9012 /* ThemeImageView.m in Sources */,
 				FDAAAF091C8EBF8300CEF5CA /* ZXAztecToken.m in Sources */,
@@ -4849,7 +4843,6 @@
 				FD9B51221CD09EDF001E0E6D /* PopCustomView.m in Sources */,
 				FD91815C1CAA5F26001A0A73 /* HorizonalTableViewController.m in Sources */,
 				FDE22E791CABBB1D0018E643 /* Staff.m in Sources */,
-				FD68F55E1C9BCB7800771B3C /* payRequsestHandler.mm in Sources */,
 				FD9181621CAA6C1B001A0A73 /* Units.m in Sources */,
 				FDAAAFDA1C8EBF8300CEF5CA /* ZXQRCodeWriter.m in Sources */,
 				FDAAAF5C1C8EBF8300CEF5CA /* ZXDataMatrixDetector.m in Sources */,
@@ -4925,6 +4918,7 @@
 				FD68DDE81C9A828D00E73EF5 /* PayViewController.m in Sources */,
 				FDAAAF7E1C8EBF8300CEF5CA /* ZXRSSExpandedDecodedChar.m in Sources */,
 				FDC95CAF1C34F51D00F6BD76 /* MyView.m in Sources */,
+				FDD564301D0D61B600A3A16F /* WXUtil.mm in Sources */,
 				FDE22E721CABAA870018E643 /* FileManagerViewController.m in Sources */,
 				FD66FC4A1CCF6A0E007BE0B9 /* FFmpegViewController.m in Sources */,
 				FDA34DE21D016EEF003F4876 /* XMLParser.m in Sources */,
@@ -4973,7 +4967,6 @@
 				FDAAAFDB1C8EBF8300CEF5CA /* ZXMultiFormatReader.m in Sources */,
 				FDAAAF711C8EBF8300CEF5CA /* ZXAbstractExpandedDecoder.m in Sources */,
 				FDAAAF881C8EBF8300CEF5CA /* ZXAbstractRSSReader.m in Sources */,
-				FD68F55F1C9BCB7800771B3C /* WXUtil.mm in Sources */,
 				FDC29C801C2CCF7700F51079 /* UIImage+help.m in Sources */,
 				FDAAAF141C8EBF8300CEF5CA /* ZXEmailAddressParsedResult.m in Sources */,
 				FD68DE5E1C9A83F800E73EF5 /* RSADataSigner.m in Sources */,
@@ -5074,6 +5067,7 @@
 				FDE22E761CABB40A0018E643 /* NSFileManager+help.m in Sources */,
 				FDE22E7F1CABD35F0018E643 /* UIScrollView+ScalableCover.m in Sources */,
 				FDD9385D1C88191800DABD8C /* UITabBarController+showHide.m in Sources */,
+				FDD5642F1D0D61B600A3A16F /* payRequsestHandler.mm in Sources */,
 				FD4EC8AB1CBDF59B00BA89C2 /* DOPNavbarMenu.m in Sources */,
 				FDFA16261C5EF11D007D27C7 /* LockManager.m in Sources */,
 				FDAAAF0C1C8EBF8300CEF5CA /* ZXAztecWriter.m in Sources */,
@@ -5153,7 +5147,6 @@
 				FDFDC5261CACC460002A6B03 /* ZXBitArray.m in Sources */,
 				FDFDC5271CACC460002A6B03 /* SecondViewController.m in Sources */,
 				FDFDC5291CACC460002A6B03 /* PushTransition.m in Sources */,
-				FDFDC52A1CACC460002A6B03 /* ApiXml.mm in Sources */,
 				FDFDC52B1CACC460002A6B03 /* FDRoot.m in Sources */,
 				FDFDC52C1CACC460002A6B03 /* ZXCodaBarReader.m in Sources */,
 				FDFDC52D1CACC460002A6B03 /* ZXPDF417Codeword.m in Sources */,
@@ -5237,7 +5230,6 @@
 				FDFDC57A1CACC460002A6B03 /* SwipableViewController.m in Sources */,
 				FDFDC57B1CACC460002A6B03 /* HorizonalTableViewController.m in Sources */,
 				FDFDC57C1CACC460002A6B03 /* Staff.m in Sources */,
-				FDFDC57D1CACC460002A6B03 /* payRequsestHandler.mm in Sources */,
 				FDFDC57E1CACC460002A6B03 /* Units.m in Sources */,
 				FD4EC8AC1CBDF59B00BA89C2 /* DOPNavbarMenu.m in Sources */,
 				FDFDC57F1CACC460002A6B03 /* ZXQRCodeWriter.m in Sources */,
@@ -5343,7 +5335,6 @@
 				FDFDC5E21CACC460002A6B03 /* ZXMultiFormatReader.m in Sources */,
 				FDFDC5E31CACC460002A6B03 /* ZXAbstractExpandedDecoder.m in Sources */,
 				FDFDC5E41CACC460002A6B03 /* ZXAbstractRSSReader.m in Sources */,
-				FDFDC5E51CACC460002A6B03 /* WXUtil.mm in Sources */,
 				FDFDC5E61CACC460002A6B03 /* UIImage+help.m in Sources */,
 				FDFDC5E71CACC460002A6B03 /* ZXEmailAddressParsedResult.m in Sources */,
 				FDFDC5E81CACC460002A6B03 /* RSADataSigner.m in Sources */,
@@ -5638,7 +5629,6 @@
 					"$(PROJECT_DIR)/Tools",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tools/Alipay",
-					"$(PROJECT_DIR)/Tools/WeChatSDK",
 					"$(PROJECT_DIR)/Tools/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/TestDemo/Vendor/ZBarSDK",
@@ -5706,7 +5696,6 @@
 					"$(PROJECT_DIR)/Tools",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tools/Alipay",
-					"$(PROJECT_DIR)/Tools/WeChatSDK",
 					"$(PROJECT_DIR)/Tools/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/TestDemo/Vendor/ZBarSDK",
