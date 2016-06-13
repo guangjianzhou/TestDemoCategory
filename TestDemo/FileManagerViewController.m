@@ -83,6 +83,23 @@
     parser.delegate = self;
     
     NSLog(@"===nodes=%@====",parser);
+    
+    
+    NSURL *url = [NSURL URLWithString:path];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:request];
+    
+    
+    //其他应用打开
+    
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:@"其他应用打开" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(otherAppOpen:) forControlEvents:UIControlEventTouchUpInside];
+    [btn sizeToFit];
+    UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    self.navigationItem.rightBarButtonItem = rightBarItem;
+    
 }
 
 #pragma mark  - NSXMLParserDelegate
@@ -284,7 +301,57 @@
 #pragma mark  - QLPreviewControllerDelegate
 - (void)previewControllerDidDismiss:(QLPreviewController *)controller
 {
-    
+    NSLog(@"previewControllerDidDismiss===");
 }
+
+
+#pragma mark  - UIDocumentInteractionControllerDelegate
+//点击快速查看时依次调用
+- (UIViewController*)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController*)controller
+{
+    NSLog(@"12222%s",__func__);
+    return self;
+}
+
+- (UIView *)documentInteractionControllerViewForPreview:(UIDocumentInteractionController*)controller
+{
+    NSLog(@"12222%s",__func__);
+    return self.view;
+}
+
+- (CGRect)documentInteractionControllerRectForPreview:(UIDocumentInteractionController*)controller
+{
+    NSLog(@"12222%s",__func__);
+    return self.view.frame;
+}
+
+- (void)documentInteractionControllerDidEndPreview:(UIDocumentInteractionController*)_controller
+{
+    NSLog(@"12222%s",__func__);
+}
+
+- (void)documentInteractionControllerDidDismissOptionsMenu:(UIDocumentInteractionController *)controller
+{
+    NSLog(@"12222%s",__func__);
+}
+
+
+- (void)otherAppOpen:(UIButton *)btn
+{
+    if (!docuVC)
+    {
+//        docuVC = [[UIDocumentInteractionController alloc] init];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"ffmpeg" ofType:@"docx"];
+        docuVC = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:path]];
+        docuVC.delegate = self;
+    }
+    
+    //不会调用
+    [docuVC presentOpenInMenuFromRect:self.view.bounds inView:self.view animated:YES];
+    //会调用上述的代理方法
+//    [docuVC presentPreviewAnimated:YES];
+}
+
+
 
 @end

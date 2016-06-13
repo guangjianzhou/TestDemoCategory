@@ -19,6 +19,7 @@
 		FD211F6B1C2BF45900C7ACCC /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = FD211F651C2BF45900C7ACCC /* 2.png */; };
 		FD211F6C1C2BF45900C7ACCC /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = FD211F661C2BF45900C7ACCC /* 1.png */; };
 		FD23ED7E1C1EC19F0013BDC2 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23ED7D1C1EC19F0013BDC2 /* Status.m */; };
+		FD2C9FE21D0E5D2600C9DBF8 /* TopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2C9FE11D0E5D2600C9DBF8 /* TopWindow.m */; };
 		FD4EC8A41CBDF57F00BA89C2 /* HMWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4EC8A31CBDF57F00BA89C2 /* HMWaterflowLayout.m */; };
 		FD4EC8A51CBDF57F00BA89C2 /* HMWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4EC8A31CBDF57F00BA89C2 /* HMWaterflowLayout.m */; };
 		FD4EC8AB1CBDF59B00BA89C2 /* DOPNavbarMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4EC8A81CBDF59B00BA89C2 /* DOPNavbarMenu.m */; };
@@ -1004,6 +1005,8 @@
 		FD211F661C2BF45900C7ACCC /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		FD23ED7C1C1EC19F0013BDC2 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
 		FD23ED7D1C1EC19F0013BDC2 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		FD2C9FE01D0E5D2600C9DBF8 /* TopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopWindow.h; path = ../../TopWindow.h; sourceTree = "<group>"; };
+		FD2C9FE11D0E5D2600C9DBF8 /* TopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopWindow.m; path = ../../TopWindow.m; sourceTree = "<group>"; };
 		FD4EC8A21CBDF57F00BA89C2 /* HMWaterflowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMWaterflowLayout.h; sourceTree = "<group>"; };
 		FD4EC8A31CBDF57F00BA89C2 /* HMWaterflowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMWaterflowLayout.m; sourceTree = "<group>"; };
 		FD4EC8A71CBDF59B00BA89C2 /* DOPNavbarMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPNavbarMenu.h; sourceTree = "<group>"; };
@@ -2179,6 +2182,15 @@
 			path = CustomUIAlertView;
 			sourceTree = "<group>";
 		};
+		FD2C9FE31D0E5D4400C9DBF8 /* CustomWindow */ = {
+			isa = PBXGroup;
+			children = (
+				FD2C9FE01D0E5D2600C9DBF8 /* TopWindow.h */,
+				FD2C9FE11D0E5D2600C9DBF8 /* TopWindow.m */,
+			);
+			path = CustomWindow;
+			sourceTree = "<group>";
+		};
 		FD4EC8A11CBDF57F00BA89C2 /* 瀑布流 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2490,6 +2502,7 @@
 		FD8A99A41C22850300AB4E6B /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FD2C9FE31D0E5D4400C9DBF8 /* CustomWindow */,
 				FD7E12911CD3316F000F9012 /* ISUzbar */,
 				FDB943861CCDFFF500449EB4 /* TSMessages */,
 				FD4EC8A61CBDF59B00BA89C2 /* DOPNavbarMenu */,
@@ -4340,7 +4353,7 @@
 				TargetAttributes = {
 					FDF5920E1C0EB43C00AF8B5C = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 78885LJ926;
+						DevelopmentTeam = JKJQ2SXDA9;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -4954,6 +4967,7 @@
 				FDAAAF8A1C8EBF8300CEF5CA /* ZXRSSDataCharacter.m in Sources */,
 				FDA0C3A71C1FB8870087B5CE /* RootViewController.m in Sources */,
 				FDA9D4751C294D0F00CB9369 /* XHRealTimeBlur.m in Sources */,
+				FD2C9FE21D0E5D2600C9DBF8 /* TopWindow.m in Sources */,
 				FDAAAF7C1C8EBF8300CEF5CA /* ZXRSSExpandedBlockParsedResult.m in Sources */,
 				FDD9385A1C88190400DABD8C /* UIViewController+help.m in Sources */,
 				FDF592141C0EB43C00AF8B5C /* main.m in Sources */,
@@ -5633,6 +5647,7 @@
 					"$(PROJECT_DIR)/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/TestDemo/Vendor/ZBarSDK",
 					"$(PROJECT_DIR)/TestDemo/FFmpeg-iOS/lib",
+					"$(PROJECT_DIR)/Tools/WeChatSDK",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -5644,7 +5659,7 @@
 					"-framework",
 					"\"Reveal\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cyberway.TestDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = cyberway.TestDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TestDemo/TestDemo_Develop-Bridging-Header.h";
@@ -5700,6 +5715,7 @@
 					"$(PROJECT_DIR)/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/TestDemo/Vendor/ZBarSDK",
 					"$(PROJECT_DIR)/TestDemo/FFmpeg-iOS/lib",
+					"$(PROJECT_DIR)/Tools/WeChatSDK",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -5711,7 +5727,7 @@
 					"-framework",
 					"\"Reveal\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cyberway.TestDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = cyberway.TestDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TestDemo/TestDemo_Develop-Bridging-Header.h";

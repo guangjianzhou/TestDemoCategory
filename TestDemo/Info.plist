@@ -2,19 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIApplicationShortcutItems</key>
-	<array>
-		<dict>
-			<key>UIApplicationShortcutItemType</key>
-			<string>com.test.static1</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Static ShortCut</string>
-			<key>UIApplicationShortcutItemSubtitle</key>
-			<string>avaliable at launch</string>
-			<key>UIApplicationShortcutItemIconFile</key>
-			<string>icon</string>
-		</dict>
-	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -61,6 +48,23 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>loveway.ttf</string>
+	</array>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>icon</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>avaliable at launch</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Static ShortCut</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.test.static1</string>
+		</dict>
+	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -75,9 +79,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>loveway.ttf</string>
-	</array>
 </dict>
 </plist>

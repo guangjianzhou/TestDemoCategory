@@ -197,5 +197,13 @@
     return attributeString;
 }
 
+/**
+ *  取一个随机整数 0~x-1
+ **/
++ (int)random:(int)x
+{
+    return arc4random() % x;
+}
+
 
 @end

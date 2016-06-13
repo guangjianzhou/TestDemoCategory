@@ -40,6 +40,8 @@
     [self.view addSubview:_imageView];
     
     
+    //设置标题栏不能覆盖下面viewcontroller的内容
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     
     _dataSourceArray = [NSMutableArray arrayWithObjects:@"系统相册",@"系统照片",nil];

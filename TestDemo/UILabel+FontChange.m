@@ -58,8 +58,8 @@
         }
         else
         {
-            if ([UIFont fontNamesForFamilyName:CustomFontName])
-                self.font  = [UIFont fontWithName:CustomFontName size:self.font.pointSize];
+//            if ([UIFont fontNamesForFamilyName:CustomFontName])
+//                self.font  = [UIFont fontWithName:CustomFontName size:self.font.pointSize];
         }
     }
 }

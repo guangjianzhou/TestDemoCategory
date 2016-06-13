@@ -16,6 +16,21 @@
         }
     }
 
+
+rootTabBarController.tabBar.tintColor = [UIColor colorWithRed:55 / 255.0 green:196 / 255.0 blue:242 / 255.0 alpha:1];  //字体颜色
+rootTabBarController.tabBar.barTintColor = [UIColor orangeColor]; //
+rootTabBarController.tabBar.backgroundColor = [UIColor yellowColor];//
+
+//设置图片渲染模式
+UIImage *deselectedImage = [[UIImage imageNamed:@"tabbar_item_home"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+UIImage *selectedImage = [[UIImage imageNamed:@"tabbar_item_home_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+// 底部导航item
+UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:nil tag:0];
+tabBarItem.image = deselectedImage;
+tabBarItem.selectedImage = selectedImage;
+self.tabBarItem = tabBarItem;
+
+
 2.#define kUserTest 1 判断
 #if kUserTest
     self.navigationController.navigationBar.translucent = NO;
@@ -130,7 +145,10 @@ TintColor是描述线条轮廓的一种颜色,该颜色默认具有传递性,默
 
 9.全程统一的ErrorVC
 
-10.
+10.特殊技巧
+self.view.endEditing = YES ;//收缩键盘
+//设置标题栏不能覆盖下面viewcontroller的内容
+self.edgesForExtendedLayout = UIRectEdgeNone;
 
 
 
