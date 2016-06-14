@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A4129923F1FF71EE8B0AB7F2'
+               BlueprintIdentifier = 'D467162337E2940CD438DB15'
                BlueprintName = 'IGLDropDownMenu'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libIGLDropDownMenu.a'>

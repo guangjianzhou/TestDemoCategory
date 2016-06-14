@@ -30,6 +30,7 @@
 #import "TSMessage.h"
 #import "AnimationViewController.h"
 #import "OpenCVViewController.h"
+#import "WaterfallViewController.h"
 
 #define NSNullObjects @[@"",@0,@{},@[]]
 
@@ -214,7 +215,7 @@
     
     
     
-    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"头部视图",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",@"改变字体",@"IBDesignable",@"毛玻璃",@"CoreAnimation",@"OpenCV",nil];
+    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"运行时",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",@"改变字体",@"IBDesignable",@"毛玻璃",@"CoreAnimation",@"OpenCV",@"瀑布流",nil];
     [self configClass];
     
     _hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
@@ -780,7 +781,7 @@
     {
         [self performSegueWithIdentifier:@"CoreGraphicsSegue" sender:nil];
     }
-    else if([title isEqualToString:@"头部视图"])
+    else if([title isEqualToString:@"运行时"])
     {
         [self performSegueWithIdentifier:@"HeadSegue" sender:nil];
     }
@@ -879,6 +880,12 @@
         OpenCVViewController *openCV = [[OpenCVViewController alloc] init];
         [self.navigationController pushViewController:openCV animated:YES];
     }
+    else if ([title isEqualToString:@"瀑布流"])
+    {
+        WaterfallViewController *waterfallVC = [[WaterfallViewController alloc] init];
+        [self.navigationController pushViewController:waterfallVC animated:YES];
+    }
+    
 }
 
 

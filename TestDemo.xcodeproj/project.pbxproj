@@ -26,6 +26,14 @@
 		FD4EC8AC1CBDF59B00BA89C2 /* DOPNavbarMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4EC8A81CBDF59B00BA89C2 /* DOPNavbarMenu.m */; };
 		FD4EC8AD1CBDF59B00BA89C2 /* UIView+DOPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4EC8AA1CBDF59B00BA89C2 /* UIView+DOPExtension.m */; };
 		FD4EC8AE1CBDF59B00BA89C2 /* UIView+DOPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4EC8AA1CBDF59B00BA89C2 /* UIView+DOPExtension.m */; };
+		FD5133111D0F9A14007B8FA6 /* WaterfallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5133101D0F9A14007B8FA6 /* WaterfallViewController.m */; };
+		FD5133141D0F9BE7007B8FA6 /* WaterFallFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5133131D0F9BE7007B8FA6 /* WaterFallFlowLayout.m */; };
+		FD56A98B1D0F9D60008973FA /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD56A9891D0F9D60008973FA /* PhotoCollectionViewCell.m */; };
+		FD56A98C1D0F9D60008973FA /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD56A98A1D0F9D60008973FA /* PhotoCollectionViewCell.xib */; };
+		FD56A98E1D0FD8A5008973FA /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD56A98D1D0FD8A5008973FA /* 1.plist */; };
+		FD56A9911D0FD8BF008973FA /* XMGShop.m in Sources */ = {isa = PBXBuildFile; fileRef = FD56A9901D0FD8BF008973FA /* XMGShop.m */; };
+		FD56A9931D0FD922008973FA /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = FD56A9921D0FD922008973FA /* loading.png */; };
+		FD56A9991D0FE5F0008973FA /* UIViewController+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FD56A9981D0FE5F0008973FA /* UIViewController+XMGExtension.m */; };
 		FD578E541C1E69CB00F13038 /* CustomKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD578E531C1E69CB00F13038 /* CustomKeyboardView.m */; };
 		FD578E561C1E69E200F13038 /* CustomKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD578E551C1E69E200F13038 /* CustomKeyboardView.xib */; };
 		FD578E591C1E76D100F13038 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD578E581C1E76D000F13038 /* CustomView.m */; };
@@ -1013,6 +1021,18 @@
 		FD4EC8A81CBDF59B00BA89C2 /* DOPNavbarMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPNavbarMenu.m; sourceTree = "<group>"; };
 		FD4EC8A91CBDF59B00BA89C2 /* UIView+DOPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DOPExtension.h"; sourceTree = "<group>"; };
 		FD4EC8AA1CBDF59B00BA89C2 /* UIView+DOPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DOPExtension.m"; sourceTree = "<group>"; };
+		FD51330F1D0F9A14007B8FA6 /* WaterfallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallViewController.h; sourceTree = "<group>"; };
+		FD5133101D0F9A14007B8FA6 /* WaterfallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallViewController.m; sourceTree = "<group>"; };
+		FD5133121D0F9BE7007B8FA6 /* WaterFallFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFallFlowLayout.h; sourceTree = "<group>"; };
+		FD5133131D0F9BE7007B8FA6 /* WaterFallFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFallFlowLayout.m; sourceTree = "<group>"; };
+		FD56A9881D0F9D60008973FA /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		FD56A9891D0F9D60008973FA /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		FD56A98A1D0F9D60008973FA /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		FD56A98D1D0FD8A5008973FA /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 1.plist; sourceTree = "<group>"; };
+		FD56A98F1D0FD8BF008973FA /* XMGShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGShop.h; sourceTree = "<group>"; };
+		FD56A9901D0FD8BF008973FA /* XMGShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGShop.m; sourceTree = "<group>"; };
+		FD56A9921D0FD922008973FA /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
+		FD56A9981D0FE5F0008973FA /* UIViewController+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XMGExtension.m"; sourceTree = "<group>"; };
 		FD578E521C1E69CB00F13038 /* CustomKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomKeyboardView.h; sourceTree = "<group>"; };
 		FD578E531C1E69CB00F13038 /* CustomKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKeyboardView.m; sourceTree = "<group>"; };
 		FD578E551C1E69E200F13038 /* CustomKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomKeyboardView.xib; sourceTree = "<group>"; };
@@ -2211,6 +2231,24 @@
 			path = DOPNavbarMenu;
 			sourceTree = "<group>";
 		};
+		FD51330E1D0F99CF007B8FA6 /* 瀑布流 */ = {
+			isa = PBXGroup;
+			children = (
+				FD56A98D1D0FD8A5008973FA /* 1.plist */,
+				FD56A9921D0FD922008973FA /* loading.png */,
+				FD56A98F1D0FD8BF008973FA /* XMGShop.h */,
+				FD56A9901D0FD8BF008973FA /* XMGShop.m */,
+				FD51330F1D0F9A14007B8FA6 /* WaterfallViewController.h */,
+				FD5133101D0F9A14007B8FA6 /* WaterfallViewController.m */,
+				FD5133121D0F9BE7007B8FA6 /* WaterFallFlowLayout.h */,
+				FD5133131D0F9BE7007B8FA6 /* WaterFallFlowLayout.m */,
+				FD56A9881D0F9D60008973FA /* PhotoCollectionViewCell.h */,
+				FD56A9891D0F9D60008973FA /* PhotoCollectionViewCell.m */,
+				FD56A98A1D0F9D60008973FA /* PhotoCollectionViewCell.xib */,
+			);
+			path = "瀑布流";
+			sourceTree = "<group>";
+		};
 		FD59DFC41CF68B77000A17A5 /* CoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -2796,7 +2834,7 @@
 				FDE3CA531C2A8B9900636C40 /* RAC */,
 				FDC29D081C2D3A2300F51079 /* Pop */,
 				FDBB58C11C434C69007DE015 /* FMDB */,
-				FDDB6DA01C7A9AFC00E49D8B /* HeaderVC */,
+				FDDB6DA01C7A9AFC00E49D8B /* 运行时 */,
 				FDD05BB21C7FEEF500B2F930 /* FFmpeg */,
 				FDE5AC221C8D181C006562E8 /* AssertAndQRCode摇一摇 */,
 				FD8D32F51C90FFBB00AD9638 /* AutoLayout/网络请求 */,
@@ -2817,6 +2855,7 @@
 				FD681E441CE993670098A1C5 /* 一键改变字体 */,
 				FD9106971CEAAF8000185386 /* IBDesignable可视化效果 */,
 				FD9106E21CEAF1EA00185386 /* 毛玻璃 */,
+				FD51330E1D0F99CF007B8FA6 /* 瀑布流 */,
 				FD59DFC41CF68B77000A17A5 /* CoreAnimation */,
 			);
 			name = ViewControllers;
@@ -3947,17 +3986,18 @@
 			name = Device;
 			sourceTree = "<group>";
 		};
-		FDDB6DA01C7A9AFC00E49D8B /* HeaderVC */ = {
+		FDDB6DA01C7A9AFC00E49D8B /* 运行时 */ = {
 			isa = PBXGroup;
 			children = (
 				FDDB6D9D1C7A9AF700E49D8B /* HeaderViewController.h */,
 				FDDB6D9E1C7A9AF700E49D8B /* HeaderViewController.m */,
 				FDDB6DA31C7ADA3D00E49D8B /* UIViewController+OverRite.h */,
 				FDDB6DA41C7ADA3D00E49D8B /* UIViewController+OverRite.m */,
+				FD56A9981D0FE5F0008973FA /* UIViewController+XMGExtension.m */,
 				FDDB6DA61C7AE61300E49D8B /* Student.h */,
 				FDDB6DA71C7AE61300E49D8B /* Student.m */,
 			);
-			name = HeaderVC;
+			name = "运行时";
 			sourceTree = "<group>";
 		};
 		FDDFDDAF1CA50F790038B658 /* 拖动图片和图像圆角 */ = {
@@ -4406,6 +4446,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD56A98E1D0FD8A5008973FA /* 1.plist in Resources */,
 				FDA9D4601C293F3D00CB9369 /* contacts_add_newmessage@2x.png in Resources */,
 				FDA34D631D0115E4003F4876 /* reset.css in Resources */,
 				FDA9D4881C294EB700CB9369 /* pop_Project@3x.png in Resources */,
@@ -4461,6 +4502,7 @@
 				FDA34DA91D0116DF003F4876 /* icon-google.png in Resources */,
 				FD7E112E1CD302FB000F9012 /* fontColor.plist in Resources */,
 				FDA34D491D01107C003F4876 /* test2.avi in Resources */,
+				FD56A9931D0FD922008973FA /* loading.png in Resources */,
 				FDB943AF1CCDFFF500449EB4 /* NotificationBackgroundSuccessIcon@2x.png in Resources */,
 				FD15CA091CFD8CA2001AF686 /* ico_appeal_03@3x.png in Resources */,
 				FDA34D871D011630003F4876 /* icon-ext.png in Resources */,
@@ -4503,6 +4545,7 @@
 				FDB06A981C99476C00056F10 /* adn.cer in Resources */,
 				FD7E11231CD302BD000F9012 /* fontColor.plist in Resources */,
 				FD9181691CAA7957001A0A73 /* loading_monkey@2x.png in Resources */,
+				FD56A98C1D0F9D60008973FA /* PhotoCollectionViewCell.xib in Resources */,
 				FDA34D6B1D0115E4003F4876 /* part4.png in Resources */,
 				FD6A760F1C7C315C00D7E5D8 /* share.png in Resources */,
 				FDD45C581CD1F4EF00C69F41 /* TestDemo.strings in Resources */,
@@ -4757,6 +4800,7 @@
 				FDD343FE1C9290B500F4677A /* InteractionTransitionAnimation.m in Sources */,
 				FDE9040B1C608ED800798583 /* CoreGraphicsView.m in Sources */,
 				FDAAAF3B1C8EBF8300CEF5CA /* ZXBitArray.m in Sources */,
+				FD56A9991D0FE5F0008973FA /* UIViewController+XMGExtension.m in Sources */,
 				FDFDC6B71CACF957002A6B03 /* UIView+SizeHeight.m in Sources */,
 				FDB943A41CCDFFF500449EB4 /* HexColor.m in Sources */,
 				FD9B51261CD09F06001E0E6D /* PopZgjViewController.m in Sources */,
@@ -4852,6 +4896,7 @@
 				FDAAAF4F1C8EBF8300CEF5CA /* ZXEncodeHints.m in Sources */,
 				FDAAAFC01C8EBF8300CEF5CA /* ZXPDF417Writer.m in Sources */,
 				FDE3CA3F1C2A62E000636C40 /* WebViewCosntroller.m in Sources */,
+				FD5133111D0F9A14007B8FA6 /* WaterfallViewController.m in Sources */,
 				FD91815D1CAA5F26001A0A73 /* SwipableViewController.m in Sources */,
 				FD9B51221CD09EDF001E0E6D /* PopCustomView.m in Sources */,
 				FD91815C1CAA5F26001A0A73 /* HorizonalTableViewController.m in Sources */,
@@ -4929,6 +4974,7 @@
 				FDD9384D1C88189E00DABD8C /* NSString+help.m in Sources */,
 				FDAAAFA61C8EBF8300CEF5CA /* ZXUPCEANWriter.m in Sources */,
 				FD68DDE81C9A828D00E73EF5 /* PayViewController.m in Sources */,
+				FD5133141D0F9BE7007B8FA6 /* WaterFallFlowLayout.m in Sources */,
 				FDAAAF7E1C8EBF8300CEF5CA /* ZXRSSExpandedDecodedChar.m in Sources */,
 				FDC95CAF1C34F51D00F6BD76 /* MyView.m in Sources */,
 				FDD564301D0D61B600A3A16F /* WXUtil.mm in Sources */,
@@ -5056,6 +5102,7 @@
 				FDAAAF3D1C8EBF8300CEF5CA /* ZXBitSource.m in Sources */,
 				FDAAAF5A1C8EBF8300CEF5CA /* ZXDataMatrixDecoder.m in Sources */,
 				FD578E541C1E69CB00F13038 /* CustomKeyboardView.m in Sources */,
+				FD56A9911D0FD8BF008973FA /* XMGShop.m in Sources */,
 				FDAAAF7F1C8EBF8300CEF5CA /* ZXRSSExpandedDecodedInformation.m in Sources */,
 				FDAAAFC51C8EBF8300CEF5CA /* ZXQRCodeDecoder.m in Sources */,
 				FDAAAF391C8EBF8300CEF5CA /* ZXReedSolomonDecoder.m in Sources */,
@@ -5106,6 +5153,7 @@
 				FDAAAF771C8EBF8300CEF5CA /* ZXAI013x0xDecoder.m in Sources */,
 				FDAAAF441C8EBF8300CEF5CA /* ZXGlobalHistogramBinarizer.m in Sources */,
 				FDD343F81C925EF600F4677A /* TestTransferViewController.m in Sources */,
+				FD56A98B1D0F9D60008973FA /* PhotoCollectionViewCell.m in Sources */,
 				FDAAAFC71C8EBF8300CEF5CA /* ZXQRCodeErrorCorrectionLevel.m in Sources */,
 				FD66F76B1D0509260019B772 /* WordParserViewController.m in Sources */,
 				FDAAAF541C8EBF8300CEF5CA /* ZXResult.m in Sources */,
@@ -5643,10 +5691,8 @@
 					"$(PROJECT_DIR)/Tools",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tools/Alipay",
-					"$(PROJECT_DIR)/Tools/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/TestDemo/Vendor/ZBarSDK",
-					"$(PROJECT_DIR)/TestDemo/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/Tools/WeChatSDK",
 				);
 				OTHER_LDFLAGS = (
@@ -5711,10 +5757,8 @@
 					"$(PROJECT_DIR)/Tools",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tools/Alipay",
-					"$(PROJECT_DIR)/Tools/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/TestDemo/Vendor/ZBarSDK",
-					"$(PROJECT_DIR)/TestDemo/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/Tools/WeChatSDK",
 				);
 				OTHER_LDFLAGS = (

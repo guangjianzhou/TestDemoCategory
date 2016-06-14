@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0ACF401B84898E3FB1F3DB62'
+               BlueprintIdentifier = '5ACC4394FBC6DEA39AB871B5'
                BlueprintName = 'LDProgressView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libLDProgressView.a'>

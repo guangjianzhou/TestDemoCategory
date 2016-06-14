@@ -10,6 +10,7 @@
 
 @interface Student : NSObject
 
-@property (nonatomic, assign) BOOL isShow;
+- (void)run;
+- (void)study;
 
 @end

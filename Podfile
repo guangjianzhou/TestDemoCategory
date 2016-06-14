@@ -65,7 +65,7 @@ pod 'SSZipArchive', '~> 1.1'
 pod 'KVNProgress', '~> 2.2.1'
 pod 'MBProgressHUD', '~> 0.9.1'     # 实现多种HUD效果，可自定义程度高
 pod 'SVProgressHUD', '~> 2.0.3'     # 实现多种HUD效果(推荐)
-pod 'TSMessages', '~> 0.9.12'       #消息弹出（从UI上部--导航栏弹出）(推荐)
+#pod 'TSMessages', '~> 0.9.12'       #消息弹出（从UI上部--导航栏弹出）(推荐)
 pod 'AMPopTip', '~> 0.9.12'         #信息提示控件，具有漂亮的弹出框动画效果。可以设置弹出框的弹出方向以及弹出框的箭头指向
 
 

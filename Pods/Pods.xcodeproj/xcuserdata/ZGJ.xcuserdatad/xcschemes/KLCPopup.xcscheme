@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0B204371F534DF25DC66EB7F'
+               BlueprintIdentifier = 'A4D0FCC564CE3752A4D2A78C'
                BlueprintName = 'KLCPopup'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libKLCPopup.a'>

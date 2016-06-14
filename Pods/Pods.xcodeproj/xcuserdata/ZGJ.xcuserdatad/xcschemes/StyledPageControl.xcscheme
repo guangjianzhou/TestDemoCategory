@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '16C0982B3FE1227CB608397A'
+               BlueprintIdentifier = '4922519047EA695A934E0DD2'
                BlueprintName = 'StyledPageControl'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libStyledPageControl.a'>

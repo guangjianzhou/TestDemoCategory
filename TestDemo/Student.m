@@ -10,4 +10,14 @@
 
 @implementation Student
 
+- (void)run
+{
+    NSLog(@"%s", __func__);
+}
+
+- (void)study
+{
+    NSLog(@"%s", __func__);
+}
+
 @end

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E2897A4E2C9313766281CE9B'
+               BlueprintIdentifier = 'FFBBB84758A912E92AB25D0F'
                BlueprintName = 'BButton'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libBButton.a'>

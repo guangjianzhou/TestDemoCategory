@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '236DCF2E0429E439082A1661'
+               BlueprintIdentifier = 'CD3C2AD759F4CF66BC619B45'
                BlueprintName = 'FBRetainCycleDetector'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libFBRetainCycleDetector.a'>

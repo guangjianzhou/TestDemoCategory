@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6738A3AC932151533BCB9D32'
+               BlueprintIdentifier = '04600BBBA10D3F73CE5FF9E9'
                BlueprintName = 'Onboard'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libOnboard.a'>
