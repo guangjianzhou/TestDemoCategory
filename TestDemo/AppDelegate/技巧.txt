@@ -261,6 +261,27 @@ b.//是否隐藏
 
     ## 快速上手公司的旧项目
 
+14.const
+
+#define Red 0.4  宏
+
+const CGFloat Red = 0.4
+extern const CGFloat Red;
+
+const int *p1;   const 右边是*p1,*p1不能改变
+int const *p1;
+
+
+int * const p1; const 右边是p1,p1不能改
+
+int a = 10;
+
+p1 = &a;
+*p1 = 20;
+
+
+
+
 
 
 

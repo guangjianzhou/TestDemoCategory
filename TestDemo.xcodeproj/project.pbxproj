@@ -12,6 +12,7 @@
 		FD0C19BF1C338306008AE06F /* WCAlertview.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0C19BE1C338306008AE06F /* WCAlertview.m */; };
 		FD15CA071CFD8627001AF686 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = FD15CA061CFD8627001AF686 /* index.html */; };
 		FD15CA091CFD8CA2001AF686 /* ico_appeal_03@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD15CA081CFD8CA2001AF686 /* ico_appeal_03@3x.png */; };
+		FD1E1E9A1D111B82005638B3 /* CustomScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1E1E991D111B82005638B3 /* CustomScrollViewController.m */; };
 		FD211F671C2BF45900C7ACCC /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = FD211F611C2BF45900C7ACCC /* 4.png */; };
 		FD211F681C2BF45900C7ACCC /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = FD211F621C2BF45900C7ACCC /* 5.png */; };
 		FD211F691C2BF45900C7ACCC /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = FD211F631C2BF45900C7ACCC /* 6.png */; };
@@ -41,6 +42,7 @@
 		FD578E591C1E76D100F13038 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD578E581C1E76D000F13038 /* CustomView.m */; };
 		FD578E5B1C1E76E700F13038 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD578E5A1C1E76E700F13038 /* CustomView.xib */; };
 		FD59DFC31CF68B48000A17A5 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD59DFC21CF68B48000A17A5 /* AnimationViewController.m */; };
+		FD59EFEA1D113A7F00E6AFCC /* XMGInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD59EFE91D113A7F00E6AFCC /* XMGInfiniteScrollView.m */; };
 		FD66F76B1D0509260019B772 /* WordParserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD66F76A1D0509260019B772 /* WordParserViewController.m */; };
 		FD66F76E1D0509400019B772 /* ffxy.docx in Resources */ = {isa = PBXBuildFile; fileRef = FD66F76D1D0509400019B772 /* ffxy.docx */; };
 		FD66FC4A1CCF6A0E007BE0B9 /* FFmpegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD66FC491CCF6A0E007BE0B9 /* FFmpegViewController.m */; };
@@ -1007,6 +1009,8 @@
 		FD0C19BE1C338306008AE06F /* WCAlertview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAlertview.m; sourceTree = "<group>"; };
 		FD15CA061CFD8627001AF686 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		FD15CA081CFD8CA2001AF686 /* ico_appeal_03@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_appeal_03@3x.png"; sourceTree = "<group>"; };
+		FD1E1E981D111B82005638B3 /* CustomScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomScrollViewController.h; sourceTree = "<group>"; };
+		FD1E1E991D111B82005638B3 /* CustomScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomScrollViewController.m; sourceTree = "<group>"; };
 		FD211F611C2BF45900C7ACCC /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		FD211F621C2BF45900C7ACCC /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 		FD211F631C2BF45900C7ACCC /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
@@ -1047,6 +1051,9 @@
 		FD578E5A1C1E76E700F13038 /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		FD59DFC11CF68B48000A17A5 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
 		FD59DFC21CF68B48000A17A5 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		FD59EFE81D113A7F00E6AFCC /* XMGInfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGInfiniteScrollView.h; sourceTree = "<group>"; };
+		FD59EFE91D113A7F00E6AFCC /* XMGInfiniteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGInfiniteScrollView.m; sourceTree = "<group>"; };
+		FD59EFEB1D11418500E6AFCC /* VendorMacro.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VendorMacro.m; sourceTree = "<group>"; };
 		FD66F7691D0509260019B772 /* WordParserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordParserViewController.h; sourceTree = "<group>"; };
 		FD66F76A1D0509260019B772 /* WordParserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordParserViewController.m; sourceTree = "<group>"; };
 		FD66F76D1D0509400019B772 /* ffxy.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = ffxy.docx; sourceTree = "<group>"; };
@@ -2208,6 +2215,15 @@
 			path = CustomUIAlertView;
 			sourceTree = "<group>";
 		};
+		FD1E1E971D111B59005638B3 /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				FD1E1E981D111B82005638B3 /* CustomScrollViewController.h */,
+				FD1E1E991D111B82005638B3 /* CustomScrollViewController.m */,
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
 		FD2C9FE31D0E5D4400C9DBF8 /* CustomWindow */ = {
 			isa = PBXGroup;
 			children = (
@@ -2273,6 +2289,15 @@
 				FD59DFC21CF68B48000A17A5 /* AnimationViewController.m */,
 			);
 			name = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		FD59EFE71D113A6200E6AFCC /* UIScrollView循环分页 */ = {
+			isa = PBXGroup;
+			children = (
+				FD59EFE81D113A7F00E6AFCC /* XMGInfiniteScrollView.h */,
+				FD59EFE91D113A7F00E6AFCC /* XMGInfiniteScrollView.m */,
+			);
+			path = "UIScrollView循环分页";
 			sourceTree = "<group>";
 		};
 		FD66F76C1D05092B0019B772 /* Word文档修改 */ = {
@@ -2557,6 +2582,7 @@
 		FD8A99A41C22850300AB4E6B /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FD59EFE71D113A6200E6AFCC /* UIScrollView循环分页 */,
 				FD2C9FE31D0E5D4400C9DBF8 /* CustomWindow */,
 				FD7E12911CD3316F000F9012 /* ISUzbar */,
 				FDB943861CCDFFF500449EB4 /* TSMessages */,
@@ -2839,6 +2865,7 @@
 		FDA9D44A1C2938A100CB9369 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FD1E1E971D111B59005638B3 /* UIScrollView */,
 				FD56A99A1D0FF0A5008973FA /* ios9新加 */,
 				FD6C82A11CFEB68700320D6B /* OpenCV */,
 				FDCCF0481C605DAF0012F928 /* Core Graphics */,
@@ -2956,6 +2983,7 @@
 				FDE9BA621CC72F0E00E6239F /* NSErrorViewController.m */,
 				FDE9BA631CC72F0E00E6239F /* NSErrorViewController.xib */,
 				FD8D8C921CC9BEEC00429DCF /* VendorMacro.h */,
+				FD59EFEB1D11418500E6AFCC /* VendorMacro.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -4851,6 +4879,7 @@
 				FDAAAFD01C8EBF8300CEF5CA /* ZXQRCodeFinderPatternInfo.m in Sources */,
 				FDAAAFD11C8EBF8300CEF5CA /* ZXQRCode.m in Sources */,
 				FD7E12891CD30A91000F9012 /* ThemeManager.m in Sources */,
+				FD1E1E9A1D111B82005638B3 /* CustomScrollViewController.m in Sources */,
 				FDAAAF8B1C8EBF8300CEF5CA /* ZXRSSFinderPattern.m in Sources */,
 				FDAAAFCA1C8EBF8300CEF5CA /* ZXQRCodeVersion.m in Sources */,
 				FDDB81501C3F56AA00BEBCB3 /* PopUpZgjView.m in Sources */,
@@ -4988,6 +5017,7 @@
 				FDAAAF041C8EBF8300CEF5CA /* ZXAztecCode.m in Sources */,
 				FDAAAF261C8EBF8300CEF5CA /* ZXTelResultParser.m in Sources */,
 				FDB943B81CCDFFF500449EB4 /* TSMessageView.m in Sources */,
+				FD59EFEA1D113A7F00E6AFCC /* XMGInfiniteScrollView.m in Sources */,
 				FDAAAFBB1C8EBF8300CEF5CA /* ZXPDF417ErrorCorrection.m in Sources */,
 				FDAAAF4D1C8EBF8300CEF5CA /* ZXDecodeHints.m in Sources */,
 				FDD45C551CD1F2D100C69F41 /* ISULanguageManger.m in Sources */,

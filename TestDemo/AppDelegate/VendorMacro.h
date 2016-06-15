@@ -5,6 +5,8 @@
 //  Created by guangjianzhou on 16/4/22.
 //  Copyright © 2016年 guangjianzhou. All rights reserved.
 //
+#import <UIKit/UIKit.h>
+
 
 #ifndef VendorMacro_h
 #define VendorMacro_h
@@ -22,3 +24,8 @@
 #define kThemeDidChangeNotification     @"ThemeDidChangeNotification"    //更改主题的通知
 #define kThemeName                      @"kThemeName"
 
+
+
+UIKIT_EXTERN const CGFloat Color_Red;
+UIKIT_EXTERN const CGFloat Color_Blue;
+UIKIT_EXTERN const CGFloat Color_Green;

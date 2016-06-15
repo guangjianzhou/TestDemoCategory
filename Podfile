@@ -1,4 +1,5 @@
 platform :ios, "7.0"
+use_frameworks!
 
 #----------------------常用工具----------------------
 pod 'AFNetworking','~>2.6.3'                #网络请求
