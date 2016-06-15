@@ -15,6 +15,7 @@
 #import "RongCloudManager.h"
 #include <AudioToolbox/AudioToolbox.h>
 #import "ISULanguageManger.h"
+#import "TopWindowViewController.h"
 
 #define  kBackButtonFontSize 16
 #define  kNavTitleFontSize 18
@@ -25,6 +26,8 @@ NSString * const NotificationActionOneIdent = @"ACTION_ONE";
 NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
 
 @interface AppDelegate ()<WXApiDelegate>
+
+@property (nonatomic, strong) UIWindow *topWindow;
 
 @end
 
@@ -38,8 +41,11 @@ NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        exit(0);
     });
+    
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
     [application setValue:[UIColor redColor] forKeyPath:@"statusBarWindow.statusBar.foregroundColor"];
+    
+//    [self addCustomWindow:application];
     
     if ([[UIDevice currentDevice].systemVersion integerValue] > 7)
     {
@@ -160,6 +166,16 @@ NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
     
     
     
+}
+
+- (void)addCustomWindow:(UIApplication *)application
+{
+    self.topWindow = [[UIWindow alloc] init];
+    self.topWindow.frame = application.statusBarFrame;
+    self.topWindow.hidden = NO;
+    self.topWindow.windowLevel = UIWindowLevelAlert;
+    self.topWindow.backgroundColor = [UIColor clearColor];
+    self.topWindow.rootViewController = [[TopWindowViewController alloc] init];
 }
 
 - (void)confing

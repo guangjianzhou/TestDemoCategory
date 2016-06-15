@@ -24,4 +24,7 @@
     //换完之后，接着执行系统原先的方法
 //    [self xmg_dealloc];(dealloc系统方法比较特殊)
 }
+
+
+
 @end

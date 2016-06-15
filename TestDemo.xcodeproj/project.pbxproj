@@ -20,6 +20,7 @@
 		FD211F6C1C2BF45900C7ACCC /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = FD211F661C2BF45900C7ACCC /* 1.png */; };
 		FD23ED7E1C1EC19F0013BDC2 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23ED7D1C1EC19F0013BDC2 /* Status.m */; };
 		FD2C9FE21D0E5D2600C9DBF8 /* TopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2C9FE11D0E5D2600C9DBF8 /* TopWindow.m */; };
+		FD39B9931D10F8330054A6B2 /* TopWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD39B9921D10F8330054A6B2 /* TopWindowViewController.m */; };
 		FD4EC8A41CBDF57F00BA89C2 /* HMWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4EC8A31CBDF57F00BA89C2 /* HMWaterflowLayout.m */; };
 		FD4EC8A51CBDF57F00BA89C2 /* HMWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4EC8A31CBDF57F00BA89C2 /* HMWaterflowLayout.m */; };
 		FD4EC8AB1CBDF59B00BA89C2 /* DOPNavbarMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4EC8A81CBDF59B00BA89C2 /* DOPNavbarMenu.m */; };
@@ -34,6 +35,7 @@
 		FD56A9911D0FD8BF008973FA /* XMGShop.m in Sources */ = {isa = PBXBuildFile; fileRef = FD56A9901D0FD8BF008973FA /* XMGShop.m */; };
 		FD56A9931D0FD922008973FA /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = FD56A9921D0FD922008973FA /* loading.png */; };
 		FD56A9991D0FE5F0008973FA /* UIViewController+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FD56A9981D0FE5F0008973FA /* UIViewController+XMGExtension.m */; };
+		FD56A99D1D0FF0B5008973FA /* iOS9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD56A99C1D0FF0B5008973FA /* iOS9ViewController.m */; };
 		FD578E541C1E69CB00F13038 /* CustomKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD578E531C1E69CB00F13038 /* CustomKeyboardView.m */; };
 		FD578E561C1E69E200F13038 /* CustomKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD578E551C1E69E200F13038 /* CustomKeyboardView.xib */; };
 		FD578E591C1E76D100F13038 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD578E581C1E76D000F13038 /* CustomView.m */; };
@@ -1015,6 +1017,8 @@
 		FD23ED7D1C1EC19F0013BDC2 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
 		FD2C9FE01D0E5D2600C9DBF8 /* TopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopWindow.h; path = ../../TopWindow.h; sourceTree = "<group>"; };
 		FD2C9FE11D0E5D2600C9DBF8 /* TopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopWindow.m; path = ../../TopWindow.m; sourceTree = "<group>"; };
+		FD39B9911D10F8330054A6B2 /* TopWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopWindowViewController.h; sourceTree = "<group>"; };
+		FD39B9921D10F8330054A6B2 /* TopWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopWindowViewController.m; sourceTree = "<group>"; };
 		FD4EC8A21CBDF57F00BA89C2 /* HMWaterflowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMWaterflowLayout.h; sourceTree = "<group>"; };
 		FD4EC8A31CBDF57F00BA89C2 /* HMWaterflowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMWaterflowLayout.m; sourceTree = "<group>"; };
 		FD4EC8A71CBDF59B00BA89C2 /* DOPNavbarMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPNavbarMenu.h; sourceTree = "<group>"; };
@@ -1033,6 +1037,8 @@
 		FD56A9901D0FD8BF008973FA /* XMGShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGShop.m; sourceTree = "<group>"; };
 		FD56A9921D0FD922008973FA /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
 		FD56A9981D0FE5F0008973FA /* UIViewController+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XMGExtension.m"; sourceTree = "<group>"; };
+		FD56A99B1D0FF0B5008973FA /* iOS9ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOS9ViewController.h; sourceTree = "<group>"; };
+		FD56A99C1D0FF0B5008973FA /* iOS9ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOS9ViewController.m; sourceTree = "<group>"; };
 		FD578E521C1E69CB00F13038 /* CustomKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomKeyboardView.h; sourceTree = "<group>"; };
 		FD578E531C1E69CB00F13038 /* CustomKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKeyboardView.m; sourceTree = "<group>"; };
 		FD578E551C1E69E200F13038 /* CustomKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomKeyboardView.xib; sourceTree = "<group>"; };
@@ -2249,6 +2255,17 @@
 			path = "瀑布流";
 			sourceTree = "<group>";
 		};
+		FD56A99A1D0FF0A5008973FA /* ios9新加 */ = {
+			isa = PBXGroup;
+			children = (
+				FD39B9911D10F8330054A6B2 /* TopWindowViewController.h */,
+				FD39B9921D10F8330054A6B2 /* TopWindowViewController.m */,
+				FD56A99B1D0FF0B5008973FA /* iOS9ViewController.h */,
+				FD56A99C1D0FF0B5008973FA /* iOS9ViewController.m */,
+			);
+			path = "ios9新加";
+			sourceTree = "<group>";
+		};
 		FD59DFC41CF68B77000A17A5 /* CoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -2822,6 +2839,7 @@
 		FDA9D44A1C2938A100CB9369 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FD56A99A1D0FF0A5008973FA /* ios9新加 */,
 				FD6C82A11CFEB68700320D6B /* OpenCV */,
 				FDCCF0481C605DAF0012F928 /* Core Graphics */,
 				FDFA16201C5EEF23007D27C7 /* Loc&kUISearchController */,
@@ -4824,6 +4842,7 @@
 				FDAAAF2E1C8EBF8300CEF5CA /* ZXVINResultParser.m in Sources */,
 				FDAAAFA41C8EBF8300CEF5CA /* ZXUPCEANExtensionSupport.m in Sources */,
 				FD68DE5F1C9A83F800E73EF5 /* RSADataVerifier.m in Sources */,
+				FD39B9931D10F8330054A6B2 /* TopWindowViewController.m in Sources */,
 				FDAAAF351C8EBF8300CEF5CA /* ZXMonochromeRectangleDetector.m in Sources */,
 				FDA9EBFF1CA8D8E200217B92 /* ImageCropperView.m in Sources */,
 				FDAAAF7D1C8EBF8300CEF5CA /* ZXRSSExpandedCurrentParsingState.m in Sources */,
@@ -4931,6 +4950,7 @@
 				FDAAAF2B1C8EBF8300CEF5CA /* ZXVCardResultParser.m in Sources */,
 				FD68DE571C9A83F800E73EF5 /* Order.m in Sources */,
 				FDAAAF201C8EBF8300CEF5CA /* ZXResultParser.m in Sources */,
+				FD56A99D1D0FF0B5008973FA /* iOS9ViewController.m in Sources */,
 				FDA9D46F1C29457C00CB9369 /* GlowImageView.m in Sources */,
 				FDAAAF6D1C8EBF8300CEF5CA /* ZXMaxiCodeDecoder.m in Sources */,
 				FDD9382C1C87D2F500DABD8C /* ThrowLineTool.m in Sources */,

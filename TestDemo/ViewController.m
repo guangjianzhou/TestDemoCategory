@@ -31,6 +31,9 @@
 #import "AnimationViewController.h"
 #import "OpenCVViewController.h"
 #import "WaterfallViewController.h"
+#import "Student.h"
+#import "iOS9ViewController.h"
+
 
 #define NSNullObjects @[@"",@0,@{},@[]]
 
@@ -215,7 +218,7 @@
     
     
     
-    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"运行时",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",@"改变字体",@"IBDesignable",@"毛玻璃",@"CoreAnimation",@"OpenCV",@"瀑布流",nil];
+    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"运行时",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",@"改变字体",@"IBDesignable",@"毛玻璃",@"CoreAnimation",@"OpenCV",@"瀑布流",@"iOS9",nil];
     [self configClass];
     
     _hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
@@ -885,6 +888,11 @@
         WaterfallViewController *waterfallVC = [[WaterfallViewController alloc] init];
         [self.navigationController pushViewController:waterfallVC animated:YES];
     }
+    else if ([title isEqualToString:@"iOS9"])
+    {
+        iOS9ViewController *iOS9VC = [[iOS9ViewController alloc] init];
+        [self.navigationController pushViewController:iOS9VC animated:YES];
+    }
     
 }
 
@@ -995,6 +1003,22 @@
     //按下状态
     [self.testBtn setTitle:@"呵呵" forState:UIControlStateHighlighted];
     [self.testBtn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+    
+    
+    //kvc
+    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"zgj",@"name",@"98",@"age", nil];
+    
+    
+    [dic setValue:@"27" forKey:@"age"];
+//    {
+//        age = 27;
+//        name = zgj;
+//    }
+    NSLog(@"==%@=",dic);
+    
+    Student *student = [[Student alloc] init];
+    [student setValue:@"25" forKey:@"age"];    // 没有name crash
+    NSLog(@"=====%@=",[student valueForKey:@"age"]); //valueForUndefinedKey: crash
     
 }
 

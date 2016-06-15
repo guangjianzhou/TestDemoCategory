@@ -20,4 +20,18 @@
     NSLog(@"%s", __func__);
 }
 
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    //
+    NSLog(@"===%@==%@=",value,key);
+}
+
+- (id)valueForUndefinedKey:(NSString *)key
+{
+    NSLog(@"===%@==",key);
+    return  @"自己重写了valueForUndefinedKey";
+    
+}
+
 @end
