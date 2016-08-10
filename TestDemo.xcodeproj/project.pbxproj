@@ -22,6 +22,7 @@
 		FD23ED7E1C1EC19F0013BDC2 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23ED7D1C1EC19F0013BDC2 /* Status.m */; };
 		FD2C9FE21D0E5D2600C9DBF8 /* TopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2C9FE11D0E5D2600C9DBF8 /* TopWindow.m */; };
 		FD39B9931D10F8330054A6B2 /* TopWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD39B9921D10F8330054A6B2 /* TopWindowViewController.m */; };
+		FD4970D21D54644200E167CD /* NSData+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4970D11D54644200E167CD /* NSData+help.m */; };
 		FD4EC8A41CBDF57F00BA89C2 /* HMWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4EC8A31CBDF57F00BA89C2 /* HMWaterflowLayout.m */; };
 		FD4EC8A51CBDF57F00BA89C2 /* HMWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4EC8A31CBDF57F00BA89C2 /* HMWaterflowLayout.m */; };
 		FD4EC8AB1CBDF59B00BA89C2 /* DOPNavbarMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4EC8A81CBDF59B00BA89C2 /* DOPNavbarMenu.m */; };
@@ -102,6 +103,7 @@
 		FD87E0DD1CB393FF009BE457 /* TZTestTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD87E0D91CB393FF009BE457 /* TZTestTwoViewController.xib */; };
 		FD87E0E11CB3AAD2009BE457 /* FileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD87E0E01CB3AAD2009BE457 /* FileCell.m */; };
 		FD87E0E41CB3B26C009BE457 /* FileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD87E0E31CB3B26C009BE457 /* FileModel.m */; };
+		FD8A0F011D5AD49C00A48A38 /* CgView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8A0F001D5AD49C00A48A38 /* CgView.m */; };
 		FD8A99AB1C22864800AB4E6B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8A99AA1C22864800AB4E6B /* SecondViewController.m */; };
 		FD8A99AE1C229A1800AB4E6B /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8A99AD1C229A1800AB4E6B /* ThirdViewController.m */; };
 		FD8D32F41C90FFB500AD9638 /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8D32F31C90FFB500AD9638 /* AutoLayoutViewController.m */; };
@@ -1023,6 +1025,8 @@
 		FD2C9FE11D0E5D2600C9DBF8 /* TopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopWindow.m; path = ../../TopWindow.m; sourceTree = "<group>"; };
 		FD39B9911D10F8330054A6B2 /* TopWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopWindowViewController.h; sourceTree = "<group>"; };
 		FD39B9921D10F8330054A6B2 /* TopWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopWindowViewController.m; sourceTree = "<group>"; };
+		FD4970D01D54644200E167CD /* NSData+help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+help.h"; sourceTree = "<group>"; };
+		FD4970D11D54644200E167CD /* NSData+help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+help.m"; sourceTree = "<group>"; };
 		FD4EC8A21CBDF57F00BA89C2 /* HMWaterflowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMWaterflowLayout.h; sourceTree = "<group>"; };
 		FD4EC8A31CBDF57F00BA89C2 /* HMWaterflowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMWaterflowLayout.m; sourceTree = "<group>"; };
 		FD4EC8A71CBDF59B00BA89C2 /* DOPNavbarMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPNavbarMenu.h; sourceTree = "<group>"; };
@@ -1223,6 +1227,8 @@
 		FD87E0E01CB3AAD2009BE457 /* FileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCell.m; sourceTree = "<group>"; };
 		FD87E0E21CB3B26C009BE457 /* FileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileModel.h; sourceTree = "<group>"; };
 		FD87E0E31CB3B26C009BE457 /* FileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileModel.m; sourceTree = "<group>"; };
+		FD8A0EFF1D5AD49C00A48A38 /* CgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CgView.h; sourceTree = "<group>"; };
+		FD8A0F001D5AD49C00A48A38 /* CgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CgView.m; sourceTree = "<group>"; };
 		FD8A99A91C22864800AB4E6B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		FD8A99AA1C22864800AB4E6B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		FD8A99AC1C229A1800AB4E6B /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
@@ -2858,6 +2864,8 @@
 				FDDB81511C3F56EF00BEBCB3 /* PopUpZgjView.xib */,
 				FDDF578C1CAE54C500F78DEF /* AvatarView.h */,
 				FDDF578D1CAE54C500F78DEF /* AvatarView.m */,
+				FD8A0EFF1D5AD49C00A48A38 /* CgView.h */,
+				FD8A0F001D5AD49C00A48A38 /* CgView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -2959,6 +2967,8 @@
 				FDD938491C88189300DABD8C /* NSObject+help.m */,
 				FDD938451C88188500DABD8C /* UIColor+help.h */,
 				FDD938461C88188500DABD8C /* UIColor+help.m */,
+				FD4970D01D54644200E167CD /* NSData+help.h */,
+				FD4970D11D54644200E167CD /* NSData+help.m */,
 				FD7E27011C1914E4002D4CDD /* NSDate+help.h */,
 				FD7E27021C1914E4002D4CDD /* NSDate+help.m */,
 				FDE22E741CABB4090018E643 /* NSFileManager+help.h */,
@@ -4926,6 +4936,7 @@
 				FDA9D4571C293DBC00CB9369 /* XHPopMenu.m in Sources */,
 				FDAAAF3E1C8EBF8300CEF5CA /* ZXBoolArray.m in Sources */,
 				FDAAAF901C8EBF8300CEF5CA /* ZXCode128Reader.m in Sources */,
+				FD8A0F011D5AD49C00A48A38 /* CgView.m in Sources */,
 				FD76AB531C97B9120071F9AB /* BLEViewController.m in Sources */,
 				FDA9D4581C293DBC00CB9369 /* XHPopMenuItem.m in Sources */,
 				FD7E27031C1914E4002D4CDD /* NSDate+help.m in Sources */,
@@ -5066,6 +5077,7 @@
 				FD2C9FE21D0E5D2600C9DBF8 /* TopWindow.m in Sources */,
 				FDAAAF7C1C8EBF8300CEF5CA /* ZXRSSExpandedBlockParsedResult.m in Sources */,
 				FDD9385A1C88190400DABD8C /* UIViewController+help.m in Sources */,
+				FD4970D21D54644200E167CD /* NSData+help.m in Sources */,
 				FDF592141C0EB43C00AF8B5C /* main.m in Sources */,
 				FDAAAF671C8EBF8300CEF5CA /* ZXDataMatrixTextEncoder.m in Sources */,
 				FDA9EC001CA8D8E200217B92 /* UIImage+Rotation.m in Sources */,

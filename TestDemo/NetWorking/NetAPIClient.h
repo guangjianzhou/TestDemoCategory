@@ -22,6 +22,8 @@ typedef NS_ENUM (NSUInteger, NetRequestType){
 typedef NS_ENUM (NSUInteger, NetRequestContentType) {
     NetRequestContent_RecordSet,             // 录音设置
     NetRequestContent_RecordLogSave,         // 保存通话日志
+    
+    NetRequestContent_Test,
 };
 
 

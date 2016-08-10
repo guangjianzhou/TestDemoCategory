@@ -124,6 +124,10 @@ const NSInteger kAPI_Timeout = 15;
 //url 修改
 -(NSString *)httpNetRuquestUrl:(NetRequestContentType)contentType
 {
+    if (contentType == NetRequestContent_Test) {
+        return  @"http://123.1.170:9000/apistore/appapi/registerUser";
+    }
+    
     NSString *httpUrl = @"http://apicloud.mob.com/cook/menu/query?key=d1bcf0d1bb38&id=00100010110000034063";
     return httpUrl;
 }

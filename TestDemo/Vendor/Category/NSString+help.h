@@ -124,5 +124,21 @@
 + (BOOL)isURL:(NSString *)string;
 
 
+/**
+ *	@brief base64编码
+ *
+ *
+ *	@returns 加密串
+ */
+- (NSString *)base64EncodedString;
+
+/**
+ *	@brief base64解码
+ *
+ *
+ *	@returns 解密串
+ */
+- (NSString *)base64DecodedString;
+
 @end
 

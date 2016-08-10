@@ -998,6 +998,18 @@
 #pragma mark  - Button状态
 - (void)btnStatus
 {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:@{@"userName":@"zgj",@"password":@"1234",@"email":@"zgj6406400@163.com",@"realName":@"哈哈",@"qq":@"1234555"}];
+    
+    [[NetAPIClient sharedClient]requestDataWithDic:dic requestType:NetRequestPost contentType:NetRequestContent_Test finishBlock:^(id responserObj) {
+        NSLog(@"====responserObj%@===",responserObj);
+    } failBlock:^(NSError *error) {
+        NSLog(@"====error%@===",error);
+    } errorBlock:^(NSError *error) {
+        NSLog(@"====error%@===",error);
+    }];
+    
+    
     int a = 10.1;
     
     [self.testBtn setTitle:@"helloNormal" forState:UIControlStateNormal];
@@ -1010,15 +1022,15 @@
     
     
     //kvc
-    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"zgj",@"name",@"98",@"age", nil];
+    NSMutableDictionary *dic1 = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"zgj",@"name",@"98",@"age", nil];
     
     
-    [dic setValue:@"27" forKey:@"age"];
+    [dic1 setValue:@"27" forKey:@"age"];
 //    {
 //        age = 27;
 //        name = zgj;
 //    }
-    NSLog(@"==%@=",dic);
+    NSLog(@"==%@=",dic1);
     
     Student *student = [[Student alloc] init];
     [student setValue:@"25" forKey:@"age"];    // 没有name crash
