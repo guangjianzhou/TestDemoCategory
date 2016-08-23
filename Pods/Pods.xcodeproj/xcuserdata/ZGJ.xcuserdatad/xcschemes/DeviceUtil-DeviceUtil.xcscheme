@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D1CCFBA349945189F1AD78D6'
+               BlueprintIdentifier = '60364B522DB4905973E45201E0F72A34'
                BlueprintName = 'DeviceUtil-DeviceUtil'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'DeviceUtil.bundle'>

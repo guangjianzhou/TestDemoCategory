@@ -11,9 +11,16 @@
 #import "Masonry.h"
 #import "UIImage+help.h"
 #import "UIColor+help.h"
+#import <CoreLocation/CoreLocation.h>
+#import <CoreTelephony/CTCellularData.h>
+#import <AddressBook/AddressBook.h>
+@import Photos;
 
-@interface SystemViewController ()<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
+@interface SystemViewController ()<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate>
+{
+    CLLocationManager *manager;
+}
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataSourceArray;
 @property (nonatomic, strong) UIImageView *imageView;
@@ -50,6 +57,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+//    [self judegeInteNet];
+//    [self photoAuto];
+//    [self cameraAuthor];
+    [self location];
 
     
 //    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -149,7 +160,6 @@
 - (UIImagePickerController *)imagePVCWithSourceType:(UIImagePickerControllerSourceType)sourceType
 {
     //字体默认英文 国际化
-    
     UIImagePickerController *picker = [[UIImagePickerController alloc]init];
     picker.view.backgroundColor = [UIColor orangeColor];
     picker.sourceType = sourceType;
@@ -161,7 +171,6 @@
     UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
     [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"topbar"] forBarMetrics:UIBarMetricsDefault];
 
-    
     
     return picker;
 }
@@ -225,6 +234,264 @@
     viewController.navigationItem.rightBarButtonItem.tintColor = [UIColor blackColor];
 }
 
+
+
+#pragma mark  - 权限设置
+//联网权限
+- (void)judegeInteNet{
+    CTCellularData *cellularData = [[CTCellularData alloc]init];
+    CTCellularDataRestrictedState state = cellularData.restrictedState;
+    switch (state) {
+        case kCTCellularDataRestricted:
+            NSLog(@"Restricrted");
+            break;
+        case kCTCellularDataNotRestricted:
+            NSLog(@"Not Restricted");
+            break;
+        case kCTCellularDataRestrictedStateUnknown:
+            NSLog(@"Unknown");
+            break;
+        default:
+            break;
+    }
+    [self jumpSet];
+}
+
+//相机权限
+- (void)photoAuto
+{
+    if ([UIDevice currentDevice].systemVersion.floatValue < 9.0) {
+        ALAuthorizationStatus status = [ALAssetsLibrary authorizationStatus];
+        switch (status) {
+            case ALAuthorizationStatusAuthorized:
+                NSLog(@"Authorized");
+                break;
+            case ALAuthorizationStatusDenied:
+                NSLog(@"Denied");
+                break;
+            case ALAuthorizationStatusNotDetermined:
+                NSLog(@"not Determined");
+                break;
+            case ALAuthorizationStatusRestricted:
+                NSLog(@"Restricted");
+                break;
+                
+            default:
+                break;
+        }
+    }else{
+        PHAuthorizationStatus photoAuthorStatus = [PHPhotoLibrary authorizationStatus];
+        switch (photoAuthorStatus) {
+            case PHAuthorizationStatusAuthorized:
+                NSLog(@"Authorized");
+                break;
+            case PHAuthorizationStatusDenied:
+                NSLog(@"Denied");
+                break;
+            case PHAuthorizationStatusNotDetermined:
+                NSLog(@"not Determined");
+                break;
+            case PHAuthorizationStatusRestricted:
+                NSLog(@"Restricted");
+                break;
+            default:
+                break;
+        }
+        
+        
+        //    获取相册权限
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            if (status == PHAuthorizationStatusAuthorized) {
+                NSLog(@"Authorized");
+            }else{
+                NSLog(@"Denied or Restricted");
+            }
+        }];
+    }
+}
+
+- (void)cameraAuthor{
+    AVAuthorizationStatus AVstatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];//相机权限
+//    AVAuthorizationStatus AVstatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];//麦克风权限
+    
+    switch (AVstatus) {
+        case AVAuthorizationStatusAuthorized:
+            NSLog(@"Authorized");
+            break;
+        case AVAuthorizationStatusDenied:
+            NSLog(@"Denied");
+            break;
+        case AVAuthorizationStatusNotDetermined:
+            NSLog(@"not Determined");
+            break;
+        case AVAuthorizationStatusRestricted:
+            NSLog(@"Restricted");
+            break;
+        default:
+            break;
+    }
+    
+    
+    //第一次安装的时候，会弹出框提示你；当你第一次选完后，不会再提示，但代码执行 ====Authorized
+    [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {//相机权限
+        if (granted) {
+            NSLog(@"====Authorized");
+        }else{
+            NSLog(@"Denied or Restricted");
+        }
+    }];
+    
+//    [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {//麦克风权限
+//        if (granted) {
+//            NSLog(@"Authorized");
+//        }else{
+//            NSLog(@"Denied or Restricted");
+//        }
+//    }];
+    
+}
+
+- (void)location{
+    BOOL isLocation = [CLLocationManager locationServicesEnabled];
+    if (!isLocation) {
+        NSLog(@"not turn on the location");
+    }
+    CLAuthorizationStatus CLstatus = [CLLocationManager authorizationStatus];
+    switch (CLstatus) {
+        case kCLAuthorizationStatusAuthorizedAlways:
+            NSLog(@"Always Authorized");
+            break;
+        case kCLAuthorizationStatusAuthorizedWhenInUse:
+            NSLog(@"AuthorizedWhenInUse");
+            break;
+        case kCLAuthorizationStatusDenied:
+            NSLog(@"Denied");
+            break;
+        case kCLAuthorizationStatusNotDetermined:
+            NSLog(@"not Determined");
+            break;
+        case kCLAuthorizationStatusRestricted:
+            NSLog(@"Restricted");
+            break;
+        default:
+            break;
+    }
+    
+     manager = [[CLLocationManager alloc] init];
+//    manager.delegate = self;
+    //infoPlist 设置 NSLocationWhenInUseUsageDescription
+    
+    
+    [manager requestAlwaysAuthorization];//一直获取定位信息
+    [manager requestWhenInUseAuthorization];//使用的时候获取定位信息
+}
+
+- (void)addressAuthor{
+    ABAuthorizationStatus ABstatus = ABAddressBookGetAuthorizationStatus();
+    switch (ABstatus) {
+        case kABAuthorizationStatusAuthorized:
+            NSLog(@"Authorized");
+            break;
+        case kABAuthorizationStatusDenied:
+            NSLog(@"Denied'");
+            break;
+        case kABAuthorizationStatusNotDetermined:
+            NSLog(@"not Determined");
+            break;
+        case kABAuthorizationStatusRestricted:
+            NSLog(@"Restricted");
+            break;
+        default:
+            break;
+    }
+    
+    ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
+    ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
+        if (granted) {
+            NSLog(@"Authorized");
+            CFRelease(addressBook);
+        }else{
+            NSLog(@"Denied or Restricted");
+        }
+    });
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
+    switch (status) {
+        case kCLAuthorizationStatusAuthorizedAlways:
+            NSLog(@"Always Authorized");
+            break;
+        case kCLAuthorizationStatusAuthorizedWhenInUse:
+            NSLog(@"AuthorizedWhenInUse");
+            break;
+        case kCLAuthorizationStatusDenied:
+            NSLog(@"Denied");
+            break;
+        case kCLAuthorizationStatusNotDetermined:
+            NSLog(@"not Determined");
+            break;
+        case kCLAuthorizationStatusRestricted:
+            NSLog(@"Restricted");
+            break;
+        default:
+            break;
+    }
+    
+}
+
+//About — prefs:root=General&path=About
+//Accessibility — prefs:root=General&path=ACCESSIBILITY
+//AirplaneModeOn— prefs:root=AIRPLANE_MODE
+//Auto-Lock — prefs:root=General&path=AUTOLOCK
+//Brightness — prefs:root=Brightness
+//Bluetooth — prefs:root=General&path=Bluetooth
+//Date& Time — prefs:root=General&path=DATE_AND_TIME
+//FaceTime — prefs:root=FACETIME
+//General— prefs:root=General
+//Keyboard — prefs:root=General&path=Keyboard
+//iCloud — prefs:root=CASTLE iCloud
+//Storage & Backup — prefs:root=CASTLE&path=STORAGE_AND_BACKUP
+//International — prefs:root=General&path=INTERNATIONAL
+//Location Services — prefs:root=LOCATION_SERVICES
+//Music — prefs:root=MUSIC
+//Music Equalizer — prefs:root=MUSIC&path=EQ
+//Music VolumeLimit— prefs:root=MUSIC&path=VolumeLimit
+//Network — prefs:root=General&path=Network
+//Nike + iPod — prefs:root=NIKE_PLUS_IPOD
+//Notes — prefs:root=NOTES
+//Notification — prefs:root=NOTIFICATIONS_ID
+//Phone — prefs:root=Phone
+//Photos — prefs:root=Photos
+//Profile — prefs:root=General&path=ManagedConfigurationList
+//Reset — prefs:root=General&path=Reset
+//Safari — prefs:root=Safari Siri — prefs:root=General&path=Assistant
+//Sounds — prefs:root=Sounds
+//SoftwareUpdate— prefs:root=General&path=SOFTWARE_UPDATE_LINK
+//Store — prefs:root=STORE
+//Twitter — prefs:root=TWITTER
+//Usage — prefs:root=General&path=USAGE
+//VPN — prefs:root=General&path=Network/VPN
+//Wallpaper — prefs:root=Wallpaper
+//Wi-Fi — prefs:root=WIFI
+//Setting—prefs:root=INTERNET_TETHERING
+- (void)jumpSet{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"设置网络" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //通用
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=General&path=Network/VPN"]];
+        //进到app设置里面了
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+        
+    }];
+    
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [alertController addAction:action];
+    [alertController addAction:action1];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
 
 
 - (void)didReceiveMemoryWarning

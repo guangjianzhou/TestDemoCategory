@@ -16,6 +16,17 @@
 #include <AudioToolbox/AudioToolbox.h>
 #import "ISULanguageManger.h"
 #import "TopWindowViewController.h"
+#import "AFNetworking.h"
+
+// access_token openid refresh_token unionid
+#define WXPatient_App_ID @"wx53bb98d092d08c4d"
+#define WXPatient_App_Secret @"487bab8c673300349b6d30d914c834b7"
+
+#define WX_ACCESS_TOKEN @"access_token"
+#define WX_OPEN_ID @"openid"
+#define WX_REFRESH_TOKEN @"refresh_token"
+#define WX_UNION_ID @"unionid"
+#define WX_BASE_URL @"https://api.weixin.qq.com/sns"
 
 #define  kBackButtonFontSize 16
 #define  kNavTitleFontSize 18
@@ -192,7 +203,7 @@ NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
     
     //向微信注册appid.
     //Description :  更新后的api 没有什么作用,只是给开发者一种解释作用.
-    [WXApi registerApp:@"wx920fde9f97d60569" withDescription:@"微信支付"];
+    [WXApi registerApp:@"wx53bb98d092d08c4d" withDescription:@"微信支付"];
     //
     self.errorVC = [[NSErrorViewController alloc] initWithNibName:@"NSErrorViewController" bundle:nil];
 }
@@ -309,6 +320,68 @@ NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
                 break;
         }
     }
+    // 向微信请求授权后,得到响应结果
+    //通过code+appId +appleSecret 去换取access_Token
+    else if ([resp isKindOfClass:[SendAuthResp class]]) {
+            //拿到了code  state
+            SendAuthResp *temp = (SendAuthResp *)resp;
+            AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+            manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObjectsFromArray:@[@"text/html",@"text/plain",@"text/json",@"text/xml",@"application/json",@"application/xml",@"application/x-www-form-urlencoded"]];
+            NSString *accessUrlStr = [NSString stringWithFormat:@"%@/oauth2/access_token?appid=%@&secret=%@&code=%@&grant_type=authorization_code", WX_BASE_URL, WXPatient_App_ID, WXPatient_App_Secret, temp.code];
+        
+//        "access_token" = "-hp4AI67y9MYGqy1GUoNzI9E2k07jArCQOEeW2Y7iUGkdhiquExemVf5-HIEhgXPi0Q3pz5kRGFvHi-qNXpo5sw-ENc_ADfjWTFaY2eAqkE";
+//        "expires_in" = 7200;
+//        openid = ovnnpwBFvMwQIWkDdHULsQEouQuc;
+//        "refresh_token" = "_aK81jIBt1myeeqNhAPqm-XjRO18GMN8-zht2L56iyHEc8zipEQbatxTz0r_YXwGZ5TSGv-IC27G9-glUhdG7ceSdayCxF6aPagxjPrmZDA";
+//        scope = "snsapi_userinfo";
+//        unionid = "oR9fFv9rAt_b5x_Q608ehVK6Gg4U";
+            [manager GET:accessUrlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                NSLog(@"请求access的response = %@", responseObject);
+                NSDictionary *accessDict = [NSDictionary dictionaryWithDictionary:responseObject];
+                NSString *accessToken = [accessDict objectForKey:WX_ACCESS_TOKEN];
+                NSString *openID = [accessDict objectForKey:WX_OPEN_ID];
+                NSString *refreshToken = [accessDict objectForKey:WX_REFRESH_TOKEN];
+                // 本地持久化，以便access_token的使用、刷新或者持续
+                if (accessToken && ![accessToken isEqualToString:@""] && openID && ![openID isEqualToString:@""]) {
+                    [[NSUserDefaults standardUserDefaults] setObject:accessToken forKey:WX_ACCESS_TOKEN];
+                    [[NSUserDefaults standardUserDefaults] setObject:openID forKey:WX_OPEN_ID];
+                    [[NSUserDefaults standardUserDefaults] setObject:refreshToken forKey:WX_REFRESH_TOKEN];
+                    [[NSUserDefaults standardUserDefaults] synchronize]; // 命令直接同步到文件里，来避免数据的丢失
+                }
+                [self wechatLoginByRequestForUserInfo];
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                NSLog(@"获取access_token时出错 = %@", error);
+            }];
+        }
+}
+// 获取用户个人信息（UnionID机制）
+- (void)wechatLoginByRequestForUserInfo {
+//    请求用户信息的response = {
+//        city = Xuzhou;
+//        country = CN;
+//        headimgurl = "http://wx.qlogo.cn/mmopen/PiajxSqBRaEIYcwxVhIxSpB9QBicaJySCxjSIg3qia2hlX6d1ia9IVrNDH3wic91NtKC4QySzKu36VM13xtzs0A1shw/0";
+//        language = "zh_CN";
+//        nickname = "\U6361\U4e0d\U8d77\U6765\U7684\U8282\U64cd";
+//        openid = ovnnpwBFvMwQIWkDdHULsQEouQuc;
+//        privilege =     (
+//        );
+//        province = Jiangsu;
+//        sex = 1;
+//        unionid = "oR9fFv9rAt_b5x_Q608ehVK6Gg4U";
+//    }
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSString *accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:WX_ACCESS_TOKEN];
+    NSString *openID = [[NSUserDefaults standardUserDefaults] objectForKey:WX_OPEN_ID];
+    NSString *userUrlStr = [NSString stringWithFormat:@"%@/userinfo?access_token=%@&openid=%@", WX_BASE_URL, accessToken, openID];
+    // 请求用户数据
+    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObjectsFromArray:@[@"text/html",@"text/plain",@"text/json",@"text/xml",@"application/json",@"application/xml",@"application/x-www-form-urlencoded"]];
+    [manager GET:userUrlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"请求用户信息的response = %@", responseObject);
+        // NSMutableDictionary *userDict = [NSMutableDictionary dictionaryWithDictionary:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"获取用户信息时出错 = %@", error);
+    }];
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(nonnull NSURL *)url options:(nonnull NSDictionary<NSString *,id> *)options

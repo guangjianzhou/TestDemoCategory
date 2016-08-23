@@ -1,11 +1,15 @@
-platform :ios, "7.0"
+platform :ios, "8.0"
 use_frameworks!
+
+
+
+target 'TestDemo_Develop' do
 
 #----------------------常用工具----------------------
 pod 'AFNetworking','~>2.6.3'                #网络请求
 pod 'Masonry', '~> 0.6.3'                   #一个轻量级的布局框架,采用更优雅的链式语法封装自动布局
 pod 'MJExtension', '~> 3.0.7'               #转换速度快、使用简单方便的字典转模型框(非侵入式，推荐)
-pod 'BlocksKit', '~> 2.2.5'                 #为UIKit增加Block回调，是对Cocoa类的一个扩展(推荐)
+#pod 'BlocksKit', '~> 2.2.5'                 #为UIKit增加Block回调，是对Cocoa类的一个扩展(推荐)
 pod 'ICViewPager', '~> 1.5.1'               #界面VC 滑动
 pod 'pop', '~> 1.0.8'                       #FaceBook 动画库
 pod 'FMDB', '~> 2.5'                        #数据库
@@ -44,17 +48,19 @@ pod 'MWPhotoBrowser', '~> 2.1.1' #照片视频浏览器
 pod 'BButton', '~> 4.0.2'   #各种样式的Button的快速创建（在图右文字，左文字右图，单图等）
 
 
-pod 'ReactiveCocoa', '~> 2.5'
-pod 'ReactiveViewModel', '>= 0.3'
+#pod 'ReactiveCocoa', '~> 4.2.1'
+#pod 'RxViewModel', '~> 3.1.3'
+#pod 'ReactiveViewModel', '>= 0.3'
 
 
-pod 'AYCheckVersion',:git => "https://github.com/guangjianzhou/AYCheckVersion.git"
+
+#pod 'AYCheckVersion',:git => "https://github.com/guangjianzhou/AYCheckVersion.git"
 
 #融云
  pod 'RongCloudIMKit', '~> 2.4.11'
 
 # block
-pod 'BlocksKit', '~> 2.2.5'
+#pod 'BlocksKit', '~> 2.2.5'
 
 #人脸识别
 pod 'OpenCV', '~> 3.0.0'
@@ -93,7 +99,7 @@ pod 'DKNightVersion', '~> 2.3.0'
 pod 'MCSwipeTableViewCell', '~> 2.1.4'
 
 #tableView 滑动
-pod 'SwipeTableView', '~> 0.1.1'
+pod 'SwipeTableView', '~> 0.2.4'
 
 #----------------------图表控件----------------------
 pod 'PNChart', '~> 0.8.7'   #简单带有动画效果的图表库
@@ -144,7 +150,7 @@ pod 'FBMemoryProfiler'    #手动性能分析,它会借用FBAllocationTracker和
 #----------------------其它工具----------------------
 pod 'DeviceUtil', '~> 1.3.7'    #获取设备三件版本号，如 iPhone 4,iPad mini2
 
-
+end
 
 
 

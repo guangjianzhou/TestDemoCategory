@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '39850E7CFED8018A335EBEDA'
+               BlueprintIdentifier = '6C18C789438292FED01EB702705FC9AA'
                BlueprintName = 'UICountingLabel'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libUICountingLabel.a'>
+               BuildableName = 'UICountingLabel.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

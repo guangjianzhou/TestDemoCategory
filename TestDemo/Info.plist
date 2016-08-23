@@ -25,7 +25,7 @@
 			<string>weixin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wx920fde9f97d60569</string>
+				<string>wx53bb98d092d08c4d</string>
 			</array>
 		</dict>
 		<dict>
@@ -38,9 +38,22 @@
 				<string>hugezuishuai</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>prefs</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>wechat</string>
+		<string>weixin</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -48,6 +61,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>在设置里面可以看到他</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>描述下 随便</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>loveway.ttf</string>

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4ABE78F8FBC6A1C7887861B6'
+               BlueprintIdentifier = 'C235BC565F79E81C781D562EEB321C7A'
                BlueprintName = 'MDRadialProgress'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libMDRadialProgress.a'>
+               BuildableName = 'MDRadialProgress.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

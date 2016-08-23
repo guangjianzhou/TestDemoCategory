@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7ACCCD975073196F03E23411'
+               BlueprintIdentifier = '3B1B807C498F77D8AC595DCA6B8CBC50'
                BlueprintName = 'CubeController'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libCubeController.a'>
+               BuildableName = 'CubeController.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

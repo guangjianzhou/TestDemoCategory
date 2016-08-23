@@ -9,7 +9,7 @@
 #import "ImageCropperView.h"
 #import <QuartzCore/QuartzCore.h>
 #include <math.h>
-#import <Masonry.h>
+#import "Masonry.h"
 
 #import "UIImage+Rotation.h"
 

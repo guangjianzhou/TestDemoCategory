@@ -8,7 +8,7 @@
 
 #import "SecondViewController.h"
 #import "ThirdViewController.h"
-#import <ViewPagerController.h>
+#import "ViewPagerController.h"
 
 @interface SecondViewController ()<ViewPagerDataSource,ViewPagerDelegate>
 

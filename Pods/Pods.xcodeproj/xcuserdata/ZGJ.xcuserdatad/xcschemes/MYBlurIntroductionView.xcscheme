@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '22D725A464AC28988987C1CF'
+               BlueprintIdentifier = 'E1225DF74542B399EE152EDA64D2634B'
                BlueprintName = 'MYBlurIntroductionView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libMYBlurIntroductionView.a'>
+               BuildableName = 'MYBlurIntroductionView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

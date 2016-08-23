@@ -7,7 +7,6 @@
 //
 
 #import "RACViewController.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "UIImage+help.h"
 
 typedef void (^RWSignInResponse)(BOOL);
@@ -73,19 +72,19 @@ typedef void (^RWSignInResponse)(BOOL);
 //        NSLog(@"=%@==",x);
 //    }];
     
-    RACSignal *validUserNameSignal = [self.userNameTextField.rac_textSignal map:^id(NSString* value) {
-        return @([self isValidUsername:value]);
-    }];
-    
-    RACSignal *validUserPswSignal = [self.pswTextField.rac_textSignal map:^id(NSString *value) {
-        return @([self isValidPassword:value] );
-    }];
-    
-    [[validUserPswSignal map:^id(NSNumber *passwdValue) {
-        return [passwdValue boolValue] ?[UIColor clearColor]:[UIColor yellowColor];
-    }] subscribeNext:^(UIColor *color) {
-        self.pswTextField.backgroundColor = color;
-    }];
+//    RACSignal *validUserNameSignal = [self.userNameTextField.rac_textSignal map:^id(NSString* value) {
+//        return @([self isValidUsername:value]);
+//    }];
+//    
+//    RACSignal *validUserPswSignal = [self.pswTextField.rac_textSignal map:^id(NSString *value) {
+//        return @([self isValidPassword:value] );
+//    }];
+//    
+//    [[validUserPswSignal map:^id(NSNumber *passwdValue) {
+//        return [passwdValue boolValue] ?[UIColor clearColor]:[UIColor yellowColor];
+//    }] subscribeNext:^(UIColor *color) {
+//        self.pswTextField.backgroundColor = color;
+//    }];
     
 //    RAC(self.pswTextField,backgroundColor) = [validUserPswSignal
 //                                              map:^id(NSNumber *passwordValid){
@@ -94,16 +93,16 @@ typedef void (^RWSignInResponse)(BOOL);
     
     
 //    聚合信号
-    RACSignal *signUpActiveSignal = [RACSignal combineLatest:@[validUserNameSignal,validUserPswSignal]
-                                                      //数组中信号对应的值
-                                                      reduce:^id(NSNumber *usernameValid,NSNumber *passwdValid){
-                        return @([usernameValid boolValue] && [passwdValid boolValue]);
-    }];
-
-    //必须两种条件满足后 点击按钮才有用
-    [signUpActiveSignal subscribeNext:^(NSNumber *valid) {
-        self.loginBtn.enabled = [valid boolValue];
-    }];
+//    RACSignal *signUpActiveSignal = [RACSignal combineLatest:@[validUserNameSignal,validUserPswSignal]
+//                                                      //数组中信号对应的值
+//                                                      reduce:^id(NSNumber *usernameValid,NSNumber *passwdValid){
+//                        return @([usernameValid boolValue] && [passwdValid boolValue]);
+//    }];
+//
+//    //必须两种条件满足后 点击按钮才有用
+//    [signUpActiveSignal subscribeNext:^(NSNumber *valid) {
+//        self.loginBtn.enabled = [valid boolValue];
+//    }];
 
     //按钮
     //外部login按钮信号(包含内部信号)
@@ -118,44 +117,44 @@ typedef void (^RWSignInResponse)(BOOL);
 //    }];
     
         /*****************第二部分******************************/
-    [[self.searchTextField.rac_textSignal map:^id(NSString *text){
-        return [self isValidUsername:text]?[UIColor whiteColor]:[UIColor yellowColor];
-    }] subscribeNext:^(UIColor *color){
-        self.searchTextField.backgroundColor = color;
-    }];
-    
-    RACSignal *backgroundColorSignal = [self.searchTextField.rac_textSignal map:^id(NSString *text){
-        return [self isValidUsername:text]?[UIColor whiteColor]:[UIColor yellowColor];
-    }];
-    
-    RACDisposable *subscription = [backgroundColorSignal subscribeNext:^(UIColor *color){
-        self.searchTextField.backgroundColor = color;
-    }];
-    
-    //某个时刻
-    [subscription dispose];
-    
-    
-    
-    
+//    [[self.searchTextField.rac_textSignal map:^id(NSString *text){
+//        return [self isValidUsername:text]?[UIColor whiteColor]:[UIColor yellowColor];
+//    }] subscribeNext:^(UIColor *color){
+//        self.searchTextField.backgroundColor = color;
+//    }];
+//    
+//    RACSignal *backgroundColorSignal = [self.searchTextField.rac_textSignal map:^id(NSString *text){
+//        return [self isValidUsername:text]?[UIColor whiteColor]:[UIColor yellowColor];
+//    }];
+//    
+//    RACDisposable *subscription = [backgroundColorSignal subscribeNext:^(UIColor *color){
+//        self.searchTextField.backgroundColor = color;
+//    }];
+//    
+//    //某个时刻
+//    [subscription dispose];
+//    
+//    
+//    
+//    
     
     
 }
 
 //把已有的异步API用信号的方式来表示
-- (RACSignal *)signSignal
-{
-    __weak typeof(self) weakSelf = self;
-    [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        [weakSelf signInWithUsername:weakSelf.userNameTextField.text password:self.pswTextField.text complete:^(BOOL success) {
-           //发出信号
-            [subscriber sendNext:@(success)];
-            [subscriber sendCompleted];
-        }];
-        return nil;
-    }];
-    return nil;
-}
+//- (RACSignal *)signSignal
+//{
+//    __weak typeof(self) weakSelf = self;
+//    [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        [weakSelf signInWithUsername:weakSelf.userNameTextField.text password:self.pswTextField.text complete:^(BOOL success) {
+//           //发出信号
+//            [subscriber sendNext:@(success)];
+//            [subscriber sendCompleted];
+//        }];
+//        return nil;
+//    }];
+//    return nil;
+//}
 
 
 - (void)signInWithUsername:(NSString *)username password:(NSString *)password complete:(RWSignInResponse)completeBlock {
@@ -197,8 +196,8 @@ typedef void (^RWSignInResponse)(BOOL);
     
     //异步加载图片
     //1. 获取一个后台scheduler,来让signal不在主线程执行
-    RACScheduler *scheduler = [RACScheduler
-                               schedulerWithPriority:RACSchedulerPriorityBackground];
+//    RACScheduler *scheduler = [RACScheduler
+//                               schedulerWithPriority:RACSchedulerPriorityBackground];
     //2. 创建一个signal
     
     //3.subscribeOn: 保证signal在指定的scheduler执行
