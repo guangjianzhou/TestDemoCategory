@@ -11,15 +11,20 @@
 #import "WebViewCosntroller.h"
 #import "WebViewJavascriptBridge.h"
 
-@interface WebViewCosntroller ()<UINavigationBarDelegate,UIImagePickerControllerDelegate>
+@interface WebViewCosntroller ()<UINavigationBarDelegate,UIImagePickerControllerDelegate,UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) WebViewJavascriptBridge *bridge;
+@property (assign, nonatomic) BOOL isFirstLoad;
 
 
 @end
 
 
+/**
+ *要注意的是：所有在应用内的资源文件都是在baseURL的根目录也就是此代码中的bundlePath的根目录，所以图片资源，不管在项目里面放在哪个目录结构下，在HTML内引用的时候，都是直接根目录的。
+ //BaseURL file:///Users/liuqian/Library/Developer/CoreSimulator/Devices/77D7DB9D-A382-436A-B5D2-3CBD7B8B68AB/data/Containers/Bundle/Application/EF451A7E-B19E-4444-A9FC-B0E3CFEE7DE4/TestDemo_Develop.app/ + 资源文件
+ */
 
 @implementation WebViewCosntroller
 
@@ -27,22 +32,43 @@
 {
     [super viewDidLoad];
     //1.加载网页html
-//    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
+//    NSString *urlStr = @"http://lyds2011.139379.com:8027/login.aspx?zflx=aj&zf=安监执法稽查系统";
+    NSString *urlStr = @"http://m.dianping.com/tuan/deal/12415397?utm_source=open";
+    NSString* sURl = [self URLEncodeString:urlStr];
+    NSURL *url = [NSURL URLWithString:sURl];
     
     
     //2.加载本地html
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"index-h5" withExtension:@"html"];
-    
+//    NSURL *url = [[NSBundle mainBundle] URLForResource:@"index-h5" withExtension:@"html"];
+//    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"index-h5" ofType:@"html"];
+//    NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];    // 获取当前应用的根目录
+//    NSString *path = [[NSBundle mainBundle] bundlePath];
+//    NSURL *baseURL = [NSURL fileURLWithPath:path];
+//    // 通过baseURL的方式加载的HTML
+//    // 可以在HTML内通过相对目录的方式加载js,css,img等文件
+//    [_webView loadHTMLString:htmlCont baseURL:baseURL]; //可以显示图片
+//    
+//
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [_webView loadRequest:request];
     //属性
     _webView.scalesPageToFit = YES;//自动对页面进行缩放以适应屏幕
     _webView.dataDetectorTypes = UIDataDetectorTypeNone;
+    _webView.delegate = self;
     
     [self setUpLeftNaviItem];
     
 }
 
+- (NSString *)encodeToPercentEscapeString: (NSString *) input
+{
+    NSString *outputStr = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(
+                                                                                       NULL, /* allocator */
+                                                                                       (__bridge CFStringRef)input,
+                                                                                       NULL, /* charactersToLeaveUnescaped */
+                                                                                       (CFStringRef)@"!*'();:@&=+$,/?%#[]",kCFStringEncodingUTF8);
+    return  outputStr;
+}
 
 - (void)setUpLeftNaviItem
 {
@@ -97,6 +123,8 @@
 {
     NSLog(@"--shouldStartLoadWithRequest----%@------",request.URL);
     
+    
+    
     //拦截 点击相册
     NSString *str = request.URL.absoluteString;
     NSRange range = [str rangeOfString:@"xmg://"];
@@ -127,28 +155,49 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     NSLog(@"--webViewDidFinishLoad----------");
+    
+    if (!_isFirstLoad) {
+        _isFirstLoad = true;
+        NSString *lJs = @"document.documentElement.innerHTML";
+        NSString *lHtml1 = [webView stringByEvaluatingJavaScriptFromString:lJs];
+        
+        NSString *path = [[NSBundle mainBundle] bundlePath];
+        NSURL *baseURL = [NSURL fileURLWithPath:path];
+        [_webView loadHTMLString:lHtml1 baseURL:baseURL];
+    }
+    
 //    获取所有html
     NSString *lJs = @"document.documentElement.innerHTML";
     
+//    if (webView.isLoading) {
+//        webView.userInteractionEnabled = NO;
+//    }else{
+//        webView.userInteractionEnabled = YES;
+//    }
+    
     //获取网页title
-    NSString *lJs2 = @"document.title";
+//    NSString *lJs2 = @"document.title";
     NSString *lHtml1 = [webView stringByEvaluatingJavaScriptFromString:lJs];
     NSLog(@"==lHtml1=%@========",lHtml1);
-　　 NSString *lHtml2 = [webView stringByEvaluatingJavaScriptFromString:lJs2];
-    NSLog(@"title========%@",lHtml2);
+//　　 NSString *lHtml2 = [webView stringByEvaluatingJavaScriptFromString:lJs2];
+//    NSLog(@"title========%@",lHtml2);
 
     
-    [_webView stringByEvaluatingJavaScriptFromString:@"function test(){ alert(123123123)}"];
-    [_webView stringByEvaluatingJavaScriptFromString:@"test();"];//调用
-    
-    
-    
+//    [_webView stringByEvaluatingJavaScriptFromString:@"function test(){ alert(123123123)}"];
+//    [_webView stringByEvaluatingJavaScriptFromString:@"test();"];//调用
     
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     NSLog(@"--didFailLoadWithError---%@-------",error);
+}
+
+- (NSString *)URLEncodeString:(NSString *)str
+{
+    NSCharacterSet *set = [NSCharacterSet URLQueryAllowedCharacterSet];
+    NSString *encodedString = [str stringByAddingPercentEncodingWithAllowedCharacters:set];
+    return encodedString;
 }
 
 
@@ -202,6 +251,17 @@
     [self presentViewController:imageVC animated:YES completion:^{
         
     }];
+}
+
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+    
 }
 
 

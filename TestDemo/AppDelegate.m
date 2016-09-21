@@ -53,6 +53,8 @@ NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
 //        exit(0);
     });
     
+    NSInteger version = [UIDevice currentDevice].systemVersion.integerValue;
+    
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
     [application setValue:[UIColor redColor] forKeyPath:@"statusBarWindow.statusBar.foregroundColor"];
     

@@ -9,8 +9,14 @@
 //
 
 #import "LimitInputViewController.h"
+#import "UITextField+Category.h"
+
+
+#define MaxNumberOfDescriptionChars 10
 
 @interface LimitInputViewController ()
+
+
 
 @property (nonatomic, strong) UITextField *inputTextField;
 @property (nonatomic, strong) UITextView *inputView;
@@ -21,10 +27,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     _inputTextField = [[UITextField alloc] initWithFrame:CGRectMake(0, 64, 150, 60)];
     _inputTextField.backgroundColor = [UIColor lightGrayColor];
-    [_inputTextField addTarget:self action:@selector(changeTextField) forControlEvents:UIControlEventEditingChanged];
+    [_inputTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [self.view addSubview:_inputTextField];
     
     
@@ -45,15 +52,18 @@
 }
 
 
-#pragma mark  - 
-- (void)changeTextField
+#pragma mark  - 字数限制
+// 监听文本改变
+- (void)textFieldDidChange:(UITextField*)textField
 {
-    
+    [textField limitTextFieldWithBytesLength:MaxNumberOfDescriptionChars];
 }
 
-- (void)changeTextView
+
+#pragma mark-- UITextfielfDelegate imp
+- (BOOL)textField:(UITextField*)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString*)string
 {
-    
+    return [textField isEnabledWithBytesLength:MaxNumberOfDescriptionChars shouldChangeCharactersInRange:range replacementString:string];
 }
 
 - (void)didReceiveMemoryWarning {

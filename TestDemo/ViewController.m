@@ -37,6 +37,12 @@
 #import "ThirdLoginViewController.h"
 #import "AppScoreViewController.h"
 #import "LimitInputViewController.h"
+#import "WordPicViewController.h"
+#import "LoadInitiViewContorller.h"
+#import "RecordVideoViewController.h"
+#import "CustomTableViewController.h"
+#import "DesignPatternViewController.h"
+#import "DynamicViewController.h"
 
 
 #define NSNullObjects @[@"",@0,@{},@[]]
@@ -222,7 +228,7 @@
     
     
     
-    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"运行时",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",@"改变字体",@"IBDesignable",@"毛玻璃",@"CoreAnimation",@"OpenCV",@"瀑布流",@"iOS9",@"滑动view",@"自定义view",@"第三方登录",@"App评分",@"限制字符个数",nil];
+    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"运行时",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",@"改变字体",@"IBDesignable",@"毛玻璃",@"CoreAnimation",@"OpenCV",@"瀑布流",@"iOS9",@"滑动view",@"自定义view",@"第三方登录",@"App评分",@"限制字符个数",@"图文混排",@"LoadInitial",@"视频录制",@"表视图",@"设计模式",@"粒子动画",nil];
     [self configClass];
     
     _hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
@@ -914,12 +920,27 @@
     }else if ([title isEqualToString:@"限制字符个数"]){
         LimitInputViewController *limitVC = [[LimitInputViewController alloc] init];
         [self.navigationController pushViewController:limitVC animated:true];
+    }else if([title isEqualToString:@"图文混排"]){
+        WordPicViewController *wordPic = [[WordPicViewController alloc] initWithNibName:@"WordPicViewController" bundle:nil];
+        [self.navigationController pushViewController:wordPic animated:true];
+    }else if ([title isEqualToString:@"LoadInitial"]){
+        LoadInitiViewContorller *vc = [[LoadInitiViewContorller alloc] init];
+        [self.navigationController pushViewController:vc animated:true];
+    }else if ([title isEqualToString:@"视频录制"]){
+        RecordVideoViewController *videoVC = [[RecordVideoViewController alloc] init];
+        [self.navigationController pushViewController:videoVC animated:true];
+    }else if ([title isEqualToString:@"表视图"]){
+        CustomTableViewController *vc = [[CustomTableViewController alloc] initWithNibName:@"CustomTableViewController" bundle:nil
+        ];
+        [self.navigationController pushViewController:vc animated:true];
+    }else if([title isEqualToString:@"设计模式"]){
+        DesignPatternViewController *designPatternVC = [[DesignPatternViewController alloc] init];
+        [self.navigationController pushViewController:designPatternVC animated:YES];
+    }else if([title isEqualToString:@"粒子动画"]){
+        DynamicViewController *dynamicVC = [[DynamicViewController alloc] initWithNibName:@"DynamicViewController" bundle:nil];
+        [self.navigationController pushViewController:dynamicVC animated:YES];
     }
-    
 }
-
-
-
 
 #pragma mark - Segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -944,6 +965,15 @@
 #pragma mark  - BugTest
 - (void)bugTest
 {
+    
+    NSArray *numbers = @[@5,@19,@89,@11,@3,@99];
+    NSInteger max =  [[numbers valueForKeyPath:@"@max.intValue"] integerValue];  //
+    
+    
+    [numbers enumerateObjectsUsingBlock:^(NSNumber  *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSLog(@"===number=%@===",obj);
+    }];
+    NSLog(@"---------finish--------");
     
     
     //没问题

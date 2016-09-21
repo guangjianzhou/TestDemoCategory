@@ -310,6 +310,27 @@ const NSInteger kAPI_Timeout = 15;
 
 #pragma mark - 头像
 
+//我们在写代码的时候经常会将头像进行上传服务器，上传头像图片我试过两种方式
+//一种方式就是使用base64字符串上传图片，这种形式我个人认为比较适合上传图片数量比较少的，比如上传头像，上传图片数量多的话，速度会慢些
+//另一种方式是使用二进制流进行上传图片，这种方式上传图片少或者数量多都没关系，速度也很快
+
+
+- (void)commitInfo
+{
+    UIImage *photoImage = nil;
+    NSData *imageData = UIImageJPEGRepresentation(photoImage, 1);
+    //超过一定大小图片压缩
+    int maxlength=1024*100*6;
+    if (imageData.length>maxlength)
+    {
+        imageData=UIImageJPEGRepresentation(photoImage, 0.01);
+    }
+//    NSString *Base64Str= [Base64 stringByEncodingData:imageData];
+//        NSString *inObj=[NSString stringWithFormat:@"{\\\"UserId\\\":\\\"%@\\\",\\\"UserName\\\":\\\"%@\\\",\\\"EMail\\\":\\\"%@\\\",\\\"exName\\\":\\\"%@\\\",\\\"Base64Str\\\":\\\"%@\\\",\\\"UserIcon\\\":\\\"%@\\\"}",userInfo.UserId,_nickField.text,_mailField.text,exName,Base64Str,UserIcon];
+     //上传提交
+}
+
+
 - (void)uploadImage:(UIImage *)image
                 url:(NSString *)url
              params:(NSMutableDictionary *)params
