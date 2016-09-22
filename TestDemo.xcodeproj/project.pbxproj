@@ -97,6 +97,10 @@
 		FD6C82A81CFEB71D00320D6B /* OpenCVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C82A71CFEB71D00320D6B /* OpenCVViewController.m */; };
 		FD76AB531C97B9120071F9AB /* BLEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76AB521C97B9120071F9AB /* BLEViewController.m */; };
 		FD76AB561C97D03A0071F9AB /* DelayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76AB551C97D03A0071F9AB /* DelayViewController.m */; };
+		FD7B750D1D935F60009F5060 /* CustomSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7B750B1D935F60009F5060 /* CustomSecondViewController.m */; };
+		FD7B750E1D935F60009F5060 /* CustomSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7B750C1D935F60009F5060 /* CustomSecondViewController.xib */; };
+		FD7B75111D936694009F5060 /* XibInSBView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7B75101D936694009F5060 /* XibInSBView.m */; };
+		FD7B75131D9366A6009F5060 /* XibInSBView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7B75121D9366A6009F5060 /* XibInSBView.xib */; };
 		FD7E110B1CD2FA8E000F9012 /* ThemeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E110A1CD2FA8E000F9012 /* ThemeConfig.m */; };
 		FD7E11231CD302BD000F9012 /* fontColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD7E11201CD302BD000F9012 /* fontColor.plist */; };
 		FD7E11241CD302BD000F9012 /* fontColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD7E11221CD302BD000F9012 /* fontColor.plist */; };
@@ -549,6 +553,8 @@
 		FDDB81481C3F4E5400BEBCB3 /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDDB81461C3F4E5400BEBCB3 /* PopupView.xib */; };
 		FDDB81501C3F56AA00BEBCB3 /* PopUpZgjView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDB814F1C3F56AA00BEBCB3 /* PopUpZgjView.m */; };
 		FDDB81521C3F56EF00BEBCB3 /* PopUpZgjView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDDB81511C3F56EF00BEBCB3 /* PopUpZgjView.xib */; };
+		FDDD9B141D927DE600225141 /* CustomXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDD9B131D927DE600225141 /* CustomXibView.m */; };
+		FDDD9B161D927E0400225141 /* CustomXibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDDD9B151D927E0400225141 /* CustomXibView.xib */; };
 		FDDF578E1CAE54C500F78DEF /* AvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDF578D1CAE54C500F78DEF /* AvatarView.m */; };
 		FDDFDDAE1CA50F750038B658 /* CaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDFDDAD1CA50F750038B658 /* CaseViewController.m */; };
 		FDDFDDB31CA5137E0038B658 /* VIPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDFDDB21CA5137E0038B658 /* VIPhotoView.m */; };
@@ -1254,6 +1260,12 @@
 		FD76AB521C97B9120071F9AB /* BLEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEViewController.m; sourceTree = "<group>"; };
 		FD76AB541C97D03A0071F9AB /* DelayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelayViewController.h; sourceTree = "<group>"; };
 		FD76AB551C97D03A0071F9AB /* DelayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelayViewController.m; sourceTree = "<group>"; };
+		FD7B750A1D935F60009F5060 /* CustomSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSecondViewController.h; sourceTree = "<group>"; };
+		FD7B750B1D935F60009F5060 /* CustomSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSecondViewController.m; sourceTree = "<group>"; };
+		FD7B750C1D935F60009F5060 /* CustomSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomSecondViewController.xib; sourceTree = "<group>"; };
+		FD7B750F1D936694009F5060 /* XibInSBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XibInSBView.h; sourceTree = "<group>"; };
+		FD7B75101D936694009F5060 /* XibInSBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XibInSBView.m; sourceTree = "<group>"; };
+		FD7B75121D9366A6009F5060 /* XibInSBView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XibInSBView.xib; sourceTree = "<group>"; };
 		FD7E11091CD2FA8E000F9012 /* ThemeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeConfig.h; sourceTree = "<group>"; };
 		FD7E110A1CD2FA8E000F9012 /* ThemeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeConfig.m; sourceTree = "<group>"; };
 		FD7E11201CD302BD000F9012 /* fontColor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fontColor.plist; sourceTree = "<group>"; };
@@ -2062,6 +2074,9 @@
 		FDDB814E1C3F56AA00BEBCB3 /* PopUpZgjView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpZgjView.h; sourceTree = "<group>"; };
 		FDDB814F1C3F56AA00BEBCB3 /* PopUpZgjView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopUpZgjView.m; sourceTree = "<group>"; };
 		FDDB81511C3F56EF00BEBCB3 /* PopUpZgjView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpZgjView.xib; sourceTree = "<group>"; };
+		FDDD9B121D927DE600225141 /* CustomXibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomXibView.h; sourceTree = "<group>"; };
+		FDDD9B131D927DE600225141 /* CustomXibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomXibView.m; sourceTree = "<group>"; };
+		FDDD9B151D927E0400225141 /* CustomXibView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomXibView.xib; sourceTree = "<group>"; };
 		FDDF578C1CAE54C500F78DEF /* AvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarView.h; sourceTree = "<group>"; };
 		FDDF578D1CAE54C500F78DEF /* AvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarView.m; sourceTree = "<group>"; };
 		FDDFDDAC1CA50F750038B658 /* CaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaseViewController.h; sourceTree = "<group>"; };
@@ -2792,6 +2807,15 @@
 				FD8A0F001D5AD49C00A48A38 /* CgView.m */,
 				FD8A0F061D5AEDDC00A48A38 /* CustomerZGJViewController.h */,
 				FD8A0F071D5AEDDC00A48A38 /* CustomerZGJViewController.m */,
+				FDDD9B121D927DE600225141 /* CustomXibView.h */,
+				FDDD9B131D927DE600225141 /* CustomXibView.m */,
+				FDDD9B151D927E0400225141 /* CustomXibView.xib */,
+				FD7B750A1D935F60009F5060 /* CustomSecondViewController.h */,
+				FD7B750B1D935F60009F5060 /* CustomSecondViewController.m */,
+				FD7B750C1D935F60009F5060 /* CustomSecondViewController.xib */,
+				FD7B750F1D936694009F5060 /* XibInSBView.h */,
+				FD7B75101D936694009F5060 /* XibInSBView.m */,
+				FD7B75121D9366A6009F5060 /* XibInSBView.xib */,
 			);
 			name = "自定义view";
 			sourceTree = "<group>";
@@ -4800,8 +4824,10 @@
 				FDC5965C1CA53BE700DA533D /* ShowCollectionViewCell.xib in Resources */,
 				FDA34D6F1D011629003F4876 /* index-h5.html in Resources */,
 				FDA9D48B1C294EB700CB9369 /* pop_Tweet@2x.png in Resources */,
+				FD7B75131D9366A6009F5060 /* XibInSBView.xib in Resources */,
 				FDAA34DD1C9FD34100FF5594 /* 技巧.txt in Resources */,
 				FD7E11241CD302BD000F9012 /* fontColor.plist in Resources */,
+				FDDD9B161D927E0400225141 /* CustomXibView.xib in Resources */,
 				FD9B51281CD0A7ED001E0E6D /* PopCustomView.xib in Resources */,
 				FD7E11331CD302FB000F9012 /* setting_btn.png in Resources */,
 				FDF3E8F51CA1265800E517D5 /* page_icon_emptyMessage.png in Resources */,
@@ -4872,6 +4898,7 @@
 				FD56A98C1D0F9D60008973FA /* PhotoCollectionViewCell.xib in Resources */,
 				FDA34D6B1D0115E4003F4876 /* part4.png in Resources */,
 				FD6A760F1C7C315C00D7E5D8 /* share.png in Resources */,
+				FD7B750E1D935F60009F5060 /* CustomSecondViewController.xib in Resources */,
 				FDD45C581CD1F4EF00C69F41 /* TestDemo.strings in Resources */,
 				FDA9D4831C294EB700CB9369 /* pop_2FA@2x.png in Resources */,
 				FDA34D691D0115E4003F4876 /* part2.png in Resources */,
@@ -5112,6 +5139,7 @@
 				FDAAAFD01C8EBF8300CEF5CA /* ZXQRCodeFinderPatternInfo.m in Sources */,
 				FDAAAFD11C8EBF8300CEF5CA /* ZXQRCode.m in Sources */,
 				FD7E12891CD30A91000F9012 /* ThemeManager.m in Sources */,
+				FD7B75111D936694009F5060 /* XibInSBView.m in Sources */,
 				FD1E1E9A1D111B82005638B3 /* CustomScrollViewController.m in Sources */,
 				FDAAAF8B1C8EBF8300CEF5CA /* ZXRSSFinderPattern.m in Sources */,
 				FDAAAFCA1C8EBF8300CEF5CA /* ZXQRCodeVersion.m in Sources */,
@@ -5157,6 +5185,7 @@
 				FDAAAFCB1C8EBF8300CEF5CA /* ZXQRCodeAlignmentPattern.m in Sources */,
 				FDAAAF491C8EBF8300CEF5CA /* ZXStringUtils.m in Sources */,
 				FDF592171C0EB43C00AF8B5C /* AppDelegate.m in Sources */,
+				FD7B750D1D935F60009F5060 /* CustomSecondViewController.m in Sources */,
 				FD87E0D21CB38092009BE457 /* 3DTouchViewController.m in Sources */,
 				FD07E55E1C55C1F100FA7890 /* UIDynamic1ViewController.m in Sources */,
 				FDAAAF5E1C8EBF8300CEF5CA /* ZXDataMatrixBase256Encoder.m in Sources */,
@@ -5456,6 +5485,7 @@
 				FDAAAF1C1C8EBF8300CEF5CA /* ZXISBNResultParser.m in Sources */,
 				FDBE74321CBCE19F0062C5B6 /* SystemViewController.m in Sources */,
 				FDEF1B931C21580600187029 /* FDRecipe.m in Sources */,
+				FDDD9B141D927DE600225141 /* CustomXibView.m in Sources */,
 				FD8D8C961CC9CED600429DCF /* RongCloudManager.m in Sources */,
 				FDAAAF9C1C8EBF8300CEF5CA /* ZXMultiFormatOneDReader.m in Sources */,
 				FD7E12941CD3316F000F9012 /* ISUzbar.m in Sources */,

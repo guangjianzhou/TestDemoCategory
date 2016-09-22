@@ -17,6 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.edgesForExtendedLayout =UIRectEdgeNone;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.view.backgroundColor = [UIColor yellowColor];
+    
+    
+//    self.edgesForExtendedLayout =UIRectEdgeNone;
+//    self.extendedLayoutIncludesOpaqueBars = YES;
 }
 
 //应用内评分
@@ -31,7 +39,7 @@
 //AppStore评分
 - (IBAction)appStoreAction:(UIButton *)sender {
     
-    
+    [self evaluate];
     
 }
 

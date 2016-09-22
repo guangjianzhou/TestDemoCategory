@@ -16,12 +16,14 @@
 
 @implementation CustomPopView
 
+//xib调用
 - (void)awakeFromNib
 {
     [self setUp];
 }
 
 
+//纯代码创建使用
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -40,6 +42,7 @@
     
     return self;
 }
+
 
 - (void)setUp
 {

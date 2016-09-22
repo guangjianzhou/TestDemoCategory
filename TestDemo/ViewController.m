@@ -271,10 +271,12 @@
 
 - (void)pressRightBtn:(UIButton *)btn
 {
-  _popView = [[CustomPopView alloc] initWithFrame:CGRectMake(0, 0,     [UIScreen mainScreen].bounds.size.width,     [UIScreen mainScreen].bounds.size.height)];
-
     MyView *myView = [[MyView alloc] initWithFrame:CGRectMake(0,0,200,200)];
     [[UIApplication sharedApplication].keyWindow addSubview:myView];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [myView removeFromSuperview];
+    });
+    
     return;
 }
 
