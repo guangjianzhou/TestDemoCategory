@@ -43,6 +43,7 @@
 #import "CustomTableViewController.h"
 #import "DesignPatternViewController.h"
 #import "DynamicViewController.h"
+#import "LocalNotification10ViewController.h"
 
 
 #define NSNullObjects @[@"",@0,@{},@[]]
@@ -228,7 +229,7 @@
     
     
     
-    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"运行时",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",@"改变字体",@"IBDesignable",@"毛玻璃",@"CoreAnimation",@"OpenCV",@"瀑布流",@"iOS9",@"滑动view",@"自定义view",@"第三方登录",@"App评分",@"限制字符个数",@"图文混排",@"LoadInitial",@"视频录制",@"表视图",@"设计模式",@"粒子动画",nil];
+    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"运行时",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",@"改变字体",@"IBDesignable",@"毛玻璃",@"CoreAnimation",@"OpenCV",@"瀑布流",@"iOS9",@"滑动view",@"自定义view",@"第三方登录",@"App评分",@"限制字符个数",@"图文混排",@"LoadInitial",@"视频录制",@"表视图",@"设计模式",@"粒子动画",@"ios10通知",nil];
     [self configClass];
     
     _hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
@@ -941,6 +942,10 @@
     }else if([title isEqualToString:@"粒子动画"]){
         DynamicViewController *dynamicVC = [[DynamicViewController alloc] initWithNibName:@"DynamicViewController" bundle:nil];
         [self.navigationController pushViewController:dynamicVC animated:YES];
+    }else if([title isEqualToString:@"ios10通知"])
+    {
+        LocalNotification10ViewController *vc = [[LocalNotification10ViewController alloc] initWithNibName:@"LocalNotification10ViewController" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
@@ -965,8 +970,28 @@
 }
 
 #pragma mark  - BugTest
+- (void)dictAndArrayNil
+{
+    
+    //字典赋值
+    NSMutableDictionary *resultDic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"zgj",@"name", nil];
+    [resultDic setObject:@"" forKey:@"address"];
+//    [resultDic setObject:nil forKey:@"age"]; 不允许nil
+    
+    
+    //数组取值
+    NSMutableArray *array = [NSMutableArray arrayWithObjects:@"1",@"121",@"131", nil];
+    NSString *value = [array objectAtIndex:3];
+    NSLog(@"value=====%@",value);
+    
+    
+}
+
+
 - (void)bugTest
 {
+    
+    [self dictAndArrayNil];
     
     NSArray *numbers = @[@5,@19,@89,@11,@3,@99];
     NSInteger max =  [[numbers valueForKeyPath:@"@max.intValue"] integerValue];  //
@@ -994,7 +1019,8 @@
     [TSMessage showNotificationWithTitle:nil subtitle:nil type:TSMessageNotificationTypeSuccess];
     
     
-    NSMutableDictionary *resultDic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"zgj",@"name", nil];
+    
+    
     
     
 //    id obj = [resultDic objectForKey:@"returnObj"];
@@ -1004,7 +1030,7 @@
     NSArray  *exitClientArray =[NSJSONSerialization JSONObjectWithData:[obj dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:nil];
     
     
-    [resultDic setObject:@"" forKey:@"address"];
+    
     
     
     NSString *text = @(5);

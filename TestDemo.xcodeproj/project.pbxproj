@@ -23,6 +23,7 @@
 		FD211F6C1C2BF45900C7ACCC /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = FD211F661C2BF45900C7ACCC /* 1.png */; };
 		FD23ED7E1C1EC19F0013BDC2 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23ED7D1C1EC19F0013BDC2 /* Status.m */; };
 		FD2C9FE21D0E5D2600C9DBF8 /* TopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2C9FE11D0E5D2600C9DBF8 /* TopWindow.m */; };
+		FD34D1AF1D9B536E001B6E52 /* NSArray+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34D1AE1D9B536E001B6E52 /* NSArray+help.m */; };
 		FD381FA31D5D5FB6005FEB78 /* ThirdLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD381FA21D5D5FB6005FEB78 /* ThirdLoginViewController.m */; };
 		FD381FAE1D5D63BE005FEB78 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD381FAA1D5D63BE005FEB78 /* libWeChatSDK.a */; };
 		FD39B9931D10F8330054A6B2 /* TopWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD39B9921D10F8330054A6B2 /* TopWindowViewController.m */; };
@@ -122,6 +123,9 @@
 		FD7E27031C1914E4002D4CDD /* NSDate+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E27021C1914E4002D4CDD /* NSDate+help.m */; };
 		FD7E2EAF1C9A872700D292CC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7E2EAE1C9A872700D292CC /* CoreTelephony.framework */; };
 		FD7E2EB11C9A87A900D292CC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7E2EB01C9A87A900D292CC /* CoreMotion.framework */; };
+		FD7EEF3B1D98FFD9004D31CE /* LocalNotification10ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7EEF391D98FFD9004D31CE /* LocalNotification10ViewController.m */; };
+		FD7EEF3C1D98FFD9004D31CE /* LocalNotification10ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7EEF3A1D98FFD9004D31CE /* LocalNotification10ViewController.xib */; };
+		FD7EEF3F1D990174004D31CE /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7EEF3E1D990174004D31CE /* UserNotifications.framework */; };
 		FD7FF4571C3B4C4E00DDB21E /* NSTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7FF4561C3B4C4E00DDB21E /* NSTimerViewController.m */; };
 		FD87E0D21CB38092009BE457 /* 3DTouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD87E0D11CB38092009BE457 /* 3DTouchViewController.m */; };
 		FD87E0DA1CB393FF009BE457 /* TZTestOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD87E0D51CB393FF009BE457 /* TZTestOneViewController.m */; };
@@ -1060,6 +1064,8 @@
 		FD23ED7D1C1EC19F0013BDC2 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
 		FD2C9FE01D0E5D2600C9DBF8 /* TopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopWindow.h; path = ../../TopWindow.h; sourceTree = "<group>"; };
 		FD2C9FE11D0E5D2600C9DBF8 /* TopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopWindow.m; path = ../../TopWindow.m; sourceTree = "<group>"; };
+		FD34D1AD1D9B536E001B6E52 /* NSArray+help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+help.h"; sourceTree = "<group>"; };
+		FD34D1AE1D9B536E001B6E52 /* NSArray+help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+help.m"; sourceTree = "<group>"; };
 		FD381FA11D5D5FB6005FEB78 /* ThirdLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdLoginViewController.h; sourceTree = "<group>"; };
 		FD381FA21D5D5FB6005FEB78 /* ThirdLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdLoginViewController.m; sourceTree = "<group>"; };
 		FD381FAA1D5D63BE005FEB78 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
@@ -1295,6 +1301,10 @@
 		FD7E27021C1914E4002D4CDD /* NSDate+help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+help.m"; path = "../../NSDate+help.m"; sourceTree = "<group>"; };
 		FD7E2EAE1C9A872700D292CC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		FD7E2EB01C9A87A900D292CC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		FD7EEF381D98FFD9004D31CE /* LocalNotification10ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalNotification10ViewController.h; sourceTree = "<group>"; };
+		FD7EEF391D98FFD9004D31CE /* LocalNotification10ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotification10ViewController.m; sourceTree = "<group>"; };
+		FD7EEF3A1D98FFD9004D31CE /* LocalNotification10ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalNotification10ViewController.xib; sourceTree = "<group>"; };
+		FD7EEF3E1D990174004D31CE /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		FD7FF4551C3B4C4E00DDB21E /* NSTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimerViewController.h; sourceTree = "<group>"; };
 		FD7FF4561C3B4C4E00DDB21E /* NSTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimerViewController.m; sourceTree = "<group>"; };
 		FD87E0D01CB38092009BE457 /* 3DTouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 3DTouchViewController.h; sourceTree = "<group>"; };
@@ -2192,6 +2202,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7EEF3F1D990174004D31CE /* UserNotifications.framework in Frameworks */,
 				FD68DDEB1C9A83A200E73EF5 /* CoreText.framework in Frameworks */,
 				FDF1837F1D62B11500785A99 /* StoreKit.framework in Frameworks */,
 				FDAAAFDE1C8EC17C00CEF5CA /* AddressBook.framework in Frameworks */,
@@ -2285,6 +2296,7 @@
 		B3FF0BA1D689D6EE88C7A45B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD7EEF3E1D990174004D31CE /* UserNotifications.framework */,
 				FD419EF91D6ADE9F0041D820 /* BlocksKit.framework */,
 				FDF1837E1D62B11500785A99 /* StoreKit.framework */,
 				FDC2909F1D5C680900454B04 /* CoreLocation.framework */,
@@ -2776,6 +2788,16 @@
 			path = ISUzbar;
 			sourceTree = "<group>";
 		};
+		FD7EEF3D1D98FFDE004D31CE /* 通知10 */ = {
+			isa = PBXGroup;
+			children = (
+				FD7EEF381D98FFD9004D31CE /* LocalNotification10ViewController.h */,
+				FD7EEF391D98FFD9004D31CE /* LocalNotification10ViewController.m */,
+				FD7EEF3A1D98FFD9004D31CE /* LocalNotification10ViewController.xib */,
+			);
+			name = "通知10";
+			sourceTree = "<group>";
+		};
 		FD7FF4541C3B4C2400DDB21E /* NSTimerVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -3138,6 +3160,7 @@
 				FD49B1051D7914EF00BBF3B4 /* 表视图 */,
 				FD959B851D7D11B20000FCD3 /* 设计模式 */,
 				FDFF001E1D7D48DD00C6922F /* 粒子动画 */,
+				FD7EEF3D1D98FFDE004D31CE /* 通知10 */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -3206,6 +3229,8 @@
 				FDFDC6B81CACF95D002A6B03 /* UIView */,
 				FD7E128C1CD321C5000F9012 /* NSMutableDictionary+help.h */,
 				FD7E128D1CD321C5000F9012 /* NSMutableDictionary+help.m */,
+				FD34D1AD1D9B536E001B6E52 /* NSArray+help.h */,
+				FD34D1AE1D9B536E001B6E52 /* NSArray+help.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -4814,6 +4839,7 @@
 				FDA34DB81D01380E003F4876 /* ffmpeg.docx in Resources */,
 				FDF1837C1D62AC1A00785A99 /* AppScoreViewController.xib in Resources */,
 				FDA34D481D01107C003F4876 /* test.mp4 in Resources */,
+				FD7EEF3C1D98FFD9004D31CE /* LocalNotification10ViewController.xib in Resources */,
 				FDA34D651D0115E4003F4876 /* jquery.fullPage.js in Resources */,
 				FDE9BA651CC72F0E00E6239F /* NSErrorViewController.xib in Resources */,
 				FD87E0DD1CB393FF009BE457 /* TZTestTwoViewController.xib in Resources */,
@@ -5339,6 +5365,7 @@
 				FD7E12861CD30A91000F9012 /* ThemeButton.m in Sources */,
 				FDAAAFB51C8EBF8300CEF5CA /* ZXPDF417Detector.m in Sources */,
 				FDD45C4E1CD1EFCC00C69F41 /* ThemeAndLanguageViewController.m in Sources */,
+				FD7EEF3B1D98FFD9004D31CE /* LocalNotification10ViewController.m in Sources */,
 				FDB332331D7FC00700963FA7 /* CustomButton.m in Sources */,
 				FDAAAF511C8EBF8300CEF5CA /* ZXInvertedLuminanceSource.m in Sources */,
 				FDAAAF8A1C8EBF8300CEF5CA /* ZXRSSDataCharacter.m in Sources */,
@@ -5403,6 +5430,7 @@
 				FDAAAF4E1C8EBF8300CEF5CA /* ZXDimension.m in Sources */,
 				FDAAAFB81C8EBF8300CEF5CA /* ZXPDF417BarcodeMatrix.m in Sources */,
 				FDA9D4591C293DBC00CB9369 /* XHPopMenuItemView.m in Sources */,
+				FD34D1AF1D9B536E001B6E52 /* NSArray+help.m in Sources */,
 				FDAAAF9B1C8EBF8300CEF5CA /* ZXITFWriter.m in Sources */,
 				FDAAAF991C8EBF8300CEF5CA /* ZXEANManufacturerOrgSupport.m in Sources */,
 				FDFDC6C51CAD027B002A6B03 /* UIView+help.m in Sources */,
@@ -5994,6 +6022,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = JKJQ2SXDA9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6061,6 +6090,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = JKJQ2SXDA9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

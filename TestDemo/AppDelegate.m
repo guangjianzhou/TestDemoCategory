@@ -17,6 +17,9 @@
 #import "ISULanguageManger.h"
 #import "TopWindowViewController.h"
 #import "AFNetworking.h"
+#ifdef NSFoundationVersionNumber_iOS_9_x_Max
+#import <UserNotifications/UserNotifications.h>
+#endif
 
 // access_token openid refresh_token unionid
 #define WXPatient_App_ID @"wx53bb98d092d08c4d"
@@ -36,7 +39,7 @@ NSString * const NotificationCategoryIdent  = @"ACTIONABLE";
 NSString * const NotificationActionOneIdent = @"ACTION_ONE";
 NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
 
-@interface AppDelegate ()<WXApiDelegate>
+@interface AppDelegate ()<WXApiDelegate,UNUserNotificationCenterDelegate>
 
 @property (nonatomic, strong) UIWindow *topWindow;
 
@@ -60,7 +63,25 @@ NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
     
 //    [self addCustomWindow:application];
     
-    if ([[UIDevice currentDevice].systemVersion integerValue] > 7)
+    if([[UIDevice currentDevice].systemVersion floatValue] >= 10.0)
+    {
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+       //必须写代理，不然无法监听通知的接收与点击
+        center.delegate = self;
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if (granted) {
+                //点击允许
+                NSLog(@"注册成功");
+                [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+                    
+                }];
+            }else
+            {
+                NSLog(@"注册失败");
+            }
+        }];
+    }
+    else if ([[UIDevice currentDevice].systemVersion integerValue] > 7)
     {
         //1.创建消息上面要添加的动作(按钮的形式显示出来)
         UIMutableUserNotificationAction *action1;
@@ -501,6 +522,22 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
                                                                          ]];
     application.applicationIconBadgeNumber = unreadMsgCount;
 }
+
+#pragma mark  - iOS10通知
+//app 处于前台
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
+{
+    NSLog(@"-----willPresentNotification--------");
+}
+
+//app 处于后台
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)())completionHandler
+{
+    NSLog(@"-----didReceiveNotificationResponse--------");
+}
+
+
+
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
