@@ -44,6 +44,10 @@
 #import "DesignPatternViewController.h"
 #import "DynamicViewController.h"
 #import "LocalNotification10ViewController.h"
+#import "CollectionVC.h"
+#import "CALayerViewController.h"
+#import "ProfileHeaderViewController.h"
+#import "GesViewController.h"
 
 
 #define NSNullObjects @[@"",@0,@{},@[]]
@@ -209,7 +213,6 @@
     NSLog(@"%@=推送======",notifi.userInfo);
 }
 
-
 - (void)backAction
 {
     NSLog(@"======backAction======");
@@ -229,13 +232,13 @@
     
     
     
-    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"运行时",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",@"改变字体",@"IBDesignable",@"毛玻璃",@"CoreAnimation",@"OpenCV",@"瀑布流",@"iOS9",@"滑动view",@"自定义view",@"第三方登录",@"App评分",@"限制字符个数",@"图文混排",@"LoadInitial",@"视频录制",@"表视图",@"设计模式",@"粒子动画",@"ios10通知",nil];
+    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"手势",@"运行时",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",@"改变字体",@"IBDesignable",@"毛玻璃",@"CoreAnimation",@"OpenCV",@"瀑布流",@"iOS9",@"滑动view",@"自定义view",@"第三方登录",@"App评分",@"限制字符个数",@"图文混排",@"LoadInitial",@"视频录制",@"表视图",@"设计模式",@"粒子动画",@"ios10通知",@"九宫格",@"CALayer",@"表头拉伸",nil];
     [self configClass];
     
-    _hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
-    _hud.labelText = @"拨打中,请稍等";
+//    _hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
+//    _hud.labelText = @"拨打中,请稍等";
     
-    [_hud hide:YES afterDelay:1];
+//    [_hud hide:YES afterDelay:1];
     
     
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -946,6 +949,19 @@
     {
         LocalNotification10ViewController *vc = [[LocalNotification10ViewController alloc] initWithNibName:@"LocalNotification10ViewController" bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
+    }else if([title isEqualToString:@"九宫格"])
+    {
+        CollectionVC *vc = [[CollectionVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if([title isEqualToString:@"CALayer"]){
+        CALayerViewController *vc = [[CALayerViewController alloc] initWithNibName:@"CALayerViewController" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if([title isEqualToString:@"表头拉伸"]){
+        ProfileHeaderViewController *profileVC = [[ProfileHeaderViewController alloc] initWithNibName:@"ProfileHeaderViewController" bundle:nil];
+        [self.navigationController pushViewController:profileVC animated:YES];
+    }else if([title isEqualToString:@"手势"]){
+        GesViewController *ges = [[GesViewController alloc] initWithNibName:@"GesViewController" bundle:nil];
+        [self.navigationController pushViewController:ges animated:YES];
     }
 }
 
@@ -1076,6 +1092,13 @@
 #pragma mark  - Button状态
 - (void)btnStatus
 {
+    
+//    [[NSUserDefaults standardUserDefaults] setObject:@"111" forKey:@"111"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    NSString *str = [[NSUserDefaults standardUserDefaults]objectForKey:@"111" ];
+    NSLog(@"str:%@",str);
+    
     
     NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:@{@"userName":@"zgj",@"password":@"1234",@"email":@"zgj6406400@163.com",@"realName":@"哈哈",@"qq":@"1234555"}];
     

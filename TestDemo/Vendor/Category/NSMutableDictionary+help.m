@@ -46,7 +46,7 @@
 
 - (void)cusSetObject:(id)obj valueForKey:(id)key
 {
-    NSLog(@"===%s===%@=key=",__func__,key);
+//    NSLog(@"===%s===%@=key=",__func__,key);
     if (obj)
     {
         [self cusSetObject:obj valueForKey:key];

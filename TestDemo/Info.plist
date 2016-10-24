@@ -65,6 +65,8 @@
 	<string>在设置里面可以看到他</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>描述下 随便</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>需要🙆使用相册</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>loveway.ttf</string>
@@ -82,6 +84,8 @@
 			<string>com.test.static1</string>
 		</dict>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array/>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -94,8 +98,6 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>需要🙆使用相册</string>
 	<key>UIWhitePointAdaptivityStyle</key>
 	<string>UIWhitePointAdaptivityStyleStandard</string>
 </dict>
