@@ -9,7 +9,7 @@
 #import "LockViewController.h"
 #import "LockManager.h"
 
-@interface LockViewController ()<UISearchResultsUpdating>
+@interface LockViewController ()<UISearchResultsUpdating,UISearchBarDelegate>
 
 
 @property (nonatomic, strong) UISearchController *mySearchController;
@@ -66,6 +66,12 @@
     _mySearchController.dimsBackgroundDuringPresentation = YES;
     [_mySearchController.searchBar sizeToFit];
     self.myTableView.tableHeaderView = _mySearchController.searchBar;
+    
+    _mySearchController.searchBar.showsCancelButton = YES;
+    UIButton *canceLBtn = [_mySearchController.searchBar valueForKey:@"cancelButton"];
+    [canceLBtn setTitle:@"取消zgj" forState:UIControlStateNormal];
+    [canceLBtn setTitleColor:[UIColor colorWithRed:0.965 green:0.290 blue:0.608 alpha:1.00] forState:UIControlStateNormal];
+    
 }
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource

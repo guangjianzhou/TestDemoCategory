@@ -17,6 +17,7 @@
 #import "ISULanguageManger.h"
 #import "TopWindowViewController.h"
 #import "AFNetworking.h"
+#import "JPEngine.h"
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #import <UserNotifications/UserNotifications.h>
 #endif
@@ -212,6 +213,9 @@ NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
     self.topWindow.rootViewController = [[TopWindowViewController alloc] init];
 }
 
+
+
+#pragma mark - 配置
 - (void)confing
 {
     [NSThread sleepForTimeInterval:1.0];//设置启动页面时间
@@ -220,6 +224,7 @@ NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
     [self customizeInterface];
     [self configRongCloud];
     [self configLocalNotification];
+    [self congfingJSPatch];
     
     [[ISULanguageManger shared] initUserLanguage];              //初始化多语种
     
@@ -231,6 +236,25 @@ NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
     self.errorVC = [[NSErrorViewController alloc] initWithNibName:@"NSErrorViewController" bundle:nil];
 }
 
+- (void)congfingJSPatch
+{
+    [JPEngine startEngine];
+    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"js"];
+    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+    [JPEngine evaluateScript:script];
+    
+    
+//    // 从网络拉回js脚本执行
+//    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://cnbang.net/test.js"]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+//        NSString *script = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//        [JPEngine evaluateScript:script];
+//    }];
+//    
+//    // 执行本地js文件
+//    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"js"];
+//    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+//    [JPEngine evaluateScript:script];
+}
 
 
 - (void)configRongCloud

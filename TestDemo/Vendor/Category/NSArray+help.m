@@ -11,21 +11,21 @@
 
 @implementation NSArray (help)
 
-+ (void)load
-{
-    [super load];
-    //NSArray
-    Method customMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(swizzleObjectAtIndex:));
-    Method systemMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(swizzleObjectAtIndex:));
-    
-    
-    //NSMutableArray
-    Method custom1Method = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(swizzleObjectAtIndex:));
-    Method system1Method = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(objectAtIndex:));
-    
-    method_exchangeImplementations(customMethod, systemMethod);
-    method_exchangeImplementations(custom1Method, system1Method);
-}
+//+ (void)load
+//{
+//    [super load];
+//    //NSArray
+//    Method customMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(swizzleObjectAtIndex:));
+//    Method systemMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(swizzleObjectAtIndex:));
+//    
+//    
+//    //NSMutableArray
+//    Method custom1Method = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(swizzleObjectAtIndex:));
+//    Method system1Method = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(objectAtIndex:));
+//    
+//    method_exchangeImplementations(customMethod, systemMethod);
+//    method_exchangeImplementations(custom1Method, system1Method);
+//}
 
 - (id)swizzleObjectAtIndex:(NSUInteger)index
 {
