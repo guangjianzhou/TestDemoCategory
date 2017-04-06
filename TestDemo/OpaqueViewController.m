@@ -79,11 +79,11 @@
     UIImage *blurImage = [sourceImage blurImage];
 //    imageView.image = blurImage;
     
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 130, 20)];
-    btn.backgroundColor = [UIColor clearColor];
-    [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [btn setTitle:@"模糊偏上文字" forState:UIControlStateNormal];
-    [imageView addSubview:btn];
+//    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 130, 20)];
+//    btn.backgroundColor = [UIColor clearColor];
+//    [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+//    [btn setTitle:@"模糊偏上文字" forState:UIControlStateNormal];
+//    [imageView addSubview:btn];
     
     
     /**
@@ -92,6 +92,7 @@
     imageView.image = sourceImage;
     UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
     effectView.frame = CGRectMake(0, 100, kScreenWidth, 200);
+    effectView.alpha = 0.5;
     [self.view addSubview:effectView];
     
     
@@ -99,7 +100,8 @@
     label.text = @"测试乐乐";
     label.font = [UIFont systemFontOfSize:30];
     label.textAlignment = NSTextAlignmentCenter;
-//    [effectView addSubview:label];
+//    [effectView.contentView addSubview:label];
+    
     
     //添加模糊子view的UIVisualEffectView
     //子view的effectForBlurEffect 和父view 相同

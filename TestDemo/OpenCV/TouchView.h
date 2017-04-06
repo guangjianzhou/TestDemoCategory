@@ -1,0 +1,14 @@
+//
+//  TouchView.h
+//  TestDemo
+//
+//  Created by ZGJ on 2016/11/1.
+//  Copyright © 2016年 guangjianzhou. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface TouchView : UIView
+
+
+@end

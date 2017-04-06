@@ -14,6 +14,9 @@
 #import "KCView1.h"
 
 @interface CALayerViewController ()<CALayerDelegate>
+{
+    
+}
 @property (weak, nonatomic) IBOutlet UIView *anchorView;
 
 
@@ -23,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self drawLayer4];
+    [self drawBezier];
     
 }
 
@@ -219,6 +222,15 @@ CAPropertyAnimation
  CAKeyframeAnimation 关键帧动画
  */
 
+
+#pragma mark - UIBezierPath
+/*
+ UIBezierPath 创建椭圆或矩形，或者有多个直线和曲线段组成的形状
+ */
+- (void)drawBezier
+{
+    
+}
 
 
 

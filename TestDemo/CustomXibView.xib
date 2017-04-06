@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -16,12 +21,12 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zra-8g-VTi">
                             <rect key="frame" x="0.0" y="8" width="240" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJc-vt-Pxe">
                             <rect key="frame" x="151" y="100" width="51" height="30"/>
-                            <color key="backgroundColor" red="0.17754777070063693" green="0.20409534235668789" blue="0.27930931528662423" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.17754777070063693" green="0.20409534235668789" blue="0.27930931528662423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="取消"/>
                         </button>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHJ-Zc-Uhq">
@@ -37,7 +42,7 @@
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmh-00-aMo">
                             <rect key="frame" x="27" y="100" width="51" height="30"/>
-                            <color key="backgroundColor" red="0.83611166401273884" green="0.20409534235668789" blue="0.48872910031847133" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.83611166401273884" green="0.20409534235668789" blue="0.48872910031847133" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="51" id="mzu-N2-mKR"/>
                             </constraints>
@@ -47,7 +52,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="MJc-vt-Pxe" secondAttribute="trailing" constant="38" id="2Tj-Wu-Ocr"/>
                         <constraint firstItem="GHJ-Zc-Uhq" firstAttribute="leading" secondItem="rLW-Bb-jOm" secondAttribute="leading" constant="33" id="3Pq-0s-VbC"/>
@@ -67,12 +72,11 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="rLW-Bb-jOm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Oxd-Lk-F0g"/>
                 <constraint firstItem="rLW-Bb-jOm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TmQ-cr-bKw"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
                 <outlet property="alertView" destination="rLW-Bb-jOm" id="oNL-wG-4bJ"/>
                 <outlet property="inputTextField" destination="GHJ-Zc-Uhq" id="0OB-hm-Ftb"/>

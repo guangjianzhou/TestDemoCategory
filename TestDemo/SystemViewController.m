@@ -260,7 +260,8 @@
 //相机权限
 - (void)photoAuto
 {
-    if ([UIDevice currentDevice].systemVersion.floatValue < 9.0) {
+    //没必要判断
+    if (NO) {
         ALAuthorizationStatus status = [ALAssetsLibrary authorizationStatus];
         switch (status) {
             case ALAuthorizationStatusAuthorized:

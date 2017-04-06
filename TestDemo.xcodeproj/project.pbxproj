@@ -12,6 +12,7 @@
 		FD0942AB1D6BDADC008EE678 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0942A81D6BDADC008EE678 /* NSString+Category.m */; };
 		FD0942AC1D6BDADC008EE678 /* UITextField+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0942AA1D6BDADC008EE678 /* UITextField+Category.m */; };
 		FD0C19BF1C338306008AE06F /* WCAlertview.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0C19BE1C338306008AE06F /* WCAlertview.m */; };
+		FD1285E71DC8921B003E7604 /* TouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1285E61DC8921B003E7604 /* TouchView.m */; };
 		FD15CA071CFD8627001AF686 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = FD15CA061CFD8627001AF686 /* index.html */; };
 		FD15CA091CFD8CA2001AF686 /* ico_appeal_03@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD15CA081CFD8CA2001AF686 /* ico_appeal_03@3x.png */; };
 		FD1E1E9A1D111B82005638B3 /* CustomScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1E1E991D111B82005638B3 /* CustomScrollViewController.m */; };
@@ -497,6 +498,7 @@
 		FDB06A951C99473A00056F10 /* AFNHTTPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB06A941C99473A00056F10 /* AFNHTTPSViewController.m */; };
 		FDB06A981C99476C00056F10 /* adn.cer in Resources */ = {isa = PBXBuildFile; fileRef = FDB06A971C99476C00056F10 /* adn.cer */; };
 		FDB06A9B1C99477D00056F10 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB06A9A1C99477D00056F10 /* HttpRequest.m */; };
+		FDB279391E499CB400FD00F3 /* Father.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB279381E499CB400FD00F3 /* Father.m */; };
 		FDB332331D7FC00700963FA7 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB332321D7FC00700963FA7 /* CustomButton.m */; };
 		FDB3678B1CC5DB840015E107 /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB3678A1CC5DB840015E107 /* ScrollViewController.m */; };
 		FDB943A41CCDFFF500449EB4 /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB943891CCDFFF500449EB4 /* HexColor.m */; };
@@ -1068,6 +1070,8 @@
 		FD0942AA1D6BDADC008EE678 /* UITextField+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Category.m"; sourceTree = "<group>"; };
 		FD0C19BD1C338306008AE06F /* WCAlertview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAlertview.h; sourceTree = "<group>"; };
 		FD0C19BE1C338306008AE06F /* WCAlertview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAlertview.m; sourceTree = "<group>"; };
+		FD1285E51DC8921B003E7604 /* TouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchView.h; sourceTree = "<group>"; };
+		FD1285E61DC8921B003E7604 /* TouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchView.m; sourceTree = "<group>"; };
 		FD15CA061CFD8627001AF686 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		FD15CA081CFD8CA2001AF686 /* ico_appeal_03@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_appeal_03@3x.png"; sourceTree = "<group>"; };
 		FD1E1E981D111B82005638B3 /* CustomScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomScrollViewController.h; sourceTree = "<group>"; };
@@ -1998,6 +2002,8 @@
 		FDB06A971C99476C00056F10 /* adn.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = adn.cer; sourceTree = "<group>"; };
 		FDB06A991C99477D00056F10 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
 		FDB06A9A1C99477D00056F10 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
+		FDB279371E499CB400FD00F3 /* Father.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Father.h; sourceTree = "<group>"; };
+		FDB279381E499CB400FD00F3 /* Father.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Father.m; sourceTree = "<group>"; };
 		FDB332311D7FC00700963FA7 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		FDB332321D7FC00700963FA7 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		FDB367891CC5DB840015E107 /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
@@ -2754,6 +2760,8 @@
 			children = (
 				FD6C82A61CFEB71D00320D6B /* OpenCVViewController.h */,
 				FD6C82A71CFEB71D00320D6B /* OpenCVViewController.m */,
+				FD1285E51DC8921B003E7604 /* TouchView.h */,
+				FD1285E61DC8921B003E7604 /* TouchView.m */,
 			);
 			path = OpenCV;
 			sourceTree = "<group>";
@@ -4447,6 +4455,8 @@
 				FD56A9981D0FE5F0008973FA /* UIViewController+XMGExtension.m */,
 				FDDB6DA61C7AE61300E49D8B /* Student.h */,
 				FDDB6DA71C7AE61300E49D8B /* Student.m */,
+				FDB279371E499CB400FD00F3 /* Father.h */,
+				FDB279381E499CB400FD00F3 /* Father.m */,
 			);
 			name = "运行时";
 			sourceTree = "<group>";
@@ -4891,7 +4901,7 @@
 								enabled = 0;
 							};
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -5457,6 +5467,7 @@
 				FDD9384D1C88189E00DABD8C /* NSString+help.m in Sources */,
 				FDAAAFA61C8EBF8300CEF5CA /* ZXUPCEANWriter.m in Sources */,
 				FD68DDE81C9A828D00E73EF5 /* PayViewController.m in Sources */,
+				FDB279391E499CB400FD00F3 /* Father.m in Sources */,
 				FD5133141D0F9BE7007B8FA6 /* WaterFallFlowLayout.m in Sources */,
 				FDAAAF7E1C8EBF8300CEF5CA /* ZXRSSExpandedDecodedChar.m in Sources */,
 				FDC95CAF1C34F51D00F6BD76 /* MyView.m in Sources */,
@@ -5591,6 +5602,7 @@
 				FDAAAF401C8EBF8300CEF5CA /* ZXCharacterSetECI.m in Sources */,
 				FDAAAFA01C8EBF8300CEF5CA /* ZXUPCAReader.m in Sources */,
 				FDAAAF331C8EBF8300CEF5CA /* ZXImage.m in Sources */,
+				FD1285E71DC8921B003E7604 /* TouchView.m in Sources */,
 				FDAAAF211C8EBF8300CEF5CA /* ZXSMSMMSResultParser.m in Sources */,
 				FDAAAF4B1C8EBF8300CEF5CA /* ZXBinaryBitmap.m in Sources */,
 				FD87E0E11CB3AAD2009BE457 /* FileCell.m in Sources */,
@@ -6192,7 +6204,7 @@
 					"\"$(PROJECT_DIR)/Tools/Alipay\"",
 				);
 				INFOPLIST_FILE = TestDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/Tools",
@@ -6211,12 +6223,13 @@
 					"-framework",
 					"\"Reveal\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.guanjian.XmppProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.guanjian.project1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TestDemo/TestDemo_Develop-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -6257,7 +6270,7 @@
 					"\"$(PROJECT_DIR)/Tools/Alipay\"",
 				);
 				INFOPLIST_FILE = TestDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/Tools",
@@ -6276,11 +6289,12 @@
 					"-framework",
 					"\"Reveal\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.guanjian.XmppProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.guanjian.project1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TestDemo/TestDemo_Develop-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

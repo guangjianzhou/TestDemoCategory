@@ -84,8 +84,6 @@
 			<string>com.test.static1</string>
 		</dict>
 	</array>
-	<key>UIBackgroundModes</key>
-	<array/>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
