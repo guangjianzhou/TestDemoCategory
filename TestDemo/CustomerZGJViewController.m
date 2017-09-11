@@ -17,9 +17,9 @@
 /**
  *  1.drawRect 进行画
     2.纯代码 进行创建
-    3.xib创建
-        代码加载    正常使用
-        sb加载     但是xib fileowners 
+    3.xib创建的view
+        代码加载    正常使用（xib创建的view  class 设置为TestView，只能代码加载addsubview(TestView)）
+        sb加载     但是xib fileowners (想让自定义的view 加载在sb上，fileowners 设置成TestView,然后直接拖控件即可)
  */
 @property (nonatomic, strong) CustomXibView *xibview;
 @property (nonatomic, strong) CgView *cgView;

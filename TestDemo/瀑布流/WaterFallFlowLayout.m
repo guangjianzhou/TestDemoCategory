@@ -132,6 +132,8 @@ static const UIEdgeInsets DefaultEdgeIntset = {10,10,10,10};
     [super prepareLayout];
 }
 
+
+#pragma mark - 3
 /**
  *  决定cell的排布
  *  重复调用，
@@ -145,6 +147,7 @@ static const UIEdgeInsets DefaultEdgeIntset = {10,10,10,10};
 }
 
 
+#pragma mark - 2 返回indexpath位置cell的对应布局
 /**
  *  返回indexpath位置cell的对应布局
  *  排布cell
@@ -216,6 +219,7 @@ static const UIEdgeInsets DefaultEdgeIntset = {10,10,10,10};
 }
 
 
+#pragma mark - 1返回contentsize的总大小
 //拿出最长一列
 - (CGSize)collectionViewContentSize
 {
@@ -235,3 +239,12 @@ static const UIEdgeInsets DefaultEdgeIntset = {10,10,10,10};
 }
 
 @end
+
+/**
+ 1、设计好我们的布局配置数据 prepareLayout方法中
+ 
+ 2、返回我们的配置数组 layoutAttributesForElementsInRect方法中
+ 
+ */
+
+

@@ -63,7 +63,8 @@ NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
     [application setValue:[UIColor redColor] forKeyPath:@"statusBarWindow.statusBar.foregroundColor"];
     
 //    [self addCustomWindow:application];
-    
+ 
+#pragma mark  - 通知
     if([[UIDevice currentDevice].systemVersion floatValue] >= 10.0)
     {
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -489,9 +490,11 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 /**
  * 推送处理4
  * userInfo内容请参考官网文档
+ * iOS6及以下系统，收到通知
  */
 - (void)application:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
     /**
      * 统计推送打开率2
      */
@@ -510,17 +513,100 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
     }
 }
 
+//处理远程通知
+//与上面方面相斥，两者都实现，执行上述方法
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:
+(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    NSLog(@"iOS7及以上系统，收到通知");
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
+
+//本地通知回调函数，当应用程序在前台后台调用
 - (void)application:(UIApplication *)application
 didReceiveLocalNotification:(UILocalNotification *)notification {
     /**
      * 统计推送打开率3
      */
+    NSLog(@"获得本地通知");
     [[RCIMClient sharedRCIMClient] recordLocalNotificationEvent:notification];
     
     //震动
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     AudioServicesPlaySystemSound(1007);
+    
+    
+    
 }
+
+//在非本App界面时收到本地消息，下拉消息会有快捷回复的按钮，点击按钮后调用的方法，根据identifier来判断点击的哪个按钮，notification为消息内容
+- (void)application:(UIApplication *)application
+handleActionWithIdentifier:(nullable NSString *)identifier
+forLocalNotification:(UILocalNotification *)notification
+   withResponseInfo:(NSDictionary *)responseInfo
+  completionHandler:(void(^)())completionHandler
+{
+    NSLog(@"本地通知%s",__FUNCTION__);
+}
+
+
+
+#pragma mark  - iOS10通知
+//app 处于前台
+//UNPushNotificationTrigger 远程通知
+//UNTimeIntervalNotificationTrigger 本地通知
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
+{
+    NSLog(@"-----willPresentNotification--------");
+    
+    NSDictionary * userInfo = notification.request.content.userInfo;
+    UNNotificationRequest *request = notification.request; // 收到推送的请求
+    UNNotificationContent *content = request.content; // 收到推送的消息内容
+    NSNumber *badge = content.badge;  // 推送消息的角标
+    NSString *body = content.body;    // 推送消息体
+    UNNotificationSound *sound = content.sound;  // 推送消息的声音
+    NSString *subtitle = content.subtitle;  // 推送消息的副标题
+    NSString *title = content.title;  // 推送消息的标题
+    
+    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        NSLog(@"iOS10 前台收到远程通知");
+    }
+    else {
+        // 判断为本地通知
+        NSLog(@"iOS10 前台收到本地通知:{\\\\nbody:%@，\\\\ntitle:%@,\\\\nsubtitle:%@,\\\\nbadge：%@，\\\\nsound：%@，\\\\nuserInfo：%@\\\\n}",body,title,subtitle,badge,sound,userInfo);
+    }
+    //前台展示出来弹出框
+    completionHandler(UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionSound|UNNotificationPresentationOptionAlert);
+}
+
+//app 处于后台
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)())completionHandler
+{
+    NSLog(@"-----didReceiveNotificationResponse--------");
+}
+
+
+
+#pragma mark  - lifeCycle
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    NSLog(@"applicationWillTerminate====");
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    NSLog(@"applicationWillTerminate====");
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+    NSLog(@"applicationWillTerminate====");
+    
+    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state.
@@ -547,36 +633,58 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
     application.applicationIconBadgeNumber = unreadMsgCount;
 }
 
-#pragma mark  - iOS10通知
-//app 处于前台
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
-{
-    NSLog(@"-----willPresentNotification--------");
+
+
+/**
+ 1.注册 通知
+     if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.0) {
+         //iOS10特有
+         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+         // 必须写代理，不然无法监听通知的接收与点击
+         center.delegate = self;
+         [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+         if (granted) {
+         // 点击允许
+         NSLog(@"注册成功");
+         [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+         NSLog(@"%@", settings);
+         }];
+         } else {
+         // 点击不允许
+         NSLog(@"注册失败");
+         }
+         }];
+    }else if ([[UIDevice currentDevice].systemVersion floatValue] >8.0){
+         //iOS8 - iOS10
+         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge categories:nil]];
+         
+    }else if ([[UIDevice currentDevice].systemVersion floatValue] < 8.0) {
+         //iOS8系统以下
+         [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
+    }
+    // 注册获得device Token
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
+ 
+ // 获得Device Token
+ - (void)application:(UIApplication *)application
+ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+     NSLog(@"%@", [NSString stringWithFormat:@"Device Token: %@", deviceToken]);
+ }
+ // 获得Device Token失败
+ - (void)application:(UIApplication *)application
+ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+     NSLog(@"did Fail To Register For Remote Notifications With Error: %@", error);
+ }
+ 
+ 2.处理接收的通知
+    a.前台通知
+        - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
+    b.后台
+        - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)())completionHandler
+    c.app关闭
+        - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+ 
+ */
 
-//app 处于后台
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)())completionHandler
-{
-    NSLog(@"-----didReceiveNotificationResponse--------");
-}
-
-
-
-
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    NSLog(@"applicationWillTerminate====");
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    NSLog(@"applicationWillTerminate====");
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    NSLog(@"applicationWillTerminate====");
-    
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
 @end

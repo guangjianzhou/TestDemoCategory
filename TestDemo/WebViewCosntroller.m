@@ -22,6 +22,14 @@
 
 
 /**
+ VC与html 交互
+ 
+ uiwebview 用JavaScriptCore
+ wkwebview 可以直接注册js
+ */
+
+
+/**
  *要注意的是：所有在应用内的资源文件都是在baseURL的根目录也就是此代码中的bundlePath的根目录，所以图片资源，不管在项目里面放在哪个目录结构下，在HTML内引用的时候，都是直接根目录的。
  //BaseURL file:///Users/liuqian/Library/Developer/CoreSimulator/Devices/77D7DB9D-A382-436A-B5D2-3CBD7B8B68AB/data/Containers/Bundle/Application/EF451A7E-B19E-4444-A9FC-B0E3CFEE7DE4/TestDemo_Develop.app/ + 资源文件
  */
@@ -122,8 +130,6 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     NSLog(@"--shouldStartLoadWithRequest----%@------",request.URL);
-    
-    
     
     //拦截 点击相册
     NSString *str = request.URL.absoluteString;

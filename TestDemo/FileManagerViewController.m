@@ -341,7 +341,7 @@
     if (!docuVC)
     {
 //        docuVC = [[UIDocumentInteractionController alloc] init];
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"ffmpeg" ofType:@"docx"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"ffxy" ofType:@"docx"];
         docuVC = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:path]];
         docuVC.delegate = self;
     }
@@ -349,7 +349,7 @@
     //不会调用
     [docuVC presentOpenInMenuFromRect:self.view.bounds inView:self.view animated:YES];
     //会调用上述的代理方法
-//    [docuVC presentPreviewAnimated:YES];
+    [docuVC presentPreviewAnimated:YES];
 }
 
 
