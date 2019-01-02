@@ -33,14 +33,32 @@
 {
     [super viewWillAppear:animated];
     
+    
+    
+//    2017-09-27 21:58:54.989 TestDemo_Develop[27157:1556031] *** Terminating app due to uncaught exception 'NSGenericException', reason: '*** Collection <__NSArrayM: 0x60800025b570> was mutated while being enumerated.'
+//    dispatch_async(dispatch_queue_create("printQueue", DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
+//       NSLog(@"==thread1===%@",[NSThread currentThread]);
+//        [[LockManager sharedSingleton] addContentWithOut];
+//    });
+//    
+//    
+//    dispatch_async(dispatch_queue_create("printQueue", DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
+//        NSLog(@"==thread2===%@",[NSThread currentThread]);
+//        [[LockManager sharedSingleton] printContentWithOut];
+//    });
+    
+    
+    
     //两个线程同时操作了单利的一个共享资源 crash
     dispatch_async(dispatch_queue_create("printQueue", DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
-       [[LockManager sharedSingleton] printContent];
+        NSLog(@"==thread1===%@",[NSThread currentThread]);
+        [[LockManager sharedSingleton] printContentGCD];
     });
     
     dispatch_queue_t queue = dispatch_queue_create("LockQueue", DISPATCH_QUEUE_PRIORITY_DEFAULT);
     dispatch_async(queue, ^{
-           [[LockManager sharedSingleton] addContent];
+        NSLog(@"==thread2===%@",[NSThread currentThread]);
+        [[LockManager sharedSingleton] addContentGCD];
     });
     
 }

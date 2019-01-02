@@ -151,5 +151,27 @@ static LockManager *locakManager;
 
 
 
+- (void)printContentWithOut
+{
+    for (NSString *item in _dataArray)
+    {
+        NSLog(@"==%@",item);
+    }
+}
+
+
+
+- (void)addContentWithOut
+{
+    for (int i = 0; i < 1000; i++)
+    {
+        [_dataArray addObject:[NSString stringWithFormat:@"熊二%d+100",i]];
+        NSLog(@"%@",[NSString stringWithFormat:@"==🐻=%d人参果+100",i]);
+    }
+}
+
+
+
+
 
 @end

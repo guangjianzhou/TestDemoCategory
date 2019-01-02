@@ -49,6 +49,7 @@
 #import "ProfileHeaderViewController.h"
 #import "GesViewController.h"
 #import "JSPatchViewController.h"
+#import "TestTableViewViewController.h"
 
 
 #define NSNullObjects @[@"",@0,@{},@[]]
@@ -233,7 +234,7 @@
     
     
     
-    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"热更新",@"手势",@"运行时",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",@"改变字体",@"IBDesignable",@"毛玻璃",@"CoreAnimation",@"OpenCV",@"瀑布流",@"iOS9",@"滑动view",@"自定义view",@"第三方登录",@"App评分",@"限制字符个数",@"图文混排",@"LoadInitial",@"视频录制",@"表视图",@"设计模式",@"粒子动画",@"ios10通知",@"九宫格",@"CALayer",@"表头拉伸",nil];
+    _dataArray = [NSMutableArray arrayWithObjects:ISULocalizedString(@"webViewUserInterFaced"),ISULocalizedString(@"RACStudy"),ISULocalizedString(@"AVFoundataion"), ISULocalizedString(@"NSTimer"),ISULocalizedString(@"FMDB"),ISULocalizedString(@"UIDynamic"),ISULocalizedString(@"Lock"),ISULocalizedString(@"CoreGraphics"),@"热更新",@"手势",@"运行时",@"FFmpeg",@"Assert和摇一摇 二维码",@"AutoLayout",@"转场动画",@"StatusBar",@"蓝牙",@"延迟调用与取消",@"支付",@"CaseView",@"文件读写",@"AutoHeight",@"3DTouch",@"系统界面",@"ScrollVC",@"融云",@"会话列表",@"自定义弹出框",@"切换主题和语言",@"改变字体",@"IBDesignable",@"毛玻璃",@"CoreAnimation",@"OpenCV",@"瀑布流",@"iOS9",@"滑动view",@"自定义view",@"第三方登录",@"App评分",@"限制字符个数",@"图文混排",@"LoadInitial",@"视频录制",@"表视图",@"设计模式",@"粒子动画",@"ios10通知",@"九宫格",@"CALayer",@"表头拉伸",@"TestTableView",nil];
     [self configClass];
     
 //    _hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
@@ -325,7 +326,13 @@
                                            @"name" : @"Rose",
                                            @"icon" : @"nami.png"
                                            }
-                                   }
+                                   },
+                           @"missionList": @[
+                                           @[
+                                            @{
+                                                @"missionNum": @1,
+                                                @"name":@"zgj"
+                                            }]]
                            };
     
     {
@@ -336,7 +343,7 @@
     }
     
     Status *status = [Status mj_objectWithKeyValues:dict];
-    NSLog(@"status=======%@",status);
+    NSLog(@"status=======%@",status.missionList);
 }
 
 
@@ -965,6 +972,10 @@
         [self.navigationController pushViewController:ges animated:YES];
     }else if([title isEqualToString:@"热更新"]){
         JSPatchViewController *vc = [[JSPatchViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([title isEqualToString:@"TestTableView"])
+    {
+        TestTableViewViewController *vc = [[TestTableViewViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
     

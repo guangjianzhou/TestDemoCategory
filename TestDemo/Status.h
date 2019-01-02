@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class User;
+#import "MeetModel.h"
 
 
 @interface Status : NSObject
@@ -15,5 +16,7 @@
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, strong) User *user;
 @property (nonatomic, strong) Status *retweetedStatus;
+
+@property (nonatomic, strong) NSMutableArray *missionList;
 
 @end

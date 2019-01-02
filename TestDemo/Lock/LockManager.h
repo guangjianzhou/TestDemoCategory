@@ -12,6 +12,7 @@
 
 + (instancetype) sharedSingleton;
 
+//NSLock
 - (void)printContent;
 - (void)addContent;
 
@@ -19,5 +20,9 @@
 - (void)printContentGCD;
 - (void)addContentGCD;
 
+
+//什么都不加
+- (void)printContentWithOut;
+- (void)addContentWithOut;
 
 @end

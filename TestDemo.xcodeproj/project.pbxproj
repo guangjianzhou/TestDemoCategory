@@ -15,6 +15,10 @@
 		FD1285E71DC8921B003E7604 /* TouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1285E61DC8921B003E7604 /* TouchView.m */; };
 		FD15CA071CFD8627001AF686 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = FD15CA061CFD8627001AF686 /* index.html */; };
 		FD15CA091CFD8CA2001AF686 /* ico_appeal_03@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD15CA081CFD8CA2001AF686 /* ico_appeal_03@3x.png */; };
+		FD1C1E2F1F77EE5B009C2BF0 /* TestTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1C1E2E1F77EE5A009C2BF0 /* TestTableViewViewController.m */; };
+		FD1C1E331F77F2B4009C2BF0 /* TestTableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1C1E311F77F2B4009C2BF0 /* TestTableTableViewCell.m */; };
+		FD1C1E341F77F2B4009C2BF0 /* TestTableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1C1E321F77F2B4009C2BF0 /* TestTableTableViewCell.xib */; };
+		FD1C1E361F77F4E0009C2BF0 /* 1011.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD1C1E351F77F4E0009C2BF0 /* 1011.jpg */; };
 		FD1E1E9A1D111B82005638B3 /* CustomScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1E1E991D111B82005638B3 /* CustomScrollViewController.m */; };
 		FD211F671C2BF45900C7ACCC /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = FD211F611C2BF45900C7ACCC /* 4.png */; };
 		FD211F681C2BF45900C7ACCC /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = FD211F621C2BF45900C7ACCC /* 5.png */; };
@@ -30,6 +34,7 @@
 		FD381FA31D5D5FB6005FEB78 /* ThirdLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD381FA21D5D5FB6005FEB78 /* ThirdLoginViewController.m */; };
 		FD381FAE1D5D63BE005FEB78 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD381FAA1D5D63BE005FEB78 /* libWeChatSDK.a */; };
 		FD39B9931D10F8330054A6B2 /* TopWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD39B9921D10F8330054A6B2 /* TopWindowViewController.m */; };
+		FD3DFC731F72B5E30046B565 /* MeetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3DFC721F72B5E30046B565 /* MeetModel.m */; };
 		FD419EF71D6AD1290041D820 /* LimitInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD419EF61D6AD1290041D820 /* LimitInputViewController.m */; };
 		FD4970D21D54644200E167CD /* NSData+help.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4970D11D54644200E167CD /* NSData+help.m */; };
 		FD49B1031D7914E900BBF3B4 /* CustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD49B1011D7914E900BBF3B4 /* CustomTableViewController.m */; };
@@ -539,6 +544,7 @@
 		FDC95CB01C34F51D00F6BD76 /* MyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDC95CAE1C34F51D00F6BD76 /* MyView.xib */; };
 		FDC95CF81C35132800F6BD76 /* CustomPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDC95CF71C35132800F6BD76 /* CustomPopView.xib */; };
 		FDCCF04B1C605DC30012F928 /* CoreGraphicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDCCF04A1C605DC30012F928 /* CoreGraphicsViewController.m */; };
+		FDD02A8321DCFB3A00CD8FD6 /* PromoVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FDA34DB51D01197A003F4876 /* PromoVideo.mp4 */; };
 		FDD05BB41C7FF4F800B2F930 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD05BB31C7FF4F800B2F930 /* libbz2.tbd */; };
 		FDD05BB61C7FF50B00B2F930 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD05BB51C7FF50B00B2F930 /* libiconv.tbd */; };
 		FDD343F41C92595100F4677A /* TransferAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD343F31C92595100F4677A /* TransferAnimationViewController.m */; };
@@ -1074,6 +1080,12 @@
 		FD1285E61DC8921B003E7604 /* TouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchView.m; sourceTree = "<group>"; };
 		FD15CA061CFD8627001AF686 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		FD15CA081CFD8CA2001AF686 /* ico_appeal_03@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_appeal_03@3x.png"; sourceTree = "<group>"; };
+		FD1C1E2D1F77EE5A009C2BF0 /* TestTableViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewViewController.h; sourceTree = "<group>"; };
+		FD1C1E2E1F77EE5A009C2BF0 /* TestTableViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewViewController.m; sourceTree = "<group>"; };
+		FD1C1E301F77F2B4009C2BF0 /* TestTableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableTableViewCell.h; sourceTree = "<group>"; };
+		FD1C1E311F77F2B4009C2BF0 /* TestTableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableTableViewCell.m; sourceTree = "<group>"; };
+		FD1C1E321F77F2B4009C2BF0 /* TestTableTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTableTableViewCell.xib; sourceTree = "<group>"; };
+		FD1C1E351F77F4E0009C2BF0 /* 1011.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1011.jpg; sourceTree = "<group>"; };
 		FD1E1E981D111B82005638B3 /* CustomScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomScrollViewController.h; sourceTree = "<group>"; };
 		FD1E1E991D111B82005638B3 /* CustomScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomScrollViewController.m; sourceTree = "<group>"; };
 		FD211F611C2BF45900C7ACCC /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
@@ -1099,6 +1111,8 @@
 		FD381FAD1D5D63BE005FEB78 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		FD39B9911D10F8330054A6B2 /* TopWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopWindowViewController.h; sourceTree = "<group>"; };
 		FD39B9921D10F8330054A6B2 /* TopWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopWindowViewController.m; sourceTree = "<group>"; };
+		FD3DFC711F72B5E30046B565 /* MeetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetModel.h; sourceTree = "<group>"; };
+		FD3DFC721F72B5E30046B565 /* MeetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetModel.m; sourceTree = "<group>"; };
 		FD419EF51D6AD1290041D820 /* LimitInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitInputViewController.h; sourceTree = "<group>"; };
 		FD419EF61D6AD1290041D820 /* LimitInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitInputViewController.m; sourceTree = "<group>"; };
 		FD419EF91D6ADE9F0041D820 /* BlocksKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BlocksKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/TestDemo-ghxyykrtdivdnacwwagyyehoxgxo/Build/Products/Debug-iphonesimulator/BlocksKit/BlocksKit.framework"; sourceTree = "<group>"; };
@@ -3347,9 +3361,15 @@
 				FDF592131C0EB43C00AF8B5C /* main.m */,
 				FDE9BA611CC72F0E00E6239F /* NSErrorViewController.h */,
 				FDE9BA621CC72F0E00E6239F /* NSErrorViewController.m */,
+				FD1C1E351F77F4E0009C2BF0 /* 1011.jpg */,
 				FDE9BA631CC72F0E00E6239F /* NSErrorViewController.xib */,
 				FD8D8C921CC9BEEC00429DCF /* VendorMacro.h */,
 				FD59EFEB1D11418500E6AFCC /* VendorMacro.m */,
+				FD1C1E2D1F77EE5A009C2BF0 /* TestTableViewViewController.h */,
+				FD1C1E2E1F77EE5A009C2BF0 /* TestTableViewViewController.m */,
+				FD1C1E301F77F2B4009C2BF0 /* TestTableTableViewCell.h */,
+				FD1C1E311F77F2B4009C2BF0 /* TestTableTableViewCell.m */,
+				FD1C1E321F77F2B4009C2BF0 /* TestTableTableViewCell.xib */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -4732,6 +4752,8 @@
 				FDC6B7661C58763F00DCE172 /* Mather.m */,
 				FDC6B7681C58764D00DCE172 /* Son.h */,
 				FDC6B7691C58764D00DCE172 /* Son.m */,
+				FD3DFC711F72B5E30046B565 /* MeetModel.h */,
+				FD3DFC721F72B5E30046B565 /* MeetModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -5023,6 +5045,7 @@
 				FDB943B51CCDFFF500449EB4 /* NotificationButtonBackground@2x.png in Resources */,
 				FDA34D4F1D0115C7003F4876 /* index.css in Resources */,
 				FD9181711CAA7C10001A0A73 /* blankpage_button_reload@2x.png in Resources */,
+				FD1C1E361F77F4E0009C2BF0 /* 1011.jpg in Resources */,
 				FDA34D8D1D011630003F4876 /* layer.ext.css in Resources */,
 				FDA3A2D51DAF68E800FF086E /* CALayerViewController.xib in Resources */,
 				FDA34D8C1D011630003F4876 /* layer.css in Resources */,
@@ -5061,6 +5084,7 @@
 				FDA34D6B1D0115E4003F4876 /* part4.png in Resources */,
 				FD6A760F1C7C315C00D7E5D8 /* share.png in Resources */,
 				FD7B750E1D935F60009F5060 /* CustomSecondViewController.xib in Resources */,
+				FD1C1E341F77F2B4009C2BF0 /* TestTableTableViewCell.xib in Resources */,
 				FDD45C581CD1F4EF00C69F41 /* TestDemo.strings in Resources */,
 				FDA9D4831C294EB700CB9369 /* pop_2FA@2x.png in Resources */,
 				FDA34D691D0115E4003F4876 /* part2.png in Resources */,
@@ -5158,6 +5182,7 @@
 				FDFDC6901CACC460002A6B03 /* iOSDeviceModelMapping.plist in Resources */,
 				FDFDC6911CACC460002A6B03 /* pop_Task@2x.png in Resources */,
 				FDFDC6921CACC460002A6B03 /* pop_Task@3x.png in Resources */,
+				FDD02A8321DCFB3A00CD8FD6 /* PromoVideo.mp4 in Resources */,
 				FDFDC6931CACC460002A6B03 /* contacts_add_voip@2x.png in Resources */,
 				FDFDC6941CACC460002A6B03 /* pop_Tweet@3x.png in Resources */,
 				FDFDC6951CACC460002A6B03 /* adn.cer in Resources */,
@@ -5248,6 +5273,7 @@
 				FDAAAF9E1C8EBF8300CEF5CA /* ZXOneDimensionalCodeWriter.m in Sources */,
 				FDAAAF221C8EBF8300CEF5CA /* ZXSMSParsedResult.m in Sources */,
 				FDCCF04B1C605DC30012F928 /* CoreGraphicsViewController.m in Sources */,
+				FD3DFC731F72B5E30046B565 /* MeetModel.m in Sources */,
 				FDAAAFA11C8EBF8300CEF5CA /* ZXUPCAWriter.m in Sources */,
 				FD7E12881CD30A91000F9012 /* ThemeLabel.m in Sources */,
 				FDAAAFD21C8EBF8300CEF5CA /* ZXQRCodeBlockPair.m in Sources */,
@@ -5455,6 +5481,7 @@
 				FDAAAFC21C8EBF8300CEF5CA /* ZXQRCodeDataBlock.m in Sources */,
 				FD7FF4571C3B4C4E00DDB21E /* NSTimerViewController.m in Sources */,
 				FDAAAF3A1C8EBF8300CEF5CA /* ZXReedSolomonEncoder.m in Sources */,
+				FD1C1E2F1F77EE5B009C2BF0 /* TestTableViewViewController.m in Sources */,
 				FDE5AC211C8D17FC006562E8 /* AssertViewController.m in Sources */,
 				FDAAAF041C8EBF8300CEF5CA /* ZXAztecCode.m in Sources */,
 				FDAAAF261C8EBF8300CEF5CA /* ZXTelResultParser.m in Sources */,
@@ -5638,6 +5665,7 @@
 				FD91069A1CEAB17400185386 /* IBDesignableUIImageView.m in Sources */,
 				FDAAAF8C1C8EBF8300CEF5CA /* ZXRSSPair.m in Sources */,
 				FDAAAFD71C8EBF8300CEF5CA /* ZXMultiFinderPatternFinder.m in Sources */,
+				FD1C1E331F77F2B4009C2BF0 /* TestTableTableViewCell.m in Sources */,
 				FDAAAFA91C8EBF8300CEF5CA /* ZXModulusPoly.m in Sources */,
 				FDAAAF4C1C8EBF8300CEF5CA /* ZXByteMatrix.m in Sources */,
 				FDE22E761CABB40A0018E643 /* NSFileManager+help.m in Sources */,

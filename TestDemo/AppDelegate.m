@@ -60,7 +60,12 @@ NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
     NSInteger version = [UIDevice currentDevice].systemVersion.integerValue;
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
-    [application setValue:[UIColor redColor] forKeyPath:@"statusBarWindow.statusBar.foregroundColor"];
+    UIColor *color = [application valueForKeyPath:@"statusBarWindow.statusBar.foregroundColor"];
+
+    NSLog(@"colo=====%u",(unsigned int)color.rgbHex);
+    [application setValue:[UIColor colorWithRed:0 green:0 blue:0 alpha:0] forKeyPath:@"statusBarWindow.statusBar.foregroundColor"];
+
+    
     
 //    [self addCustomWindow:application];
  
